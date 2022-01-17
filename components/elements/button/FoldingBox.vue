@@ -47,13 +47,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: nowrap;
     }
     &-title {
+      flex: 0 0 90%;
       p {
         font-family: 'NotoSansKR';
         font-size: 20px;
         line-height: 1.2;
         font-weight: 700;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
     }
     &-button {
