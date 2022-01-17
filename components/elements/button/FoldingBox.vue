@@ -9,7 +9,7 @@
       </button>
     </div>
     <div v-if="isOpen" class="folding-content">
-      <p v-html="contentText"></p>
+      <div v-html="contentText"></div>
     </div>
   </div>
 </template>
@@ -72,7 +72,7 @@
     }
     &-content {
       margin-top: 40px;
-      p {
+      > div {
         font-family: 'NotoSansKR';
         font-size: 16px;
         line-height: 1.5;
