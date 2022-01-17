@@ -1,0 +1,38 @@
+//Primary Color
+$kakao-yellow: #ffcd00;
+$kakao-gray: #4d4d4d;
+$brain-yellow: #ffd200;
+$brain-blue: #0092e1;
+
+//secondary Color
+$kakao-black: #1e1e1e;
+$brain-orange: #fd5000;
+$brain-mint: #28d5cd;
+$brain-magenta: #e31a82;
+$brain-purple: #4b25b0;
+
+//Surface Color
+$surface-1: #f5f7fa;
+$surface-2: #eff1f6;
+$surface-3: #e8ecf1;
+$surface-4: #e2e6ed;
+$surface-5: #dce0e8;
+$surface-6: #d6dae4;
+$surface-7: #cfd5df;
+$surface-8: #c9cfdb;
+
+//Grayscale
+$gray-0: #fff;
+$gray-1: #e6e5e6;
+$gray-2: #cccccc;
+$gray-3: #b3b2b3;
+$gray-4: #999999;
+$gray-5: #807f80;
+$gray-6: #666666;
+$gray-7: #4d4c4d;
+$gray-8: #333333;
+$gray-9: #000;
+
+//Grid
+$gutter: 20px;
+$grid: calc((100vw - #{$gutter} * 11) / 10);
