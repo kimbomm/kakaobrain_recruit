@@ -12,9 +12,8 @@
 
     <div class="rule-box">
       <ul>
-        <li class="rule-item">
-          <CompanyBracketTit/>
-          
+        <li v-for="(data,index) in interviewListA" :key="index" class="rule-item">
+          <CompanyInterview :data="data"/>
         </li>
       </ul>
     </div>
@@ -24,14 +23,25 @@
 import CompanyTitle from '@/components/company/CompanyTitle'
 import CompanyTitText from '@/components/company/CompanyTitText'
 import CompanyImg from '@/components/company/CompanyImg'
-import CompanyBracketTit from '@/components/company/CompanyBracketTit'
+import CompanyInterview from '@/components/company/CompanyInterview'
 export default {
   name:'index',
   components:{
     CompanyTitle,
     CompanyTitText,
     CompanyImg,
-    CompanyBracketTit,
+    CompanyInterview,
+  },
+  data(){
+    return{
+      interviewListA: [
+        {
+          profileTit:'Neuro-Symbolic AI팀',
+          profileSubTit:"인턴 'Gina'의 회고",
+          profileTxt:"카이스트 AI대학원 주재걸교수님 연구실 석사과정"
+        },
+      ]
+    }
   }
 }
 </script>
