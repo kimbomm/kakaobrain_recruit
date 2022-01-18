@@ -57,8 +57,8 @@ export default {
   name:'CompanyInterview',
   props:{
     data:{
-      type:String,
-      default:"",
+      type: Object,
+      default: () => {},
       require: true
     }
   }
