@@ -17,49 +17,34 @@
       </div>
       <div class="profile-head">
         <div class="profile-tit">
-          <div>
-            <!-- Neuro-Symbolic AI팀 -->
-            {{ data.profileTit }}
-            </div>
-          <div>
-            <!-- 인턴 'Gina'의 회고  -->
-            {{ data.profileSubTit }}
-            </div>
+          <div>{{ data.team }}팀</div>
+          <div>인턴'{{ data.name }}'의 회고</div>
         </div>
-        <div class="profile-txt">
-          {{ data.profileTxt }}
-          <!-- 카이스트 AI대학원 주재걸교수님 연구실 석사과정 -->
-          </div>
+        <div class="profile-txt">{{ data.profileTxt }}</div>
       </div>
 
       <div class="interview-box">
-        <div class="interview-text">
-          사내에서 상시로 열리는 기술 공유 세미나 ‘미니컨퍼런스’ 시간을 통해 CEO와 이야기하고 의견을 나눠본다던가 하는 것이 신선했어요. 
-          다른 연구자들의 발표를 듣다 보면 업계 지식도 늘고 자극이 되기도 하더라고요.
-        </div>
-        <div class="interview-text l-ml-1">
-          카카오브레인은 매머드 조직이 아니지만  큰 조직 못지않은 AI 시스템과 풍부한 자원들에 업무 지원도 잘 되어 연구에만 신경 쓸 수 있었어요. 
-          거기다 스타트업 같은 파이팅도 넘치는  조직이라 뭔가 함께 토론하며 일하는 맛도  나더라고요.
-        </div>
+        <div class="interview-text">{{data.interviewTextA}}</div>
+        <div class="interview-text l-ml-1">{{data.interviewTextB}}</div>
       </div>
 
       <div class="interview-know-how">
-        <div class="know-how-tit">Gina가 알려주는 노하우!</div>
+        <div class="know-how-tit">{{ data.name }}가 알려주는 노하우!</div>
         <div class="advice">
           <div class="advice-item">
             <div class="tit">이런 분들에게 추천!</div>
-            <div class="txt">대기업에서 정직원처럼 일하는 체험을 통해 성장할 분들</div>
-            <div class="txt">업계 최고 동료들과 다양한 프로젝트 협업을 경험해볼 분들</div>
-            <div class="txt">최신 트렌드 정보를 흡수해 자신을 발전시키고 싶은 분들</div>
+            <div class="txt">{{ data.adviceTxtA }}</div>
+            <div class="txt">{{ data.adviceTxtB }}</div>
+            <div class="txt">{{ data.adviceTxtC }}</div>
           </div>
           <div class="advice-item">
             <div class="tit">지원자를 위한 조언</div>
-            <div class="txt">자신이 어떤 것을 하고 싶은지 명확히 정의하세요.</div>
-            <div class="txt">평소에 궁금했지만 쉽게 접할 수 없던 기술적 궁금증 리스트를 만들어 보세요.</div>
+            <div class="txt">{{ data.adviceTxtD }}</div>
+            <div class="txt">{{ data.adviceTxtE }}</div>
           </div>
         </div>
         <div class="interview-tidy">
-          <div class="txt">지나가 말한 ‘카카오브레인은 ‘빠르다’는 한마디엔 여러 가지가 담겨있어요. 단순히 내달리는 빠름보다는 서로 의견을 나누고 도움받고 때로는 도와주며, 서로의 능력에 맞게 나아가는 것이 카카오브레인 식의 발전입니다. ‘함께 가면 느리지만 멀리 갈 수 있다’보다 ‘함께 가야 힘내서 더 빨리 갈 수 있다’는 말이 옳다는 것을, 카카오브레인은 증명하고 있습니다.</div>
+          <div class="txt">{{ data.interviewTidy }}</div>
           <div class="btn"><span class="btn-txt">카카오브레인 페이스북에서 보기 →</span></div>
         </div>
       </div>
