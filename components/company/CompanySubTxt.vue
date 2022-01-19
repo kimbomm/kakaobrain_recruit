@@ -1,6 +1,6 @@
 <template>
   <div class="company-sub-txt gl-5 l-ml-3">
-    <div class="text">{{text}}</div> 
+    <div class="text" v-html="text"></div> 
   </div>
 </template>
 <script>

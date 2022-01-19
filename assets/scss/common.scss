@@ -22,3 +22,15 @@ body {
     border-radius: 50px;
   }
 }
+.string{
+  font-weight:900;
+}
+.dot{
+  display: inline-block;
+  vertical-align: middle;
+  width:4px;
+  height:4px;
+  margin-right:10px;
+  border-radius: 50%;
+  background-color: $gray-9;
+}
