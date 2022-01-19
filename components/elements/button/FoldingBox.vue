@@ -3,6 +3,7 @@
     <div class="folding-top">
       <div class="folding-title">
         <p>{{ data.title }}</p>
+        <p v-if="data.isText" class="sub-title">{{data.titleText}}</p>
       </div>
       <button class="folding-button" @click="onClick">
         <span>{{ isOpen ? '닫기' : '자세히 보기' }}</span>
@@ -29,7 +30,8 @@
     },
     data() {
       return {
-        isOpen: false
+        isOpen: false,
+        isText: false,
       }
     },
     methods: {
@@ -59,6 +61,12 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+      }
+      .sub-title{
+        margin-top:10px;
+        font-size: 14px;
+        font-weight:400;
+        line-height: 120%;
       }
     }
     &-button {

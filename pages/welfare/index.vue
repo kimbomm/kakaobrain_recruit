@@ -1,5 +1,5 @@
 <template>
-  <div class="company">
+  <div class="welfare">
     <MainTitle
       :title="`원격근무와</br>유연근무제.`"
     />
@@ -19,7 +19,7 @@
             :text="`집, 오피스, 카페, 호텔, 캠핑장 등 어디서나 본인이 정한 장소에서 업무를 해도 됩니다.</br>
             이것은 업무 공간이 어디든지 자기주도성과 자율성을 가지고 본인의 일을 잘할 수 있다는 신뢰가 있기 때문입니다.`"
           />
-          <div class="company-btn l-ml-3"><span class="btn-txt">카카오브레인 페이스북에서 보기 →</span></div>
+          <div class="link-btn l-ml-3"><span class="btn-txt">카카오브레인 페이스북에서 보기 →</span></div>
 
         </li>
 
@@ -44,7 +44,7 @@
             계속 논의하며 우리의 원격 근무 방식을 만들어 가고 있습니다.`"
           />
 
-          <div class="share-rule gl-5 l-ml-3">
+          <div class="folding-rule gl-5 l-ml-3">
             <ul class="rule-list">
               <li v-for="(data, index) in benefitsList" :key="index">
                 <FoldingBox :data="data"/>
@@ -63,7 +63,7 @@
             [최소한의 원칙에 적용해 최대한 자유롭게 근로 시간을 관리할 수 있는] 근무제가 될 수 있도록 카카오브레인 크루들이 논의를 통해
             선택하고 제도화 했습니다.`"
           />
-          <div class="share-rule gl-5 l-ml-3">
+          <div class="folding-rule gl-5 l-ml-3">
             <ul class="rule-list">
               <li v-for="(data, index) in qna" :key="index">
                 <FoldingBox :data="data"/>
@@ -183,7 +183,7 @@ export default {
   .contents-text{
     margin-bottom:40px;
   }
-  .share-rule{
+  .folding-rule{
     // margin-bottom:200px;
     .rule-list{
       li{
@@ -226,9 +226,8 @@ export default {
       }
     }
   }
-  
 
-  .company-btn{
+  .link-btn{
     width:238px;
     height:50px;
     border:1px solid $gray-9;
