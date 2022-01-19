@@ -1,36 +1,36 @@
 <template>
   <div class="company">
-    <CompanyTitle
+    <MainTitle
       title="인턴 체험"
       subTitle="스토리."
     />
-    <CompanyTitText
+    <MainTitleText
       text="2021 Summer AI 영입 연계형 인턴과정을 수료한
       Gina, Wilson, Jwoong, Ted 의 카카오브레인 인턴 체험 스토리를 전달해 드립니다."
     />
-    <CompanyImg/>
+    <MiddleImg/>
 
     <div class="rule-box">
       <ul>
         <li v-for="(data,index) in interviewListA" :key="index" class="rule-item">
-          <CompanyInterview :data="data"/>
+          <Interview :data="data"/>
         </li>
       </ul>
     </div>
   </div> 
 </template>
 <script>
-import CompanyTitle from '@/components/company/CompanyTitle'
-import CompanyTitText from '@/components/company/CompanyTitText'
-import CompanyImg from '@/components/company/CompanyImg'
-import CompanyInterview from '@/components/company/CompanyInterview'
+import MainTitle from '@/components/company/MainTitle'
+import MainTitleText from '@/components/company/MainTitleText'
+import MiddleImg from '@/components/company/MiddleImg'
+import Interview from '@/components/company/Interview'
 export default {
   name:'index',
   components:{
-    CompanyTitle,
-    CompanyTitText,
-    CompanyImg,
-    CompanyInterview,
+    MainTitle,
+    MainTitleText,
+    MiddleImg,
+    Interview,
   },
   data(){
     return{
@@ -69,14 +69,14 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .company-title{
+  .main-title{
     margin-top:320px;
     margin-bottom:60px;
   }
-  .company-tit-text{ 
+  .main-title-text{ 
     margin-bottom:200px;
   }
-  .company-img{
+  .middle-img{
     margin-bottom:140px;
   }
   

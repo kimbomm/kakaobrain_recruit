@@ -1,5 +1,5 @@
 <template>
-  <div class="company-info gl-5 l-ml-3">
+  <div class="contents-info gl-5 l-ml-3">
     <div class="item">
       <div class="tit">이메일</div>
       <div class="txt">hotline@kakaobrain.com</div>
@@ -12,11 +12,11 @@
 </template>
 <script>
 export default {
-  
+  name:'ContentsInfo',
 }
 </script>
 <style lang="scss" scoped>
-  .company-info{
+  .contents-info{
     .item{
       &:not(:last-child){
         margin-bottom:30px;

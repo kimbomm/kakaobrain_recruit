@@ -1,5 +1,5 @@
 <template>
-  <div class="company-bracket-tit gl-6 l-ml-2">
+  <div class="parentheses-title gl-6 l-ml-2">
     <div class="title">카카오브레인은</div>
     <div class="sub-title">
       <span>[</span>
@@ -12,11 +12,11 @@
 </template>
 <script>
 export default {
-  name:'CompanyBracketTit'
+  name:'ParenthesesTitle'
 }
 </script>
 <style lang="scss" scoped>
-.company-bracket-tit{
+.parentheses-title{
   font-weight: 900;
   font-size: 80px;
   line-height: 130%;

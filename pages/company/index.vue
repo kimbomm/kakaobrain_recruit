@@ -1,23 +1,23 @@
 <template>
   <div class="company">
-    <CompanyTitle
+    <MainTitle
       title="우리의"
       subTitle="일하는 방식."
     />
-    <CompanyTitText
+    <MainTitleText
       text="자기 주도적으로 성장할 수 있는 좋은 기회가 많이 주어지고, 
       훌륭한 동료들을 통해 함께 성장할 수 있는 카카오브레인의 크루는 어떻게 일을 하고 있을까요?"
     />
-    <CompanyImg/>
+    <MiddleImg/>
 
     <div class="rule-box">
       <ul>
         <li class="rule-item">
-          <CompanySubTit
+          <ContentsTitle
             title="우리는 더 나은 결과를 위해"
             subTitle="공개하고 공유해요."
           />
-          <CompanySubTxt
+          <ContentsText
             text="정보의 독점은 권력이 될 수 있고 수직적인 소통 구조를 만들어 크루들의 업무 자율성을 떨어뜨릴 수 있습니다. 하지만 정보가 공유되면 업무의 자율성을 높이고, 집단지성의 효과를 크게 할 수 있습니다. 그래서 우리는 공유/공개를 위해 Notion, Slack, Google Workspace, GitHub과 같은 협업툴을 사용하고 누구나 접근하고 참여할 수 있게 합니다.
             공유/공개도 해야 되는 ‘일’ 이지만, 공유가 최종 목적은 아닙니다. 효율적으로 일하는 방식을 끊임없이 고민하며 우리가 함께 성장 할 수 있도록 서로 돕습니다.또한 올바른 공개 문화를 위해 보안을 지키고 크루끼리만 공유합니다."
           />
@@ -31,18 +31,18 @@
         </li>
 
         <li class="rule-item">
-          <CompanySubTit
+          <ContentsTitle
             title="우리는 스스로 몰입하고"
             subTitle="자기 주도적으로 일해요."
           />
           <div class="text-box"> 
-            <CompanySubTxt
+            <ContentsText
               text="카카오브레인은 어느 곳보다 빠르게 실험하고 변화할 수 있어야 하며, 새로운 것과 아무도 가보지 않은 길에 관심을 갖고 도전해야 합니다. 그래서 우리는 실패를 두려워하지 않습니다. 성과는 성공만이 아니라 의미 있는 실패도 포함합니다. 
               당연한 것을 당연한 것이라 그냥 넘어가지 않고 스스로 질문하며 개인의 창의성을 극대화해야 하는 상황이 잦은 만큼 문제점을 스스로 찾고 해결해내는 자기 주도성이 우선으로 요구됩니다."
             />
           </div>
-          <CompanyTextTit tit="왜 이 일을 할까?"/>
-          <CompanySubTxt
+          <ContentSubTitle tit="왜 이 일을 할까?"/>
+          <ContentsText
             text="카카오브레인 크루라면 가장 먼저 해야 하는 질문입니다. 우리는 일의 원동력을 스스로 만들어냅니다. 
             일에 끌려 다니지 않고 끌고 가기 위해서 언제나 내가 먼저 생각하고, 질문하고, 움직입니다. 
             이렇게 우리는 본인의 일에 대해 본인이 가장 잘 판단할 수 있다는 신뢰로 스스로 판단하고 스스로 자기의 일을 하는 것을 지향합니다."
@@ -50,11 +50,11 @@
         </li>
 
         <li class="rule-item">
-          <CompanySubTit
+          <ContentsTitle
             title="우리는 수평 커뮤니케이션을"
             subTitle="지향해요."
           />
-          <CompanySubTxt
+          <ContentsText
             text="‘수평적’ 논의를 통해 전달되는 구성원의 생각과 의견들이 의사 결정자의 더 나은 결정을 이끌어 낼 수 있습니다.
             더 이상의 논의로 의사 결정이 어려워 책임을 갖고 ‘선택’을 해야 하는 순간이 온다면 각 정해진 의사결정자가 최종적인 의사결정을 하게 됩니다"
           />
@@ -68,11 +68,11 @@
         </li>
 
         <li class="rule-item">
-          <CompanySubTit
+          <ContentsTitle
             title="우리는 최소한의 원칙으로"
             subTitle="최대한의 자율성을 가져 가고자 해요."
           />
-          <CompanySubTxt
+          <ContentsText
             text="우리는 마치 조직 문화가 없는 듯 느껴지게끔 가능하면 조직 문화 원칙을 최소화하고, 최대한 카카오브레인 크루들의 토의를 통해 자율적으로 모든 것을 결정하게 하는 방식을 지향하고 있습니다.
             이 최소한의 원칙으로 알아서 자율적으로 돌아갈 수 있게 하는 것입니다. 따라서 제도와 원칙을 인위적으로 만들지 않고, 공유하며 만들어가는 카카오브레인의 문화는 업무에서 뿐만 아니라 사내 복지를 만들어 갈 때도 적용됩니다. "
           />
@@ -89,23 +89,23 @@
   </div> 
 </template>
 <script>
-import CompanyTitle from '@/components/company/CompanyTitle'
-import CompanyTitText from '@/components/company/CompanyTitText'
-import CompanyImg from '@/components/company/CompanyImg'
-import CompanySubTit from '@/components/company/CompanySubTit'
-import CompanySubTxt from '@/components/company/CompanySubTxt'
-import CompanyTextTit from '@/components/company/CompanyTextTit'
+import MainTitle from '@/components/company/MainTitle'
+import MainTitleText from '@/components/company/MainTitleText'
+import MiddleImg from '@/components/company/MiddleImg'
+import ContentsTitle from '@/components/company/ContentsTitle'
+import ContentsText from '@/components/company/ContentsText'
+import ContentSubTitle from '@/components/company/ContentSubTitle'
 import FoldingBox from '@/components/elements/button/FoldingBox'
 export default {
   name:'index',
   components:{
-    CompanyTitle,
-    CompanyTitText,
-    CompanyImg,
-    CompanySubTit,
-    CompanySubTxt,
+    MainTitle,
+    MainTitleText,
+    MiddleImg,
+    ContentsTitle,
+    ContentsText,
     FoldingBox,
-    CompanyTextTit,
+    ContentSubTitle,
   },
   data(){
     return{
@@ -140,20 +140,20 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .company-title{
+  .main-title{
     margin-top:320px;
     margin-bottom:60px;
   }
-  .company-tit-text{ 
+  .main-title-text{ 
     margin-bottom:200px;
   }
-  .company-img{
+  .middle-img{
     margin-bottom:140px;
   }
-  .company-sub-tit{
+  .contents-title{
     margin-bottom:40px;
   }
-  .company-sub-txt{
+  .contents-text{
     margin-bottom:40px;
   }
   .share-rule{
@@ -174,13 +174,13 @@ export default {
       }
     }
     .text-box{
-      .company-sub-txt{
+      .contents-text{
         margin-bottom:70px;
       }
     }
   }
   
-  .company-text-tit{
+  .content-sub-title{
     margin-bottom:20px;
   }
 </style>

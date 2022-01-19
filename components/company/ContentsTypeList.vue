@@ -1,5 +1,5 @@
 <template>
-  <div class="company-type-list">
+  <div class="contents-type-list">
     <div class="type-txt">{{ data.text }}</div>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .company-type-list{
+  .contents-type-list{
     padding: 22px 190px 24px 30px;
     background-color: $surface-2;
     .type-txt{

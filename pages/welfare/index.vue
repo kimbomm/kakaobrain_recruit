@@ -1,23 +1,23 @@
 <template>
   <div class="company">
-    <CompanyTitle
+    <MainTitle
       title="원격근무와"
       subTitle="유연근무제."
     />
-    <CompanyTitText
+    <MainTitleText
       text="우리는 업무 공간을 스스로 정해 일합니다.
       우리의 ‘완전선택근무시간제'는 자신의 업무시간을 정해 스스로 관리하며 일합니다."
     />
-    <CompanyImg/>
+    <MiddleImg/>
 
     <div class="rule-box">
       <ul>
         <li class="rule-item">
-          <CompanySubTit
+          <ContentsTitle
             title="카카오브레인 크루는"
             subTitle="업무 공간을 스스로 정해 일합니다."
           />
-          <CompanySubTxt
+          <ContentsText
             text="집, 오피스, 카페, 호텔, 캠핑장 등 어디서나 본인이 정한 장소에서 업무를 해도 됩니다. 
             이것은 업무 공간이 어디든지 자기주도성과 자율성을 가지고 본인의 일을 잘할 수 있다는 신뢰가 있기 때문입니다."
           />
@@ -26,12 +26,12 @@
         </li>
 
         <li class="rule-item">
-          <CompanySubTit
+          <ContentsTitle
             title="카카오브레인에는"
             subTitle="고정된 출·퇴근 시간도 없고, 지각도 없습니다."
           />
 
-            <CompanySubTxt
+            <ContentsText
               text=" 정해진 월 업무 시간을 다 채울 수 있다면 일찍 업무를 종료할 수 있고,
               초과했다면 연장 수당을 지급 받거나 그만큼의 Off 시간 이나 Off 휴가를 사용할 수도 있습니다.
               이것은 유연근무제를 [완전선택근무시간제]로 선택해 우리의 Fit에 맞춰 운영하고 있기 때문입니다."
@@ -41,7 +41,7 @@
 
         <li class="rule-item">
 
-          <CompanySmallTit
+          <SmallTitle
             :title="`우리는 원격 근무 중에도 동료 관계와 팀워크를<br/> 
             놓치지 않고 즐겁게 일할 수 있는 좋은 방법을<br/>
             계속 논의하며 우리의 원격 근무 방식을 만들어 가고 있습니다.`"
@@ -57,11 +57,11 @@
         </li>
 
         <li class="rule-item">
-          <CompanySmallTit
+          <SmallTitle
             :title="`카카오브레인 크루들이 논의해</br>
             [완전선택근무시간제]를 제도화 했습니다.`"
           />
-          <CompanySubTxt
+          <ContentsText
             text="크루가 [자기 주도성]과 [자율성]을 가지고, 일 할 때는 몰입해서 일을 하고, 쉴 때는 확실하게 더 잘~ 쉴 수 있는 근무제로
             [최소한의 원칙에 적용해 최대한 자유롭게 근로 시간을 관리할 수 있는] 근무제가 될 수 있도록 카카오브레인 크루들이 논의를 통해 
             선택하고 제도화 했습니다. "
@@ -76,22 +76,22 @@
         </li>
         
         <li class="rule-item">
-          <CompanySmallTit
+          <SmallTitle
             :title="`유연근무시스템을 통해 스스로 점검하고,</br>
             앞으로의 일정을 계획해 한 달 단위 근로 시간을</br>
             스스로 관리할 수 있습니다.</br>`"
           />
           <div class="system-plan">
-            <CompanySubTxt
+            <ContentsText
               text="유연근무시스템에서 모든 크루는 본인의 업무 시간을 모두가 열람할 수 있게 공개하기 때문에</br>
               별도의 코어타임(Core-Time)을 정하지 않고, 서로의 협업의 가치를 존중해 업무를 잘 할 수 있고, 성실한 업무 수행과 조화를
               이루는 범위 내에서 크루 개개인의 유연한 근무시간 계획 및 운용이 가능합니다."
             />
             <div class="list-box">
-              <CompanySubTxt
+              <ContentsText
                 text='유연근무시스템은 가급적 크루의 업무 몰입에 방해되지 않게 하기 위해 시간 관리를 보다 쉽게 할 수 있도록 모바일에서 사용 가능하며, 슬랙과 구글캘린더로 연결해 어디서나 쉽게 이용할 수 있게 합니다.'
               />
-              <CompanySubTxt
+              <ContentsText
                 text='유연근무제를 통해 일과 생활의 균형을 맞춰 크루 개인의 업무에 더욱 몰입할 수 있기를 바라기에, 지속적으로 크루들과 커뮤니케이션하면서 우리에게 더 잘 맞는 제도로 개선하고 있습니다.'
               />
             </div>
@@ -99,21 +99,21 @@
         </li>
 
         <li class="rule-item">
-          <CompanySmallTit
+          <SmallTitle
             :title="`크루의 편의를 위해</br>
             업무 하지 않는 시간을 비우는 ‘OFF 제도'는 </br>
             휴가처럼 사용 할 수 있습니다.`"
           />
           <div class="system-plan">
             <div class="list-box">
-              <CompanySubTxt
+              <ContentsText
                 text='하루의 업무를 시작하면 종료시간까지 무조건 업무를 이어서 해야 할 필요는 없습니다.</br>
                 해당 월의 총 표준근로시간을 전부 채워 근무했고, 현업 일정에 지장이 없는 경우, 해당 월의 나머지 시간은 업무 하지 않아도 되기 때문입니다.'
               />
-              <CompanySubTxt
+              <ContentsText
                 text='카카오브레인은 크루의 편의를 위해 연/25일의 유급 휴가를 1시간 단위로 나눠서 휴가 사용을 할 수 있기 때문에 개인 사정에 따라 업무 시간 중간에 1시간 단위로 시간차 휴가를 사용할 수 있습니다.</br>(유급휴가 1일 = 8시간 휴가)'
               />
-              <CompanySubTxt
+              <ContentsText
                 text="휴가를 사용해야 할 때, 해당 월에 연장 근로 한 시간이 있다면,</br> 그 시간 만큼은 업무하지 않고 시간을 비우는 ‘Off제'를 이용해 휴가처럼 사용할 수도 있고 모든건 본인이 선택에 따라 사용 가능합니다."
               />
             </div>
@@ -126,23 +126,23 @@
   </div> 
 </template>
 <script>
-import CompanyTitle from '@/components/company/CompanyTitle'
-import CompanyTitText from '@/components/company/CompanyTitText'
-import CompanyImg from '@/components/company/CompanyImg'
-import CompanySubTit from '@/components/company/CompanySubTit'
-import CompanySubTxt from '@/components/company/CompanySubTxt'
+import MainTitle from '@/components/company/MainTitle'
+import MainTitleText from '@/components/company/MainTitleText'
+import MiddleImg from '@/components/company/MiddleImg'
+import ContentsTitle from '@/components/company/ContentsTitle'
+import ContentsText from '@/components/company/ContentsText'
 import FoldingBox from '@/components/elements/button/FoldingBox'
-import CompanySmallTit from '@/components/company//CompanySmallTit'
+import SmallTitle from '@/components/company//SmallTitle'
 export default {
   name:'index',
   components:{
-    CompanyTitle,
-    CompanyTitText,
-    CompanyImg,
-    CompanySubTit,
-    CompanySubTxt,
+    MainTitle,
+    MainTitleText,
+    MiddleImg,
+    ContentsTitle,
+    ContentsText,
     FoldingBox,
-    CompanySmallTit,
+    SmallTitle,
   },
   data(){
     return{
@@ -170,20 +170,20 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .company-title{
+  .main-title{
     margin-top:320px;
     margin-bottom:60px;
   }
-  .company-tit-text{ 
+  .main-title-text{ 
     margin-bottom:200px;
   }
-  .company-img{
+  .middle-img{
     margin-bottom:140px;
   }
-  .company-sub-tit{
+  .contents-title{
     margin-bottom:40px;
   }
-  .company-sub-txt{
+  .contents-text{
     margin-bottom:40px;
   }
   .share-rule{
@@ -206,11 +206,11 @@ export default {
   }
   
   .system-plan{
-    .company-sub-txt{
+    .contents-text{
       margin-bottom:20px
     }
     .list-box{
-      .company-sub-txt{
+      .contents-text{
         position: relative;
         padding-left:20px;
         &:not(:last-child){

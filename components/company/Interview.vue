@@ -1,5 +1,5 @@
 <template>
-  <div class="company-interview gl-6 l-ml-2">
+  <div class="interview gl-6 l-ml-2">
     <div class="interview-title">
       <div class="title">카카오브레인은</div>
       <div class="sub-title">
@@ -54,7 +54,7 @@
 </template>
 <script>
 export default {
-  name:'CompanyInterview',
+  name:'Interview',
   props:{
     data:{
       type: Object,
@@ -65,7 +65,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.company-interview{
+.interview{
   font-weight: 900;
   font-size: 80px;
   line-height: 130%;

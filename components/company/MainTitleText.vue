@@ -1,11 +1,11 @@
 <template>
-  <div class="company-tit-text gl-5 l-ml-3">
+  <div class="main-title-text gl-5 l-ml-3">
     <div class="text">{{text}}</div>
   </div>
 </template>
 <script>
 export default {
-  name:'CompanyTitle',
+  name:'MainTitleText',
   props:{
     text:{
       type:String,
@@ -16,7 +16,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.company-tit-text{
+.main-title-text{
   font-size: 16px;
   line-height: 150%;
 }

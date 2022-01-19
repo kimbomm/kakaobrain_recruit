@@ -1,11 +1,11 @@
 <template>
-  <div class="company-small-tit gl-5 l-ml-3">
+  <div class="small-title gl-5 l-ml-3">
     <div class="title" v-html="title"></div>
   </div>
 </template>
 <script>
 export default {
-  name:'CompanySmallTit',
+  name:'SmallTitle',
   props:{
     title:{
       type:String,
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .company-small-tit{
+  .small-title{
     margin-bottom:40px;
     font-weight: 700;
     font-size: 26px;

@@ -1,12 +1,12 @@
 <template>
-  <div class="company-sub-tit gl-5 l-ml-3">
+  <div class="contents-title gl-5 l-ml-3">
     <div class="title">{{title}}</div>
     <div class="sub-title">{{subTitle}}</div>
   </div>
 </template>
 <script>
 export default {
-  name:'CompanySubTit',
+  name:'ContentsTitle',
   props:{
     title:{
       type:String,
@@ -22,7 +22,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .company-sub-tit{
+  .contents-title{
     font-weight: 900;
   font-size: 40px;
   line-height: 130%;

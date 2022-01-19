@@ -1,11 +1,11 @@
 <template>
-  <div class="company-text-tit gl-5 l-ml-3">
+  <div class="content-sub-title gl-5 l-ml-3">
     <div class="tit">{{tit}}</div> 
   </div>
 </template>
 <script>
 export default {
-  name:'CompanyTextTit',
+  name:'ContentSubTitle',
   props:{
     tit:{
       type:String,
@@ -16,7 +16,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .company-text-tit{
+  .content-sub-title{
     .tit{
       font-weight: 900;
       font-size: 20px;

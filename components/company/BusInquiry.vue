@@ -1,5 +1,5 @@
 <template>
-  <div class="company-bus gl-6 l-ml-3">
+  <div class="bus-inquiry gl-6 l-ml-3">
     <div class="bus-con">
       <div class="tit">주변 버스</div>
       <div class="list">
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .company-bus{
+  .bus-inquiry{
     .bus-con{
       margin-bottom:40px;
       .tit{

@@ -1,60 +1,60 @@
 <template>
   <div class="company">
-    <CompanyTitle
+    <MainTitle
       title="카카오브레인"
       subTitle="사이버윤리실."
     />
-    <CompanyTitText
+    <MainTitleText
       text="제보자가 안심하고 제보할 수 있도록 신고 내용과 제보자의 신분은 철저하게 보호되며, 
       빠른 시일 내에 처리할 수 있도록 최선을 다할 것입니다."
     />
-    <CompanyImg/>
+    <MiddleImg/>
 
     <div class="rule-box">
       <ul>
         <li class="rule-item">
-          <CompanySubTit
+          <ContentsTitle
             title="사이버윤리실 안내"
             subTitle=""
           />
-          <CompanySubTxt
+          <ContentsText
             text="카카오브레인 사이버 윤리실은 카카오브레인 임직원의 불공정한 행위나 금품, 접대와 같은 부당한 요구, 회사 자산의 부당 사용이나 남용,협력업체에 대한 부정 투자, 비공개 정보의 유출, 문서나 데이터의 조작, 기타 비리 및 부정 행위를 신고, 상담하는 곳입니다. 
             어떤 경우에도 제보자가 안심하고 제보할 수 있도록 신고 내용과 제보자의 신분은 철저하게 보호되며, 빠른 시일 내에 처리할 수 있도록 최선을 다할 것입니다."
           />
         </li>
         <li class="rule-item">
-          <CompanySubTit
+          <ContentsTitle
             title="신고유형"
             subTitle=""
           />
           <div class="type-box gl-5 l-ml-3">
             <ul>
               <li v-for="(data, index) in typeListA" :key="index" class="type-list">
-                <CompanyTypeList :data="data"/>
+                <ContentsTypeList :data="data"/>
               </li>
             </ul>
           </div>
         </li>
         <li class="rule-item">
-          <CompanySubTit
+          <ContentsTitle
             title="신고처"
             subTitle=""
           />
-          <CompanyInfo/>
+          <ContentsInfo/> 
         </li>
         <li class="rule-item">
-          <CompanySubTit
+          <ContentsTitle
             title="선물 및 향응 수수에 관한 윤리지침"
             subTitle=""
           />
-          <CompanySubTxt
+          <ContentsText
             text="카카오브레인 직원 및 그 가족 구성원들은 이해관계의 충돌을 일으킬 수 있는 어떠한 금품 및 향응을 받아서는 아니되며 경쟁사, 고객, 기타 업무상의 비지니스 파트너들도 금품 및 향응을 제공해서는 안됩니다.  
             선물 및 금품 수령시 즉시 반환이 원칙이며 이미 수령한 선물 및 금품은 컬처팀에 반납하여 추후 안내를 받아야 합니다. 카카오브레인 직원은 본인 및 가족 또는 지인의 이익을 위하여 선물, 사례,  사업상의 우대를 청하여서는 아니되며, 아래의 경우 문제가 발생할 수 있습니다."
           />
           <div class="type-box gl-5 l-ml-3">
             <ul>
               <li v-for="(data, index) in typeListB" :key="index" class="type-list">
-                <CompanyTypeList :data="data"/>
+                <ContentsTypeList :data="data"/>
               </li>
             </ul>
           </div>
@@ -67,23 +67,23 @@
   </div> 
 </template>
 <script>
-import CompanyTitle from '@/components/company/CompanyTitle'
-import CompanyTitText from '@/components/company/CompanyTitText'
-import CompanyImg from '@/components/company/CompanyImg'
-import CompanySubTit from '@/components/company/CompanySubTit'
-import CompanySubTxt from '@/components/company/CompanySubTxt'
-import CompanyTypeList from '@/components/company/CompanyTypeList'
-import CompanyInfo from '@/components/company/CompanyInfo'
+import MainTitle from '@/components/company/MainTitle'
+import MainTitleText from '@/components/company/MainTitleText'
+import MiddleImg from '@/components/company/MiddleImg'
+import ContentsTitle from '@/components/company/ContentsTitle'
+import ContentsText from '@/components/company/ContentsText'
+import ContentsTypeList from '@/components/company/ContentsTypeList'
+import ContentsInfo from '@/components/company/ContentsInfo'
 export default {
   name:'ethics',
   components:{
-    CompanyTitle,
-    CompanyTitText,
-    CompanyImg,
-    CompanySubTit,
-    CompanySubTxt,
-    CompanyTypeList,
-    CompanyInfo,
+    MainTitle,
+    MainTitleText,
+    MiddleImg,
+    ContentsTitle,
+    ContentsText,
+    ContentsTypeList,
+    ContentsInfo,
   },
   data(){
     return{
@@ -141,20 +141,20 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .company-title{
+  .main-title{
     margin-top:320px;
     margin-bottom:60px;
   }
-  .company-tit-text{ 
+  .main-title-text{ 
     margin-bottom:200px;
   }
-  .company-img{
+  .middle-img{
     margin-bottom:140px;
   }
-  .company-sub-tit{
+  .contents-title{
     margin-bottom:40px;
   }
-  .company-sub-txt{
+  .contents-text{
     margin-bottom:40px;
   }
 
@@ -174,7 +174,7 @@ export default {
       }
     }
     .text-box{
-      .company-sub-txt{
+      .contents-text{
         margin-bottom:70px;
       }
     }

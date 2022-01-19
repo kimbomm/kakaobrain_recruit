@@ -1,11 +1,11 @@
 <template>
-  <div class="company-sub-txt gl-5 l-ml-3">
+  <div class="contents-text gl-5 l-ml-3">
     <div class="text" v-html="text"></div> 
   </div>
 </template>
 <script>
 export default {
-  name:'CompanySubTxt',
+  name:'ContentsText',
   props:{
     text:{
       type:String,
@@ -16,7 +16,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .company-sub-txt{
+  .contents-text{
     .text{
       font-size: 16px; 
       line-height: 150%;
