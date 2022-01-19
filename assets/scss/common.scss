@@ -34,3 +34,17 @@ body {
   border-radius: 50%;
   background-color: $gray-9;
 }
+.folding-item{
+  position: relative;
+  padding-left:20px;
+  &::before{
+    content: "";
+    position: absolute;
+    left:10px;
+    top:10px;
+    width:4px;
+    height:4px;
+    border-radius: 50%;
+    background-color: $gray-9;
+  }
+}

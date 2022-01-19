@@ -186,6 +186,16 @@ export default {
         font-size: 14px;
         font-weight:400;
         line-height: 150%;
+        &::before{
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          width:4px;
+          height:4px;
+          margin-right:10px;
+          border-radius: 50%;
+          background-color: $gray-9;
+        }
       }
     }
   }

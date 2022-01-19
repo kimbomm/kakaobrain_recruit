@@ -1,12 +1,11 @@
 <template>
   <div class="company">
     <MainTitle
-      title="인턴 체험"
-      subTitle="스토리."
+      :title="`인턴 체험</br>스토리.`"
     />
     <MainTitleText
-      text="2021 Summer AI 영입 연계형 인턴과정을 수료한
-      Gina, Wilson, Jwoong, Ted 의 카카오브레인 인턴 체험 스토리를 전달해 드립니다."
+      :text="`2021 Summer AI 영입 연계형 인턴과정을 수료한</br>
+      Gina, Wilson, Jwoong, Ted 의 카카오브레인 인턴 체험 스토리를 전달해 드립니다.`"
     />
     <MiddleImg/>
 
@@ -40,7 +39,7 @@ export default {
           team:'Neuro-Symbolic AI',
           profileSubTit:"인턴 'Gina'의 회고",
           profileTxt:"카이스트 AI대학원 주재걸교수님 연구실 석사과정",
-          interviewTextA:"사내에서 상시로 열리는 기술 공유 세미나 ‘미니컨퍼런스’ 시간을 통해 CEO와 이야기하고 의견을 나눠본다던가 하는 것이 신선했어요. 다른 연구자들의 발표를 듣다 보면 업계 지식도 늘고 자극이 되기도 하더라고요.",
+          interviewTextA:"사내에서 상시로 열리는\n 기술 공유 세미나 ‘미니컨퍼런스’ 시간을 통해 CEO와 이야기하고 의견을 나눠본다던가 하는 것이 신선했어요. 다른 연구자들의 발표를 듣다 보면 업계 지식도 늘고 자극이 되기도 하더라고요.",
           interviewTextB:"카카오브레인은 매머드 조직이 아니지만  큰 조직 못지않은 AI 시스템과 풍부한 자원들에 업무 지원도 잘 되어 연구에만 신경 쓸 수 있었어요. 거기다 스타트업 같은 파이팅도 넘치는  조직이라 뭔가 함께 토론하며 일하는 맛도  나더라고요.",
           adviceTxtA:"대기업에서 정직원처럼 일하는 체험을 통해 성장할 분들",
           adviceTxtB:"업계 최고 동료들과 다양한 프로젝트 협업을 경험해볼 분들",

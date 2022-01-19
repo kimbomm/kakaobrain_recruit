@@ -1,8 +1,7 @@
 <template>
   <div class="company">
     <MainTitle
-      title="찾아오시는"
-      subTitle="길."
+      :title="`찾아오시는</br>길.`"
     />
     <MainTitleText
       text="카카오브레인 크루가 모여 생각하지 못한 질문을 던지고 해답을 찾아가는 장소입니다."
@@ -10,7 +9,6 @@
     <MiddleImg/>
     <ContentsTitle
       title="주소"
-      subTitle=""
     />
     <ContentsText
       text="경기도 성남시 분당구 판교역로241번길 20 미래에셋벤처타워 11층 (우)13494"
