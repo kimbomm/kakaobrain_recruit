@@ -19,7 +19,6 @@ export default {
 </script>
 <style lang="scss" scoped>
   .small-title{
-    margin-bottom:40px;
     font-weight: 700;
     font-size: 26px;
     line-height: 140%;

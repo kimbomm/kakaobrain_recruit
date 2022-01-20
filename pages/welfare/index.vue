@@ -183,6 +183,9 @@ export default {
   .contents-text{
     margin-bottom:40px;
   }
+  .small-title{
+    margin-bottom:40px;
+  }
   .share-rule{
     // margin-bottom:200px;
     .rule-list{

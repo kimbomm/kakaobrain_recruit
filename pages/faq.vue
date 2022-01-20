@@ -1,16 +1,59 @@
 <template>
   <div class="faq">
-    <ul class="faq-list">
-      <li v-for="(data, index) in faqList" :key="index">
-        <FoldingBox :data="data" />
-      </li>
-    </ul>
+    <MainTitle
+      :title="`FAQ.`"
+    />
+    <MainTitleText
+      :text="`영입 관련한 질문이 있으신가요?</br>
+      자세히 알려드리겠습니다.`"
+    />
+    <MiddleImg/>
+
+    
+    <div class="system-plan">
+      <div class="list-box">
+        <ContentsTitle
+          :title="`우선 확인해 주세요.`"
+        />
+        <ContentsText
+          text='영입 절차의 공정화에 관한 법률 제 4조의 3에 근거하여 직무수행에 필요하지 않은 정보를 이력서에 기재하는 경우 서류반환 및 접수 취소됩니다.'
+        />
+        <ContentsText
+          text='영입 관련한 모든 질문은 apply@kakaobrain.com 로 메일로 주시면 확인하여 회신 드릴 수 있도록 하겠습니다.'
+        />
+      </div>
+      <div class="faq-btn l-ml-3"><span class="btn-txt">Our Open Position →</span></div>
+    </div>
+
+    
+
+    <div>
+      <ContentsTitle
+        :title="`FAQ`"
+      />
+      <ul class="faq-list">
+        <li v-for="(data, index) in faqList" :key="index">
+          <FoldingBox :data="data" />
+        </li>
+      </ul> 
+    </div>
+    
   </div>
 </template>
 <script>
+  import MainTitle from '@/components/company/MainTitle'
+  import MainTitleText from '@/components/company/MainTitleText'
+  import MiddleImg from '@/components/company/MiddleImg'
+  import ContentsTitle from '@/components/company/ContentsTitle'
+  import ContentsText from '@/components/company/ContentsText'
   import FoldingBox from '@/components/elements/button/FoldingBox'
   export default {
     components: {
+      MainTitle,
+      MainTitleText,
+      MiddleImg,
+      ContentsTitle,
+      ContentsText,
       FoldingBox
     },
     data() {
@@ -65,6 +108,63 @@
         margin-bottom: 10px;
         &:last-child {
           margin-bottom: 0;
+        }
+      }
+    }
+    .main-title{
+      margin-top:320px;
+      margin-bottom:60px;
+    }
+    .main-title-text{ 
+      margin-bottom:200px;
+    }
+    .middle-img{
+      margin-bottom:140px;
+    }
+  }
+
+  .faq-btn{
+    width:238px;
+    height:50px;
+    border:1px solid $gray-9;
+    border-radius: 0px;
+    padding:16px;
+    font-size: 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    .btn-txt{
+      display: block;
+      letter-spacing: -1px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight:400;
+      line-height: 130%;
+      color: $gray-9;
+    }
+  }
+  .contents-title{
+    margin-bottom:40px;
+  }
+  .system-plan{
+    margin-bottom:200px;
+    .list-box{
+      margin-bottom:40px;
+      
+      .contents-text{
+        position: relative;
+        padding-left:20px;
+        &:not(:last-child){
+          margin-bottom:20px;
+        }
+        &::before{
+          content: "";
+          position: absolute;
+          left:8px;
+          top:10px;
+          width:4px;
+          height:4px;
+          border-radius: 100%;
+          background-color: $gray-9;
         }
       }
     }
