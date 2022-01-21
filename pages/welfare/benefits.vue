@@ -10,7 +10,9 @@
     <MiddleImg/>
 
     <ContentsTitle
-      :title="`카카오브레인 크루는</br>업무 공간을 스스로 정해 일합니다.`"
+      :title="`꼼꼼하게 보세요.</br>
+      비교해서 보세요.</br>
+      진정으로 크루를 위한 진심.`"
     />
 
     <div class="folding-rule gl-5 l-ml-3">
@@ -51,7 +53,7 @@ export default {
         {
           title: "원격(재택) 근무와 유연 근무(완전선택근무시간제)",
           content:
-            '<div class="folding-item">카카오브레인 크루는 업무 공간을 스스로 정해 일합니다.</div></br><div class="folding-item">원격근무와 유연근무제 상세보기</div>',
+            '<div class="folding-item">카카오브레인 크루는 업무 공간을 스스로 정해 일합니다.</div></br><div class="folding-item"><span class="underline">원격근무와 유연근무제 상세보기</span></span></div>',
           isText:false,
         },
         {
@@ -64,7 +66,7 @@ export default {
         {
           title: "직장 어린이집 지원",
           content:
-            "<div class='folding-item'>카카오 공동체 직장 어린이집 지원 : 늘예솔, 오리뜰, 스페이스닷키즈</div></br><div class='folding-item'>판교오피스 인근의 '스타트업캠퍼스어린이집' 도 제휴해 지원합니다</div>",
+            "<div class='folding-item'>카카오 공동체 직장 어린이집 지원 : <span class='underline'>늘예솔</span>, <span class='underline'>오리뜰</span>, <span class='underline'>스페이스닷키즈</span></div></br><div class='folding-item'>판교오피스 인근의 '<span class='underline'>스타트업캠퍼스어린이집</span>' 도 제휴해 지원합니다</div>",
           isText:false,
         },
         {

@@ -1,5 +1,5 @@
 <template>
-  <div class="company">
+  <div class="">
     <MainTitle
       :title="`사외 추천 제도.`"
     />
@@ -36,7 +36,7 @@
                   text='추천 대상 : 정규직 포지션 지원 자격에 맞는 직무 역량과 경험을 보유한 인재'
                 />
               </div>
-              <div class="company-btn l-ml-3"><span class="btn-txt">Our Open Position →</span></div>
+              <div class="link-btn l-ml-3"><span class="btn-txt">Our Open Position →</span></div>
             </div>
 
             <div class="list-box">
@@ -48,7 +48,7 @@
                   text='지원자가 지원서를 작성하기 전, 인재추천서 설문을 완료해 보내주시면 감사하겠습니다.'
                 />
               </div>
-              <div class="company-btn l-ml-3"><span class="btn-txt">Talent recommendation →</span></div>
+              <div class="link-btn l-ml-3"><span class="btn-txt">Talent recommendation →</span></div>
             </div>
             
             <div class="list-box">
@@ -63,8 +63,6 @@
                   text='서류 전형에 통과한 분에 한하여, 서류 전형 및 최종 합격 여부를 메일 안내 드립니다.'
                 />
               </div>
-              
-              <div class="company-btn l-ml-3"><span class="btn-txt">카카오브레인 페이스북에서 보기 →</span></div>
             </div>
             
             <div class="list-box">
@@ -100,9 +98,7 @@
               </div>
             </div>
 
-            <SmallTitle
-              :title="`지급 시점`"
-            />
+            <ContentSubTitle tit="지급 시점"/>
             <ContentsText
               text='피추천인 입사 후 3개월 만근월 기준 **익월 10일**에 지급 드립니다.</br>
               단, 피추천인이나 추천인이 지급일 이전에 퇴직하는 경우 지급 대상에서 제외됩니다.</br>
@@ -171,6 +167,7 @@ import MiddleImg from '@/components/company/MiddleImg'
 import ContentsTitle from '@/components/company/ContentsTitle'
 import ContentsText from '@/components/company/ContentsText'
 import SmallTitle from '@/components/company//SmallTitle'
+import ContentSubTitle from '@/components/company//ContentSubTitle'
 export default {
   name:'index',
   components:{
@@ -180,6 +177,7 @@ export default {
     ContentsTitle,
     ContentsText,
     SmallTitle,
+    ContentSubTitle,
   }
 }
 </script>
@@ -197,22 +195,12 @@ export default {
   .contents-title{
     margin-bottom:40px;
   }
-  // .contents-text{
-  //   margin-bottom:40px;
-  // }
   .small-title{
     margin-bottom:10px;
   }
-  // .share-rule{
-  //   // margin-bottom:200px;
-  //   .rule-list{
-  //     li{
-  //       &:not(:last-child){
-  //         margin-bottom:10px;
-  //       }
-  //     }
-  //   }
-  // }
+  .content-sub-title{
+    margin-bottom:20px;
+  }
   
   .rule-box{
     .rule-item{
@@ -222,9 +210,6 @@ export default {
     }
 
     .system-plan{
-      // .contents-text{
-      //   margin-bottom:20px
-      // }
       .list-box{
         &:not(:last-child){
           margin-bottom:40px;
@@ -240,9 +225,6 @@ export default {
         .contents-text{
           position: relative;
           padding-left:20px;
-          // &:not(:last-child){
-          //   margin-bottom:20px;
-          // }
           &::before{
             content: "";
             position: absolute;
@@ -258,8 +240,10 @@ export default {
     }
   }
   
-  .company-btn{
-    width:238px;
+  .link-btn{
+    display: inline-block;
+    min-width:150px;
+    width:auto;
     height:50px;
     border:1px solid $gray-9;
     border-radius: 0px;
