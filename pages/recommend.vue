@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="recommendation">
     <MainTitle
       :title="`사외 추천 제도.`"
     />
@@ -152,12 +152,8 @@
             </div>
           </div>
         </li>
-
- 
       </ul>
     </div>
-
-
   </div> 
 </template>
 <script>
@@ -182,58 +178,58 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .main-title{
-    margin-top:320px;
-    margin-bottom:60px;
-  }
-  .main-title-text{ 
-    margin-bottom:200px;
-  }
-  .middle-img{
-    margin-bottom:140px;
-  }
-  .contents-title{
-    margin-bottom:40px;
-  }
-  .small-title{
-    margin-bottom:10px;
-  }
-  .content-sub-title{
-    margin-bottom:20px;
-  }
-  
-  .rule-box{
-    .rule-item{
-      &:not(:last-child){
-        margin-bottom:200px;
-      }
+  .recommendation{
+    padding:0 20px;
+    .main-title{
+      margin-top:320px;
+      margin-bottom:60px;
     }
-
-    .system-plan{
-      .list-box{
+    .main-title-text{ 
+      margin-bottom:200px;
+    }
+    .middle-img{
+      margin-bottom:140px;
+    }
+    .contents-title{
+      margin-bottom:40px;
+    }
+    .small-title{
+      margin-bottom:10px;
+    }
+    
+    .rule-box{
+      .rule-item{
         &:not(:last-child){
-          margin-bottom:40px;
+          margin-bottom:200px;
         }
-        .box-text-con{
-          margin-bottom:20px;
-          .contents-text{
-            &:not(:last-child){
-              margin-bottom:5px;
+      }
+
+      .system-plan{
+        .list-box{
+          &:not(:last-child){
+            margin-bottom:40px;
+          }
+          .box-text-con{
+            margin-bottom:20px;
+            .contents-text{
+              &:not(:last-child){
+                margin-bottom:5px;
+              }
             }
           }
-        }
-        .contents-text{
-          position: relative;
-          padding-left:20px;
-          &::before{
-            content: "";
-            position: absolute;
-            left:8px;
-            top:10px;
-            width:4px;
-            height:4px;
-            border-radius: 100%;
-            background-color: $gray-9;
+          .contents-text{
+            position: relative;
+            padding-left:20px;
+            &::before{
+              content: "";
+              position: absolute;
+              left:8px;
+              top:10px;
+              width:4px;
+              height:4px;
+              border-radius: 100%;
+              background-color: $gray-9;
+            }
           }
         }
       }
@@ -262,5 +258,247 @@ export default {
     }
   }
   
+  @include pc-large {
+    .recommendation{
+      .main-title{
+        margin-top:440px;
+        margin-bottom:100px;
+      }
+      .main-title-text{ 
+        margin-bottom:240px;
+      }
+      .middle-img{
+        margin-bottom:180px;
+      }
+      
+      .contents-title{ 
+        margin-bottom:50px;
+      }
+      .small-title{
+        margin-bottom:14px;
+      }
+
+      .rule-box{
+        .rule-item{
+          &:not(:last-child){
+            margin-bottom:270px;
+          }
+        }
+
+        .system-plan{
+          .list-box{
+            &:not(:last-child){
+              margin-bottom:80px;
+            }
+            .contents-text{
+              padding-left:23px;
+              &::before{
+                left:8px;
+                top:12px;
+                width:6px;
+                height:6px;
+              }
+            }
+          }
+        }
+      }
+
+      .link-btn{
+        height:60px;
+        padding:14px 23px;
+        .btn-txt{
+          font-size: 22px;
+        }
+      }
+
+    }
+    
+  }
+  @include pc-4k {
+    .recommendation{
+      .main-title{
+        margin-top:600px;
+        margin-bottom:120px;
+      }
+      .main-title-text{ 
+        margin-bottom:360px;
+      }
+      .middle-img{
+        margin-bottom:270px;
+      }
+      
+      .contents-title{
+        margin-bottom:80px;
+      }
+      .small-title{
+        margin-bottom:20px;
+      }
+
+      .rule-box{
+        .rule-item{
+          &:not(:last-child){
+            margin-bottom:390px;
+          }
+        }
+
+        .system-plan{
+          .list-box{
+            &:not(:last-child){
+              margin-bottom:80px;
+            }
+            .box-text-con{
+              margin-bottom:50px;
+              // .contents-text{
+              //   &:not(:last-child){
+              //     margin-bottom:5px;
+              //   }
+              // }
+            }
+            .contents-text{
+              padding-left:30px;
+              &::before{
+                left:8px;
+                top:17px;
+                width:10px;
+                height:10px;
+              }
+            }
+          }
+        }
+      }
+
+      .link-btn{
+        height:90px;
+        padding:28px 171px;
+        .btn-txt{
+          font-size: 22px;
+        }
+      }
+
+    }
+  }
+  @include tablet {
+    .recommendation{
+      .main-title{
+        margin-top:200px;
+        margin-bottom:40px;
+      }
+      .main-title-text{ 
+        margin-bottom:100px;
+      }
+      .middle-img{
+        margin-bottom:140px;
+      }
+
+      .contents-title{
+        margin-bottom:40px;
+      }
+      .small-title{
+        margin-bottom:10px;
+      }
+
+      .rule-box{
+        .rule-item{
+          &:not(:last-child){
+            margin-bottom:140px;
+          }
+        }
+
+        .system-plan{
+          .list-box{
+            &:not(:last-child){
+              margin-bottom:40px;
+            }
+            .box-text-con{
+              margin-bottom:20px;
+            }
+            .contents-text{
+              padding-left:20px;
+              &::before{
+                left:8px;
+                top:9px;
+                width:3px;
+                height:3px;
+              }
+            }
+          }
+        }
+      }
+
+      .link-btn{
+        &.l-ml-3{
+          margin-left: getMargin(2) !important;
+        }
+        height:48px;
+        padding:16px 30px;
+        .btn-txt{
+          font-size: 12px;
+        }
+      }
+
+    }
+    
+  }
+  @include mobile {
+    .recommendation{
+      .main-title{
+        margin-top:157px;
+        margin-bottom:20px;
+      }
+      .main-title-text{ 
+        margin-bottom:60px;
+      }
+      .middle-img{
+        margin-bottom:100px;
+      }
+
+      .contents-title{
+        margin-bottom:30px;
+      }
+      .rule-box{
+        .rule-item{
+          &:not(:last-child){
+            margin-bottom:100px;
+          }
+        }
+
+        .system-plan{
+          .list-box{
+            &:not(:last-child){
+              margin-bottom:30px;
+            }
+            .box-text-con{
+              .contents-text{
+                &:not(:last-child){
+                  margin-bottom:0px;
+                }
+              }
+            }
+            .contents-text{
+              padding-left:20px;
+              &::before{
+                left:8px;
+                top:9px;
+                width:3px;
+                height:3px;
+              }
+            }
+          }
+        }
+      }
+
+      .link-btn{
+        &.l-ml-3{
+          margin-left: 0 !important;
+        }
+        height:48px;
+        padding:16px 20px;
+        .btn-txt{
+          font-size: 12px;
+        }
+      }
+
+    }
+  }
   
 </style>
