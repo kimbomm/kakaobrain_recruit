@@ -119,6 +119,10 @@
         p {
           font-size: 28px;
         }
+        .sub-title{
+          margin-top:14px;
+          font-size: 18px;
+        }
       }
       &-button {
         span {
@@ -142,8 +146,8 @@
           font-size: 42px;
         }
         .sub-title{
-          margin-top:10px;
-          font-size: 14px;
+          margin-top:20px;
+          font-size: 26px;
         }
       }
       &-button {
@@ -166,6 +170,10 @@
         flex: 0 0 75%;
         p {
           font-size: 18px;
+        }
+        .sub-title{
+          margin-top:10px;
+          font-size: 14px;
         }
       }
       &-button {
