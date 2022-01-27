@@ -34,4 +34,68 @@ export default {
       }
     }
   }
+  @include pc-large {
+    .contents-info{
+      .item{
+        &:not(:last-child){
+          margin-bottom:50px;
+        }
+        .tit{
+          font-size: 30px;
+          margin-bottom:14px;
+        }
+        .txt{
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  @include pc-4k {
+    .contents-info{
+      .item{
+        &:not(:last-child){
+          margin-bottom:8 0px;
+        }
+        .tit{
+          font-size: 42px;
+          margin-bottom:20px;
+        }
+        .txt{
+          font-size: 32px;
+        }
+      }
+    }
+  }
+  @include tablet {
+    .contents-info{
+      .item{
+        &:not(:last-child){
+          margin-bottom:40px;
+        }
+        .tit{
+          font-size: 20px;
+          margin-bottom:10px;
+        }
+        .txt{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  @include mobile {
+    .contents-info{
+      .item{
+        &:not(:last-child){
+          margin-bottom:30px;
+        }
+        .tit{
+          font-size: 20px;
+          margin-bottom:16px;
+        }
+        .txt{
+          font-size: 14px;
+        }
+      }
+    }
+  }
 </style>
