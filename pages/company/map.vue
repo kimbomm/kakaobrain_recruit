@@ -37,21 +37,107 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .main-title{
-    margin-top:320px;
-    margin-bottom:60px;
-  }
-  .main-title-text{ 
-    margin-bottom:200px;
-  }
-  .middle-img{
-    margin-bottom:140px;
-  }
-  .contents-title{
-    margin-bottom:40px;
-  }
-  .contents-text{
-    margin-bottom:60px;
+  .company{
+    padding:0 20px;
+    .main-title{
+      margin-top:320px;
+      margin-bottom:60px;
+    }
+    .main-title-text{ 
+      margin-bottom:200px;
+    }
+    .middle-img{
+      margin-bottom:140px;
+    }
+    .contents-title{
+      margin-bottom:40px;
+    }
+    .contents-text{
+      margin-bottom:60px;
+    }
   }
 
+  @include pc-large {
+    .company{
+      .main-title{
+        margin-top:440px;
+        margin-bottom:100px;
+      }
+      .main-title-text{ 
+        margin-bottom:240px;
+      }
+      .middle-img{
+        margin-bottom:180px;
+      }
+      .contents-title{
+        margin-bottom:50px;
+      }
+      .contents-text{
+        margin-bottom:80px;
+      }
+      
+    }
+    
+  }
+  @include pc-4k {
+    .company{
+      .main-title{
+        margin-top:600px;
+        margin-bottom:120px;
+      }
+      .main-title-text{ 
+        margin-bottom:360px;
+      }
+      .middle-img{
+        margin-bottom:270px;
+      }
+      .contents-title{
+        margin-bottom:70px;
+      }
+      .contents-text{
+        margin-bottom:80px;
+      }
+    }
+  }
+  @include tablet {
+    .company{
+      .main-title{
+        margin-top:200px;
+        margin-bottom:40px;
+      }
+      .main-title-text{ 
+        margin-bottom:100px;
+      }
+      .middle-img{
+        margin-bottom:140px;
+      }
+      .contents-title{
+        margin-bottom:40px;
+      }
+      .contents-text{
+        margin-bottom:40px;
+      }
+    }
+    
+  }
+  @include mobile {
+    .company{
+      .main-title{
+        margin-top:157px;
+        margin-bottom:20px;
+      }
+      .main-title-text{ 
+        margin-bottom:60px;
+      }
+      .middle-img{
+        margin-bottom:100px;
+      }
+      .contents-title{
+        margin-bottom:30px;
+      }
+      .contents-text{
+        margin-bottom:30px;
+      }
+    }
+  }
 </style>

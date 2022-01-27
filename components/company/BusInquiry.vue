@@ -75,4 +75,134 @@ export default {
       }
     }
   }
+
+  @include pc-large {
+    .bus-inquiry{
+      .bus-con{
+        margin-bottom:50px;
+        .tit{
+          margin-bottom:20px;
+          font-size: 30px;
+        }
+      }
+      .bus{
+        &-item{
+          &:not(:last-child){
+            margin-bottom:15px;
+          }
+        }
+        &-tit{
+          margin-right:30px;
+          font-size:22px;
+        }
+        &-txt{
+          font-size:22px;
+        }
+      }
+      .inquiry{
+        .tit{
+          margin-bottom:20px;
+          font-size: 30px;
+        }
+        .txt{
+          font-size:22px;
+        }
+      }
+    }
+  }
+  @include pc-4k {
+    .bus-inquiry{
+      .bus-con{
+        margin-bottom:70px;
+        .tit{
+          margin-bottom:42px;
+          font-size: 40px;
+        }
+      }
+      .bus{
+        &-item{
+          &:not(:last-child){
+            margin-bottom:15px;
+          }
+        }
+        &-tit{
+          margin-right:40px;
+          font-size:32px;
+        }
+        &-txt{
+          font-size:32px;
+        }
+      }
+      .inquiry{
+        .tit{
+          margin-bottom:40px;
+          font-size: 42px;
+        }
+        .txt{
+          font-size:32px;
+        }
+      }
+    }
+  }
+  @include tablet {
+    .bus-inquiry{
+      &.gl-6{
+        width: getWidth(7) !important;
+      }
+      &.l-ml-3{
+        margin-left: getMargin(2) !important;
+      }
+      .bus-con{
+        margin-bottom:40px;
+        .tit{
+          margin-bottom:20px;
+          font-size: 20px;
+        }
+      }
+      .bus{
+        &-item{
+          &:not(:last-child){
+            margin-bottom:15px;
+          }
+        }
+        &-tit{
+          margin-right:20px;
+          font-size:14px;
+        }
+        &-txt{
+          font-size:14px;
+        }
+      }
+      .inquiry{
+        .tit{
+          margin-bottom:16px;
+          font-size: 20px;
+        }
+        .txt{
+          font-size:14px;
+        }
+      }
+    }
+  }
+  @include mobile {
+    .bus-inquiry{
+      &.gl-6{
+        width: 100% !important;
+      }
+      &.l-ml-3{
+        margin-left: 0 !important;
+      }
+      .bus-con{
+        margin-bottom:30px;
+      }
+      .bus{
+        &-item{
+          flex-direction: column;
+          &:not(:last-child){
+            margin-bottom:15px;
+          }
+        }
+      }
+    }
+  }
 </style>
