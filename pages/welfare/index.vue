@@ -19,7 +19,7 @@
             :text="`집, 오피스, 카페, 호텔, 캠핑장 등 어디서나 본인이 정한 장소에서 업무를 해도 됩니다.</br>
             이것은 업무 공간이 어디든지 자기주도성과 자율성을 가지고 본인의 일을 잘할 수 있다는 신뢰가 있기 때문입니다.`"
           />
-          <div class="company-btn l-ml-3"><span class="btn-txt">카카오브레인 페이스북에서 보기 →</span></div>
+          <div class="company-btn l-ml-3"><span class="btn-txt">Our Open Position →</span></div>
 
         </li>
 
@@ -74,9 +74,7 @@
         
         <li class="rule-item">
           <SmallTitle
-            :title="`유연근무시스템을 통해 스스로 점검하고,</br>
-            앞으로의 일정을 계획해 한 달 단위 근로 시간을</br>
-            스스로 관리할 수 있습니다.</br>`"
+            :title="`카카오브레인에는</br>고정된 출·퇴근 시간도 없고, 지각도 없습니다.`"
           />
           <div class="system-plan">
             <ContentsText
@@ -167,64 +165,67 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .main-title{
-    margin-top:320px;
-    margin-bottom:60px;
-  }
-  .main-title-text{ 
-    margin-bottom:200px;
-  }
-  .middle-img{
-    margin-bottom:140px;
-  }
-  .contents-title{
-    margin-bottom:40px;
-  }
-  .contents-text{
-    margin-bottom:40px;
-  }
-  .small-title{
-    margin-bottom:40px;
-  }
-  .share-rule{
-    // margin-bottom:200px;
-    .rule-list{
-      li{
-        &:not(:last-child){
-          margin-bottom:10px;
-        }
-      }
+  .company{
+    padding:0 20px;
+    .main-title{
+      margin-top:320px;
+      margin-bottom:60px;
     }
-  }
-  
-  .rule-box{
-    .rule-item{
-      &:not(:last-child){
-        margin-bottom:200px;
-      }
+    .main-title-text{ 
+      margin-bottom:200px;
     }
-  }
-  
-  .system-plan{
+    .middle-img{
+      margin-bottom:140px;
+    }
+    .contents-title{
+      margin-bottom:40px;
+    }
     .contents-text{
-      margin-bottom:20px
+      margin-bottom:40px;
     }
-    .list-box{
-      .contents-text{
-        position: relative;
-        padding-left:20px;
-        &:not(:last-child){
-          margin-bottom:20px;
+    .small-title{
+      margin-bottom:40px;
+    }
+    .share-rule{
+      // margin-bottom:200px;
+      .rule-list{
+        li{
+          &:not(:last-child){
+            margin-bottom:10px;
+          }
         }
-        &::before{
-          content: "";
-          position: absolute;
-          left:8px;
-          top:10px;
-          width:4px;
-          height:4px;
-          border-radius: 100%;
-          background-color: $gray-9;
+      }
+    }
+    
+    .rule-box{
+      .rule-item{
+        &:not(:last-child){
+          margin-bottom:200px;
+        }
+      }
+    }
+    
+    .system-plan{
+      .contents-text{
+        margin-bottom:20px
+      }
+      .list-box{
+        .contents-text{
+          position: relative;
+          padding-left:20px;
+          &:not(:last-child){
+            margin-bottom:20px;
+          }
+          &::before{
+            content: "";
+            position: absolute;
+            left:8px;
+            top:10px;
+            width:4px;
+            height:4px;
+            border-radius: 100%;
+            background-color: $gray-9;
+          }
         }
       }
     }
@@ -232,6 +233,9 @@ export default {
   
 
   .company-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width:238px;
     height:50px;
     border:1px solid $gray-9;
@@ -250,6 +254,286 @@ export default {
       color: $gray-9;
     }
   }
-  
+
+  @include pc-large {
+    .company{
+      .main-title{
+        margin-top:440px;
+        margin-bottom:100px;
+      }
+      .main-title-text{ 
+        margin-bottom:240px;
+      }
+      .middle-img{
+        margin-bottom:180px;
+      }
+      .contents-title{
+        margin-bottom:50px;
+      }
+      .contents-text{
+        margin-bottom:80px;
+      }
+
+      .small-title{
+        margin-bottom:50px;
+      }
+      .share-rule{
+        .rule-list{
+          li{
+            &:not(:last-child){
+              margin-bottom:14px;
+            }
+          }
+        }
+      }
+      .rule-box{
+        .rule-item{
+          &:not(:last-child){
+            margin-bottom:270px;
+          }
+        }
+      }
+      .system-plan{
+        .contents-text{
+          margin-bottom:30px
+        }
+        .list-box{
+          .contents-text{
+            padding-left:25px;
+            &:not(:last-child){
+              margin-bottom:30px;
+            }
+            &::before{
+              left:8px;
+              top:14px;
+              width:6px;
+              height:6px;
+            }
+          }
+        }
+      }
+
+      .company-btn{
+        width:218px;
+        height:60px;
+        padding:19px 14px;
+        text-align: center;
+        .btn-txt{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  @include pc-4k {
+    .company{
+      .main-title{
+        margin-top:600px;
+        margin-bottom:120px;
+      }
+      .main-title-text{ 
+        margin-bottom:360px;
+      }
+      .middle-img{
+        margin-bottom:270px;
+      }
+      .contents-title{
+        margin-bottom:80px;
+      }
+      .contents-text{
+        margin-bottom:80px;
+      }
+
+      .small-title{
+        margin-bottom:80px;
+      }
+      .share-rule{
+        .rule-list{
+          li{
+            &:not(:last-child){
+              margin-bottom:20px;
+            }
+          }
+        }
+      }
+      .rule-box{
+        .rule-item{
+          &:not(:last-child){
+            margin-bottom:400px;
+          }
+        }
+      }
+      .system-plan{
+        .contents-text{
+          margin-bottom:50px
+        }
+        .list-box{
+          .contents-text{
+            padding-left:30px;
+            &:not(:last-child){
+              margin-bottom:50px;
+            }
+            &::before{
+              left:8px;
+              top:19px;
+              width:8px;
+              height:8px;
+            }
+          }
+        }
+      }
+
+      .company-btn{
+        width:541px;
+        height:90px;
+        padding:28px 74px;
+        .btn-txt{
+          font-size: 14px;
+        }
+      }
+
+    }
+  }
+  @include tablet {
+    .company{
+      .main-title{
+        margin-top:200px;
+        margin-bottom:40px;
+      }
+      .main-title-text{ 
+        margin-bottom:100px;
+      }
+      .middle-img{
+        margin-bottom:140px;
+      }
+      .contents-title{
+        margin-bottom:40px;
+      }
+      .contents-text{
+        margin-bottom:40px;
+      }
+
+      .small-title{
+        margin-bottom:40px;
+      }
+      .share-rule{
+        &.gl-5{
+          width: getWidth(7) !important;
+        }
+        &.l-ml-3{
+          margin-left: getMargin(2) !important;
+        }
+        // .rule-list{
+        //   li{
+        //     &:not(:last-child){
+        //       margin-bottom:14px;
+        //     }
+        //   }
+        // }
+      }
+      .rule-box{
+        .rule-item{
+          &:not(:last-child){
+            margin-bottom:140px;
+          }
+        }
+      }
+      .system-plan{
+        .contents-text{
+          margin-bottom:15px
+        }
+        .list-box{
+          .contents-text{
+            padding-left:20px;
+            &:not(:last-child){
+              margin-bottom:15px;
+            }
+            &::before{
+              left:8px;
+              top:10px;
+              width:4px;
+              height:4px;
+            }
+          }
+        }
+      }
+
+      .company-btn{
+        width:160px;
+        height:48px;
+        padding:16px 19px;
+        text-align: center;
+        &.l-ml-3{
+          margin-left: getMargin(2) !important;
+        }
+        .btn-txt{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  @include mobile {
+    .company{
+      .main-title{
+        margin-top:157px;
+        margin-bottom:20px;
+      }
+      .main-title-text{ 
+        margin-bottom:60px;
+      }
+      .middle-img{
+        margin-bottom:100px;
+      }
+      .contents-title{
+        margin-bottom:30px;
+      }
+      .contents-text{
+        margin-bottom:30px;
+      }
+
+      .small-title{
+        margin-bottom:30px;
+      }
+      .share-rule{
+        &.gl-5{
+          width: 100% !important;
+        }
+        &.l-ml-3{
+          margin-left: 0 !important;
+        }
+      }
+      .rule-box{
+        .rule-item{
+          &:not(:last-child){
+            margin-bottom:100px;
+          }
+        }
+      }
+      .system-plan{
+        .contents-text{
+          margin-bottom:10px
+        }
+        .list-box{
+          .contents-text{
+            padding-left:15px;
+            &:not(:last-child){
+              margin-bottom:10px;
+            }
+            &::before{
+              left:7px;
+              top:10px;
+              width:3px;
+              height:3px;
+            }
+          }
+        }
+      }
+
+      .company-btn{
+        &.l-ml-3{
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
   
 </style>
