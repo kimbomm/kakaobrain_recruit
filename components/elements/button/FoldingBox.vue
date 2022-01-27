@@ -97,7 +97,7 @@
       }
     }
   }
-  @media screen and (max-width:1200px) {
+  @media screen and (max-width:1220px) {
     .folding {
       &-title {
         p {
@@ -106,7 +106,7 @@
       }
       &-button {
         span {
-          font-size: 15px;
+          font-size: 13px;
         }
       }
     }
@@ -184,6 +184,11 @@
   
   @media screen and (max-width:800px) {
     .folding {
+      &-title {
+        p {
+          font-size: 16px;
+        }
+      }
       &-button {
         span {
           font-size: 12px;
