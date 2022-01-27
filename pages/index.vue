@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="recruiting">
     <MainTitle
       :title="`영입공고.`"
     />
@@ -9,7 +9,7 @@
     />
     <MiddleImg/>
 
-    <div class="gl-5 l-ml-3">
+    <div class="category-wrap gl-5 l-ml-3">
       <div class="category-box">
         <Checkbox
           checkboxId="checkbox_0"
@@ -64,10 +64,9 @@
       </div>
       
     </div>
-    <div class="l-ml-1">
+    <div class="notice-paging l-ml-1">
       <ListPaging/>
     </div>
-    
   </div> 
 </template>
 <script>
@@ -110,34 +109,194 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .main-title{
-    margin-top:320px;
-    margin-bottom:60px;
-  }
-  .main-title-text{ 
-    margin-bottom:200px;
-  }
-  .middle-img{
-    margin-bottom:140px;
-  }
-  .category-box{
-    margin-bottom:60px;
-  }
-  .paging {
-    margin-top:62px;
-  }
-  .category-box{
-    .checkbox{
-      &:not(:last-child){
-        margin-right:10px;
+  .recruiting{
+    padding: 0 20px;
+
+    .main-title{
+      margin-top:320px;
+      margin-bottom:60px;
+    }
+    .main-title-text{ 
+      margin-bottom:200px;
+    }
+    .middle-img{
+      margin-bottom:140px;
+    }
+    .category-box{
+      margin-bottom:50px;
+    }
+    .paging {
+      margin-top:62px;
+    }
+    .category-box{
+      .checkbox{
+        &:not(:last-child){
+          margin-right:10px;
+        }
+      }
+    }
+    .notice-contents{
+      .notice-list{
+        &:not(:last-child){
+          margin-bottom:80px;
+        }
       }
     }
   }
-  .notice-contents{
-    .notice-list{
-      &:not(:last-child){
-        margin-bottom:80px;
+  
+  @include pc-large {
+    .recruiting{
+      .main-title{
+        margin-top:440px;
+        margin-bottom:100px;
+      }
+      .main-title-text{ 
+        margin-bottom:240px;
+      }
+      .middle-img{
+        margin-bottom:180px;
+      }
+      .category-box{
+        margin-bottom:70px;
+      }
+      .notice-contents{
+        .notice-list{
+          &:not(:last-child){
+            margin-bottom:100px;
+          }
+        }
+      }
+      .notice-paging{
+        &.l-ml-1{
+          margin-left:0px !important;
+        }
+        .paging {
+          margin-top:260px;
+        }
+      }
+    }
+    
+  }
+  @include pc-4k {
+    .recruiting{
+      .main-title{
+        margin-top:600px;
+        margin-bottom:120px;
+      }
+      .main-title-text{ 
+        margin-bottom:360px;
+      }
+      .middle-img{
+        margin-bottom:270px;
+      }
+      .category-box{
+        .checkbox{
+          &:not(:last-child){
+            margin-right:20px;
+          }
+        }
+      }
+      .category-box{
+        margin-bottom:120px;
+      }
+      .notice-contents{
+        .notice-list{
+          &:not(:last-child){
+            margin-bottom:150px;
+          }
+        }
+      }
+      .notice-paging{
+        &.l-ml-1{
+          margin-left:getMargin(1) !important;
+        }
+        .paging {
+          margin-top:380px;
+        }
       }
     }
   }
+  @include tablet {
+    .recruiting{
+      .main-title{
+        margin-top:200px;
+        margin-bottom:40px;
+      }
+      .main-title-text{ 
+        margin-bottom:100px;
+      }
+      .middle-img{
+        margin-bottom:140px;
+      }
+      .category-wrap{
+        &.gl-5{
+          width: getWidth(7) !important;
+        }
+        &.l-ml-3{
+          margin-left: getMargin(2) !important;
+        }
+        .category-box{
+          margin-bottom:30px;
+        }
+      }
+      
+      .notice-contents{
+        .notice-list{
+          &:not(:last-child){
+            margin-bottom:60px;
+          }
+        }
+      }
+      .notice-paging{
+        &.l-ml-1{
+          margin-left:0px !important;
+        }
+        .paging {
+          margin-top:140px;
+        }
+      }
+    }
+    
+  }
+  @include mobile {
+    .recruiting{
+      .main-title{
+        margin-top:157px;
+        margin-bottom:20px;
+      }
+      .main-title-text{ 
+        margin-bottom:60px;
+      }
+      .middle-img{
+        margin-bottom:100px;
+      }
+
+      .category-wrap{
+        &.gl-5{
+          width: 100% !important;
+        }
+        &.l-ml-3{
+          margin-left: 0 !important;
+        }
+        .category-box{
+          margin-bottom:30px;
+        }
+      }
+
+      .notice-contents{
+        .notice-list{
+          &:not(:last-child){
+            margin-bottom:60px;
+          }
+        }
+      }
+      
+      .notice-paging{
+        .paging {
+          margin-top:107px;
+        }
+      }
+    }
+  }
+
 </style>

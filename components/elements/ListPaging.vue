@@ -34,10 +34,12 @@ export default {
     &-prev{
       margin-right: 10px;
       font-size:16px;
+      line-height: 130%;
     }
     &-next{
       margin-left: 10px;
       font-size:16px;
+      line-height: 130%;
     }
     &-num{
       ul{
@@ -56,45 +58,24 @@ export default {
       }
       .link{
         font-size:16px;
+        line-height: 130%;
         &.more{
           cursor: auto;
         }
       }
     }
   }
-  @include pc-4k {
-    .paging{
-      margin-top:374px !important;
-      &-prev{
-        margin-right: 15px !important;
-        font-size:26px !important;
-      }
-      &-next{
-        margin-left: 15px !important;
-        font-size:26px !important;
-      }
-      &-num{
-        li{
-          &:not(:last-child){
-            margin-right:15px !important;
-          }
-        }
-        .link{
-          font-size:26px !important;
-        }
-      }
-    }
-  }
+  
   @include pc-large {
-    .paging{
+    .paging{ 
       margin-top:260px;
       &-prev{
         margin-right: 12px;
-        font-size:20.8px;
+        // font-size:20.8px;
       }
       &-next{
         margin-left: 12px;
-        font-size:20.8px;
+        // font-size:20.8px;
       }
       &-num{
         li{
@@ -108,9 +89,35 @@ export default {
       }
     }
   }
+  @include pc-4k {
+    .paging{
+      margin-top:374px ;
+      &-prev{
+        margin-right: 15px ;
+        font-size:26px ;
+      }
+      &-next{
+        margin-left: 15px ;
+        font-size:26px ;
+      }
+      &-num{
+        li{
+          &:not(:last-child){
+            margin-right:15px ;
+          }
+        }
+        .link{
+          font-size:26px ;
+        }
+      }
+    }
+  }
   @include tablet {
     .paging{
-      margin-top:150px;
+      margin-top:140px;
+      &.l-ml-3{
+        margin-left: getMargin(2) !important;
+      }
       &-prev{
         margin-right: 12px;
         font-size:20px;
@@ -134,6 +141,9 @@ export default {
   @include mobile {
     .paging{
       margin-top:80px;
+      &.l-ml-3{
+        margin-left:0 !important;
+      }
       &-prev{
         margin-right: 20px;
         font-size:30px;

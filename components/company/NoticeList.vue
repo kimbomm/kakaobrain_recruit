@@ -37,6 +37,7 @@ export default {
     }
   }
   .item-category{
+    margin-right:20px;
     .category{
       font-size: 20px;
       font-weight:400;
@@ -44,6 +45,7 @@ export default {
     }
   }
   .item-con{
+    margin-right:20px;
     .title{
       margin-bottom:10px;
       font-size: 20px;
@@ -80,6 +82,157 @@ export default {
       font-size: 12px;
       line-height: 130%;
       color:$gray-0;
+      letter-spacing: -2px;
+    }
+  }
+
+  @include pc-large {
+    .notice{
+      &-item{
+        padding:20px 0 0;
+      }
+    }
+    .item-category{
+      .category{
+        font-size: 26px;
+      }
+    }
+    .item-con{
+      .title{
+        margin-bottom:14px;
+        font-size: 26px;
+      }
+      .date{
+        margin-bottom:14px;
+        font-size: 16px;
+      }
+      .day{
+        width:69px;
+        height:33px;
+        padding:6px 12px;
+        font-size: 16px;
+      }
+    }
+    .item-type{
+      .type{
+        width:73px;
+        height:38px;
+        padding:9px 14px;
+        font-size: 16px;
+      }
+    }
+  }
+  @include pc-4k {
+    .notice{
+      &-item{
+        padding:39.39px 0 0;
+      }
+    }
+    .item-category{
+      .category{
+        font-size: 38px;
+      }
+    }
+    .item-con{
+      .title{
+        margin-bottom:20px;
+        font-size: 38px;
+      }
+      .date{
+        margin-bottom:20px;
+        font-size: 24px;
+      }
+      .day{
+        width:107px;
+        height:51px;
+        padding:10px 20px;
+        font-size: 24px;
+      }
+    }
+    .item-type{
+      .type{
+        width:120px;
+        height:58px;
+        padding:12px 24px;
+        font-size: 26px;
+      }
+    }
+  }
+  @include tablet {
+    .item-category{
+      .category{
+        font-size: 18px;
+      }
+    }
+    .item-con{
+      .title{
+        margin-bottom:10px;
+        font-size: 18px;
+      }
+      .date{
+        margin-bottom:10px;
+        font-size: 12px;
+      }
+      .day{
+        width:58px;
+        height:28px;
+        padding:6px 12px;
+        font-size: 12px;
+      }
+    }
+    .item-type{
+      .type{
+        width:58px;
+        height:28px;
+        padding:6px 12px;
+        font-size: 12px;
+      }
+    }
+  }
+  @include mobile {
+    .notice{
+      &-item{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid $gray-9;
+        box-sizing: border-box;
+      }
+    }
+    .item-category{
+      margin-bottom:20px;
+      margin-right:0px;
+      .category{
+        font-size: 18px;
+      }
+    }
+    .item-con{
+      margin-right:0px;
+      .title{
+        margin-bottom:20px;
+        font-size: 18px;
+      }
+      .date{
+        margin-bottom:20px;
+        font-size: 12px;
+      }
+      .day{
+        width:58px;
+        height:28px;
+        padding:6px 12px;
+        font-size: 12px;
+      }
+    }
+    .item-type{
+      position: absolute;
+      bottom: 0;
+      right:0;
+      .type{
+        width:58px;
+        height:28px;
+        padding:6px 12px;
+        font-size: 12px;
+      }
     }
   }
 </style> 

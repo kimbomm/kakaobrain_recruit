@@ -85,6 +85,7 @@
 
   .checkbox {
     display: inline-flex;
+    margin-bottom:12px;
     input {
       display: none;
       &:checked + .label {
@@ -126,21 +127,22 @@
     } 
   }
 
-  @include pc-4k {
-    .checkbox {
-      .label {
-        padding: 14px 24px !important;
-        height: 64px !important;
-        font-size: 28px !important;
-      }
-    }
-  }
+  
   @include pc-large {
     .checkbox {
       .label {
         // padding: 14px 24px;
         height: 39px;
         font-size: 18px;
+      }
+    }
+  }
+  @include pc-4k {
+    .checkbox {
+      .label {
+        padding: 14px 24px;
+        height: 64px;
+        font-size: 28px;
       }
     }
   }
