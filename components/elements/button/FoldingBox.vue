@@ -89,4 +89,138 @@
       }
     }
   }
+
+  @media screen and (max-width:1500px) {
+    .folding {
+      &-title {
+        flex: 0 0 72%;
+      }
+    }
+  }
+  @media screen and (max-width:1200px) {
+    .folding {
+      &-title {
+        p {
+          font-size: 16px;
+        }
+      }
+      &-button {
+        span {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  @include pc-large {
+    .folding {
+      padding: 40px 75px 40px 30px;
+      &-title {
+        flex: 0 0 90%;
+        p {
+          font-size: 28px;
+        }
+      }
+      &-button {
+        span {
+          font-size: 18px;
+        }
+      }
+      &-content {
+        margin-top: 40px;
+        > div {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  @include pc-4k {
+    .folding {
+      padding: 46px 50px;
+      &-title {
+        flex: 0 0 90%;
+        p {
+          font-size: 42px;
+        }
+        .sub-title{
+          margin-top:10px;
+          font-size: 14px;
+        }
+      }
+      &-button {
+        span {
+          font-size: 28px;
+        }
+      }
+      &-content {
+        margin-top: 50px;
+        > div {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+  @include tablet {
+    .folding {
+      padding: 24px 30px;
+      &-title {
+        flex: 0 0 75%;
+        p {
+          font-size: 18px;
+        }
+      }
+      &-button {
+        span {
+          font-size: 14px;
+        }
+      }
+      &-content {
+        margin-top: 30px;
+        > div {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width:800px) {
+    .folding {
+      &-button {
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  @include mobile {
+    .folding {
+      position: relative;
+      padding: 20px 40px 50px 20px;
+      &-top {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      &-title {
+        flex: 0 0 80%;
+        p {
+          white-space: normal;
+        }
+      }
+      &-button {
+        position: absolute;
+        bottom: 20px;
+        span {
+          font-size: 14px;
+        }
+      }
+      &-content {
+        margin-top: 20px;
+        > div {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 </style>

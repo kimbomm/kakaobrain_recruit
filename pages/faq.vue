@@ -25,8 +25,6 @@
       <div class="faq-btn l-ml-3"><span class="btn-txt">Our Open Position →</span></div>
     </div>
 
-    
-
     <div>
       <ContentsTitle
         :title="`FAQ`"
@@ -124,6 +122,8 @@
   }
 
   .faq-btn{
+    display: flex;
+    align-items: center;
     width:170px;
     height:50px;
     border:1px solid $gray-9;
@@ -165,6 +165,128 @@
           height:4px;
           border-radius: 100%;
           background-color: $gray-9;
+        }
+      }
+    }
+  }
+
+
+  @include pc-large {
+    .faq{
+      .main-title{
+        margin-top:440px;
+        margin-bottom:100px;
+      }
+      .main-title-text{ 
+        margin-bottom:240px;
+      }
+      .middle-img{
+        margin-bottom:180px;
+      }
+      .system-plan{
+        margin-bottom:270px;
+        .list-box{
+          margin-bottom:50px;
+        }
+        .faq-btn{
+          width:218px;
+          height:60px;
+          padding:19px 14px;
+          .btn-txt{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    
+  }
+  @include pc-4k {
+    .faq{
+      .main-title{
+        margin-top:600px;
+        margin-bottom:120px;
+      }
+      .main-title-text{ 
+        margin-bottom:360px;
+      }
+      .middle-img{
+        margin-bottom:270px;
+      }
+      .system-plan{
+        margin-bottom:270px;
+        .list-box{
+          margin-bottom:80px;
+        }
+        .faq-btn{
+          width:300px;
+          height:90px;
+          padding:28px 41px 32px;
+          .btn-txt{
+            font-size: 22px;
+          }
+        }
+      }
+    }
+    
+  }
+  @include tablet {
+    .faq{
+      &-list {
+        width: getWidth(7);
+        margin-left: getMargin(2);
+      }
+      .main-title{
+        margin-top:200px;
+        margin-bottom:40px;
+      }
+      .main-title-text{ 
+        margin-bottom:100px;
+      }
+      .middle-img{
+        margin-bottom:140px;
+      }
+      .system-plan{
+        margin-bottom:140px;
+        .list-box{
+          margin-bottom:40px;
+        }
+        .faq-btn{
+          width:160px;
+          height:48px;
+          padding:19px 16px;
+          .btn-txt{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    
+  }
+  @include mobile {
+    .faq{
+      &-list {
+        width: 100% !important;
+        margin-left: 0 !important;
+      }
+      .main-title{
+        margin-top:157px;
+        margin-bottom:20px;
+      }
+      .main-title-text{ 
+        margin-bottom:60px;
+      }
+      .middle-img{
+        margin-bottom:100px;
+      }
+      .system-plan{
+        margin-bottom:100px;
+        .list-box{
+          margin-bottom:30px;
+        }
+        .faq-btn{
+          &.l-ml-3{
+            margin-left:0 !important;
+          }
         }
       }
     }
