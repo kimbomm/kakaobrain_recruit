@@ -1,5 +1,6 @@
 html,
 body {
+  font-family: 'NotoSansKR', sans-serif;
   scroll-behavior: smooth;
 }
 .btn {
@@ -22,36 +23,36 @@ body {
     border-radius: 50px;
   }
 }
-.string{
-  font-weight:900;
+.string {
+  font-weight: 900;
 }
-.dot{
+.dot {
   display: inline-block;
   vertical-align: middle;
-  width:4px;
-  height:4px;
-  margin-right:10px;
+  width: 4px;
+  height: 4px;
+  margin-right: 10px;
   border-radius: 50%;
   background-color: $gray-9;
 }
-.folding-item{
+.folding-item {
   position: relative;
-  padding-left:20px;
-  &::before{
-    content: "";
+  padding-left: 20px;
+  &::before {
+    content: '';
     position: absolute;
-    left:10px;
-    top:10px;
-    width:4px;
-    height:4px;
+    left: 10px;
+    top: 10px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
     background-color: $gray-9;
   }
 }
-.folding-title-text{
+.folding-title-text {
   font-size: 14px;
   line-height: 120%;
 }
-.underline{
-  border-bottom:1px solid $gray-9;
+.underline {
+  border-bottom: 1px solid $gray-9;
 }
