@@ -4,16 +4,6 @@
       <h1 class="b-logo gl-2">
         <nuxt-link to="/main">
           <span>kakaobrain</span>
-          <!-- <img
-						class="black-logo"
-						:src="require(`@/assets/images/logo.png`)"
-						alt="카카오 브레인 로고"
-					/>
-					<img
-						class="white-logo"
-						:src="require(`@/assets/images/logo-w.png`)"
-						alt="카카오 브레인 로고"
-					/> -->
         </nuxt-link>
       </h1>
       <div class="header-con gl-2">
@@ -54,6 +44,7 @@
     line-height: 1.3;
     &-top {
       display: flex;
+      font-family: 'Inter', sans-serif;
     }
     .b-logo {
       font-weight: 900;
