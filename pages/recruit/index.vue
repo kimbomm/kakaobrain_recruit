@@ -1,80 +1,117 @@
 <template>
-  <div class="procedure-wrap">
+  <div class="recruiting">
     <MainTitle
-      :title="`영입절차.`"
+      :title="`영입공고.`"
     />
     <MainTitleText
-      :text="`Unthinkable Question의 여정을 함께할</br>
-      든든한 동료를 찾습니다.`"
+      :text="`카카오브레인과 함께 생각하지 못한 물음을 던지고,</br>
+      아무도 가보지 않은 길을 개척할 Unthinkable Krew를 기다립니다.`"
     />
     <MiddleImg/>
-    <ContentsTitle 
-      :title="`인재 영입 프로세스`"
-    />
-    <Procedure/> 
-    <div class="contents-list">
-      <ul>
-        <li class="item">
-          <ContentSubTitle tit="➀ 서류 전형"/>
-          <ContentsText
-            :text="`공고와 지원자의 기본 Fit을 검토하는 단계입니다.`"
-          />
-        </li>
-        <li class="item">
-          <ContentSubTitle tit="➁ 과제 전형"/>
-          <ContentsText
-            :text="`다음단계로 공고에 필요한 역량을 실제로 보유하고 있는지 과제를 통해 검증하는 단계입니다.</br>
-            공고별로 과제 전형이 제외되거나 내용이 상이할 수 있으며, 기술직군은 코딩테스트로 진행됩니다.`"
-          />
-        </li>
-        <li class="item">
-          <ContentSubTitle tit="➂ 인터뷰 전형"/>
-          <ContentsText
-            :text="`서류,과제 전형을 토대로 실무 담당자들과 Q&A를 통해 서로를 더 깊게 알아가는 단계입니다.</br>
-            통상 1-2회의 인터뷰로 진행됩니다.`"
-          />
-        </li>
-        <li class="item">
-          <ContentSubTitle tit="➃ 처우협상"/>
-          <ContentsText
-            :text="`지원자의 역량을 기반으로 처우협상을 진행합니다. (인턴 : 사전에 정해진 내규에 따라 지급됩니다) `"
-          />
-        </li>
-        <li class="item">
-          <ContentSubTitle tit="➄ 입사확정"/>
-          <ContentsText
-            :text="`입사일 조율후 Unthinkable Question의 여정을 함께할 든든한 크루들을 만날 준비를 합니다.`"
-          />
-        </li>
-      </ul>
+
+    <div class="category-wrap gl-5 l-ml-3">
+      <div class="category-box">
+        <Checkbox
+          checkboxId="checkbox_0"
+          checkboxValue="a"
+          checkboxText="전체"
+          :isChecked="true"
+        />
+        <Checkbox
+          checkboxId="checkbox_1"
+          checkboxValue="b"
+          checkboxText="AI Researcher"
+          :isChecked="false"
+        />
+        <Checkbox
+          checkboxId="checkbox_2"
+          checkboxValue="b"
+          checkboxText="AI Software Engineer"
+          :isChecked="false"
+        />
+        <Checkbox
+          checkboxId="checkbox_3"
+          checkboxValue="b"
+          checkboxText="Tech Strategy Staff"
+          :isChecked="false"
+        />
+        <Checkbox
+          checkboxId="checkbox_4"
+          checkboxValue="b"
+          checkboxText="UX/UI"
+          :isChecked="false"
+        />
+        <Checkbox
+          checkboxId="checkbox_5"
+          checkboxValue="b"
+          checkboxText="경영지원"
+          :isChecked="false"
+        />
+        <Checkbox
+          checkboxId="checkbox_6"
+          checkboxValue="b"
+          checkboxText="인턴"
+          :isChecked="false"
+        />
+      </div>
+      
+      <div class="notice-contents">
+        <ul>
+          <li class="notice-list" v-for="(data, index) in noticeList" :key="index">
+            <NoticeList :data="data"/>
+          </li>
+        </ul>
+      </div>
+      
     </div>
-  
+    <div class="notice-paging l-ml-1">
+      <ListPaging/>
+    </div>
   </div> 
 </template>
 <script>
 import MainTitle from '@/components/company/MainTitle'
 import MainTitleText from '@/components/company/MainTitleText'
 import MiddleImg from '@/components/company/MiddleImg'
-import ContentsTitle from '@/components/company/ContentsTitle'
-import ContentSubTitle from '@/components/company/ContentSubTitle'
-import ContentsText from '@/components/company/ContentsText'
-import Procedure from '@/components/company/Procedure'
+import Checkbox from '@/components/elements/filter/Checkbox'
+import NoticeList from '@/components/company/NoticeList'
+import ListPaging from '@/components/elements/ListPaging'
 export default {
   name:'index',
   components:{
     MainTitle,
     MainTitleText,
     MiddleImg,
-    ContentsTitle,
-    ContentSubTitle,
-    ContentsText,
-    Procedure,
+    Checkbox,
+    NoticeList,
+    ListPaging,
+  },
+  data(){
+    return{
+      noticeList:[
+        {
+          category:'AI Researcher',
+          itemTit:'[경력/신입] AI Researcher for biology (Domain background)',
+          itemDate:'2021.10.28 (목) 00:00 ~2022.01.27 (목) 00:00',
+          itemDay:'D - 31',
+          itemType:'접수중',
+        },
+        {
+          category:'AI Researcher',
+          itemTit:'[경력/신입] AI Researcher for biology (Domain background)',
+          itemDate:'2021.10.28 (목) 00:00 ~2022.01.27 (목) 00:00',
+          itemDay:'D - 31',
+          itemType:'접수중',
+        }
+      ]
+    }
   }
 }
 </script>
 <style lang="scss" scoped>
-  .procedure-wrap{
-    padding:0 20px;
+  .recruiting{
+    padding: 0 20px;
+
     .main-title{
       margin-top:320px;
       margin-bottom:60px;
@@ -85,26 +122,30 @@ export default {
     .middle-img{
       margin-bottom:140px;
     }
-    .contents-title{
-      margin-bottom:40px;
+    .category-box{
+      margin-bottom:50px;
     }
-    .procedure {
-      margin-bottom:160px;
+    .paging {
+      margin-top:62px;
     }
-    .contents-list{
-      .item{
+    .category-box{
+      .checkbox{
         &:not(:last-child){
-          margin-bottom:40px;
+          margin-right:10px;
         }
       }
     }
-    .content-sub-title{
-      margin-bottom:10px;
+    .notice-contents{
+      .notice-list{
+        &:not(:last-child){
+          margin-bottom:80px;
+        }
+      }
     }
   }
-
+  
   @include pc-large {
-    .procedure-wrap{
+    .recruiting{
       .main-title{
         margin-top:440px;
         margin-bottom:100px;
@@ -115,26 +156,29 @@ export default {
       .middle-img{
         margin-bottom:180px;
       }
-      .contents-title{
-        margin-bottom:50px;
+      .category-box{
+        margin-bottom:70px;
       }
-      .procedure {
-        margin-bottom:220px;
-      }
-      .content-sub-title{
-        margin-bottom:10px;
-      }
-      .contents-list{ 
-        .item{
+      .notice-contents{
+        .notice-list{
           &:not(:last-child){
-            margin-bottom:60px;
+            margin-bottom:100px;
           }
         }
       }
+      .notice-paging{
+        &.l-ml-1{
+          margin-left:0px !important;
+        }
+        .paging {
+          margin-top:260px;
+        }
+      }
     }
+    
   }
   @include pc-4k {
-    .procedure-wrap{
+    .recruiting{
       .main-title{
         margin-top:600px;
         margin-bottom:120px;
@@ -145,26 +189,35 @@ export default {
       .middle-img{
         margin-bottom:270px;
       }
-      .contents-title{
-        margin-bottom:80px;
-      }
-      .procedure {
-        margin-bottom:360px;
-      }
-      .content-sub-title{
-        margin-bottom:14px;
-      }
-      .contents-list{ 
-        .item{
+      .category-box{
+        .checkbox{
           &:not(:last-child){
-            margin-bottom:80px;
+            margin-right:20px;
           }
+        }
+      }
+      .category-box{
+        margin-bottom:120px;
+      }
+      .notice-contents{
+        .notice-list{
+          &:not(:last-child){
+            margin-bottom:150px;
+          }
+        }
+      }
+      .notice-paging{
+        &.l-ml-1{
+          margin-left:getMargin(1) !important;
+        }
+        .paging {
+          margin-top:380px;
         }
       }
     }
   }
   @include tablet {
-    .procedure-wrap{
+    .recruiting{
       .main-title{
         margin-top:200px;
         margin-bottom:40px;
@@ -175,26 +228,38 @@ export default {
       .middle-img{
         margin-bottom:140px;
       }
-      .contents-title{
-        margin-bottom:40px;
+      .category-wrap{
+        &.gl-5{
+          width: getWidth(7) !important;
+        }
+        &.l-ml-3{
+          margin-left: getMargin(2) !important;
+        }
+        .category-box{
+          margin-bottom:30px;
+        }
       }
-      .procedure {
-        margin-bottom:100px;
-      }
-      .content-sub-title{
-        margin-bottom:10px;
-      }
-      .contents-list{ 
-        .item{
+      
+      .notice-contents{
+        .notice-list{
           &:not(:last-child){
-            margin-bottom:40px;
+            margin-bottom:60px;
           }
         }
       }
+      .notice-paging{
+        &.l-ml-1{
+          margin-left:0px !important;
+        }
+        .paging {
+          margin-top:140px;
+        }
+      }
     }
+    
   }
   @include mobile {
-    .procedure-wrap{
+    .recruiting{
       .main-title{
         margin-top:157px;
         margin-bottom:20px;
@@ -205,19 +270,33 @@ export default {
       .middle-img{
         margin-bottom:100px;
       }
-      .contents-title{
-        margin-bottom:42px;
+
+      .category-wrap{
+        &.gl-5{
+          width: 100% !important;
+        }
+        &.l-ml-3{
+          margin-left: 0 !important;
+        }
+        .category-box{
+          margin-bottom:30px;
+        }
       }
-      .procedure {
-        margin-bottom:60px;
-      }
-      .contents-list{ 
-        .item{
+
+      .notice-contents{
+        .notice-list{
           &:not(:last-child){
-            margin-bottom:30px;
+            margin-bottom:60px;
           }
+        }
+      }
+      
+      .notice-paging{
+        .paging {
+          margin-top:107px;
         }
       }
     }
   }
+
 </style>
