@@ -33,14 +33,9 @@
     }
   ],
   "footer": [
-    { "name": "문의", "link": "#" },
     { "name": "오시는 길", "link": "#" },
-    { "name": "사이버윤리실", "link": "#" },
-    { "name": "이용약관", "link": "#" },
-    { "name": "개인정보보호지침", "link": "#" },
-    { "name": "Pathfinder", "link": "#" },
-    { "name": "Open-MiniCon", "link": "#" },
-    { "name": "Recruit", "link": "#" }
+    { "name": "이메일무단수집거부", "link": "#" },
+    { "name": "개인정보 처리방침", "link": "#" }
   ],
   "sns": [
     { "name": "facebook", "link": "#" },
