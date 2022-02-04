@@ -1,6 +1,6 @@
 <template>
   <div class="question-box">
-    <div class="title gl-6 l-ml-2">
+    <div class="title gl-6">
       카카오브레인다움은<br/> 어떤 물음으로 만들어질까요?
     </div>
     <div class="list">
@@ -48,6 +48,7 @@ export default {
     background-color:$gray-9 ;
     .title{
       position: relative;
+      margin:0 auto;
       margin-bottom: 688px;
       text-align: center;
       font-weight: 900;
@@ -60,9 +61,11 @@ export default {
         left:50%;
         bottom:-240px;
         transform: translate(-50%, 48px);
+        font-family: Inter;
         font-weight: 900;
         font-size: 40px;
         line-height: 120%;
+        color:$gray-0;
       }
     }
     .list{

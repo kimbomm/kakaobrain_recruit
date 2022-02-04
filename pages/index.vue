@@ -13,6 +13,7 @@
     <LargeImg/>
     <ContentsQuestion/>
     <MiddleImg/>
+    <ServiceCategory/>
   </div> 
 </template>
 <script>
@@ -21,6 +22,7 @@ import MainTitleText from '@/components/company/MainTitleText'
 import LargeImg from '@/components/company/LargeImg'
 import ContentsQuestion from '@/components/company/ContentsQuestion'
 import MiddleImg from '@/components/company/MiddleImg'
+import ServiceCategory from '@/components/company/ServiceCategory'
 export default {
   name:'index',
   components:{
@@ -29,6 +31,7 @@ export default {
     LargeImg,
     ContentsQuestion,
     MiddleImg,
+    ServiceCategory,
   },
   data(){
     return{
@@ -53,6 +56,10 @@ export default {
     }
     .question-box{
       margin-bottom:200px;
+    }
+    .middle-img{
+      margin-bottom:140px;
+      box-shadow:none;
     }
   }
 
