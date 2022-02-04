@@ -62,6 +62,7 @@
   </div> 
 </template>
 <script>
+import mixinGlobal from '@/mixin/global.js'
 import MainTitle from '@/components/company/MainTitle'
 import MainTitleText from '@/components/company/MainTitleText'
 import MiddleImg from '@/components/company/MiddleImg'
@@ -70,6 +71,7 @@ import ContentsText from '@/components/company/ContentsText'
 import ContentsTypeList from '@/components/company/ContentsTypeList'
 import ContentsInfo from '@/components/company/ContentsInfo'
 export default {
+  mixins: [mixinGlobal],
   name:'ethics',
   components:{
     MainTitle,

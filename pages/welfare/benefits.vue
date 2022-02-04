@@ -26,13 +26,15 @@
   </div> 
 </template>
 <script>
+import mixinGlobal from '@/mixin/global.js'
 import MainTitle from '@/components/company/MainTitle'
 import MainTitleText from '@/components/company/MainTitleText'
 import MiddleImg from '@/components/company/MiddleImg'
 import ContentsTitle from '@/components/company/ContentsTitle'
 import FoldingBox from '@/components/elements/button/FoldingBox'
 export default {
-  name:'index',
+  mixins: [mixinGlobal],
+  name:'benefits',
   components:{
     MainTitle,
     MainTitleText,

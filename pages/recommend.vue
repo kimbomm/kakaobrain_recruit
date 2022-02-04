@@ -157,6 +157,7 @@
   </div> 
 </template>
 <script>
+import mixinGlobal from '@/mixin/global.js'
 import MainTitle from '@/components/company/MainTitle'
 import MainTitleText from '@/components/company/MainTitleText'
 import MiddleImg from '@/components/company/MiddleImg'
@@ -165,7 +166,8 @@ import ContentsText from '@/components/company/ContentsText'
 import SmallTitle from '@/components/company//SmallTitle'
 import ContentSubTitle from '@/components/company//ContentSubTitle'
 export default {
-  name:'index',
+  mixins: [mixinGlobal],
+  name:'recommend',
   components:{
     MainTitle,
     MainTitleText,

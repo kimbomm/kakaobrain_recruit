@@ -52,6 +52,7 @@
   </div> 
 </template>
 <script>
+import mixinGlobal from '@/mixin/global.js'
 import MainTitle from '@/components/company/MainTitle'
 import MainTitleText from '@/components/company/MainTitleText'
 import MiddleImg from '@/components/company/MiddleImg'
@@ -60,7 +61,8 @@ import ContentSubTitle from '@/components/company/ContentSubTitle'
 import ContentsText from '@/components/company/ContentsText'
 import Procedure from '@/components/company/Procedure'
 export default {
-  name:'index',
+  mixins: [mixinGlobal],
+  name:'process',
   components:{
     MainTitle,
     MainTitleText,
