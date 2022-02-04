@@ -20,12 +20,14 @@
   </div>
 </template>
 <script>
+  import mixinGlobal from '@/mixin/global.js'
   import MainTitle from '@/components/company/MainTitle'
   import MainTitleText from '@/components/company/MainTitleText'
   import MiddleImg from '@/components/company/MiddleImg'
   import Interview from '@/components/company/Interview'
   export default {
-    name: 'index',
+    mixins: [mixinGlobal],
+    name: 'intern',
     components: {
       MainTitle,
       MainTitleText,

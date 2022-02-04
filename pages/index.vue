@@ -17,6 +17,7 @@
   </div> 
 </template>
 <script>
+import mixinGlobal from '@/mixin/global.js'
 import MainTitle from '@/components/company/MainTitle'
 import MainTitleText from '@/components/company/MainTitleText'
 import LargeImg from '@/components/company/LargeImg'
@@ -24,6 +25,7 @@ import ContentsQuestion from '@/components/company/ContentsQuestion'
 import MiddleImg from '@/components/company/MiddleImg'
 import ServiceCategory from '@/components/company/ServiceCategory'
 export default {
+  mixins: [mixinGlobal],
   name:'index',
   components:{
     MainTitle,
@@ -63,4 +65,34 @@ export default {
     }
   }
 
+  @include pc-large {
+    
+  }
+  @include pc-4k {
+    .recruit{
+      .main-title{
+        margin-top:300px;
+        margin-bottom:60px;
+      }
+      .main-title-text{ 
+        margin-bottom:490px;
+      }
+      .large-img{
+        top:576px;
+      }
+      .question-box{
+        margin-bottom:200px;
+      }
+      .middle-img{
+        margin-bottom:140px;
+        box-shadow:none;
+      }
+    }
+  }
+  @include tablet {
+    
+  }
+  @include mobile {
+    
+  }
 </style>

@@ -19,8 +19,10 @@
   </div>
 </template>
 <script>
+  import mixinGlobal from '@/mixin/global.js'
   export default {
-    name: 'index'
+    mixins: [mixinGlobal],
+    name: 'list'
   }
 </script>
 <style lang="scss" scoped>

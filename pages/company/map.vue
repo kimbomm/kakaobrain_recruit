@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import mixinGlobal from '@/mixin/global.js'
 import MainTitle from '@/components/company/MainTitle'
 import MainTitleText from '@/components/company/MainTitleText'
 import MiddleImg from '@/components/company/MiddleImg'
@@ -25,6 +26,8 @@ import ContentsTitle from '@/components/company/ContentsTitle'
 import ContentsText from '@/components/company/ContentsText'
 import BusInquiry from '@/components/company/BusInquiry'
 export default {
+  mixins: [mixinGlobal],
+  name:'map',
   components:{
     MainTitle,
     MainTitleText,
