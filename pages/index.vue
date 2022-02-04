@@ -5,6 +5,7 @@
       문화를 만드는</br>
       우리의 물음.`"
     />
+    <EasterEgg/>
     <MainTitleText
       :text="`카카오브레인의 혁신은 모든 크루의 물음에서 시작합니다.</br>
       AI 없이는 상상할 수 없는 세상을 만들기 위해선 생각하지 못한 많은 물음이 필요합니다.</br>
@@ -19,6 +20,7 @@
 <script>
 import mixinGlobal from '@/mixin/global.js'
 import MainTitle from '@/components/company/MainTitle'
+import EasterEgg from '@/components/elements/EasterEgg'
 import MainTitleText from '@/components/company/MainTitleText'
 import LargeImg from '@/components/company/LargeImg'
 import ContentsQuestion from '@/components/company/ContentsQuestion'
@@ -29,6 +31,7 @@ export default {
   name:'index',
   components:{
     MainTitle,
+    EasterEgg,
     MainTitleText,
     LargeImg,
     ContentsQuestion,
