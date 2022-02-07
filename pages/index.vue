@@ -48,54 +48,113 @@ export default {
   .recruit{
     position: relative;
     .main-title{
+      padding:0 20px;
       margin-top:300px;
       margin-bottom:60px;
       letter-spacing: -3.5px;
     }
     .main-title-text{ 
+      padding:0 20px;
       margin-bottom:490px;
     }
     .large-img{
       position: absolute;
       top:576px;
+      padding:0 20px;
     }
     .question-box{
       margin-bottom:200px;
+      // padding:0 20px;
     }
     .middle-img{
       margin-bottom:140px;
-      box-shadow:none;
+      padding:0 20px;
+      // box-shadow:none;
+    }
+    .service{
+      padding:0 20px;
     }
   }
 
   @include pc-large {
-    
+    .recruit{
+      .main-title{
+        margin-top:400px;
+        margin-bottom:80px;
+      }
+      .main-title-text{ 
+        margin-bottom:653px;
+      }
+      .large-img{
+        top: 768px;
+      }
+      .question-box{
+        margin-bottom:260px;
+      }
+      .middle-img{
+        margin-bottom:197px;
+      }
+    }
   }
   @include pc-4k {
     .recruit{
       .main-title{
-        margin-top:300px;
-        margin-bottom:60px;
+        margin-top:600px;
+        margin-bottom:120px;
       }
       .main-title-text{ 
-        margin-bottom:490px;
+        margin-bottom:978px;
       }
       .large-img{
-        top:576px;
+        top: 1150px;
       }
       .question-box{
-        margin-bottom:200px;
+        margin-bottom:390px;
       }
       .middle-img{
-        margin-bottom:140px;
-        box-shadow:none;
+        margin-bottom:300px;
       }
     }
   }
   @include tablet {
-    
+    .recruit{
+      .main-title{
+        margin-top:140px;
+        margin-bottom:60px;
+      }
+      .main-title-text{ 
+        margin-bottom:280px;
+      }
+      .large-img{
+        top: 448px;
+      }
+      .question-box{
+        margin-bottom:120px;
+      }
+      .middle-img{
+        margin-bottom:180px;
+      }
+    }
   }
   @include mobile {
+    .recruit{
+      .main-title{
+        margin-top:116px;
+        margin-bottom:30px;
+      }
+      .main-title-text{ 
+        margin-bottom:220px;
+      }
+      .large-img{
+        top: 380px;
+      }
+      .question-box{
+        margin-bottom:100px;
+      }
+      .middle-img{
+        margin-bottom:140px;
+      }
+    }
     
   }
 </style>

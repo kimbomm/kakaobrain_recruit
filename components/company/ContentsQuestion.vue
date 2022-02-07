@@ -44,7 +44,7 @@ export default {
 </script>
 <style lang="scss" scoped>
   .question-box{
-    padding:870px 0 500px;
+    padding:870px 20px 500px;
     background-color:$gray-9 ;
     .title{
       position: relative;
@@ -72,6 +72,97 @@ export default {
       .question-item{
         &:not(:last-child){
           margin-bottom:400px;
+        }
+      }
+    }
+  }
+  
+  @include pc-large {
+    .question-box{
+      padding:1163px 20px 670px;
+      .title{
+        margin-bottom: 914px;
+        font-size: 120px;
+        &::before{
+          bottom:-320px;
+          transform: translate(-50%, 64px);
+          font-size: 40px;
+        }
+      }
+      .list{
+        .question-item{
+          &:not(:last-child){
+            margin-bottom:530px;
+          }
+        }
+      }
+    }
+  }
+  @include pc-4k {
+    .question-box{
+      padding:1740px 20px 1000px;
+      .title{
+        margin-bottom: 1376px;
+        font-size: 180px;
+        &::before{
+          bottom:-480px;
+          transform: translate(-50%, 96px);
+          font-size: 60px;
+        }
+      }
+      .list{
+        .question-item{
+          &:not(:last-child){
+            margin-bottom:800px;
+          }
+        }
+      }
+    }
+  }
+  @include tablet {
+    .question-box{
+      padding:480px 20px 300px;
+      .title{
+        margin-bottom: 474px;
+        font-size: 60px;
+        &::before{
+          bottom:-150px;
+          transform: translate(-50%, 24px);
+          font-size: 20px;
+        }
+        &.gl-6{
+          width: getWidth(8) !important;
+        }
+      }
+      .list{
+        .question-item{
+          &:not(:last-child){
+            margin-bottom:400px;
+          }
+        }
+      }
+    }
+  }
+  @include mobile {
+    .question-box{
+      padding:340px 20px 200px;
+      .title{
+        margin-bottom: 328px;
+        font-size: 36px;
+        &::before{
+          bottom:-100px;
+          transform: translate(-50%, 28px);
+          font-size: 20px;
+        }
+        &.gl-6{
+          width:100% !important;
+        }
+      }
+      .list{
+        .question-item{
+          &:not(:last-child){
+            margin-bottom:200px;
+          }
         }
       }
     }

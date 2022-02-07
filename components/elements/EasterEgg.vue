@@ -20,16 +20,114 @@
 <style lang="scss" scoped>
   .easter-egg {
     position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    cursor: pointer;
+    top:-60px;
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
+    }
+    .egg-A{
+      position: absolute;
+      left:50%;
+      width:150px;
+      height:150px;
+      overflow: hidden;
+      transform: translate(-50%, -100%);
+      border-radius: 50%;
+      box-shadow: -30px 50px 80px rgba(0,0,0,0.2);
+    }
+    .egg-B{
+      position: absolute;
+      right:210px;
+      transform: translate(0, -100%);
+      .item{
+        display: inline-block;
+        width:150px;
+        height:150px;
+        border-radius: 50%;
+        overflow: hidden;
+        &:last-child{
+          box-shadow: -30px 50px 80px rgba(0,0,0,0.2);
+        }
+      }
+    }
+  }
+  @include pc-large {
+    .easter-egg {
+      top:-80px;
+      .egg-A{
+        width:200px;
+        height:200px;
+      }
+      .egg-B{
+        right:274px;
+        .item{
+          width:200px;
+          height:200px;
+        }
+      }
+    }
+  }
+  @include pc-4k {
+    .easter-egg {
+      top:-120px;
+      .egg-A{
+        width:300px;
+        height:300px;
+      }
+      .egg-B{
+        right:530px;
+        .item{
+          width:300px;
+          height:300px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width:1700px) {
+    .easter-egg {
+      top:-70px;
+      .egg-A{
+        width:100px;
+        height:100px;
+      }
+      .egg-B{
+        right:230px;
+        .item{
+          width:100px;
+          height:100px;
+        }
+      }
+    }
+  }
+  @include tablet {
+    .easter-egg {
+      top:-60px;
+      .egg-A{
+        width:80px;
+        height:80px;
+      }
+      .egg-B{
+        right:120px;
+        .item{
+          width:80px;
+          height:80px;
+        }
+      }
+    }
+  }
+  @include mobile {
+    .easter-egg {
+      top:0px;
+      .egg-A{
+        width:50px;
+        height:50px;
+      }
+      .egg-B{
+        right:20px;
+        .item{
+          width:50px;
+          height:50px;
+        }
+      }
     }
   }
 </style>
