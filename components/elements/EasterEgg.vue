@@ -20,16 +20,39 @@
 <style lang="scss" scoped>
   .easter-egg {
     position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    cursor: pointer;
+    top:-60px;
+    // width: 150px;
+    // height: 150px;
+    // border-radius: 50%;
+    // overflow: hidden;
+    // cursor: pointer;
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
+    }
+    .egg-A{
+      position: absolute;
+      left:50%;
+      width:150px;
+      height:150px;
+      overflow: hidden;
+      transform: translate(-50%, -100%);
+      border-radius: 50%;
+      box-shadow: -30px 50px 80px rgba(0,0,0,0.2);
+    }
+    .egg-B{
+      position: absolute;
+      right:210px;
+      transform: translate(0, -100%);
+      .item{
+        display: inline-block;
+        width:150px;
+        height:150px;
+        border-radius: 50%;
+        overflow: hidden;
+        &:last-child{
+          box-shadow: -30px 50px 80px rgba(0,0,0,0.2);
+        }
+      }
     }
   }
 </style>
