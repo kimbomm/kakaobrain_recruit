@@ -108,7 +108,7 @@ export default {
           line-height: 150%;
         }
         &-text{
-          margin-bottom:18px;
+          margin-bottom:30px;
           font-size: 14px;
           line-height: 150%;
         }

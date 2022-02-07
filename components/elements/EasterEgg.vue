@@ -82,6 +82,22 @@
       }
     }
   }
+  @media screen and (max-width:1700px) {
+    .easter-egg {
+      top:-70px;
+      .egg-A{
+        width:100px;
+        height:100px;
+      }
+      .egg-B{
+        right:230px;
+        .item{
+          width:100px;
+          height:100px;
+        }
+      }
+    }
+  }
   @include tablet {
     .easter-egg {
       top:-60px;
