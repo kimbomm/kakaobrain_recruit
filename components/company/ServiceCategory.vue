@@ -34,12 +34,12 @@
       </div>
     </div>
     <div class="service-bottom">
-      <div class="bottom-item">
+      <div class="bottom-item gl-3">
         <div class="bottom-title">FAQ.</div>
         <div class="bottom-text">영입 관련한 질문이 있으신가요?</div>
         <div class="service-more"> more</div>
       </div>
-      <div class="bottom-item">
+      <div class="bottom-item gl-3">
         <div class="bottom-title">사외추천제도.</div>
         <div class="bottom-sub-title">지인 추천 보상금 300만원</div>
         <div class="bottom-text">누구에게나 열려있는 기회.<br/>지인을 추천해 주시면 추천 보상금 300만원을 지급 드립니다.</div>
@@ -83,10 +83,14 @@ export default {
       justify-content: space-between;
       .bottom{
         &-item{
-          width:550px;
-          height:230px;
+          // width:550px;
+          position: relative;
+          min-height:230px;
           padding:30px;
           background-color: #EFF1F6;
+          &:first-child{
+            margin-right:20px;
+          }
           .service-more{
             position: absolute;
             bottom: 30px;
@@ -104,8 +108,199 @@ export default {
           line-height: 150%;
         }
         &-text{
+          margin-bottom:18px;
           font-size: 14px;
           line-height: 150%;
+        }
+      }
+    }
+  }
+  
+  @include pc-large {
+    .service{
+      &-list{
+        margin-bottom:260px
+      }
+      &-item{
+        &:not(:last-child){
+          margin-bottom:260px;
+        }
+      }
+      &-title{
+        margin-bottom:80px;
+        font-size: 80px;
+      }
+      &-text{
+        margin-bottom:25px;
+        font-size: 22px;
+      }
+      &-more{
+        font-size: 22px;
+      }
+      .service-bottom{
+        .bottom{
+          &-item{
+            min-height:295px;
+            padding:40px;
+            .service-more{
+              bottom: 40px;
+            }
+          }
+          &-title{
+            margin-bottom:38px;
+            font-size:40px;
+          }
+          &-sub-title{
+            font-size: 18px;
+          }
+          &-text{
+            font-size: 18px;
+            margin-bottom:18px;
+          }
+        }
+      }
+    }
+  }
+  @include pc-4k {
+    .service{
+      &-list{
+        margin-bottom:380px
+      }
+      &-item{
+        &:not(:last-child){
+          margin-bottom:380px;
+        }
+      }
+      &-title{
+        margin-bottom:120px;
+        font-size: 120px;
+      }
+      &-text{
+        margin-bottom:40px;
+        font-size: 32px;
+      }
+      &-more{
+        font-size: 32px;
+      }
+      .service-bottom{
+        .bottom{
+          &-item{
+            min-height:442px;
+            padding:40px;
+            .service-more{
+              bottom: 40px;
+            }
+          }
+          &-title{
+            margin-bottom:38px;
+            font-size: 62px;
+          }
+          &-sub-title{
+            font-size: 22px;
+          }
+          &-text{
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+  @include tablet {
+    .service{ 
+      &-list{
+        margin-bottom:150px
+      }
+      &-item{
+        &:not(:last-child){
+          margin-bottom:140px;
+        }
+      }
+      &-title{
+        margin-bottom:50px;
+        font-size: 50px;
+      }
+      &-text{
+        margin-bottom:20px;
+        font-size: 16px;
+      }
+      &-more{
+        font-size: 16px;
+      }
+      .service-bottom{
+        justify-content: space-between;
+        flex-direction: column; 
+        .bottom{
+          &-item{
+            min-height:230px;
+            padding:30px;
+            &:first-child{
+              margin-right:0px;
+              margin-bottom:20px;
+            }
+            &.gl-3{
+              width: getWidth(6) !important;
+            }
+            .service-more{
+              bottom: 30px;
+            }
+          }
+          &-title{
+            margin-bottom:30px;
+            font-size:30px;
+          }
+          &-sub-title{
+            font-size: 14px;
+          }
+          &-text{
+            margin-bottom:38px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  @include mobile {
+    .service{
+      &.gl-6{
+        width:100% !important;
+      }
+      &.l-ml-2{
+        margin-left: 0px !important;
+      }
+      &-list{
+        margin-bottom:100px
+      }
+      &-item{
+        &:not(:last-child){
+          margin-bottom:100px;
+        }
+      }
+      &-title{
+        margin-bottom:30px;
+        font-size: 30px;
+      }
+      &-text{
+        margin-bottom:20px;
+        font-size: 16px;
+      }
+      &-more{
+        font-size: 16px;
+      }
+      .service-bottom{
+        .bottom{
+          &-item{
+            min-height:210px;
+            &.gl-3{
+              width: 100% !important;
+            }
+          }
+          &-title{
+            margin-bottom:20px;
+            font-size:20px;
+          }
+          &-text{
+            margin-bottom:40px;
+          }
         }
       }
     }
