@@ -5,8 +5,8 @@
       "link": "/",
       "alarm": "",
       "sub": [
-        { "name": "영입공고", "link": "/" },
-        { "name": "영입절차", "link": "/recruit" },
+        { "name": "영입공고", "link": "/recruit" },
+        { "name": "영입절차", "link": "/recruit/process" },
         { "name": "FAQ", "link": "/faq" },
         { "name": "사외추천제도", "link": "/recommend" }
       ]
