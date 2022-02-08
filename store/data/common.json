@@ -33,7 +33,7 @@
     }
   ],
   "footer": [
-    { "name": "오시는 길", "link": "#" },
+    { "name": "오시는 길", "link": "/company/map" },
     { "name": "이메일무단수집거부", "link": "#" },
     { "name": "개인정보 처리방침", "link": "#" }
   ],
@@ -42,36 +42,5 @@
     { "name": "insta", "link": "#" },
     { "name": "kakao", "link": "#" },
     { "name": "youtube", "link": "#" }
-  ],
-  "members": {
-    "CEO": [
-      { "name": "Cutis.abcd", "profile": "" },
-      { "name": "beam.park", "profile": "" },
-      { "name": "carl.brain", "profile": "" },
-      { "name": "lyla.j", "profile": "" },
-      { "name": "zane.kim", "profile": "" },
-      { "name": "jj.mize", "profile": "" },
-      { "name": "leo.itsme", "profile": "" },
-      { "name": "noah.young", "profile": "" }
-    ],
-    "Culture": [
-      { "name": "sharon.ej", "profile": "" },
-      { "name": "brenda.ble", "profile": "" },
-      { "name": "emily.lim", "profile": "" },
-      { "name": "helena.301", "profile": "" },
-      { "name": "henry.sky", "profile": "" },
-      { "name": "isol.tony", "profile": "" },
-      { "name": "jeff.sky", "profile": "" }
-    ],
-    "Hbrand": [{ "name": "yang.kim", "profile": "" }],
-    "Finance": [
-      { "name": "carrie.ai", "profile": "" },
-      { "name": "evelyn.choi", "profile": "" },
-      { "name": "carl.brain", "profile": "" },
-      { "name": "jeff.sky", "profile": "" }
-    ]
-  },
-  "category": {
-    "innovation": ["tag1", "tage2", "tage3", "tage4", "tage5", "tage6"]
-  }
+  ]
 }
