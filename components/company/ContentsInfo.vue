@@ -1,33 +1,35 @@
 <template>
   <div class="contents-info gl-5 l-ml-3">
-    <div class="item">
-      <div class="tit">이메일</div>
-      <div class="txt">hotline@kakaobrain.com</div>
-    </div>
-    <div class="item">
-      <div class="tit">우편</div>
-      <div class="txt">경기 성남시 분당구 판교역로241번길 20 미래에셋벤처타워 11층 (주)카카오브레인 윤리경영팀</div>
+    <div v-for="(item, index) in data" :key="index" class="item">
+      <div class="tit">{{ item.title }}</div>
+      <div class="txt">{{ item.text }}</div>
     </div>
   </div>
 </template>
 <script>
-export default {
-  name:'ContentsInfo',
-}
+  export default {
+    name: 'ContentsInfo',
+    props: {
+      data: {
+        type: Array,
+        default: () => []
+      }
+    }
+  }
 </script>
 <style lang="scss" scoped>
-  .contents-info{
-    .item{
-      &:not(:last-child){
-        margin-bottom:30px;
+  .contents-info {
+    .item {
+      &:not(:last-child) {
+        margin-bottom: 30px;
       }
-      .tit{
+      .tit {
         font-weight: 900;
         font-size: 20px;
         line-height: 130%;
-        margin-bottom:10px;
+        margin-bottom: 10px;
       }
-      .txt{
+      .txt {
         font-weight: 400;
         font-size: 16px;
         line-height: 150%;
@@ -35,64 +37,64 @@ export default {
     }
   }
   @include pc-large {
-    .contents-info{
-      .item{
-        &:not(:last-child){
-          margin-bottom:50px;
+    .contents-info {
+      .item {
+        &:not(:last-child) {
+          margin-bottom: 50px;
         }
-        .tit{
+        .tit {
           font-size: 30px;
-          margin-bottom:14px;
+          margin-bottom: 14px;
         }
-        .txt{
+        .txt {
           font-size: 22px;
         }
       }
     }
   }
   @include pc-4k {
-    .contents-info{
-      .item{
-        &:not(:last-child){
-          margin-bottom:8 0px;
+    .contents-info {
+      .item {
+        &:not(:last-child) {
+          margin-bottom: 8 0px;
         }
-        .tit{
+        .tit {
           font-size: 42px;
-          margin-bottom:20px;
+          margin-bottom: 20px;
         }
-        .txt{
+        .txt {
           font-size: 32px;
         }
       }
     }
   }
   @include tablet {
-    .contents-info{
-      .item{
-        &:not(:last-child){
-          margin-bottom:40px;
+    .contents-info {
+      .item {
+        &:not(:last-child) {
+          margin-bottom: 40px;
         }
-        .tit{
+        .tit {
           font-size: 20px;
-          margin-bottom:10px;
+          margin-bottom: 10px;
         }
-        .txt{
+        .txt {
           font-size: 14px;
         }
       }
     }
   }
   @include mobile {
-    .contents-info{
-      .item{
-        &:not(:last-child){
-          margin-bottom:30px;
+    .contents-info {
+      .item {
+        &:not(:last-child) {
+          margin-bottom: 30px;
         }
-        .tit{
+        .tit {
           font-size: 20px;
-          margin-bottom:16px;
+          margin-bottom: 16px;
         }
-        .txt{
+        .txt {
           font-size: 14px;
         }
       }

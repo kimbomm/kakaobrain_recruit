@@ -3,18 +3,19 @@
     <div class="folding-top">
       <div class="folding-title">
         <p>{{ data.title }}</p>
-        <p v-if="data.isText" class="sub-title">{{data.titleText}}</p>
+        <p v-if="data.isText" class="sub-title">{{ data.titleText }}</p>
       </div>
       <button class="folding-button" @click="onClick">
-        <span>{{ isOpen ? '닫기' : '자세히 보기' }}</span>
+        <span>{{ buttonName }}</span>
       </button>
     </div>
     <div v-if="isOpen" class="folding-content">
-      <div v-html="contentText"></div>
+      <div v-html="data.content"></div>
     </div>
   </div>
 </template>
 <script>
+  import { mapState } from 'vuex'
   export default {
     props: {
       data: {
@@ -31,7 +32,19 @@
     data() {
       return {
         isOpen: false,
-        isText: false,
+        isText: false
+      }
+    },
+    computed: {
+      ...mapState({
+        language: state => state.language
+      }),
+      buttonName() {
+        let name = this.language === 'KR' ? '자세히보기' : 'Detail'
+        if (this.isOpen) {
+          name = this.language === 'KR' ? '닫기' : 'Close'
+        }
+        return name
       }
     },
     methods: {
@@ -62,10 +75,10 @@
         white-space: nowrap;
         text-overflow: ellipsis;
       }
-      .sub-title{
-        margin-top:10px;
+      .sub-title {
+        margin-top: 10px;
         font-size: 14px;
-        font-weight:400;
+        font-weight: 400;
         line-height: 120%;
       }
     }
@@ -83,21 +96,21 @@
       > div {
         font-family: 'NotoSansKR';
         font-size: 16px;
-        font-weight:400;
+        font-weight: 400;
         line-height: 1.5;
         word-break: keep-all;
       }
     }
   }
 
-  @media screen and (max-width:1500px) {
+  @media screen and (max-width: 1500px) {
     .folding {
       &-title {
         flex: 0 0 72%;
       }
     }
   }
-  @media screen and (max-width:1220px) {
+  @media screen and (max-width: 1220px) {
     .folding {
       &-title {
         p {
@@ -119,8 +132,8 @@
         p {
           font-size: 28px;
         }
-        .sub-title{
-          margin-top:14px;
+        .sub-title {
+          margin-top: 14px;
           font-size: 18px;
         }
       }
@@ -145,8 +158,8 @@
         p {
           font-size: 42px;
         }
-        .sub-title{
-          margin-top:20px;
+        .sub-title {
+          margin-top: 20px;
           font-size: 26px;
         }
       }
@@ -171,8 +184,8 @@
         p {
           font-size: 18px;
         }
-        .sub-title{
-          margin-top:10px;
+        .sub-title {
+          margin-top: 10px;
           font-size: 14px;
         }
       }
@@ -189,8 +202,8 @@
       }
     }
   }
-  
-  @media screen and (max-width:800px) {
+
+  @media screen and (max-width: 800px) {
     .folding {
       &-title {
         p {

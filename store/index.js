@@ -1,7 +1,7 @@
 import data from './data/common.json'
 
 export const state = () => ({
-  language: 'ko',
+  language: 'EN',
   menus: data.menus,
   footerMenu: data.footer,
   members: data.members,

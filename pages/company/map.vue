@@ -1,20 +1,17 @@
 <template>
   <div class="company">
-    <MainTitle :title="`찾아오시는</br>길.`" />
-    <MainTitleText
-      text="카카오브레인 크루가 모여 생각하지 못한 질문을 던지고 해답을 찾아가는 장소입니다."
-    />
+    <MainTitle :title="data.MainTitle" />
+    <MainTitleText :text="data.MainTitleText" />
     <MiddleImg />
-    <ContentsTitle title="주소" />
-    <ContentsText
-      text="경기도 성남시 분당구 판교역로241번길 20 미래에셋벤처타워 11층 (우)13494"
-    />
+    <ContentsTitle :title="data.address.title" />
+    <ContentsText :text="data.address.text" />
     <div id="map" class="map-js"></div>
-    <BusInquiry />
+    <BusInquiry :data="data.method" />
   </div>
 </template>
 
 <script>
+  import { mapState } from 'vuex'
   import mixinGlobal from '@/mixin/global.js'
   import MainTitle from '@/components/company/MainTitle'
   import MainTitleText from '@/components/company/MainTitleText'
@@ -32,6 +29,15 @@
       ContentsTitle,
       ContentsText,
       BusInquiry
+    },
+    computed: {
+      ...mapState({
+        language: state => state.language,
+        mapData: state => state.translation.MAP
+      }),
+      data() {
+        return this.mapData[this.language]
+      }
     },
     mounted() {
       if (window.kakao && window.kakao.maps) {

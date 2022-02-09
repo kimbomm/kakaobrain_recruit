@@ -10,7 +10,7 @@
             @mouseenter="hideMenu(true)"
           >
             <button type="button">
-              <span v-if="menu.alarm" class="num">{{ menu.alarm }}</span>
+              <!-- <span v-if="menu.alarm" class="num">{{ menu.alarm }}</span> -->
               <span class="txt">{{ menu.name }}</span>
             </button>
           </li>
@@ -74,8 +74,8 @@
       return {
         isMenu: false,
         languageList: [
-          { name: 'English', value: 'en' },
-          { name: 'Korean', value: 'ko' }
+          { name: 'English', value: 'EN' },
+          { name: 'Korean', value: 'KR' }
         ]
       }
     },
@@ -102,24 +102,16 @@
         this.isMenu = value
       },
       async selectLang(lang) {
+        localStorage.setItem('language', lang)
         await this.setLanguage(lang)
-        await this.$router.push('/main')
       }
     }
   }
 </script>
 <style lang="scss" scoped>
-  .white {
-    .menu-item {
-      button {
-        color: $gray-0;
-      }
-    }
-  }
   .menu {
     &-item {
       display: inline-block;
-      font-size: 16px;
       font-weight: 900;
       &:not(:last-child) {
         margin-right: 30px;
@@ -144,15 +136,18 @@
       .menu-item button {
         color: #fff;
       }
+      & + .menu-btn {
+        background-image: url('~/assets/images/mob_menu-w.svg');
+      }
     }
   }
   .menu-btn {
     display: none;
     width: 30px;
     height: 30px;
-    img {
-      width: 100%;
-    }
+    background-image: url('~/assets/images/mob_menu.svg');
+    background-size: cover;
+    background-position: center center;
   }
 
   .hide {
@@ -184,25 +179,26 @@
       top: 0;
       padding: 90px 0 84px;
       background-color: $gray-9;
-      color: $gray-0;
       &-item {
         text-align: left;
         vertical-align: top;
+        color: $gray-0;
+        font-size: 14px;
         &:not(:last-child) {
           margin-right: 50px;
         }
-        &:nth-child(2) .sub {
-          margin-left: 23px;
-        }
-        &:nth-child(3) .sub {
-          margin-left: 20px;
-        }
-        &:nth-child(4) .sub {
-          margin-left: 12px;
-        }
-        &:nth-child(5) .sub {
-          margin-left: 20px;
-        }
+        // &:nth-child(2) .sub {
+        //   margin-left: 23px;
+        // }
+        // &:nth-child(3) .sub {
+        //   margin-left: 20px;
+        // }
+        // &:nth-child(4) .sub {
+        //   margin-left: 12px;
+        // }
+        // &:nth-child(5) .sub {
+        //   margin-left: 20px;
+        // }
       }
     }
     .sub {
@@ -228,7 +224,7 @@
       }
     }
   }
-  @include pc-large {
+  @include pc-4k {
     .menu-item {
       .txt {
         font-size: 34px;

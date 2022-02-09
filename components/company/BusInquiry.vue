@@ -1,205 +1,207 @@
 <template>
   <div class="bus-inquiry gl-6 l-ml-3">
     <div class="bus-con">
-      <div class="tit">주변 버스</div>
+      <div class="tit">{{ data.title }}</div>
       <div class="list">
-        <div class="bus-item">
-          <div class="bus-tit">일반</div>
-          <div class="bus-txt">101 15-1 330 330출 350 357 370 380 382 55 260 390 </div>
-        </div>
-        <div class="bus-item">
-          <div class="bus-tit">마을</div>
+        <div v-for="(item, index) in data.list" :key="index" class="bus-item">
+          <div class="bus-tit">{{ item.name }}</div>
           <div>
-            <div class="bus-txt">602-1(일반형)(평일) 602-1(일반형)(휴일) 602-1(출퇴근맞춤형) </div>
-            <div class="bus-txt">602-2(일반형)(평일) 602-2(출퇴근맞춤형) 71 73 73(맞춤형) 73-1 75 75(맞춤형) 812</div>
+            <div
+              v-for="(bus, idx) in item.bus"
+              :key="`bus-${idx}`"
+              class="bus-txt"
+            >
+              {{ bus }}
+            </div>
           </div>
-        </div>
-        <div class="bus-item">
-          <div class="bus-tit">직행</div>
-          <div class="bus-txt">4000 6003 9007 3000 1007 1009 5600 5700 6900 1007-1</div>
         </div>
       </div>
     </div>
     <div class="inquiry">
-      <div class="tit">문의</div>
-      <div class="txt">contact@kakaobrain.com으로 연락 바랍니다.</div>
+      <div class="tit">{{ data.info.title }}</div>
+      <div class="txt">{{ data.info.text }}</div>
     </div>
   </div>
 </template>
 <script>
-export default {
-  
-}
+  export default {
+    props: {
+      data: {
+        type: Object,
+        default: () => {}
+      }
+    }
+  }
 </script>
 <style lang="scss" scoped>
-  .bus-inquiry{
-    .bus-con{
-      margin-bottom:40px;
-      .tit{
-        margin-bottom:10px;
+  .bus-inquiry {
+    .bus-con {
+      margin-bottom: 40px;
+      .tit {
+        margin-bottom: 10px;
         font-weight: 900;
         font-size: 20px;
         line-height: 130%;
       }
     }
-    .bus{
-      &-item{
+    .bus {
+      &-item {
         display: flex;
-        &:not(:last-child){
-          margin-bottom:15px;
+        &:not(:last-child) {
+          margin-bottom: 15px;
         }
       }
-      &-tit{
-        margin-right:15px;
-        font-size:16px;
-        font-weight:700;
-        line-height:150%;
+      &-tit {
+        margin-right: 15px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 150%;
       }
-      &-txt{
-        font-size:16px;
-        font-weight:400;
-        line-height:150%;
+      &-txt {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
       }
     }
-    .inquiry{
-      .tit{
-        margin-bottom:10px;
+    .inquiry {
+      .tit {
+        margin-bottom: 10px;
         font-weight: 900;
         font-size: 20px;
         line-height: 130%;
       }
-      .txt{
-        font-size:16px;
-        font-weight:400;
-        line-height:150%;
+      .txt {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
       }
     }
   }
 
   @include pc-large {
-    .bus-inquiry{
-      .bus-con{
-        margin-bottom:50px;
-        .tit{
-          margin-bottom:20px;
+    .bus-inquiry {
+      .bus-con {
+        margin-bottom: 50px;
+        .tit {
+          margin-bottom: 20px;
           font-size: 30px;
         }
       }
-      .bus{
-        &-item{
-          &:not(:last-child){
-            margin-bottom:15px;
+      .bus {
+        &-item {
+          &:not(:last-child) {
+            margin-bottom: 15px;
           }
         }
-        &-tit{
-          margin-right:30px;
-          font-size:22px;
+        &-tit {
+          margin-right: 30px;
+          font-size: 22px;
         }
-        &-txt{
-          font-size:22px;
+        &-txt {
+          font-size: 22px;
         }
       }
-      .inquiry{
-        .tit{
-          margin-bottom:20px;
+      .inquiry {
+        .tit {
+          margin-bottom: 20px;
           font-size: 30px;
         }
-        .txt{
-          font-size:22px;
+        .txt {
+          font-size: 22px;
         }
       }
     }
   }
   @include pc-4k {
-    .bus-inquiry{
-      .bus-con{
-        margin-bottom:70px;
-        .tit{
-          margin-bottom:42px;
+    .bus-inquiry {
+      .bus-con {
+        margin-bottom: 70px;
+        .tit {
+          margin-bottom: 42px;
           font-size: 40px;
         }
       }
-      .bus{
-        &-item{
-          &:not(:last-child){
-            margin-bottom:15px;
+      .bus {
+        &-item {
+          &:not(:last-child) {
+            margin-bottom: 15px;
           }
         }
-        &-tit{
-          margin-right:40px;
-          font-size:32px;
+        &-tit {
+          margin-right: 40px;
+          font-size: 32px;
         }
-        &-txt{
-          font-size:32px;
+        &-txt {
+          font-size: 32px;
         }
       }
-      .inquiry{
-        .tit{
-          margin-bottom:40px;
+      .inquiry {
+        .tit {
+          margin-bottom: 40px;
           font-size: 42px;
         }
-        .txt{
-          font-size:32px;
+        .txt {
+          font-size: 32px;
         }
       }
     }
   }
   @include tablet {
-    .bus-inquiry{
-      &.gl-6{
+    .bus-inquiry {
+      &.gl-6 {
         width: getWidth(7) !important;
       }
-      &.l-ml-3{
+      &.l-ml-3 {
         margin-left: getMargin(2) !important;
       }
-      .bus-con{
-        margin-bottom:40px;
-        .tit{
-          margin-bottom:20px;
+      .bus-con {
+        margin-bottom: 40px;
+        .tit {
+          margin-bottom: 20px;
           font-size: 20px;
         }
       }
-      .bus{
-        &-item{
-          &:not(:last-child){
-            margin-bottom:15px;
+      .bus {
+        &-item {
+          &:not(:last-child) {
+            margin-bottom: 15px;
           }
         }
-        &-tit{
-          margin-right:20px;
-          font-size:14px;
+        &-tit {
+          margin-right: 20px;
+          font-size: 14px;
         }
-        &-txt{
-          font-size:14px;
+        &-txt {
+          font-size: 14px;
         }
       }
-      .inquiry{
-        .tit{
-          margin-bottom:16px;
+      .inquiry {
+        .tit {
+          margin-bottom: 16px;
           font-size: 20px;
         }
-        .txt{
-          font-size:14px;
+        .txt {
+          font-size: 14px;
         }
       }
     }
   }
   @include mobile {
-    .bus-inquiry{
-      &.gl-6{
+    .bus-inquiry {
+      &.gl-6 {
         width: 100% !important;
       }
-      &.l-ml-3{
+      &.l-ml-3 {
         margin-left: 0 !important;
       }
-      .bus-con{
-        margin-bottom:30px;
+      .bus-con {
+        margin-bottom: 30px;
       }
-      .bus{
-        &-item{
+      .bus {
+        &-item {
           flex-direction: column;
-          &:not(:last-child){
-            margin-bottom:15px;
+          &:not(:last-child) {
+            margin-bottom: 15px;
           }
         }
       }
