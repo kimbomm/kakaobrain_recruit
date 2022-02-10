@@ -3,7 +3,7 @@
     <div class="header-top">
       <h1 class="b-logo gl-2">
         <nuxt-link to="/">
-          <span>kakaobrain</span>
+          <img src="@/assets/images/logo.png" />
         </nuxt-link>
       </h1>
       <div class="header-con gl-2">
@@ -44,10 +44,13 @@
     line-height: 1.3;
     &-top {
       display: flex;
-      font-family: 'Inter', sans-serif;
     }
     .b-logo {
       font-weight: 900;
+      img {
+        width: 80px;
+        height: 20px;
+      }
     }
     &-con {
       margin-left: 20px;
@@ -57,7 +60,7 @@
       font-size: 16px;
     }
     &__light {
-      color: #fff;
+      color: $gray-0;
       .header-item {
         color: $gray-0;
       }
@@ -65,25 +68,61 @@
   }
 
   @include pc-large {
-    .header {
+    .header,
+    .header-item {
       font-size: 22px;
+    }
+    .header {
+      .b-logo {
+        img {
+          width: 108px;
+          height: 27px;
+        }
+      }
     }
   }
   @include pc-4k {
-    .header {
+    .header,
+    .header-item {
       font-size: 34px;
+    }
+    .header {
+      .b-logo {
+        img {
+          width: 176px;
+          height: 44px;
+        }
+      }
     }
   }
   @include tablet {
-    .header {
+    .header,
+    .header-item {
       top: 16px;
       font-size: 16px;
+    }
+    .header {
+      .b-logo {
+        img {
+          width: 84px;
+          height: 21px;
+        }
+      }
     }
   }
   @include mobile {
     .header {
-      top: 13px;
-      right: 15px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 56px;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header,
+    .header-item {
       font-size: 18px;
       &-con {
         display: none;

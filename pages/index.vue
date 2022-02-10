@@ -10,7 +10,7 @@
   </div>
 </template>
 <script>
-  import { mapState, mapActions } from 'vuex'
+  import { mapState } from 'vuex'
   import mixinGlobal from '@/mixin/global.js'
   import MainTitle from '@/components/company/MainTitle'
   import EasterEgg from '@/components/elements/EasterEgg'
