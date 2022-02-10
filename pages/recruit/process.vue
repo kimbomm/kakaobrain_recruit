@@ -2,7 +2,7 @@
   <div class="procedure-wrap">
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
-    <MiddleImg />
+    <MiddleImg image="middle-process.jpg" />
     <ContentsTitle :title="data.ContentsTitle" />
     <Procedure :data="data.list" />
     <div class="contents-list">

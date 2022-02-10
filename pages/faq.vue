@@ -2,7 +2,7 @@
   <div class="faq">
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
-    <MiddleImg />
+    <MiddleImg image="middle-faq.jpg" />
 
     <div class="system-plan">
       <div class="list-box">

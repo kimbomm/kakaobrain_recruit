@@ -2,7 +2,7 @@
   <div class="welfare">
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
-    <MiddleImg />
+    <MiddleImg image="middle-benefit.jpg" />
 
     <ContentsTitle :title="data.ContentsTitle" />
 

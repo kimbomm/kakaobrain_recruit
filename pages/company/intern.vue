@@ -2,7 +2,7 @@
   <div class="company">
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
-    <MiddleImg />
+    <MiddleImg image="middle-intern.jpg" />
     <div class="rule-box">
       <ul>
         <li

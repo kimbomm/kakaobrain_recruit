@@ -2,7 +2,7 @@
   <div class="recommendation">
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
-    <MiddleImg />
+    <MiddleImg image="middle-referral.jpg" />
 
     <div class="rule-box">
       <ul>

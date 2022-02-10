@@ -2,7 +2,7 @@
   <div class="recruiting">
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
-    <MiddleImg />
+    <MiddleImg image="middle-recruit.jpg" />
 
     <div class="category-wrap gl-5 l-ml-3">
       <div class="category-box">

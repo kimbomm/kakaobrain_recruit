@@ -1,58 +1,41 @@
 <template>
-  <div class="middle-img gl-7 l-ml-2">
-    <img src="@/assets/images/middle-img.png">
-  </div>
+  <div
+    class="middle-img gl-7 l-ml-2"
+    :style="`background-image:url(${require(`@/assets/images/middle/${image}`)})`"
+  ></div>
 </template>
 <script>
-export default {
-  name:'MiddleImg',
-}
-</script>
-<style lang="scss" scoped>
-  .middle-img{
-    box-shadow: 30px 30px 50px -10px rgba(0,0,0,0.2);
-    img{
-      width:100%;
+  export default {
+    name: 'MiddleImg',
+    props: {
+      image: {
+        type: String,
+        default: 'middle-img.png'
+      }
     }
   }
+</script>
+<style lang="scss" scoped>
+  .middle-img {
+    box-shadow: 30px 30px 50px -10px rgba(0, 0, 0, 0.2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+  }
   @include pc-large {
-    .middle-img{
-      // height:800px;
-      img{
-        // position: absolute;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%,-50%);
-        width: 100%;
-        // height: 100%;
-      }
+    .middle-img {
+      height: 530px;
     }
   }
   @include pc-4k {
-    .middle-img{
-      img{
-        width:100%;
-      }
+    .middle-img {
+      height: 800px;
     }
   }
   @include tablet {
-    .middle-img{
-      img{
-        width:100%;
-      }
-    }
-  }
-  @include mobile {
-    .middle-img{
-      &.gl-7{
-        width:100% !important;
-      }
-      &.l-ml-2{
-        margin-left: 0 !important;
-      }
-      img{
-        width:100%;
-      }
+    .middle-img {
+      height: 200px;
     }
   }
 </style>

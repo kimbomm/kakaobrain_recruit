@@ -13,7 +13,7 @@
     />
     <LargeImg />
     <ContentsQuestion />
-    <MiddleImg />
+    <MiddleImg image="middle-home.jpg" />
     <ServiceCategory />
   </div>
 </template>

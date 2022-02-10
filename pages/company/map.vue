@@ -2,7 +2,7 @@
   <div class="company">
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
-    <MiddleImg />
+    <MiddleImg image="middle-map.jpg" />
     <ContentsTitle :title="data.address.title" />
     <ContentsText :text="data.address.text" />
     <div id="map" class="map-js"></div>
