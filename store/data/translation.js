@@ -876,126 +876,134 @@ const WELFARE = {
         'Read thoroughly and compare.</br>True sincerity for the krew.',
       benefitsList: [
         {
-          title: '완전선택근무시간제란?',
-          titleText: '근속 연수에 상관없이 동일 지급.',
+          title: '25 days of annually paid leave?',
+          titleText: 'Same paid leave regardless of the years of service.',
           content: `
-            <div class="folding-item">연/25일은 1년 만근 기준 지급됩니다.(중도 입사자는 당해년 근무기간으로 일할계산 지급)</div>
-            <div class="folding-item">휴가는 결재 없이 본인이 원할 때 시스템에 등록하고 사용할 수 있습니다.</div>
-            <div class="folding-item">연/25일은 1년 만근 기준 지급됩니다.(중도 입사자는 당해년 근무기간으로 일할계산 지급) 휴가는 결재 없이 본인이 원할 때 시스템에 등록하고 사용할 수 있습니다. 연/25일의 휴가는 1시간 단위로 나눠 시간차로 사용 가능합니다.(1일 휴가 = 8시간의 휴가)</div></br><div class="folding-item">연말까지 쓰고 남은 휴가는 본인 니즈에 따라 연차수당으로 받거나, 익년도로 이월해 연중에 아무때나 사용 할 수 있습니다.</div></br><div class="folding-item">휴가는 유연근무 시스템과 함께 설계되어 있으며, 시간 관리를 보다 쉽게 할 수 있도록 모바일에서 사용 가능하고,</br>[슬랙과 구글캘린더]로 연결해 어디서나 쉽게 이용할 수 있습니다.</div>
+            <div class="folding-item">25 days/year are paid based on full-time work for one year. (Part-time employees are paid on a pro-rata basis depending on the working period of the current year)</div>
+            <div class="folding-item">Leave can be registered and used in the system whenever you want without approval.</div>
+            <div class="folding-item">25 days of annually paid leaves can be divided by the hour and used on a time basis. (1 day of paid leave  = 8 hours)</div>
           `,
           isText: true
         },
         {
-          title: '원격(재택) 근무와 유연 근무(완전선택근무시간제)',
+          title:
+            'Remote (working from home) work and flexible work (completely selective working ',
           content: `
-            <div class="folding-item">카카오브레인 크루는 업무 공간을 스스로 정해 일합니다.</div>
-            <div class="folding-item"><span class="underline">원격근무와 유연근무제 상세보기</span></span></div>
+            <div class="folding-item">kakaobrain krew decides their own workspace to work.</div>
+            <div class="folding-item"><span class="underline">See the details of remote work and flexible work systems</span></span></div>
           `,
           isText: false
         },
         {
-          title: '복지 대출 이자지원',
-          titleText: '대출금 최대 3억원 한도, 대출 이자 지원',
-          content: `<div class="folding-item">주거안정(주택구입, 임차료)과 생활안정(의료비, 학자금 등)을 위한 최대 3억원 제휴은행 대출에 대한 이자를 지원합니다. </div>`,
+          title: 'Welfare loan interest support',
+          titleText:
+            'For loans of up to  up to300,000,000 KRW, loan interest support',
+          content: `<div class="folding-item">We support interest on loans from affiliated banks of up to 300,000,000 KRW for stable housing (house purchase, rent) and living (medical expenses, student funds, etc.).</div>`,
           isText: true
         },
         {
-          title: '직장 어린이집 지원',
+          title: 'Workplace daycare center',
           content: `
-            <div class='folding-item'>카카오 공동체 직장 어린이집 지원 : <span class='underline'>늘예솔</span>, <span class='underline'>오리뜰</span>, <span class='underline'>스페이스닷키즈</span></div>
-            <div class='folding-item'>판교오피스 인근의 '<span class='underline'>스타트업캠퍼스어린이집</span>' 도 제휴해 지원합니다</div>
+            <div class='folding-item'>Kakao Community Workplace Daycare center : <span class='underline'>Neulyesol</span>, <span class='underline'>Oritdul</span>, <span class='underline'>Space.Kids</span></div>
+            <div class='folding-item'>'<span class='underline'>The Startup Campus Daycare Center</span>' near the Pangyo office is also supported in partnership.</div>
           `,
           isText: false
         },
         {
-          title: '양가 부모님까지 지원되는 국내 최고 수준 단체 의료비보험 가입',
-          titleText: '보장성 보험료, 의료실손비, 치과 보철/보존비 지원',
+          title:
+            'Subscription to the nation&rsquo;s best group medical insurance that supports both parents',
+          titleText:
+            'Support for insurance premiums, medical loss expenses, and dental prosthetics/conservation expenses',
           content: `
-            [본인 직계 가족]과 [배우자의 부모님까지] 갑작스런 [각종 상해, 사고, 질병]에 대하여 의료비 걱정없이 병원 치료를 받을 수 있도록 단체 의료비 보험 혜택(보장성보험료와 실손의료비)을 지원합니다.</br></br>
-            <div class="folding-item">실손의료비 혜택 : [외래진료비/입원치료비/약조제비]를 본인 직계가족과 배우자의 부모님까지 동일하게 지원합니다.</div>
-            <div class="folding-item">치과 보철 및 보존 치료비 : 크라운, 충치, 신경치료, 레진, 브릿지, 임플란트 등의 치과 비용을 지원합니다. 단, 치과 보철 및 보존 비용은 매해년 보험 갱신에 따라 가족관계별 지원 한도에 차이 있을 수 있습니다.</div>
+          We provide group medical insurance benefits [protection-type premiums and medical expenses] for [your immediate family] and even [your spouse's parents]. So, you can receive hospital treatment without worrying about medical costs in case of sudden [ injuries, accidents, or diseases].</br></br>
+            <div class="folding-item">Medical loss benefits: [Outpatient medical expenses/inpatient treatment expenses/medicine dispensing fee] are equally subsidized for the immediate family and the spouse’s parents</div>
+            <div class="folding-item">Dental prosthetic and conservative treatment costs: We support dental expenses, including dental crowns, cavities, nerve treatments, resins, bridges, and implants. However, the cost of dental prosthetics and preservation may vary depending on the annual insurance renewal limit for each family relationship.</div>
           `,
           isText: true
         },
         {
-          title: '종합 검진 및 종합검진휴가 지원',
+          title: 'A comprehensive health-checkup and a health check-up leave ',
           content: `
-            <div class='folding-item'>전국의 여러 전문 건강검진기관과 연계해 매해년  [건강검진을 무료]로 받을 수 있도록 지원합니다.</div><div class='folding-item'>평일 건강 검진 시, 검진 당일 [유급휴가 연/1일(8시간)]을 지원합니다.</div>
-            <div class='folding-item'>크루 가족은 크루에게 지원되는 동일 종합 건강검진 상품을 카카오 공동체와 계약된 거래가격으로 저렴하게 이용하실 수 있게 지원합니다.</div>
+            <div class='folding-item'>We support [Health Check-up free of charge] every year in partnership with various specialized health check-up institutions across the country.</div>
+            <div class='folding-item'>For weekday health check-ups, [1 day (8 hours) paid leave/year] is supported on the day of the check-up.</div>
+            <div class='folding-item'>We provide support for the krew family to use the same comprehensive health check-up products at a low price - at the price contracted with the Kakao community.</div>
           `,
           isText: false
         },
         {
-          title: '독감 백신 접종비 지원',
-          content: `<div class='folding-item'>구성원의 안전을 위해 독감백신접종 비용을 연 1회 지원합니다.</div>`,
+          title: 'Influenza vaccination support',
+          content: `<div class='folding-item'>We pay for your influenza vaccination once a year for the safety of employees.</div>`,
           isText: false
         },
         {
-          title: '코로나 19 백신접종휴가 2일 지원',
-          content: `<div class='folding-item'>코로나19 백신 접종을 하는 경우, 백신 접종 휴가로 유급휴가 2일을 지원합니다.</div>`,
+          title: 'Two-day COVID-19 vaccination leave',
+          content: `<div class='folding-item'>We provide two days as a vaccination leave for COVID-19 vaccination.</div>`,
           isText: false
         },
         {
-          title: '사망보험금 지급',
-          titleText: '보장성 보험료, 의료실손비, 치과 보철/보존비 지원',
-          content: `<div class='folding-item'>크루가 불의의 사고 또는 질병으로 사망했을 때, 크루 가족이 안정적으로 생활 계획을 세우는데 도움이 될 수 있도록 유가족에게 사망보험금을 지급합니다.</div>`,
+          title: 'Death insurance payment',
+          titleText:
+            'It is paid to the bereaved family in case a krew passes away due to a sudden accident or disease.',
+          content: `<div class='folding-item'>When a krew passes away due to a sudden accident or disease, death insurance is paid to the bereaved family to help the krew family make a stable life plan.</div>`,
           isText: true
         },
         {
-          title: '명절 선물',
-          titleText: '카카오머니 30만원 지급',
-          content: `<div class='folding-item'>설/추석 명절마다 카카오머니 30만원을 지급합니다.</div>`,
+          title: 'Holiday Gifts',
+          titleText: 'Kakao Money  300,000 KRW',
+          content: `<div class='folding-item'>300,000 KRW will be provided  for Lunar New Year/Chuseok holiday.</div>`,
           isText: true
         },
         {
-          title: '임신/출산 축하 선물 키트 지급',
-          content: `<div class='folding-item'>본인과 배우자의 임신/출산을 축하하는 선물 키트를 지급합니다.</div>`,
+          title: 'Pregnancy/birth celebration gift kit',
+          content: `<div class='folding-item'>We give out gift kits to celebrate you and your spouse's pregnancy/birth.</div>`,
           isText: false
         },
         {
-          title: '상조 서비스 지원',
-          content: `<div class='folding-item'>크루 가족의 조사 발생 시 상조전문인력 및 조화, 소모품 등 지원합니다.</div>`,
+          title: 'Funeral support',
+          content: `<div class='folding-item'>We provide funeral specialists, mourning flowers, and consumables for funerals of the krew's family </div>`,
           isText: false
         },
         {
-          title: '경조금 및 경조휴가, 경조용품 지원',
+          title:
+            'Expenses, leaves and consumables for congratulations and condolences',
           content: `
-            <div class='folding-item'>결혼, 환갑, 조사 등 집안 내 경조사 발생 시 축하금 및 조의금을 지급합니다.</div>
-            <div class='folding-item'>경조일의 기념이나 경조사에 참여를 할 수 있도록 경조일 또는 경조기간에 경조휴가를 지급합니다.</div>
-            <div class='folding-item'>경조사 발생 시, 축하 또는 조의의 마음을 전하는 예를 표하기 위하여 경조금과 경조화환(조화)를 전달하고 있습니다.</div>
+            <div class='folding-item'>We support expenses for congratulation and condolence events such as a wedding, 60th birthday, or a funeral.</div>
+            <div class='folding-item'>We provide leaves for the day or period of celebrations  or condolence events for the employees to attend.</div>
+            <div class='folding-item'>For celebrations or condolence events, we pay congratulatory or condolence money and send flowers to express celebrations or condolences.</div>
           `,
           isText: false
         },
         {
-          title: '도서비 무제한 지원',
-          content: `<div class='folding-item'>업무를 위해, 자기개발을 위해 구매가 필요한 도서는 개인별로 발급해 드린 개인 법인카드로 결제하여 구입하여 보면 됩니다.</div>`,
+          title: 'Unlimited support for books',
+          content: `<div class='folding-item'>You can purchase the books you need for work or self-development by paying with a personal business card issued to each individual.</div>`,
           isText: false
         },
         {
-          title: '1인 1개의 법인카드 제공',
+          title: 'One business card per person',
           content: `
-            <div class='folding-item'>모든 크루에게 1인 1개의 법인카드가 제공됩니다.</div>
-            <div class='folding-item'>법인카드는 자율과 책임의 문화 기조 아래 식대, 도서 구입, 회식비 등 별도의 금액 제한 없이 사용할 수 있습니다.</div>
+            <div class='folding-item'>One business card is provided to each krew.</div>
+            <div class='folding-item'>Business cards can be used for direct payment without restrictions on the cost of meals, book purchases, online and offline group dinners, etc. under the culture of autonomy and responsibility.</div>
           `,
           isText: false
         },
         {
-          title: '무제한 간식 제공',
+          title: 'Unlimited snacks',
           content: `
-            <div class='folding-item'>오피스 라운지 스낵바에는 다양한 간식과 음료가 준비되어 있습니다.</div>
-            <div class='folding-item'>배고픈 크루를 위한 라면, 즉석밥도 있고요.</div>
-            <div class='folding-item'>라운지 스낵바에 없는 먹고 싶은 간식이 있다면 스낵바에 비치된 패드나 QR코드로 신청해 주세요.</div></br><div class='folding-item'>브레인 랭킹 간식과 함께 크루가 신청한 새로운 간식은 라운지 스낵바에 계속 업데이트 됩니다.</div>
+            <div class='folding-item'>The Office Lounge snack bar offers a variety of snacks and beverages.</div>
+            <div class='folding-item'>There are instant noodles and instant rice for hungry krews.</div>
+            <div class='folding-item'>You can use the pad or QR code in the snack bar if you want a snack not available in the lounge snack bar.</div></br>
+            <div class='folding-item'>The new snacks requested by the krew will be provided in the lounge snack bar with the brain ranking snacks.</div>
           `,
           isText: false
         },
         {
-          title: '아침식사 지원',
-          content: `<div class='folding-item'>오피스에 출근한 크루를 위해 간단한 아침식사를 준비해 두고 있습니다.</div>`,
+          title: 'Support a light meal',
+          content: `<div class='folding-item'>A light meal is ready for the krew who come to work.</div>`,
           isText: false
         },
         {
-          title: '저녁식사 지원',
-          content: `<div class='folding-item'>동료와 저녁 식사를 함께 한다면 법인카드를 이용할 수 있습니다. </div>`,
+          title: 'Support dinner',
+          content: `<div class='folding-item'>You can use the business card if you are having dinner with a colleague.</div>`,
           isText: false
         }
       ]
