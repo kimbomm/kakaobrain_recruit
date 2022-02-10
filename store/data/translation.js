@@ -1,3 +1,136 @@
+const MAIN = {
+  KR: {
+    MainTitle: `더 나은</br>
+      문화를 만드는</br>
+      우리의 물음.`,
+    MainTitleText: `카카오브레인의 혁신은 모든 크루의 물음에서 시작합니다.</br>
+      AI 없이는 상상할 수 없는 세상을 만들기 위해선 생각하지 못한 많은 물음이 필요합니다.</br>
+      세상을 변화시킬 수 있는 새로운 물음을 던질 크루를 기다립니다.`,
+    ContentsQuestion: {
+      title: `카카오브레인다움은<br/>어떤 물음으로 만들어질까요?`,
+      questionList: [
+        {
+          title: '일에 끌려다니지 않고</br>일의 주인이 될 수는 없을까?',
+          text: '스스로 문제를 찾고, 새롭게 정의하고, 도전적인 목표를 설정하여 주도적으로 일합니다.</br>누군가 걸어간 길이 아닌 새로운 길을 끊임없이 개척합니다.'
+        },
+        {
+          title: '직급에 관계없이 의견을</br>솔직하게 말할 수는 없을까?',
+          text: '자유롭게 자신의 생각을 밝히고 거리낌 없이 토론합니다.</br>서로의 신뢰를 바탕으로 논쟁하여 나온 결론에 대하여서는 모두가 한 방향으로 헌신합니다.'
+        },
+        {
+          title: '누구나 필요한 정보를</br>바로 공유 받을 수는 없을까?',
+          text: '모든 크루가 하고 있는 일과 과정을 투명하게 공개하고 공유합니다.</br>정보와 경험의 공유를 바탕으로 업무에 더욱 빠르게 몰입할 수 있습니다. '
+        },
+        {
+          title: '한 명도 빠짐없이 모든 크루가</br>성장할 수 있을까?',
+          text: '모두가 업무에 몰입하고 성장에 집중할 수 있는 환경을 구성합니다.</br>크루와 소통하고 협업하며 더 즐겁게, 잘 갈 수 있는 길을 만들어갑니다.'
+        }
+      ]
+    },
+    ServiceCategory: {
+      service: [
+        {
+          title: `우리의<br/>일하는 방식.`,
+          text: `자기 주도적으로 성장할 수 있는 좋은 기회가 많이 주어지고,<br/>
+          훌륭한 동료들을 통해 함께 성장할 수 있는 카카오브레인의 크루는 어떻게 일을 하고 있을까요?`,
+          link: ''
+        },
+        {
+          title: `원격근무와<br/>유연근무제.`,
+          text: `우리는 업무 공간을 스스로 정해 일합니다.<br/>
+          우리의 ‘완전선택근무시간제’는 자신의 업무시간을 정해 스스로 관리하며 일합니다.`,
+          link: ''
+        },
+        {
+          title: `복지혜택`,
+          text: `카카오브레인 크루와 가족을 위한<br/>
+          복지혜택을 소개합니다.`,
+          link: ''
+        }
+      ],
+      bottom: [
+        {
+          title: 'FAQ.',
+          subTitle: '',
+          text: '영입 관련한 질문이 있으신가요?',
+          link: ''
+        },
+        {
+          title: '사외추천제도.',
+          subTitle: '지인 추천 보상금 300만원',
+          text: '누구에게나 열려있는 기회.<br/>지인을 추천해 주시면 추천 보상금 300만원을 지급 드립니다.',
+          link: ''
+        }
+      ]
+    }
+  },
+  EN: {
+    MainTitle: `Our question</br>
+      for a better culture</br>`,
+    MainTitleText: `
+      Kakaobrain’s innovation begins with a question from all krews. To create a world unimaginable without AI, we need to ask a lot of unthinkable questions.<br/>
+      We await for krews who are ready to ask a new question that will change the world.`,
+    ContentsQuestion: {
+      title: `What kind of question will<br/>shape kakaobrain?`,
+      questionList: [
+        {
+          title:
+            'Why not take ownership of your work<br/>and not let others dictate your work?',
+          text: 'We find problems on our own, redefine them, and set challenging goals to take initiative at work.<br/>We constantly pioneer new paths, not the paths already taken.'
+        },
+        {
+          title:
+            'Why not step up and speak<br/>out regardless of your position in the organization?',
+          text: 'We freely share our ideas and discuss them openly.</br>Everyone is committed to the conclusions reached from discussions based on mutual trust.'
+        },
+        {
+          title: 'Can’t information be available to<br/>everyone who needs it?',
+          text: 'We openly share and disclose on what and how krews are working.</br>We immerse ourselves in work faster by sharing information and experience.'
+        },
+        {
+          title: 'How can all krews grow together,<br/>leaving no one behind?',
+          text: 'We create an environment where everyone immerse themselves at work and focus on growth.<br/>We continue to communicate and collaborate with krews to pave a new path towards more fun and excitement.'
+        }
+      ]
+    },
+    ServiceCategory: {
+      service: [
+        {
+          title: `How<br/>we work`,
+          text: `kakaobrain krews are given a lot of good opportunities to grow self-directed and<br/>
+          can grow together through great colleagues?`,
+          link: ''
+        },
+        {
+          title: `Teleworking<br/>& Flexible Working`,
+          text: `We define our own workspace for work.<br/>
+          Our ‘Complete Selective Working Hours’ allows krews to set and manage their own working hours for work.`,
+          link: ''
+        },
+        {
+          title: `Benefits`,
+          text: `We offer a wide-range of benefits<br/>to kakaobrain krews and their family.`,
+          link: ''
+        }
+      ],
+      bottom: [
+        {
+          title: 'FAQ.',
+          subTitle: '',
+          text: 'Any questions on job openings?',
+          link: ''
+        },
+        {
+          title: 'External Referral Program.',
+          subTitle: 'Refer a friend and earn 3 million KRW in reward',
+          text: 'The opportunity is open to everyone!<br/>Recommend a qualified friend for the job and earn 3 million KRW in referral incentives.',
+          link: ''
+        }
+      ]
+    }
+  }
+}
+
 const COMPANY = {
   home: {
     KR: {
@@ -1393,6 +1526,7 @@ const MAP = {
 }
 
 export default {
+  MAIN,
   COMPANY,
   RECRUIT,
   WELFARE,

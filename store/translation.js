@@ -1,6 +1,7 @@
 import translation from './data/translation'
 
 export const state = () => ({
+  MAIN: translation.MAIN,
   COMPANY: translation.COMPANY,
   WELFARE: translation.WELFARE,
   RECRUIT: translation.RECRUIT,

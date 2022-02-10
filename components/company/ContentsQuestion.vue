@@ -1,167 +1,158 @@
 <template>
   <div class="question-box">
     <div class="title gl-6">
-      카카오브레인다움은<br/> 어떤 물음으로 만들어질까요?
+      <span v-html="data.title"></span>
     </div>
     <div class="list">
       <ul>
-        <li class="question-item" v-for="(data,index) in questionList" :key="index">
-          <QuestionList :data="data"/>
+        <li
+          class="question-item"
+          v-for="(item, index) in data.questionList"
+          :key="index"
+        >
+          <QuestionList :data="item" />
         </li>
       </ul>
     </div>
   </div>
 </template>
 <script>
-import QuestionList from '@/components/company/QuestionList'
-export default {
-  components:{
-    QuestionList
-  },
-  data(){
-    return{
-      questionList:[
-        {
-          title:'일에 끌려다니지 않고</br>일의 주인이 될 수는 없을까?',
-          text:'스스로 문제를 찾고, 새롭게 정의하고, 도전적인 목표를 설정하여 주도적으로 일합니다.</br>누군가 걸어간 길이 아닌 새로운 길을 끊임없이 개척합니다.'
-        },
-        {
-          title:'직급에 관계없이 의견을</br>솔직하게 말할 수는 없을까?',
-          text:'자유롭게 자신의 생각을 밝히고 거리낌 없이 토론합니다.</br>서로의 신뢰를 바탕으로 논쟁하여 나온 결론에 대하여서는 모두가 한 방향으로 헌신합니다.'
-        },
-        {
-          title:'누구나 필요한 정보를</br>바로 공유 받을 수는 없을까?',
-          text:'모든 크루가 하고 있는 일과 과정을 투명하게 공개하고 공유합니다.</br>정보와 경험의 공유를 바탕으로 업무에 더욱 빠르게 몰입할 수 있습니다. '
-        },
-        {
-          title:'한 명도 빠짐없이 모든 크루가</br>성장할 수 있을까?',
-          text:'모두가 업무에 몰입하고 성장에 집중할 수 있는 환경을 구성합니다.</br>크루와 소통하고 협업하며 더 즐겁게, 잘 갈 수 있는 길을 만들어갑니다.'
-        }
-      ]
+  import QuestionList from '@/components/company/QuestionList'
+  export default {
+    props: {
+      data: {
+        type: Object,
+        default: () => {}
+      }
+    },
+    components: {
+      QuestionList
+    },
+    data() {
+      return {}
     }
   }
-}
 </script>
 <style lang="scss" scoped>
-  .question-box{
-    padding:870px 20px 500px;
-    background-color:$gray-9 ;
-    .title{
+  .question-box {
+    padding: 870px 20px 500px;
+    background-color: $gray-9;
+    .title {
       position: relative;
-      margin:0 auto;
+      margin: 0 auto;
       margin-bottom: 688px;
       text-align: center;
       font-weight: 900;
       font-size: 90px;
       line-height: 120%;
       color: $gray-0;
-      &::before{
-        content:"";
+      &::before {
+        content: '';
         position: absolute;
-        left:50%;
-        bottom:-240px;
+        left: 50%;
+        bottom: -240px;
         transform: translate(-50%, 48px);
         font-family: Inter;
         font-weight: 900;
         font-size: 40px;
         line-height: 120%;
-        color:$gray-0;
+        color: $gray-0;
       }
     }
-    .list{
-      .question-item{
-        &:not(:last-child){
-          margin-bottom:400px;
+    .list {
+      .question-item {
+        &:not(:last-child) {
+          margin-bottom: 400px;
         }
       }
     }
   }
-  
+
   @include pc-large {
-    .question-box{
-      padding:1163px 20px 670px;
-      .title{
+    .question-box {
+      padding: 1163px 20px 670px;
+      .title {
         margin-bottom: 914px;
         font-size: 120px;
-        &::before{
-          bottom:-320px;
+        &::before {
+          bottom: -320px;
           transform: translate(-50%, 64px);
           font-size: 40px;
         }
       }
-      .list{
-        .question-item{
-          &:not(:last-child){
-            margin-bottom:530px;
+      .list {
+        .question-item {
+          &:not(:last-child) {
+            margin-bottom: 530px;
           }
         }
       }
     }
   }
   @include pc-4k {
-    .question-box{
-      padding:1740px 20px 1000px;
-      .title{
+    .question-box {
+      padding: 1740px 20px 1000px;
+      .title {
         margin-bottom: 1376px;
         font-size: 180px;
-        &::before{
-          bottom:-480px;
+        &::before {
+          bottom: -480px;
           transform: translate(-50%, 96px);
           font-size: 60px;
         }
       }
-      .list{
-        .question-item{
-          &:not(:last-child){
-            margin-bottom:800px;
+      .list {
+        .question-item {
+          &:not(:last-child) {
+            margin-bottom: 800px;
           }
         }
       }
     }
   }
   @include tablet {
-    .question-box{
-      padding:480px 20px 300px;
-      .title{
+    .question-box {
+      padding: 480px 20px 300px;
+      .title {
         margin-bottom: 474px;
         font-size: 60px;
-        &::before{
-          bottom:-150px;
+        &::before {
+          bottom: -150px;
           transform: translate(-50%, 24px);
           font-size: 20px;
         }
-        &.gl-6{
+        &.gl-6 {
           width: getWidth(8) !important;
         }
       }
-      .list{
-        .question-item{
-          &:not(:last-child){
-            margin-bottom:400px;
+      .list {
+        .question-item {
+          &:not(:last-child) {
+            margin-bottom: 400px;
           }
         }
       }
     }
   }
   @include mobile {
-    .question-box{
-      padding:340px 20px 200px;
-      .title{
+    .question-box {
+      padding: 340px 20px 200px;
+      .title {
         margin-bottom: 328px;
         font-size: 36px;
-        &::before{
-          bottom:-100px;
+        &::before {
+          bottom: -100px;
           transform: translate(-50%, 28px);
           font-size: 20px;
         }
-        &.gl-6{
-          width:100% !important;
+        &.gl-6 {
+          width: 100% !important;
         }
       }
-      .list{
-        .question-item{
-          &:not(:last-child){
-            margin-bottom:200px;
+      .list {
+        .question-item {
+          &:not(:last-child) {
+            margin-bottom: 200px;
           }
         }
       }
