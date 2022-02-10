@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="notice-paging l-ml-1">
-      <ListPaging />
+      <ListPaging :total="0" :offset="0" :limit="0" />
     </div>
   </div>
 </template>
@@ -89,6 +89,12 @@
     },
     data() {
       return {
+        pageData: {
+          limit: 10,
+          offset: 0
+        },
+        total: 0,
+        list: [],
         noticeList: [
           {
             category: 'AI Researcher',
