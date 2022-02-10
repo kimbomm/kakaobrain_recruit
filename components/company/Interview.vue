@@ -1,15 +1,27 @@
 <template>
   <div class="interview gl-6 l-ml-2">
     <div class="interview-title">
-      <div class="title">카카오브레인은</div>
-      <div class="sub-title">
-        <div class="bracket-text">
-          <img
-            :src="require(`@/assets/images/interview/${data.image.bracket}`)"
-          />
+      <template v-if="language === 'KR'">
+        <div class="title">카카오브레인은</div>
+        <div class="sub-title">
+          <div class="bracket-text">
+            <img
+              :src="require(`@/assets/images/interview/${data.image.bracket}`)"
+            />
+          </div>
+          <span>이다.</span>
         </div>
-        <span>이다.</span>
-      </div>
+      </template>
+      <template v-else>
+        <div class="title">kakaobrain is</div>
+        <div class="sub-title">
+          <div class="bracket-text">
+            <img
+              :src="require(`@/assets/images/interview/${data.image.bracket}`)"
+            />
+          </div>
+        </div>
+      </template>
     </div>
 
     <div class="interview-con l-ml-1">
@@ -20,8 +32,14 @@
       </div>
       <div class="profile-head">
         <div class="profile-tit">
-          <div>{{ data.team }}팀</div>
-          <div>인턴'{{ data.name }}'의 회고</div>
+          <template v-if="language === 'KR'">
+            <div>{{ data.team }}팀</div>
+            <div>인턴'{{ data.name }}'의 회고</div>
+          </template>
+          <template v-else>
+            <div>Memories from {{ data.name }},</div>
+            <div>who interned at the {{ data.team }} Team</div>
+          </template>
         </div>
         <div class="profile-txt">{{ data.profileTxt }}</div>
       </div>
@@ -36,10 +54,21 @@
       </div>
 
       <div class="interview-know-how">
-        <div class="know-how-tit">{{ data.name }}가 알려주는 노하우!</div>
+        <div class="know-how-tit">
+          <template v-if="language === 'KR'">
+            {{ data.name }}가 알려주는 노하우!
+          </template>
+          <template v-else>Tips from {{ data.name }}!</template>
+        </div>
         <div class="advice">
           <div class="advice-item">
-            <div class="tit">이런 분들에게 추천!</div>
+            <div class="tit">
+              {{
+                language === 'KR'
+                  ? '이런 분들에게 추천!'
+                  : 'kakaobrain is great for!'
+              }}
+            </div>
             <div
               v-for="(txt, index) in data.recommend"
               :key="index"
@@ -49,7 +78,13 @@
             </div>
           </div>
           <div class="advice-item">
-            <div class="tit">지원자를 위한 조언</div>
+            <div class="tit">
+              {{
+                language === 'KR'
+                  ? '지원자를 위한 조언'
+                  : 'Advice for applicants'
+              }}
+            </div>
             <div v-for="(txt, index) in data.advice" :key="index" class="txt">
               {{ txt }}
             </div>
@@ -60,7 +95,13 @@
             <p v-html="data.interviewTidy.replace(/\n/g, '<br/>')"></p>
           </div>
           <div class="btn">
-            <span class="btn-txt">카카오브레인 페이스북에서 보기 →</span>
+            <span class="btn-txt">
+              <template v-if="language === 'KR'">
+                카카오브레인 페이스북에서 보기
+              </template>
+              <template v-else> Meet kakaobrain on Facebook </template>
+              →
+            </span>
           </div>
         </div>
       </div>
@@ -68,6 +109,7 @@
   </div>
 </template>
 <script>
+  import { mapState } from 'vuex'
   export default {
     name: 'Interview',
     props: {
@@ -76,6 +118,11 @@
         default: () => {},
         require: true
       }
+    },
+    computed: {
+      ...mapState({
+        language: state => state.language
+      })
     }
   }
 </script>
