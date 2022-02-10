@@ -67,7 +67,6 @@
     &-title {
       flex: 0 0 90%;
       p {
-        font-family: 'NotoSansKR';
         font-size: 20px;
         line-height: 1.2;
         font-weight: 700;
@@ -85,7 +84,6 @@
     &-button {
       cursor: pointer;
       span {
-        font-family: 'NotoSansKR';
         font-size: 14px;
         color: $gray-6;
         line-height: 1.2;
@@ -94,7 +92,6 @@
     &-content {
       margin-top: 40px;
       > div {
-        font-family: 'NotoSansKR';
         font-size: 16px;
         font-weight: 400;
         line-height: 1.5;
