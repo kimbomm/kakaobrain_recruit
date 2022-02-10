@@ -49,5 +49,16 @@ export const actions = {
   },
   getFilterList({ commit }, payload) {
     commit('setFilterList', payload)
+  },
+  async getRecruitList({}, payload) {
+    const res = await this.$axios.post(
+      'https://kakaobrain.recruiter.co.kr/appsite/company/getMainView',
+      {
+        appsiteSn: 9142,
+        settingType: 'G'
+      }
+    )
+
+    return res
   }
 }

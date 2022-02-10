@@ -68,7 +68,7 @@
   </div>
 </template>
 <script>
-  import { mapState } from 'vuex'
+  import { mapState, mapActions } from 'vuex'
   import mixinGlobal from '@/mixin/global.js'
   import MainTitle from '@/components/company/MainTitle'
   import MainTitleText from '@/components/company/MainTitleText'
@@ -123,6 +123,15 @@
       data() {
         return this.recruitData[this.language]
       }
+    },
+    created() {
+      const res = this.getRecruitList()
+      console.log('res::', res)
+    },
+    methods: {
+      ...mapActions({
+        getRecruitList: 'getRecruitList'
+      })
     }
   }
 </script>
