@@ -33,14 +33,26 @@
     }
   ],
   "footer": [
-    { "name": "오시는 길", "link": "/company/map" },
-    { "name": "이메일무단수집거부", "link": "#" },
-    { "name": "개인정보 처리방침", "link": "#" }
-  ],
-  "sns": [
-    { "name": "facebook", "link": "#" },
-    { "name": "insta", "link": "#" },
-    { "name": "kakao", "link": "#" },
-    { "name": "youtube", "link": "#" }
+    {
+      "name": {
+        "KR": "오시는 길",
+        "EN": "Maps & Directions "
+      },
+      "link": "/company/map"
+    },
+    {
+      "name": {
+        "KR": "이메일무단수집거부",
+        "EN": "Unaccept to Share  EmailAddress"
+      },
+      "link": "#"
+    },
+    {
+      "name": {
+        "KR": "개인정보 처리방침",
+        "EN": "Privacy Policy"
+      },
+      "link": "#"
+    }
   ]
 }

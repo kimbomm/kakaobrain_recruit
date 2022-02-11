@@ -12,7 +12,7 @@
               class="menu-list"
             >
               <nuxt-link :to="menu.link">
-                {{ menu.name }}
+                {{ menu.name[language] }}
               </nuxt-link>
             </li>
           </ul>
