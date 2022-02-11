@@ -3,17 +3,30 @@
     <div class="footer-sns">
       <ul>
         <li class="item">
-          <Icon sns="icon-facebook-b"></Icon>
-          <!-- <button type="button" @click="onClickFacebook()" class="icon-sns icon-facebook-b"></button> -->
+          <a href="https://www.facebook.com/kakaobrain" target="_blank">
+            <Icon sns="icon-facebook-b"></Icon>
+          </a>
         </li>
         <li class="item">
-          <Icon sns="icon-insta-b"></Icon>
+          <a
+            href="https://www.linkedin.com/company/kakaobrain/"
+            target="_blank"
+          >
+            <Icon sns="icon-linkedin-b"></Icon>
+          </a>
         </li>
         <li class="item">
-          <Icon sns="icon-kakao-b"></Icon>
+          <a href="http://pf.kakao.com/_xhFyTb" target="_blank">
+            <Icon sns="icon-kakao-b"></Icon>
+          </a>
         </li>
         <li class="item">
-          <Icon sns="icon-youtube-b"></Icon>
+          <a
+            href="https://www.youtube.com/channel/UCdfmJNL-t_PdVHyn__tGrpg"
+            target="_blank"
+          >
+            <Icon sns="icon-youtube-b"></Icon>
+          </a>
         </li>
       </ul>
     </div>

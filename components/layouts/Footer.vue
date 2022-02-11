@@ -23,7 +23,7 @@
         <div class="copyright">
           Copyright ⓒ kakaobrain Corp. <span>All rights reserved.</span>
         </div>
-        <SnsLink />
+        <SnsLink v-if="language === 'KR'" />
       </div>
       <div class="footer-shape"></div>
     </div>
@@ -39,6 +39,7 @@
     computed: {
       ...mapState({
         isDark: state => state.isDark,
+        language: state => state.language,
         footerMenu: state => state.footerMenu
       }),
       classBind() {
