@@ -146,13 +146,17 @@ const COMPANY = {
           ruleList: [
             {
               title: '매주 월요일, 전사 크루가 TIM미팅에서 만나요.',
-              content:
-                'TIM은 &#91;Talk, it&#39;s Monday!&#93; 의 줄임말로, &#91;크루 전체가 참여하는 주 1회 미팅&#93;이에요.\n카카오브레인 크루 전체가 참여하는 전사 미팅인 TIM미팅을 통해 크루에게 다양한 정보를 투명하게 &#91;공개&#93;하고 &#91;공유&#93;합니다. TIM미팅은 단순한 공지를 위한 자리가 아닌, 참석한 모두와 자유롭게 질문을 주고 받으며 다양한 의견을 나누는 토론의 장입니다.\n\n카카오브레인 크루들이 사내 이슈와 테크트렌드에 대해 자유롭게 의견을 제시하며 질의응답을 주고 받기도 하고, 참석하지 못하는 크루를 위해 녹화본이 공유됩니다. 이런 일련의 &#91;공유 문화&#93;를 통해 카카오브레인 크루들이 회사내 이슈만큼은 외부가 아닌 내부에서 처음으로 들을 수 있게 노력하고 있습니다.\n\n또한 컬처팀은 TIM미팅을 통해 조직 개편 및 주요 공지 사항을 리마인드하고, 크루의 결혼이나 생일 등의 축하도 합니다. 신규 입사한 뉴크루를 소개하거나 브레인을 떠나는 크루와 아쉬움을 나누는 시간도 마련합니다.'
+              content: `
+                TIM은 &#91;Talk, it&#39;s Monday!&#93; 의 줄임말로, &#91;크루 전체가 참여하는 주 1회 미팅&#93;이에요.<br/>
+                카카오브레인 크루 전체가 참여하는 전사 미팅인 TIM미팅을 통해 크루에게 다양한 정보를 투명하게 &#91;공개&#93;하고 &#91;공유&#93;합니다.
+                TIM미팅은 단순한 공지를 위한 자리가 아닌, 참석한 모두와 자유롭게 질문을 주고 받으며 다양한 의견을 나누는 토론의 장입니다.<br/><br/>
+                카카오브레인 크루들이 사내 이슈와 테크트렌드에 대해 자유롭게 의견을 제시하며 질의응답을 주고 받기도 하고, 참석하지 못하는 크루를 위해 녹화본이 공유됩니다. 이런 일련의 &#91;공유 문화&#93;를 통해 카카오브레인 크루들이 회사내 이슈만큼은 외부가 아닌 내부에서 처음으로 들을 수 있게 노력하고 있습니다.<br/><br/>또한 컬처팀은 TIM미팅을 통해 조직 개편 및 주요 공지 사항을 리마인드하고, 크루의 결혼이나 생일 등의 축하도 합니다. 신규 입사한 뉴크루를 소개하거나 브레인을 떠나는 크루와 아쉬움을 나누는 시간도 마련합니다.
+              `
             },
             {
               title: '매월 마지막 금요일, 전사 크루가 미니컨퍼런스를 합니다.',
               content:
-                '함께 일하는 크루들과 공유를 통한 공감대를 형성하고, 더 성장하기 위해 매월 마지막 주 금요일에는 전사 크루가 미니컨퍼런스에 참여 합니다.\n\n미니컨퍼런스에서는 회사의 목표와 비즈니스 성장에 관한 이야기, 연구 및 업무의 성과 그리고 진행상황을 발표하고 어떤 과정을 거쳤는지 상세히 공유하고 토론하며 우리를 더욱 성장하게 합니다.\n\n주요 프로그램은 크게 3가지로, Google Meet에서 발표세션을 갖고, GatherTown에서 토론세션과 포스터세션이 진행됩니다.'
+                '함께 일하는 크루들과 공유를 통한 공감대를 형성하고, 더 성장하기 위해 매월 마지막 주 금요일에는 전사 크루가 미니컨퍼런스에 참여 합니다.<br/><br/>미니컨퍼런스에서는 회사의 목표와 비즈니스 성장에 관한 이야기, 연구 및 업무의 성과 그리고 진행상황을 발표하고 어떤 과정을 거쳤는지 상세히 공유하고 토론하며 우리를 더욱 성장하게 합니다.<br/><br/>주요 프로그램은 크게 3가지로, Google Meet에서 발표세션을 갖고, GatherTown에서 토론세션과 포스터세션이 진행됩니다.'
             }
           ]
         },
@@ -174,7 +178,7 @@ const COMPANY = {
               title: "카카오 공동체의 '영어 호칭' 사용과 '신충헌 원칙'",
               content: `
                 <span class="string">영어 호칭</span>은 경력, 연차, 나이에 관계없이 솔직하게 의견을 제시하고 자발적인 토론과 능동적인 참여를 이끌어내는 환경을 만들어줍니다. 그래서 카카오브레인과 카카오 공동체 전체의 크루를 부를 때에는 &#39;~께서 /~님&#39;등의 극 존칭 표현을 사용하지 않습니다.<br/><br/>
-                <span class="string">신충헌</span>(신뢰, 충돌, 헌신)이라는 원칙은 자유로운 소통 문화와 더해져 빠르게 변화하는 IT산업 환경에서 혁신을 만들고 패러다임을 전환하는 원동력으로 작용됩니다.\n이 원칙은 [서로가 신뢰를 바탕으로 충분히 논쟁하고 부딪히며 나온 결론에 대해, 모두가 한 방향으로 헌신하자]는 내용으로,결과에 대한 크루 간 합의와 이해, 주도적인 업무 추진을 가능하게 합니다.
+                <span class="string">신충헌</span>(신뢰, 충돌, 헌신)이라는 원칙은 자유로운 소통 문화와 더해져 빠르게 변화하는 IT산업 환경에서 혁신을 만들고 패러다임을 전환하는 원동력으로 작용됩니다.<br/>이 원칙은 [서로가 신뢰를 바탕으로 충분히 논쟁하고 부딪히며 나온 결론에 대해, 모두가 한 방향으로 헌신하자]는 내용으로,결과에 대한 크루 간 합의와 이해, 주도적인 업무 추진을 가능하게 합니다.
               `
             }
           ]
@@ -189,7 +193,7 @@ const COMPANY = {
             {
               title: "카카오 공동체의 '최소한의 원칙'",
               content:
-                '<span class="string">100:0의 원칙</span>\n카카오브레인 내부에서는 모든 것을 공개하고(100), 카카오브레인을 벗어나서는 아무 것도 공개하지 않습니다.\n왜 100:0 이냐? 누구에게는 중요한 정보가 누구에겐 중요하지 않은 정보일 수 있습니다. \n그렇다고 매번 동료들에게 공유를 해도 되는지 아닌지를 물어보는 것은 불가능한 일이라고 생각해서 입니다\n\n<span class="string">1원의 원칙</span>\n회사의 자원을 개인의 사적일 일에 사용하지 않는다는 원칙입니다.\n누군가의 작은 행동이 동료들의 신뢰를 깰 수 있다면 그 부분은 1원이라고 해서 이슈 삼지 않을 이유가 없다고 생각해서 입니다.\n\n<span class="string">애매하면 하지 않는다</span>'
+                '<span class="string">100:0의 원칙</span><br/>카카오브레인 내부에서는 모든 것을 공개하고(100), 카카오브레인을 벗어나서는 아무 것도 공개하지 않습니다.<br/>왜 100:0 이냐? 누구에게는 중요한 정보가 누구에겐 중요하지 않은 정보일 수 있습니다. <br/>그렇다고 매번 동료들에게 공유를 해도 되는지 아닌지를 물어보는 것은 불가능한 일이라고 생각해서 입니다<br/><br/><span class="string">1원의 원칙</span><br/>회사의 자원을 개인의 사적일 일에 사용하지 않는다는 원칙입니다.<br/>누군가의 작은 행동이 동료들의 신뢰를 깰 수 있다면 그 부분은 1원이라고 해서 이슈 삼지 않을 이유가 없다고 생각해서 입니다.<br/><br/><span class="string">애매하면 하지 않는다</span>'
             }
           ]
         }
@@ -209,8 +213,12 @@ const COMPANY = {
             {
               title:
                 'Every Monday, the company-wide krew meet at the TIM meeting.',
-              content:
-                'TIM is an abbreviation of [Talk, it’s Monday!], a [weekly meeting with the entire krew participating].'
+              content: `
+                TIM is an abbreviation of [Talk, it’s Monday!], a [weekly meeting with the entire krew participating].<br/>
+                Various information is transparently [opened] and [shared] with the krew in the company-wide krew meeting TIM. The TIM meeting is a forum for freely exchanging questions and opinions with everyone attending, rather than simply making announcements.<br/><br/>
+                kakaobrain krews freely raise opinions and exchange questions and answers on in-house issues and tech trends. Krews who cannot attend receive recordings of the meeting. The [sharing culture] intends to have the kakaobrain krew first know about in-house issues inside the company than from outside.<br/><br/>
+                The culture team reminds the krew of any organizational reform, makes important announcements, and congratulates the krew's wedding or birthday in TIM meetings. There is also a time to introduce new krew members joining the company or say farewell to krew members leaving kakaobrain.
+              `
             },
             {
               title:
@@ -255,10 +263,10 @@ const COMPANY = {
             {
               title: "Kakao community's 'minimum principle'",
               content: `
-                <span class="string">The 100:0 Principle</span>\n
-                kakaobrain opens everything inside (100) and nothing outside (0) kakaobrain. Why 100:0? Certain information might be important for some people but not for others. However, it is impossible to ask your colleagues every time whether it is okay to share or not.\n\n
-                <span class="string">One Won Principle</span>\n
-                The principle is not to use company resources for personal matters. There is no reason for ignoring an issue just because it's only 1 won if someone's small actions might break the trust of colleagues.\n\n
+                <span class="string">The 100:0 Principle</span><br/>
+                kakaobrain opens everything inside (100) and nothing outside (0) kakaobrain. Why 100:0? Certain information might be important for some people but not for others. However, it is impossible to ask your colleagues every time whether it is okay to share or not.<br/><br/>
+                <span class="string">One Won Principle</span><br/>
+                The principle is not to use company resources for personal matters. There is no reason for ignoring an issue just because it's only 1 won if someone's small actions might break the trust of colleagues.<br/><br/>
                 <span class="string">We don’t do something ambiguous.</span>`
             }
           ]
@@ -281,7 +289,7 @@ const COMPANY = {
           team: 'Neuro-Symbolic AI',
           profileTxt: '카이스트 AI대학원 주재걸교수님 연구실 석사과정',
           interviewTextA:
-            '사내에서 상시로 열리는\n 기술 공유 세미나 ‘미니컨퍼런스’ 시간을 통해 CEO와 이야기하고 의견을 나눠본다던가 하는 것이 신선했어요. 다른 연구자들의 발표를 듣다 보면 업계 지식도 늘고 자극이 되기도 하더라고요.',
+            '사내에서 상시로 열리는<br/> 기술 공유 세미나 ‘미니컨퍼런스’ 시간을 통해 CEO와 이야기하고 의견을 나눠본다던가 하는 것이 신선했어요. 다른 연구자들의 발표를 듣다 보면 업계 지식도 늘고 자극이 되기도 하더라고요.',
           interviewTextB:
             '카카오브레인은 매머드 조직이 아니지만  큰 조직 못지않은 AI 시스템과 풍부한 자원들에 업무 지원도 잘 되어 연구에만 신경 쓸 수 있었어요. 거기다 스타트업 같은 파이팅도 넘치는  조직이라 뭔가 함께 토론하며 일하는 맛도  나더라고요.',
           recommend: [
@@ -307,7 +315,7 @@ const COMPANY = {
           interviewTextA:
             "인턴을 시작하자 마자 '역시 라이언 전무가 있는 곳은 다르구나' 라고 생각했어요. AI 연구를 위한 풍족한 인프라는 물론 뛰어난 인재, 사내에서 상시로 열리는 기술 공유 세미나 ‘미니컨'에서 공유되는 수많은 정보를 접해보고, ‘AI 계에서 제대로 플렉스 하는구나!’ 라고 생각했어요.",
           interviewTextB:
-            '멘토링에 감동했습니다.\n 보통 멘토링이라고 하면, 구체적인 명세, 기술을 정해서, 그대로 구현하도록 지시하는 수동적인 방식인데, 카카오브레인 멘토들은 인턴의 자율적 의견을 존중하고 스스로 판단할 수 있도록 방향만 잡아주었어요. 정말 많은 도움이 됬죠.',
+            '멘토링에 감동했습니다.<br/> 보통 멘토링이라고 하면, 구체적인 명세, 기술을 정해서, 그대로 구현하도록 지시하는 수동적인 방식인데, 카카오브레인 멘토들은 인턴의 자율적 의견을 존중하고 스스로 판단할 수 있도록 방향만 잡아주었어요. 정말 많은 도움이 됬죠.',
           recommend: [
             '업계 최고 엔지니어의 멘토링을 경험해보고 싶은 분',
             '인턴 기간동안 모든 열정을 쏟아부을 각오가 있는 분'
@@ -317,7 +325,7 @@ const COMPANY = {
             '근거를 바탕으로 논리적으로 커뮤니케이션하는 연습을 해보세요.'
           ],
           interviewTidy:
-            '그 어디보다 뛰어난 최신 AI 기술력, 업계 최고의 동료들과의 커뮤니케이션 및 토론 등, \nWilson에게 카카오 브레인 인턴 2개월은 너무나 짧다고 느껴질 정도로 뜻 깊은 시간이었습니다. \n개인적으로 Wilson은 좀 더 긴 종류의 인턴 프로그램을 만들어줬으면 하는 마음도 있다고 해요. \n자신의 지인들에게는 휴학을 불사하고도 카카오브레인 인턴에 참여해보라고 권유할 생각이라고 합니다.'
+            '그 어디보다 뛰어난 최신 AI 기술력, 업계 최고의 동료들과의 커뮤니케이션 및 토론 등, <br/>Wilson에게 카카오 브레인 인턴 2개월은 너무나 짧다고 느껴질 정도로 뜻 깊은 시간이었습니다. <br/>개인적으로 Wilson은 좀 더 긴 종류의 인턴 프로그램을 만들어줬으면 하는 마음도 있다고 해요. <br/>자신의 지인들에게는 휴학을 불사하고도 카카오브레인 인턴에 참여해보라고 권유할 생각이라고 합니다.'
         },
         {
           image: {
@@ -328,7 +336,7 @@ const COMPANY = {
           team: 'Representation Learning',
           profileTxt: '카이스트 AI대학원 황성주교수님 연구실 석사과정',
           interviewTextA:
-            "카카오브레인 인턴생활을 하며 ‘여기는 비행기 내부와 비슷하구나' 라고 생각했어요. \n나이도 성별도 목적도 모두 다르지만, 어떤 목적지를 향해 모두 함께 날아가고 있으니까요. 그 안에서 일어나는 다양한 소통과 정보 공유가 흥미롭고 즐거웠습니다.",
+            "카카오브레인 인턴생활을 하며 ‘여기는 비행기 내부와 비슷하구나' 라고 생각했어요. <br/>나이도 성별도 목적도 모두 다르지만, 어떤 목적지를 향해 모두 함께 날아가고 있으니까요. 그 안에서 일어나는 다양한 소통과 정보 공유가 흥미롭고 즐거웠습니다.",
           interviewTextB:
             '연구원들과 함께 일하고 대화하면서 많은 것을 느꼈습니다. 의견이 충돌되더라도 누구 하나 흥분하지 않고 토의를 이어나가며 최고의 결과를 도출해 내는 것을 보고 인품과 실력이 함께 만났을 때의 최종 결과물을 확인한 느낌이였습니다. 한꺼번에 진행되는 수많은 연구를 모두 팔로우하고 매니징하는 Sam 팀장의 모습도 배우고 싶었어요.',
           recommend: [
@@ -340,7 +348,7 @@ const COMPANY = {
             '자신의 의견을 피력하기 위한 다양한 화법을 연구해 보세요.'
           ],
           interviewTidy:
-            '마치 비행기의 일등석처럼, 카카오브레인은 목표를 위해 날아가면서 \n편안하게 일할 수 있는 모든 인프라를 지원하는 게 좋았다고 강조했습니다. \n이렇게 빠르고 멀리 날아, 카카오브레인 인턴 생활 동안 Jwoong은 더 넓은 세계를 볼 수 있었다고 합니다.'
+            '마치 비행기의 일등석처럼, 카카오브레인은 목표를 위해 날아가면서 <br/>편안하게 일할 수 있는 모든 인프라를 지원하는 게 좋았다고 강조했습니다. <br/>이렇게 빠르고 멀리 날아, 카카오브레인 인턴 생활 동안 Jwoong은 더 넓은 세계를 볼 수 있었다고 합니다.'
         },
         {
           image: {
@@ -351,7 +359,7 @@ const COMPANY = {
           team: 'Human CV',
           profileTxt: 'UNIST AI대학원 Vision&Learning 연구실 석사과정',
           interviewTextA:
-            '모든 카카오브레인 선배들에게 자신의 일과 회사에 대한 Flex를 느꼈어요. \n하지만 그렇다고 소위 ‘뻣뻣’하지는 \n않았습니다. 인턴 생활 당시 저의 멘토 ‘말포이’와 자주 시간을 같이하며 고민을 풀어주고 방향성을 제시해 주었습니다. 다른 선배들도 마찬가지였고요.',
+            '모든 카카오브레인 선배들에게 자신의 일과 회사에 대한 Flex를 느꼈어요. <br/>하지만 그렇다고 소위 ‘뻣뻣’하지는 <br/>않았습니다. 인턴 생활 당시 저의 멘토 ‘말포이’와 자주 시간을 같이하며 고민을 풀어주고 방향성을 제시해 주었습니다. 다른 선배들도 마찬가지였고요.',
           interviewTextB:
             '인턴에게도 카카오브레인의 프로젝트가 거의 다 공개되어 있어 다양한 간접 경험을 해볼 수 있었던 점도 좋은 경험이었습니다. 선배들의 멘토링이 진정 도움이 됐고, 인턴이 보조가 아니라 일하는 동안의 동료라 생각해 주도적으로 프로젝트를 리드해 볼 수도 있었어요.',
           recommend: [
@@ -364,7 +372,7 @@ const COMPANY = {
             '자신의 장점과 약점을 미리 한 번 생각해 보세요.'
           ],
           interviewTidy:
-            '테드는 인턴 기간 동안 느낀 카카오브레인이 ‘오케스트라’처럼 엮여졌다고 표현합니다. \n각자가 최고의 연주자인 동시에, 모두가 카카오브레인이라는 하나의 목표로 전진하는 모습에 깊은 인상을 받았다고 합니다. \n인턴들을 주체적 연구자로 대해주는 모습도 좋았고요.'
+            '테드는 인턴 기간 동안 느낀 카카오브레인이 ‘오케스트라’처럼 엮여졌다고 표현합니다. <br/>각자가 최고의 연주자인 동시에, 모두가 카카오브레인이라는 하나의 목표로 전진하는 모습에 깊은 인상을 받았다고 합니다. <br/>인턴들을 주체적 연구자로 대해주는 모습도 좋았고요.'
         }
       ]
     },
@@ -1020,7 +1028,7 @@ const WELFARE = {
         },
         {
           title:
-            'Remote (working from home) work and flexible work (completely selective working ',
+            'Remote (working from home) work and flexible work (completely selective working hours)',
           content: `
             <div class="folding-item">kakaobrain krew decides their own workspace to work.</div>
             <div class="folding-item"><span class="underline">See the details of remote work and flexible work systems</span></span></div>
@@ -1158,22 +1166,22 @@ const FAQ = {
       {
         title: 'Q. 서류평가 결과는 언제 받아볼 수 있나요?',
         content:
-          '이력서를 제출한 날로부터 가급적 7일 내(영업일 기준)로 결과를 알려드립니다만 공고별로 상이할 수 있는 점 참고 부탁드립니다. 접수 시 메일로 안내된 기간이 지났음에도 불구하고 결과를 받아보지 못하셨을 경우, 현업에서 심사숙고하여 검토 후 결과를 안내드리려다보니 지연이 되고 있는 상황으로 보입니다.\n\n서류전형 결과가 나오면 메일로 안내드릴 예정입니다.'
+          '이력서를 제출한 날로부터 가급적 7일 내(영업일 기준)로 결과를 알려드립니다만 공고별로 상이할 수 있는 점 참고 부탁드립니다. 접수 시 메일로 안내된 기간이 지났음에도 불구하고 결과를 받아보지 못하셨을 경우, 현업에서 심사숙고하여 검토 후 결과를 안내드리려다보니 지연이 되고 있는 상황으로 보입니다.<br/><br/>서류전형 결과가 나오면 메일로 안내드릴 예정입니다.'
       },
       {
         title: 'Q. 인턴십 또는 다른 분야의 영입 계획은 없나요?',
         content:
-          '영입 계획이 확정되면 진행중인 영입공고에 게재할 계획입니다.\n관심을 갖고 지켜봐주시면 감사하겠습니다.'
+          '영입 계획이 확정되면 진행중인 영입공고에 게재할 계획입니다.<br/>관심을 갖고 지켜봐주시면 감사하겠습니다.'
       },
       {
         title: 'Q. 외국인의 경우, 지원 가능한가요?',
         content:
-          '국적에 대해 따로 제한사항을 두고 있지는 않습니다만, 취업이 가능한 비자를 소지하고 계셔야 합니다. \n추가로 카카오브레인은 현재 카카오 계열사 및 학교, 국내기관들과 커뮤니케이션 및 협업을 진행하고 있기 때문에, \n한국어를 기반으로 의사소통과 업무 수행이 가능해야 합니다.'
+          '국적에 대해 따로 제한사항을 두고 있지는 않습니다만, 취업이 가능한 비자를 소지하고 계셔야 합니다. <br/>추가로 카카오브레인은 현재 카카오 계열사 및 학교, 국내기관들과 커뮤니케이션 및 협업을 진행하고 있기 때문에, <br/>한국어를 기반으로 의사소통과 업무 수행이 가능해야 합니다.'
       },
       {
         title: 'Q. 인터뷰 결과와 관련하여 피드백을 받을 수 있을지요?',
         content:
-          '인재 영입은 수많은 지원자들을 심사하여 해당 포지션에 가장 적합하고 우수한 인재를 선발하는 과정입니다. \n따라서 합/불 결과는 상대적인 평가와 비교를 통하여 복합적으로 판단되는 경우가 많아 \n특정한 구체적인 사유를 말씀 드리기가 참 어렵습니다. \n\n한 분 한 분 구체적인 불합격 사유를 말씀 드리지 못하는 점 진심으로 죄송하게 생각합니다.'
+          '인재 영입은 수많은 지원자들을 심사하여 해당 포지션에 가장 적합하고 우수한 인재를 선발하는 과정입니다. <br/>따라서 합/불 결과는 상대적인 평가와 비교를 통하여 복합적으로 판단되는 경우가 많아 <br/>특정한 구체적인 사유를 말씀 드리기가 참 어렵습니다. <br/><br/>한 분 한 분 구체적인 불합격 사유를 말씀 드리지 못하는 점 진심으로 죄송하게 생각합니다.'
       },
       {
         title: 'Q. 불합격 시, 재지원은 언제부터 가능한가요?',
@@ -1182,12 +1190,12 @@ const FAQ = {
       {
         title: 'Q. 병역특례로 지원이 가능한가요?',
         content:
-          '병무청에서는 전문연구요원(연구기관에서 과학기술 연구·학문분야 종사)과 산업기능요원(산업체에서 제조·생산 분야 종사)를 관리하고 있습니다. \n당사에 있는 인공지능연구소에는 업종특성상 전문연구요원만 운영 중이며, 신규편입 인원 선발은 병무청으로 부터 배정받은 T/O가 없어 인원 선발이 불가하나, 전직은 소정기간 복무한 인원에 한하여 당사로 지원이 가능합니다. \n\n병역특례에 관련한 사항은 <span class="underline">apply@kakaobrain.com</span> 메일로  1:1 문의를 통해 확인해 주시기 바랍니다.'
+          '병무청에서는 전문연구요원(연구기관에서 과학기술 연구·학문분야 종사)과 산업기능요원(산업체에서 제조·생산 분야 종사)를 관리하고 있습니다. <br/>당사에 있는 인공지능연구소에는 업종특성상 전문연구요원만 운영 중이며, 신규편입 인원 선발은 병무청으로 부터 배정받은 T/O가 없어 인원 선발이 불가하나, 전직은 소정기간 복무한 인원에 한하여 당사로 지원이 가능합니다. <br/><br/>병역특례에 관련한 사항은 <span class="underline">apply@kakaobrain.com</span> 메일로  1:1 문의를 통해 확인해 주시기 바랍니다.'
       },
       {
         title: 'Q. 군미필자인 경우 지원이 가능한가요?',
         content:
-          '병역 미필자(면제자예외)는 면접에 합격 하시더라도 입사 후 원만한 직장 생활이 어렵기 때문에 지원이 불가능합니다. \n다만, 병역특례는 예외입니다. \n\n병역특례에 관련한 사항은 <span class="underline">apply@kakaobrain.com</span> 메일로  1:1 문의를 통해 확인해 주시기 바랍니다.'
+          '병역 미필자(면제자예외)는 면접에 합격 하시더라도 입사 후 원만한 직장 생활이 어렵기 때문에 지원이 불가능합니다. <br/>다만, 병역특례는 예외입니다. <br/><br/>병역특례에 관련한 사항은 <span class="underline">apply@kakaobrain.com</span> 메일로  1:1 문의를 통해 확인해 주시기 바랍니다.'
       }
     ]
   },
@@ -1204,7 +1212,7 @@ const FAQ = {
       {
         title: 'Q. When can I receive the document screening result?',
         content:
-          'We will notify you of the results within seven (7) business days as much as possible from the date you submitted your resume. However, the result may differ for each job opening. You may not receive the result within the notification period specified in the e-mail you receive at the time of application. Such delay may be from the working-level personnel trying to determine after careful deliberation.\n\nWe will notify you by e-mail once the document screening results are out.'
+          'We will notify you of the results within seven (7) business days as much as possible from the date you submitted your resume. However, the result may differ for each job opening. You may not receive the result within the notification period specified in the e-mail you receive at the time of application. Such delay may be from the working-level personnel trying to determine after careful deliberation.<br/><br/>We will notify you by e-mail once the document screening results are out.'
       },
       {
         title:
@@ -1220,7 +1228,7 @@ const FAQ = {
       {
         title: 'Q. Can I get feedback concerning the interview results?',
         content:
-          'Hiring talents is a process of screening numerous applicants and selecting the most suitable and outstanding person for the position. Therefore, it is difficult to give specific reasons because the pass/fail results are often judged in a complex way through relative evaluation and comparison.\n\nWe sincerely apologize for not being able to provide specific reasons for rejection to every one of you.'
+          'Hiring talents is a process of screening numerous applicants and selecting the most suitable and outstanding person for the position. Therefore, it is difficult to give specific reasons because the pass/fail results are often judged in a complex way through relative evaluation and comparison.<br/><br/>We sincerely apologize for not being able to provide specific reasons for rejection to every one of you.'
       },
       {
         title: 'Q. If I am not accepted, when can I apply again?',
@@ -1230,7 +1238,7 @@ const FAQ = {
       {
         title: 'Q. Can I apply for the special military service exemption?',
         content:
-          'The Military Manpower Administration manages professional research personnel (working in scientific and technological research and academic fields at research institutes) and industrial technical personnel (working in manufacturing/production at industrial companies).\n Due to the nature of the industry, the company’s AI ​​research institute hires only specialized research personnel. The company cannot hire because there is no T/O assigned by the Military Manpower Administration. However, a limited number of those who served in the military for a specific period may apply for a career change.\n\nPlease contact <span class="underline">apply@kakaobrain.com</span> through 1:1 inquiry for details regarding military service exemptions.'
+          'The Military Manpower Administration manages professional research personnel (working in scientific and technological research and academic fields at research institutes) and industrial technical personnel (working in manufacturing/production at industrial companies).<br/> Due to the nature of the industry, the company’s AI ​​research institute hires only specialized research personnel. The company cannot hire because there is no T/O assigned by the Military Manpower Administration. However, a limited number of those who served in the military for a specific period may apply for a career change.<br/><br/>Please contact <span class="underline">apply@kakaobrain.com</span> through 1:1 inquiry for details regarding military service exemptions.'
       },
       {
         title: 'Q. Can I apply if I have not completed military service yet?',
