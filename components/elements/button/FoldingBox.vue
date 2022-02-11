@@ -2,8 +2,8 @@
   <div class="folding">
     <div class="folding-top">
       <div class="folding-title">
-        <p>{{ data.title }}</p>
-        <p v-if="data.isText" class="sub-title">{{ data.titleText }}</p>
+        <p v-html="data.title"></p>
+        <p v-if="data.isText" class="sub-title" v-html="data.titleText"></p>
       </div>
       <button class="folding-button" @click="onClick">
         <span>{{ buttonName }}</span>
@@ -61,18 +61,14 @@
     &-top {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: nowrap;
     }
     &-title {
-      flex: 0 0 90%;
       p {
         font-size: 20px;
         line-height: 1.2;
         font-weight: 700;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
       }
       .sub-title {
         margin-top: 10px;
@@ -82,6 +78,9 @@
       }
     }
     &-button {
+      width: 70px;
+      flex: 0 0 70px;
+      text-align: right;
       cursor: pointer;
       span {
         font-size: 14px;
@@ -96,14 +95,6 @@
         font-weight: 400;
         line-height: 1.5;
         word-break: keep-all;
-      }
-    }
-  }
-
-  @media screen and (max-width: 1500px) {
-    .folding {
-      &-title {
-        flex: 0 0 72%;
       }
     }
   }
@@ -125,7 +116,6 @@
     .folding {
       padding: 40px 75px 40px 30px;
       &-title {
-        flex: 0 0 90%;
         p {
           font-size: 28px;
         }
@@ -151,7 +141,6 @@
     .folding {
       padding: 46px 50px;
       &-title {
-        flex: 0 0 90%;
         p {
           font-size: 42px;
         }
@@ -177,7 +166,6 @@
     .folding {
       padding: 24px 30px;
       &-title {
-        flex: 0 0 75%;
         p {
           font-size: 18px;
         }
@@ -226,7 +214,6 @@
         align-items: flex-start;
       }
       &-title {
-        flex: 0 0 80%;
         p {
           white-space: normal;
         }
@@ -234,6 +221,7 @@
       &-button {
         position: absolute;
         bottom: 20px;
+        text-align: left;
         span {
           font-size: 14px;
         }

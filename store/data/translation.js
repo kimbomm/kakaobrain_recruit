@@ -654,7 +654,7 @@ const RECRUIT = {
     KR: {
       MainTitle: '영입공고.',
       MainTitleText:
-        '카카오브레인과 함께 생각하지 못한 물음을 던지고,</br>아무도 가보지 않은 길을 개척할 Unthinkable Krew를 기다립니다.'
+        'Unthinkable Question의 여정을 함께할 든든한 동료를 찾습니다.'
     },
     EN: {
       MainTitle: 'Job Openings.',
@@ -1470,7 +1470,7 @@ const MAP = {
       list: [
         {
           name: '일반',
-          bus: ['101 15-1 330 330출 350 357 370 380 382 55 260 390']
+          bus: ['101 15-1 330 350 357 370 380 382 55 260 390']
         },
         {
           name: '마을',
@@ -1491,35 +1491,35 @@ const MAP = {
     }
   },
   EN: {
-    MainTitle: '찾아오시는</br>길.',
+    MainTitle: 'Maps<br/>& Directions',
     MainTitleText:
-      '카카오브레인 크루가 모여 생각하지 못한 질문을 던지고 해답을 찾아가는 장소입니다.',
+      'Innovation at kakaobrain starts with questions from its krew members.',
     address: {
-      title: '주소',
-      text: '경기도 성남시 분당구 판교역로241번길 20 미래에셋벤처타워 11층 (우)13494'
+      title: 'Address',
+      text: '11F, Mirae Asset Venture Tower, 20, Pangyoyeok-ro 241beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, 13494, Korea'
     },
     method: {
-      title: '주변 버스',
+      title: 'Buses',
       list: [
         {
-          name: '일반',
-          bus: ['101 15-1 330 330출 350 357 370 380 382 55 260 390']
+          name: 'City Buses',
+          bus: ['101 15-1 330 350 357 370 380 382 55 260 390']
         },
         {
-          name: '마을',
+          name: 'Maeul (Village) Buses',
           bus: [
-            '602-1(일반형)(평일) 602-1(일반형)(휴일) 602-1(출퇴근맞춤형)',
-            '602-2(일반형)(평일) 602-2(출퇴근맞춤형) 71 73 73(맞춤형) 73-1 75 75(맞춤형) 812'
+            '602-1(General)(Weekdays) 602-1(General)(Weekends and Holidays) 602-1(Squirrel Bus)',
+            '602-2(General)(Weekdays) 602-2(Squirrel Bus) 71 73 73(Squirrel Bus) 73-1 75 75(Squirrel Bus) 812'
           ]
         },
         {
-          name: '직행',
+          name: 'G-Bus',
           bus: ['4000 6003 9007 3000 1007 1009 5600 5700 6900 1007-1']
         }
       ],
       info: {
-        title: '문의',
-        text: 'contact@kakaobrain.com으로 연락 바랍니다.'
+        title: 'Contact Us',
+        text: 'Send us an email to contact@kakaobrain.com'
       }
     }
   }
