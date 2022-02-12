@@ -17,10 +17,13 @@
             @click="onClick(index)"
           >
             <span class="menu-name">{{ menu.name }}</span>
-            <span v-if="menu.alarm" class="menu-num">{{ menu.alarm }}</span>
           </button>
           <ul class="sub-menu">
-            <li v-for="(subMenu, idx) in menu.sub" :key="`sub-${idx}`">
+            <li
+              v-for="(subMenu, idx) in menu.sub"
+              :key="`sub-${idx}`"
+              @click="onClose"
+            >
               <nuxt-link :to="subMenu.link">{{ subMenu.name }}</nuxt-link>
             </li>
           </ul>

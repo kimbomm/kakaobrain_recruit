@@ -9,8 +9,10 @@
     </ul>
     <div class="sns-list">
       <ul>
-        <li v-for="(item, index) in sns" :key="index">
-          <Icon :sns="`icon-${item.name}-w`" @click="onGoingSNS(item.link)" />
+        <li v-for="(item, index) in sns" :key="index" @click="onClose">
+          <a :href="item.link" target="_blank">
+            <Icon :sns="`icon-${item.name}-w`" />
+          </a>
         </li>
       </ul>
     </div>

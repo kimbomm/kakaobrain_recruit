@@ -54,5 +54,17 @@
       },
       "link": "/privacy"
     }
+  ],
+  "sns": [
+    { "name": "facebook", "link": "https://www.facebook.com/kakaobrain" },
+    {
+      "name": "linkedin",
+      "link": "https://www.linkedin.com/company/kakaobrain/"
+    },
+    { "name": "kakao", "link": "http://pf.kakao.com/_xhFyTb" },
+    {
+      "name": "youtube",
+      "link": "https://www.youtube.com/channel/UCdfmJNL-t_PdVHyn__tGrpg"
+    }
   ]
 }

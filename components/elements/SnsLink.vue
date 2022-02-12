@@ -2,30 +2,9 @@
   <div>
     <div class="footer-sns">
       <ul>
-        <li class="item">
-          <a href="https://www.facebook.com/kakaobrain" target="_blank">
-            <Icon sns="icon-facebook-b"></Icon>
-          </a>
-        </li>
-        <li class="item">
-          <a
-            href="https://www.linkedin.com/company/kakaobrain/"
-            target="_blank"
-          >
-            <Icon sns="icon-linkedin-b"></Icon>
-          </a>
-        </li>
-        <li class="item">
-          <a href="http://pf.kakao.com/_xhFyTb" target="_blank">
-            <Icon sns="icon-kakao-b"></Icon>
-          </a>
-        </li>
-        <li class="item">
-          <a
-            href="https://www.youtube.com/channel/UCdfmJNL-t_PdVHyn__tGrpg"
-            target="_blank"
-          >
-            <Icon sns="icon-youtube-b"></Icon>
+        <li v-for="(item, index) in sns" :key="index" class="item">
+          <a :href="item.link" target="_blank">
+            <Icon :sns="`icon-${item.name}-b`" />
           </a>
         </li>
       </ul>
@@ -33,10 +12,16 @@
   </div>
 </template>
 <script>
+  import { mapState } from 'vuex'
   import Icon from '@/components/elements/Icon'
   export default {
     components: {
       Icon
+    },
+    computed: {
+      ...mapState({
+        sns: state => state.sns
+      })
     }
   }
 </script>
