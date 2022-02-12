@@ -26,7 +26,7 @@
           </ul>
         </li>
       </ul>
-      <MobMenuFooter />
+      <MobMenuFooter @onClose="onClose" />
     </div>
   </div>
 </template>

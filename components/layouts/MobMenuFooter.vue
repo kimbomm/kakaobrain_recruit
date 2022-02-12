@@ -1,9 +1,9 @@
 <template>
   <div class="menu-footer">
     <ul v-for="(menu, index) in footerMenu" :key="index">
-      <li v-for="(menuItem, idx) in menu" :key="idx">
+      <li v-for="(menuItem, idx) in menu" :key="idx" @click="onClose">
         <nuxt-link :to="menuItem.link">
-          {{ menuItem.name }}
+          {{ menuItem.name[language] }}
         </nuxt-link>
       </li>
     </ul>
@@ -37,6 +37,7 @@
     },
     computed: {
       ...mapState({
+        language: state => state.language,
         ftMenu: state => state.footerMenu,
         sns: state => state.sns
       }),
@@ -59,6 +60,9 @@
     methods: {
       onGoingSNS(link) {
         window.open(link)
+      },
+      onClose() {
+        this.$emit('onClose')
       }
     }
   }
