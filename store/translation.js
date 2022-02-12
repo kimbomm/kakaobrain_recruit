@@ -7,5 +7,7 @@ export const state = () => ({
   RECRUIT: translation.RECRUIT,
   FAQ: translation.FAQ,
   RECOMMEND: translation.RECOMMEND,
-  MAP: translation.MAP
+  MAP: translation.MAP,
+  PRIVACY: translation.PRIVACY,
+  EMAIL: translation.EMAIL
 })

@@ -45,14 +45,14 @@
         "KR": "이메일무단수집거부",
         "EN": "Unaccept to Share  EmailAddress"
       },
-      "link": "#"
+      "link": "/privacy/email"
     },
     {
       "name": {
         "KR": "개인정보 처리방침",
         "EN": "Privacy Policy"
       },
-      "link": "#"
+      "link": "/privacy"
     }
   ]
 }

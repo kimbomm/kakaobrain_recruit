@@ -124,9 +124,9 @@
         return this.recruitData[this.language]
       }
     },
-    created() {
-      const res = this.getRecruitList()
-      console.log('res::', res)
+    async created() {
+      // const res = await this.getRecruitList()
+      // console.log('res::', res)
     },
     methods: {
       ...mapActions({
