@@ -95,8 +95,8 @@
         width: 84px;
       }
       button {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         img {
           width: 100%;
         }
@@ -111,17 +111,21 @@
     }
   }
   .menu-list {
-    margin-top: 80px;
+    margin-top: 140px;
     > li {
-      margin-top: 100px;
+      margin-top: 60px;
       &:first-child {
         margin-top: 0;
+      }
+      &:last-child .sub-menu{
+        padding-bottom:0px;
       }
     }
   }
   .sub-menu {
     display: none;
     margin-top: 25px;
+    padding-bottom: 40px;
     li {
       font-size: 20px;
       line-height: 1.3;
@@ -137,13 +141,13 @@
   .menu-toggle {
     color: #fff;
     &:after {
-      content: '▲';
+      content: '▼';
       transform: rotate(180deg);
-      margin-left: 5px;
+      margin-left: 10px;
     }
     &.is-active {
       &:after {
-        content: '▼';
+        content: '▲';
       }
       & + .sub-menu {
         display: block;
