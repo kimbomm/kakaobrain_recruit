@@ -10,7 +10,9 @@
           <ContentsTitle :title="data.contents[0].ContentsTitle" />
           <ContentsText :text="data.contents[0].ContentsText" />
           <div class="company-btn l-ml-3">
-            <span class="btn-txt">Our Open Position →</span>
+            <nuxt-link to="/recruit">
+              <span class="btn-txt">Our Open Position →</span>
+            </nuxt-link>
           </div>
         </li>
 

@@ -33,19 +33,19 @@ const MAIN = {
           title: `우리의<br/>일하는 방식.`,
           text: `자기 주도적으로 성장할 수 있는 좋은 기회가 많이 주어지고,<br/>
           훌륭한 동료들을 통해 함께 성장할 수 있는 카카오브레인의 크루는 어떻게 일을 하고 있을까요?`,
-          link: ''
+          link: '/company'
         },
         {
           title: `원격근무와<br/>유연근무제.`,
           text: `우리는 업무 공간을 스스로 정해 일합니다.<br/>
           우리의 ‘완전선택근무시간제’는 자신의 업무시간을 정해 스스로 관리하며 일합니다.`,
-          link: ''
+          link: '/welfare'
         },
         {
           title: `복지혜택`,
           text: `카카오브레인 크루와 가족을 위한<br/>
           복지혜택을 소개합니다.`,
-          link: ''
+          link: '/welfare/benefits'
         }
       ],
       bottom: [
@@ -53,13 +53,13 @@ const MAIN = {
           title: 'FAQ.',
           subTitle: '',
           text: '영입 관련한 질문이 있으신가요?',
-          link: ''
+          link: '/faq'
         },
         {
           title: '사외추천제도.',
           subTitle: '지인 추천 보상금 300만원',
           text: '누구에게나 열려있는 기회.<br/>지인을 추천해 주시면 추천 보상금 300만원을 지급 드립니다.',
-          link: ''
+          link: 'recommend'
         }
       ]
     }
@@ -99,18 +99,18 @@ const MAIN = {
           title: `How<br/>we work`,
           text: `kakaobrain krews are given a lot of good opportunities to grow self-directed and<br/>
           can grow together through great colleagues?`,
-          link: ''
+          link: '/company'
         },
         {
           title: `Teleworking<br/>& Flexible Working`,
           text: `We define our own workspace for work.<br/>
           Our ‘Complete Selective Working Hours’ allows krews to set and manage their own working hours for work.`,
-          link: ''
+          link: '/welfare'
         },
         {
           title: `Benefits`,
           text: `We offer a wide-range of benefits<br/>to kakaobrain krews and their family.`,
-          link: ''
+          link: '/welfare/benefits'
         }
       ],
       bottom: [
@@ -118,13 +118,13 @@ const MAIN = {
           title: 'FAQ.',
           subTitle: '',
           text: 'Any questions on job openings?',
-          link: ''
+          link: '/faq'
         },
         {
           title: 'External Referral Program.',
           subTitle: 'Refer a friend and earn 3 million KRW in reward',
           text: 'The opportunity is open to everyone!<br/>Recommend a qualified friend for the job and earn 3 million KRW in referral incentives.',
-          link: ''
+          link: '/recommend'
         }
       ]
     }
@@ -1160,7 +1160,7 @@ const FAQ = {
     ContentsTitle: '우선 확인해 주세요.',
     ContentsText: [
       '영입 절차의 공정화에 관한 법률 <span class="underline">제 4조의 3</span>에 근거하여 직무수행에 필요하지 않은 정보를 이력서에 기재하는 경우 서류반환 및 접수 취소됩니다.',
-      '영입 관련한 모든 질문은 <span class="underline">apply@kakaobrain.com</span></spa>로 메일로 주시면 확인하여 회신 드릴 수 있도록 하겠습니다.'
+      '영입 관련한 모든 질문은 <a href="mailto:apply@kakaobrain.com" class="underline">apply@kakaobrain.com</a>로 메일로 주시면 확인하여 회신 드릴 수 있도록 하겠습니다.'
     ],
     faqList: [
       {
@@ -1190,12 +1190,12 @@ const FAQ = {
       {
         title: 'Q. 병역특례로 지원이 가능한가요?',
         content:
-          '병무청에서는 전문연구요원(연구기관에서 과학기술 연구·학문분야 종사)과 산업기능요원(산업체에서 제조·생산 분야 종사)를 관리하고 있습니다. <br/>당사에 있는 인공지능연구소에는 업종특성상 전문연구요원만 운영 중이며, 신규편입 인원 선발은 병무청으로 부터 배정받은 T/O가 없어 인원 선발이 불가하나, 전직은 소정기간 복무한 인원에 한하여 당사로 지원이 가능합니다. <br/><br/>병역특례에 관련한 사항은 <span class="underline">apply@kakaobrain.com</span> 메일로  1:1 문의를 통해 확인해 주시기 바랍니다.'
+          '병무청에서는 전문연구요원(연구기관에서 과학기술 연구·학문분야 종사)과 산업기능요원(산업체에서 제조·생산 분야 종사)를 관리하고 있습니다. <br/>당사에 있는 인공지능연구소에는 업종특성상 전문연구요원만 운영 중이며, 신규편입 인원 선발은 병무청으로 부터 배정받은 T/O가 없어 인원 선발이 불가하나, 전직은 소정기간 복무한 인원에 한하여 당사로 지원이 가능합니다. <br/><br/>병역특례에 관련한 사항은 <a href="mailto:apply@kakaobrain.com" class="underline">apply@kakaobrain.com</a> 메일로  1:1 문의를 통해 확인해 주시기 바랍니다.'
       },
       {
         title: 'Q. 군미필자인 경우 지원이 가능한가요?',
         content:
-          '병역 미필자(면제자예외)는 면접에 합격 하시더라도 입사 후 원만한 직장 생활이 어렵기 때문에 지원이 불가능합니다. <br/>다만, 병역특례는 예외입니다. <br/><br/>병역특례에 관련한 사항은 <span class="underline">apply@kakaobrain.com</span> 메일로  1:1 문의를 통해 확인해 주시기 바랍니다.'
+          '병역 미필자(면제자예외)는 면접에 합격 하시더라도 입사 후 원만한 직장 생활이 어렵기 때문에 지원이 불가능합니다. <br/>다만, 병역특례는 예외입니다. <br/><br/>병역특례에 관련한 사항은 <a href="mailto:apply@kakaobrain.com" class="underline">apply@kakaobrain.com</a> 메일로  1:1 문의를 통해 확인해 주시기 바랍니다.'
       }
     ]
   },
@@ -1206,7 +1206,7 @@ const FAQ = {
     ContentsTitle: 'Please check the following first.',
     ContentsText: [
       'According to the Fair Hiring Procedure Act Article 4-3, your resume will be returned, and the application canceled if you specify any information not required for performing your job.',
-      'Please send an e-mail for all job-related questions to <span class="underline">apply@kakaobrain.com</span>. We will check and reply.'
+      'Please send an e-mail for all job-related questions to <a href="mailto:apply@kakaobrain.com" class="underline">apply@kakaobrain.com</a>. We will check and reply.'
     ],
     faqList: [
       {
@@ -1238,12 +1238,12 @@ const FAQ = {
       {
         title: 'Q. Can I apply for the special military service exemption?',
         content:
-          'The Military Manpower Administration manages professional research personnel (working in scientific and technological research and academic fields at research institutes) and industrial technical personnel (working in manufacturing/production at industrial companies).<br/> Due to the nature of the industry, the company’s AI ​​research institute hires only specialized research personnel. The company cannot hire because there is no T/O assigned by the Military Manpower Administration. However, a limited number of those who served in the military for a specific period may apply for a career change.<br/><br/>Please contact <span class="underline">apply@kakaobrain.com</span> through 1:1 inquiry for details regarding military service exemptions.'
+          'The Military Manpower Administration manages professional research personnel (working in scientific and technological research and academic fields at research institutes) and industrial technical personnel (working in manufacturing/production at industrial companies).<br/> Due to the nature of the industry, the company’s AI ​​research institute hires only specialized research personnel. The company cannot hire because there is no T/O assigned by the Military Manpower Administration. However, a limited number of those who served in the military for a specific period may apply for a career change.<br/><br/>Please contact <a href="mailto:apply@kakaobrain.com" class="underline">apply@kakaobrain.com</a> through 1:1 inquiry for details regarding military service exemptions.'
       },
       {
         title: 'Q. Can I apply if I have not completed military service yet?',
         content:
-          'Applicants who have not completed military service (except those exempted) cannot apply because it is difficult to work constantly after joining the company even if they pass the interview. However, those who are exempted from military service are an exception.<br/>Please contact <span class="underline">apply@kakaobrain.com</span> through 1:1 inquiry. For details regarding military service exemptions.'
+          'Applicants who have not completed military service (except those exempted) cannot apply because it is difficult to work constantly after joining the company even if they pass the interview. However, those who are exempted from military service are an exception.<br/>Please contact <a href="mailto:apply@kakaobrain.com" class="underline">apply@kakaobrain.com</a> through 1:1 inquiry. For details regarding military service exemptions.'
       }
     ]
   }

@@ -35,7 +35,9 @@
                   v-if="box.button && box.button.isShow"
                   class="link-btn l-ml-3"
                 >
-                  <span class="btn-txt">{{ box.button.text }}</span>
+                  <nuxt-link to="/recruit">
+                    <span class="btn-txt">{{ box.button.text }}</span>
+                  </nuxt-link>
                 </div>
               </div>
 
