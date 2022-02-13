@@ -125,7 +125,10 @@
         font-size:60px
       }
       .main-title-text {
+        width: getWidth(6) !important;
+        margin-left: getMargin(3) !important;
         margin-bottom: 280px;
+        font-size:16px;
       }
       .large-img {
         top: 448px;
@@ -147,6 +150,9 @@
       }
       .main-title-text {
         margin-bottom: 220px;
+        width: 100% !important;
+        margin-left: 0 !important;
+        font-size:14px;
       }
       .large-img {
         top: 380px;
@@ -155,7 +161,9 @@
         margin-bottom: 100px;
       }
       .middle-img {
-        margin-bottom: 140px;
+        width: getWidth(10) !important;
+        height:220px;
+        margin:0 20px 140px 20px !important;
       }
     }
   }

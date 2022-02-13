@@ -19,6 +19,9 @@
   .main-title-text {
     font-size: 16px;
     line-height: 150%;
+    .text{
+      letter-spacing:-1px;
+    }
   }
   @include pc-large {
     .main-title-text {

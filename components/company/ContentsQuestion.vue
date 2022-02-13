@@ -61,6 +61,7 @@
     }
     .list {
       .question-item {
+        position: relative;
         &:not(:last-child) {
           margin-bottom: 400px;
         }

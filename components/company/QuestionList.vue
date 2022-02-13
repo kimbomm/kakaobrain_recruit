@@ -20,7 +20,7 @@ export default {
 </script>
 <style lang="scss" scoped>
   .item{
-    position: relative;
+    // position: relative;
     width:360px;
     height:360px;
     margin: 0 auto;
