@@ -143,15 +143,20 @@
 <style lang="scss" scoped>
   .paging {
     margin-top: 200px;
+    &.l-ml-3{
+      margin-left: getMargin(3) !important;
+    }
     &-inner {
       display: flex;
       align-items: center;
     }
     &-prev {
+      display: flex;
       margin-right: 10px;
       font-size: 16px;
     }
     &-next {
+      display: flex;
       margin-left: 10px;
       font-size: 16px;
     }
@@ -159,7 +164,8 @@
       ul {
         display: flex;
         width: 100%;
-        justify-content: space-between;
+        // justify-content: space-between;
+        justify-content: center;
       }
       li {
         padding: 0 2px;
@@ -182,32 +188,12 @@
       }
     }
   }
-  @include pc-4k {
-    .paging {
-      margin-top: 374px !important;
-      &-prev {
-        margin-right: 15px !important;
-        font-size: 26px !important;
-      }
-      &-next {
-        margin-left: 15px !important;
-        font-size: 26px !important;
-      }
-      &-num {
-        li {
-          &:not(:last-child) {
-            margin-right: 15px !important;
-          }
-        }
-        .link {
-          font-size: 26px !important;
-        }
-      }
-    }
-  }
   @include pc-large {
     .paging {
       margin-top: 260px;
+      &.l-ml-3{
+        margin-left: getMargin(3) !important;
+      }
       &-prev {
         margin-right: 12px;
         font-size: 20.8px;
@@ -228,9 +214,38 @@
       }
     }
   }
+  @include pc-4k {
+    .paging {
+      margin-top: 374px ;
+      &.l-ml-3{
+        margin-left: getMargin(3) !important;
+      }
+      &-prev {
+        margin-right: 15px ;
+        font-size: 26px ;
+      }
+      &-next {
+        margin-left: 15px ;
+        font-size: 26px ;
+      }
+      &-num {
+        li {
+          &:not(:last-child) {
+            margin-right: 15px ;
+          }
+        }
+        .link {
+          font-size: 26px ;
+        }
+      }
+    }
+  }
   @include tablet {
     .paging {
       margin-top: 150px;
+      &.l-ml-3{
+        margin-left: getMargin(2) !important;
+      }
       &-prev {
         margin-right: 12px;
         font-size: 20px;
@@ -246,7 +261,7 @@
           }
         }
         .link {
-          font-size: 20px;
+          font-size: 16px;
         }
       }
     }
@@ -254,23 +269,33 @@
   @include mobile {
     .paging {
       margin-top: 80px;
+      &.l-ml-3{
+        margin-left: 0 !important;
+      }
       &-prev {
         margin-right: 20px;
-        font-size: 30px;
+        .link{
+          font-size: 30px;
+        }
       }
       &-next {
         margin-left: 20px;
-        font-size: 30px;
+        .link{
+          font-size: 30px;
+        }
       }
       &-num {
         width: 100%;
         li {
           &:not(:last-child) {
-            margin-right: 12px;
+            // margin-right: 12px;
+            margin-right: 8%;
           }
         }
-        .link {
-          font-size: 18px;
+        .paging-num{
+          .link {
+            font-size: 14px;
+          }
         }
       }
     }
