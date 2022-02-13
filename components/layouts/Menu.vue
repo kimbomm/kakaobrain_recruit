@@ -18,7 +18,7 @@
       </div>
     </div>
     <button class="menu-btn" @click="hideMenu(true)">
-      <img src="@/assets/images/mob_menu.png" alt="모바일 메뉴 열기 이미지" />
+      <!-- <img src="@/assets/images/mob_menu.png" alt="모바일 메뉴 열기 이미지" /> -->
     </button>
     <transition name="slide">
       <div v-if="this.isMenu" class="hide" @mouseleave="hideMenu(false)">
@@ -251,6 +251,13 @@
     }
     .menu-btn {
       display: block;
+    }
+  }
+  @include mobile {
+    .menu-btn {
+      position: absolute;
+      top: 13px;
+      right: 15px;
     }
   }
 </style>

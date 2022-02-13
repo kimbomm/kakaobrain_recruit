@@ -1,7 +1,8 @@
 <template>
   <div class="mob-menu">
     <div class="mob-menu-top">
-      <span>kakaobrain</span>
+      <!-- <span>kakaobrain</span> -->
+      <img src="@/assets/images/logo-w.png" />
       <button class="menu-btn" @click="onClose">
         <img
           src="@/assets/images/mob_menu_close.png"
@@ -90,6 +91,9 @@
         font-weight: 900;
         line-height: 1.3;
       }
+      img {
+        width: 84px;
+      }
       button {
         width: 30px;
         height: 30px;
@@ -165,6 +169,7 @@
   @include mobile {
     .mob-menu {
       &-top {
+        align-items: flex-start;
         padding: 13px 15px 0 20px;
         height: 56px;
         span {
