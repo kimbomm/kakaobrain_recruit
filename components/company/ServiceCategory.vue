@@ -279,9 +279,15 @@
       &-text {
         margin-bottom: 20px;
         font-size: 16px;
+        &.l-ml-1{
+          margin-left: 0 !important
+        }
       }
       &-more {
         font-size: 16px;
+        &.l-ml-1{
+          margin-left: 0 !important
+        }
       }
       .service-bottom {
         .bottom {
