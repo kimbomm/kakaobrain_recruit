@@ -33,6 +33,9 @@
 <style lang="scss" scoped>
   .procedure {
     .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin-bottom: 40px;
       text-align: center;
       &:not(:last-child) .item-shape {
