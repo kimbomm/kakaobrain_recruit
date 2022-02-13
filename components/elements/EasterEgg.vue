@@ -102,8 +102,10 @@
     .easter-egg {
       top:-60px;
       .egg-A{
+        left:561px;
         width:80px;
         height:80px;
+        transform: translate(0, -100%);
       }
       .egg-B{
         right:120px;
@@ -116,10 +118,12 @@
   }
   @include mobile {
     .easter-egg {
-      top:0px;
+      top:5px;
       .egg-A{
+        left:50%;
         width:50px;
         height:50px;
+        transform: translate(-50%, -100%);
       }
       .egg-B{
         right:20px;

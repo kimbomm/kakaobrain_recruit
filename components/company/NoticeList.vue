@@ -82,7 +82,7 @@ export default {
       font-size: 12px;
       line-height: 130%;
       color:$gray-0;
-      letter-spacing: -2px;
+      // letter-spacing: -2px;
     }
   }
 

@@ -118,10 +118,11 @@
     }
   }
   @include tablet {
-    .recruit {
-      .main-title {
-        margin-top: 140px;
-        margin-bottom: 60px;
+    .recruit{
+      .main-title{
+        margin-top:140px;
+        margin-bottom:60px;
+        font-size:60px
       }
       .main-title-text {
         margin-bottom: 280px;
@@ -138,10 +139,11 @@
     }
   }
   @include mobile {
-    .recruit {
-      .main-title {
-        margin-top: 116px;
-        margin-bottom: 30px;
+    .recruit{
+      .main-title{
+        margin-top:116px;
+        margin-bottom:30px;
+        font-size:40px
       }
       .main-title-text {
         margin-bottom: 220px;
