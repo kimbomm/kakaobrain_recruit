@@ -56,12 +56,13 @@
 </script>
 <style lang="scss" scoped>
   .folding {
-    padding: 30px 40px 30px 30px;
+    padding: 22px 30px 24px 30px;
     background-color: $surface-2;
     &-top {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      // align-items: flex-start;
+      align-items: center;
       flex-wrap: nowrap;
     }
     &-title {
@@ -114,7 +115,7 @@
   }
   @include pc-large {
     .folding {
-      padding: 40px 75px 40px 30px;
+      padding: 29px 30px 31px 30px;
       &-title {
         p {
           font-size: 28px;
@@ -125,6 +126,7 @@
         }
       }
       &-button {
+        flex: 0 0 90px;
         span {
           font-size: 18px;
         }
@@ -150,6 +152,7 @@
         }
       }
       &-button {
+        flex: 0 0 140px;
         span {
           font-size: 28px;
         }
@@ -205,7 +208,7 @@
   @include mobile {
     .folding {
       position: relative;
-      padding: 20px 40px 50px 20px;
+      padding: 20px 40px 60px 20px;
       &-top {
         display: flex;
         justify-content: space-between;
