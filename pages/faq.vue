@@ -137,6 +137,11 @@
 
   @include pc-large {
     .faq {
+      &-list {
+        li {
+          margin-bottom: 14px;
+        }
+      }
       .main-title {
         margin-top: 440px;
         margin-bottom: 100px;
@@ -165,6 +170,11 @@
   }
   @include pc-4k {
     .faq {
+      &-list {
+        li {
+          margin-bottom: 20px;
+        }
+      }
       .main-title {
         margin-top: 600px;
         margin-bottom: 120px;
