@@ -2,7 +2,8 @@ export default ({ $axios, redirect }) => {
   $axios.onRequest(config => {
     // console.log('Making request to ' + config.url, config)
     // if (config.url === '/media/image') {
-    //   config.headers['Content-Type'] = 'multipart/form-data'
+    config.headers['Access-Control-Allow-Origin'] = '*'
+    // 'https://api.recruiter.co.kr'
     // }
   })
 

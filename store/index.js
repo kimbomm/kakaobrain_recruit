@@ -59,6 +59,9 @@ export const actions = {
         isPost: '1',
         isInprogress: '1',
         isContainsContents: '1'
+      },
+      {
+        withCredentials: true
       }
     )
 
