@@ -125,8 +125,8 @@
       }
     },
     async created() {
-      // const res = await this.getRecruitList()
-      // console.log('res::', res)
+      const res = await this.getRecruitList()
+      console.log('res::', res)
     },
     methods: {
       ...mapActions({
