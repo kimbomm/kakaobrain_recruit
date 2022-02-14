@@ -7,14 +7,48 @@
       <div class="item">
         <img src="@/assets/images/easteregg_img_2.png"/>
       </div>
-      <div class="item">
-        <img src="@/assets/images/easteregg_img_3.png"/>
+      <div class="item"
+        @mouseenter="onMouseEnter"
+        @mouseleave="onMouseLeave"
+      >
+        <img
+          v-if="interval"
+          :src="require(`@/assets/images/egg/easteregg_go_img_${NUMBER}.png`)"
+          alt="easteregg"
+        />
       </div>
     </div>
   </div>
 </template>
 <script>
+  import { mapState } from 'vuex'
   export default {
+    computed: {
+      ...mapState(['touchDevice'])
+    },
+    data() {
+      return {
+        interval: null,
+        NUMBER: Math.floor(Math.random() * 15) + 1
+      }
+    },
+    mounted() {},
+    methods: {
+      onMouseEnter() {
+        if (!this.touchDevice) {
+          this.interval = setInterval(this.onChangeImage, 200)
+        }
+      },
+      onMouseLeave() {
+        if (this.interval && !this.touchDevice) {
+          clearInterval(this.interval)
+          this.interval = null
+        }
+      },
+      onChangeImage() {
+        this.NUMBER = Math.floor(Math.random() * 15) + 1
+      }
+    }
   }
 </script>
 <style lang="scss" scoped>
@@ -45,6 +79,8 @@
         border-radius: 50%;
         overflow: hidden;
         &:last-child{
+          background: url(@/assets/images/easteregg_img_3.png) no-repeat;
+          background-size: 100%;
           box-shadow: -30px 50px 80px rgba(0,0,0,0.2);
         }
       }
