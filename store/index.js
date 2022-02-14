@@ -52,13 +52,14 @@ export const actions = {
   },
   async getRecruitList({}, payload) {
     const res = await this.$axios.post(
-      'https://api.recruiter.co.kr/mrs2/api/getRecruitNoticeList',
+      'recruit',
       {
-        COMPANY_AUTHORITY_KEY: 'XG4/yDBOTmzQ/l7wjciPRQ==',
-        API_SERVICE_KEY: 'a448a9e6-280c-4c18-828e-eebad66fdde0',
-        isPost: '1',
-        isInprogress: '1',
-        isContainsContents: '1'
+        url: 'https://api.recruiter.co.kr/mrs2/api/getRecruitNoticeList',
+        formData: {
+          isPost: '1',
+          isInprogress: '1',
+          isContainsContents: '1'
+        }
       },
       {
         withCredentials: true

@@ -47,9 +47,7 @@
       <div class="paging-next">
         <button
           class="link"
-          :disabled="
-            activeIndex === totalLength ? totalLength : totalLength - 1
-          "
+          :disabled="activeIndex === totalLength - 1"
           @click="onClick(activeIndex + 1)"
         >
           
@@ -115,7 +113,7 @@
       setPaging() {
         this.paging = []
         if (this.totalLength - 2 > 0 && this.totalLength - 2 <= 5) {
-          for (let i = 2; i < this.totalLength - 1; i++) {
+          for (let i = 2; i < this.totalLength; i++) {
             this.paging.push(i)
           }
         } else if (this.totalLength - 2 > 5) {
@@ -143,7 +141,7 @@
 <style lang="scss" scoped>
   .paging {
     margin-top: 200px;
-    &.l-ml-3{
+    &.l-ml-3 {
       margin-left: getMargin(3) !important;
     }
     &-inner {
@@ -191,7 +189,7 @@
   @include pc-large {
     .paging {
       margin-top: 260px;
-      &.l-ml-3{
+      &.l-ml-3 {
         margin-left: getMargin(3) !important;
       }
       &-prev {
@@ -216,26 +214,26 @@
   }
   @include pc-4k {
     .paging {
-      margin-top: 374px ;
-      &.l-ml-3{
+      margin-top: 374px;
+      &.l-ml-3 {
         margin-left: getMargin(3) !important;
       }
       &-prev {
-        margin-right: 15px ;
-        font-size: 26px ;
+        margin-right: 15px;
+        font-size: 26px;
       }
       &-next {
-        margin-left: 15px ;
-        font-size: 26px ;
+        margin-left: 15px;
+        font-size: 26px;
       }
       &-num {
         li {
           &:not(:last-child) {
-            margin-right: 15px ;
+            margin-right: 15px;
           }
         }
         .link {
-          font-size: 26px ;
+          font-size: 26px;
         }
       }
     }
@@ -243,7 +241,7 @@
   @include tablet {
     .paging {
       margin-top: 150px;
-      &.l-ml-3{
+      &.l-ml-3 {
         margin-left: getMargin(2) !important;
       }
       &-prev {
@@ -269,18 +267,18 @@
   @include mobile {
     .paging {
       margin-top: 80px;
-      &.l-ml-3{
+      &.l-ml-3 {
         margin-left: 0 !important;
       }
       &-prev {
         margin-right: 20px;
-        .link{
+        .link {
           font-size: 30px;
         }
       }
       &-next {
         margin-left: 20px;
-        .link{
+        .link {
           font-size: 30px;
         }
       }
@@ -292,7 +290,7 @@
             margin-right: 8%;
           }
         }
-        .paging-num{
+        .paging-num {
           .link {
             font-size: 14px;
           }

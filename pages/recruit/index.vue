@@ -7,46 +7,13 @@
     <div class="category-wrap gl-5 l-ml-3">
       <div class="category-box">
         <Checkbox
-          checkboxId="checkbox_0"
-          checkboxValue="a"
-          checkboxText="전체"
-          :isChecked="true"
-        />
-        <Checkbox
-          checkboxId="checkbox_1"
-          checkboxValue="b"
-          checkboxText="AI Researcher"
-          :isChecked="false"
-        />
-        <Checkbox
-          checkboxId="checkbox_2"
-          checkboxValue="b"
-          checkboxText="AI Software Engineer"
-          :isChecked="false"
-        />
-        <Checkbox
-          checkboxId="checkbox_3"
-          checkboxValue="b"
-          checkboxText="Tech Strategy Staff"
-          :isChecked="false"
-        />
-        <Checkbox
-          checkboxId="checkbox_4"
-          checkboxValue="b"
-          checkboxText="UX/UI"
-          :isChecked="false"
-        />
-        <Checkbox
-          checkboxId="checkbox_5"
-          checkboxValue="b"
-          checkboxText="경영지원"
-          :isChecked="false"
-        />
-        <Checkbox
-          checkboxId="checkbox_6"
-          checkboxValue="b"
-          checkboxText="인턴"
-          :isChecked="false"
+          v-for="(item, index) in filter"
+          :key="index"
+          :checkboxId="`checkbox_${index}`"
+          :checkboxValue="item.value"
+          :checkboxText="item.text"
+          :isChecked="item.isChecked"
+          @change="onChange"
         />
       </div>
 
@@ -54,7 +21,7 @@
         <ul>
           <li
             class="notice-list"
-            v-for="(data, index) in noticeList"
+            v-for="(data, index) in recruitList"
             :key="index"
           >
             <NoticeList :data="data" />
@@ -63,7 +30,12 @@
       </div>
     </div>
     <div class="notice-paging l-ml-1">
-      <ListPaging :total="0" :offset="0" :limit="0" />
+      <ListPaging
+        :total="total"
+        :offset="pageData.offset"
+        :limit="pageData.limit"
+        @onChange="onPagingChange"
+      />
     </div>
   </div>
 </template>
@@ -95,24 +67,8 @@
         },
         total: 0,
         list: [],
-        noticeList: [
-          {
-            category: 'AI Researcher',
-            itemTit:
-              '[경력/신입] AI Researcher for biology (Domain background)',
-            itemDate: '2021.10.28 (목) 00:00 ~2022.01.27 (목) 00:00',
-            itemDay: 'D - 31',
-            itemType: '접수중'
-          },
-          {
-            category: 'AI Researcher',
-            itemTit:
-              '[경력/신입] AI Researcher for biology (Domain background)',
-            itemDate: '2021.10.28 (목) 00:00 ~2022.01.27 (목) 00:00',
-            itemDay: 'D - 31',
-            itemType: '접수중'
-          }
-        ]
+        filter: [{ value: 'all', text: 'All', isChecked: true }],
+        recruitList: []
       }
     },
     computed: {
@@ -122,16 +78,78 @@
       }),
       data() {
         return this.recruitData[this.language]
+      },
+      checkedList() {
+        let checked = []
+        this.filter.forEach(item => {
+          if (item.isChecked) checked.push(item.value)
+        })
+        return checked
       }
     },
     async created() {
-      // const res = await this.getRecruitList()
-      // console.log('res::', res)
+      const res = await this.getRecruitList()
+      this.list = res.data.data
+      await this.setCategory()
+      await this.fetchList()
     },
     methods: {
       ...mapActions({
         getRecruitList: 'getRecruitList'
-      })
+      }),
+      async setCategory() {
+        const category = []
+        for (let i = 0; i < this.list.length; i++) {
+          const recruitClassName = this.list[i].recruitClassName
+          if (!category.includes(recruitClassName))
+            category.push(recruitClassName)
+        }
+        category.forEach(item => {
+          this.filter.push({
+            value: item,
+            text: item,
+            isChecked: false
+          })
+        })
+      },
+      async onChange(data) {
+        await this.filter.forEach(item => {
+          if (data.value === 'all' && data.isChecked) {
+            item.isChecked = item.value === data.value ? true : false
+          } else if (data.value !== 'all' && data.isChecked) {
+            if (item.value === data.value) item.isChecked = data.isChecked
+            if (item.value === 'all' && item.isChecked) item.isChecked = false
+          } else {
+            if (item.value === data.value) item.isChecked = data.isChecked
+          }
+        })
+        this.pageData.offset = 0
+        await this.fetchList()
+      },
+      async fetchList() {
+        const tmpList = [...this.list]
+        if (this.checkedList.includes('all')) {
+          this.recruitList = tmpList.splice(
+            this.pageData.offset,
+            this.pageData.limit
+          )
+          this.total = this.list.length
+        } else {
+          const list = []
+          tmpList.forEach(item => {
+            if (this.checkedList.includes(item.recruitClassName))
+              list.push(item)
+          })
+          this.total = list.length
+          this.recruitList = [
+            ...list.splice(this.pageData.offset, this.pageData.limit)
+          ]
+        }
+      },
+      async onPagingChange(val) {
+        this.pageData.offset = val * this.pageData.limit
+        await this.fetchList()
+      }
     }
   }
 </script>

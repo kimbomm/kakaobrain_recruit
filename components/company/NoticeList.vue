@@ -1,197 +1,212 @@
 <template>
   <div class="notice-item">
     <div class="item-category">
-      <div class="category">{{data.category}}</div>
+      <div class="category">{{ data.recruitClassName }}</div>
     </div>
     <div class="item-con">
-      <div class="title">{{data.itemTit}}</div>
-      <div class="date">{{data.itemDate}}</div>
-      <div class="day">{{data.itemDay}}</div>
+      <div class="title">{{ data.recruitNoticeName }}</div>
+      <div class="date">
+        {{ data.receiveStartDatetime }} ~ {{ data.receiveEndDatetime }}
+      </div>
+      <div class="day">
+        D-{{
+          $dayjs(data.receiveEndDatetime).diff(
+            $dayjs(data.receiveStartDatetime),
+            'day'
+          )
+        }}
+      </div>
     </div>
     <div class="item-type">
-      <div class="type">{{data.itemType}}</div>
+      <div class="type">접수중</div>
     </div>
   </div>
 </template>
 <script>
-export default {
-  name:'NoticeList',
-  props:{
-    data:{
-      type:Object,
-      default:() => [],
-      require: true
+  export default {
+    name: 'NoticeList',
+    props: {
+      data: {
+        type: Object,
+        default: () => [],
+        require: true
+      }
     }
   }
-}
 </script>
 <style lang="scss" scoped>
-  .notice{
-    &-item{
+  .notice {
+    &-item {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      padding:20px 0 0;
+      padding: 20px 0 0;
       border-top: 1px solid $gray-9;
       box-sizing: border-box;
     }
   }
-  .item-category{
-    margin-right:20px;
-    .category{
+  .item-category {
+    width: getWidth(1);
+    margin-right: 20px;
+    .category {
       font-size: 20px;
-      font-weight:400;
+      font-weight: 400;
       line-height: 130%;
     }
   }
-  .item-con{
-    margin-right:20px;
-    .title{
-      margin-bottom:10px;
+  .item-con {
+    width: getWidth(3);
+    margin-right: 20px;
+    .title {
+      margin-bottom: 10px;
       font-size: 20px;
-      font-weight:400;
+      font-weight: 400;
       line-height: 130%;
+      word-break: keep-all;
     }
-    .date{
-      margin-bottom:10px;
+    .date {
+      margin-bottom: 10px;
       font-size: 12px;
-      font-weight:400;
+      font-weight: 400;
       line-height: 130%;
       color: $gray-5;
     }
-    .day{
-      width:58px;
-      height:28px;
-      padding:6px 12px;
+    .day {
+      display: inline-flex;
+      justify-content: center;
+      align-content: center;
+      min-width: 58px;
+      height: 28px;
+      padding: 6px;
       border-radius: 50px;
       background-color: $surface-8;
       line-height: 130%;
       font-weight: 900;
       font-style: italic;
       font-size: 12px;
-      color:$gray-0;
+      color: $gray-0;
     }
   }
-  .item-type{
-    .type{
-      width:58px;
-      height:28px;
-      padding:6px 11px;
+  .item-type {
+    .type {
+      width: 58px;
+      height: 28px;
+      padding: 6px 11px;
       background-color: $gray-9;
       font-weight: 900;
       font-size: 12px;
       line-height: 130%;
-      color:$gray-0;
+      color: $gray-0;
       // letter-spacing: -2px;
     }
   }
 
   @include pc-large {
-    .notice{
-      &-item{
-        padding:20px 0 0;
+    .notice {
+      &-item {
+        padding: 20px 0 0;
       }
     }
-    .item-category{
-      .category{
+    .item-category {
+      .category {
         font-size: 26px;
       }
     }
-    .item-con{
-      .title{
-        margin-bottom:14px;
+    .item-con {
+      .title {
+        margin-bottom: 14px;
         font-size: 26px;
       }
-      .date{
-        margin-bottom:14px;
+      .date {
+        margin-bottom: 14px;
         font-size: 16px;
       }
-      .day{
-        width:69px;
-        height:33px;
-        padding:6px 12px;
+      .day {
+        min-width: 69px;
+        height: 33px;
+        padding: 6px;
         font-size: 16px;
       }
     }
-    .item-type{
-      .type{
-        width:73px;
-        height:38px;
-        padding:9px 14px;
+    .item-type {
+      .type {
+        width: 73px;
+        height: 38px;
+        padding: 9px 14px;
         font-size: 16px;
       }
     }
   }
   @include pc-4k {
-    .notice{
-      &-item{
-        padding:39.39px 0 0;
+    .notice {
+      &-item {
+        padding: 39.39px 0 0;
       }
     }
-    .item-category{
-      .category{
+    .item-category {
+      .category {
         font-size: 38px;
       }
     }
-    .item-con{
-      .title{
-        margin-bottom:20px;
+    .item-con {
+      .title {
+        margin-bottom: 20px;
         font-size: 38px;
       }
-      .date{
-        margin-bottom:20px;
+      .date {
+        margin-bottom: 20px;
         font-size: 24px;
       }
-      .day{
-        width:107px;
-        height:51px;
-        padding:10px 20px;
+      .day {
+        min-width: 107px;
+        height: 51px;
+        padding: 10px;
         font-size: 24px;
       }
     }
-    .item-type{
-      .type{
-        width:120px;
-        height:58px;
-        padding:12px 24px;
+    .item-type {
+      .type {
+        width: 120px;
+        height: 58px;
+        padding: 12px 24px;
         font-size: 26px;
       }
     }
   }
   @include tablet {
-    .item-category{
-      .category{
+    .item-category {
+      .category {
         font-size: 18px;
       }
     }
-    .item-con{
-      .title{
-        margin-bottom:10px;
+    .item-con {
+      .title {
+        margin-bottom: 10px;
         font-size: 18px;
       }
-      .date{
-        margin-bottom:10px;
+      .date {
+        margin-bottom: 10px;
         font-size: 12px;
       }
-      .day{
-        width:58px;
-        height:28px;
-        padding:6px 12px;
+      .day {
+        min-width: 58px;
+        height: 28px;
+        padding: 6px;
         font-size: 12px;
       }
     }
-    .item-type{
-      .type{
-        width:58px;
-        height:28px;
-        padding:6px 12px;
+    .item-type {
+      .type {
+        width: 58px;
+        height: 28px;
+        padding: 6px 12px;
         font-size: 12px;
       }
     }
   }
   @include mobile {
-    .notice{
-      &-item{
+    .notice {
+      &-item {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -199,40 +214,34 @@ export default {
         box-sizing: border-box;
       }
     }
-    .item-category{
-      margin-bottom:20px;
-      margin-right:0px;
-      .category{
+    .item-category {
+      margin-bottom: 20px;
+      margin-right: 0px;
+      .category {
         font-size: 18px;
       }
     }
-    .item-con{
-      margin-right:0px;
-      .title{
-        margin-bottom:20px;
+    .item-con {
+      margin-right: 0px;
+      .title {
+        margin-bottom: 20px;
         font-size: 18px;
       }
-      .date{
-        margin-bottom:20px;
-        font-size: 12px;
-      }
-      .day{
-        width:58px;
-        height:28px;
-        padding:6px 12px;
+      .date {
+        margin-bottom: 20px;
         font-size: 12px;
       }
     }
-    .item-type{
+    .item-type {
       position: absolute;
       bottom: 0;
-      right:0;
-      .type{
-        width:58px;
-        height:28px;
-        padding:6px 12px;
+      right: 0;
+      .type {
+        width: 58px;
+        height: 28px;
+        padding: 6px 12px;
         font-size: 12px;
       }
     }
   }
-</style> 
+</style>
