@@ -100,6 +100,7 @@
     .btn-txt {
       display: block;
       letter-spacing: -1px;
+      font-family: 'Inter';
       font-size: 14px;
       font-style: normal;
       font-weight: 400;

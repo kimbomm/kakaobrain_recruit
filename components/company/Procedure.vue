@@ -30,7 +30,7 @@
     }
   }
 </script>
-<style lang="scss" scoped>
+<style lang="scss" scoped> 
   .procedure {
     .item {
       display: flex;
@@ -44,8 +44,14 @@
       &-box {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        // justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
+        li{
+          &:not(:last-child){
+            margin-right:6px;
+          }
+        }
       }
       &-shape {
         position: relative;
@@ -104,8 +110,13 @@
         &-box {
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-between;
+          // justify-content: space-between;
           align-items: center;
+          li{
+            &:not(:last-child){
+              margin-right:5px;
+            }
+          }
         }
         &-shape {
           width: 234px;
@@ -129,6 +140,13 @@
   @include pc-4k {
     .procedure {
       .item {
+        &-box{
+          li{
+            &:not(:last-child){
+              margin-right:69px;
+            }
+          }
+        }
         &-shape {
           width: 362px;
           height: 362px;
@@ -160,8 +178,13 @@
         &-box {
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-between;
+          // justify-content: space-between;
           align-items: center;
+          li{
+            &:not(:last-child){ 
+              margin-right:19.8px;
+            }
+          }
         }
         &-shape {
           width: 100px;
@@ -194,8 +217,14 @@
         &-box {
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-between;
+          justify-content: flex-start;
+          // justify-content: space-between;
           align-items: center;
+          li{
+            &:not(:last-child){
+              margin-right:13px;
+            }
+          }
         }
         &-shape {
           width: 80px;

@@ -208,7 +208,7 @@
   @include mobile {
     .folding {
       position: relative;
-      padding: 20px 40px 60px 20px;
+      padding: 20px 40px 57px 20px;
       &-top {
         display: flex;
         justify-content: space-between;

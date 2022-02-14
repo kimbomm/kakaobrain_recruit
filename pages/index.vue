@@ -68,6 +68,7 @@
       // padding:0 20px;
     }
     .middle-img {
+      height:300px;
       margin-bottom: 140px;
       padding: 0 20px;
       // box-shadow:none;
@@ -93,6 +94,7 @@
         margin-bottom: 260px;
       }
       .middle-img {
+        height:403px;
         margin-bottom: 197px;
       }
     }
@@ -113,6 +115,7 @@
         margin-bottom: 390px;
       }
       .middle-img {
+        height:600px;
         margin-bottom: 300px;
       }
     }
@@ -137,6 +140,7 @@
         margin-bottom: 120px;
       }
       .middle-img {
+        height:260px;
         margin-bottom: 180px;
       }
     }
