@@ -175,11 +175,13 @@
   }
   @include tablet {
     .item-category {
+      width: getWidth(2);
       .category {
         font-size: 18px;
       }
     }
     .item-con {
+      width: getWidth(4);
       .title {
         margin-bottom: 10px;
         font-size: 18px;
