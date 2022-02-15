@@ -38,4 +38,14 @@
       height: 200px;
     }
   }
+  @include mobile {
+    .middle-img {
+      &.gl-7{
+        width: 100% !important
+      }
+      &.l-ml-2{
+        margin-left:0 !important
+      }
+    }
+  }
 </style>
