@@ -99,7 +99,6 @@
     cursor: pointer;
     .btn-txt {
       display: block;
-      letter-spacing: -1px;
       font-family: 'Inter';
       font-size: 14px;
       font-style: normal;
@@ -227,6 +226,9 @@
           width: 160px;
           height: 48px;
           padding: 19px 16px;
+          &.l-ml-3{
+            margin-left: getMargin(2) !important
+          }
           .btn-txt {
             font-size: 12px;
           }
