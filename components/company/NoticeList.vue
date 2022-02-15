@@ -215,6 +215,7 @@
       }
     }
     .item-category {
+      width: 100% !important;
       margin-bottom: 20px;
       margin-right: 0px;
       .category {
@@ -222,6 +223,7 @@
       }
     }
     .item-con {
+      width: 100% !important;
       margin-right: 0px;
       .title {
         margin-bottom: 20px;
