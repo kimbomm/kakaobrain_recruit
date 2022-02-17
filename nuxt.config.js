@@ -17,7 +17,7 @@ export default {
   axios: {
     credentials: true,
     baseURL:
-      'https://kakaobrain.loadingworks.com/front/v1' || process.env.API_BASE_URL
+      'https://homeapi.stgkakaobrain.com /front/v1' || process.env.API_BASE_URL
   },
 
   router: {
