@@ -89,13 +89,16 @@
     },
     async created() {
       const res = await this.getRecruitList()
+      const resddd = await this.getList()
+      console.log(resddd)
       this.list = res.data.data
       await this.setCategory()
       await this.fetchList()
     },
     methods: {
       ...mapActions({
-        getRecruitList: 'getRecruitList'
+        getRecruitList: 'getRecruitList',
+        getList: 'getList'
       }),
       async setCategory() {
         const category = []

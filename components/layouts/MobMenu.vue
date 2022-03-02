@@ -1,41 +1,49 @@
 <template>
-  <div class="mob-menu">
-    <div class="mob-menu-top">
-      <!-- <span>kakaobrain</span> -->
-      <img src="@/assets/images/logo-w.png" />
-      <button class="menu-btn" @click="onClose">
-        <img
-          src="@/assets/images/mob_menu_close.png"
-          alt="모바일 메뉴 닫기 이미지"
-        />
-      </button>
-    </div>
-    <div class="mob-menu-content">
-      <ul class="menu-list">
-        <li v-for="(menu, index) in menus" :key="`menu-${index}`">
-          <button
-            :class="`${active.includes(index) ? 'is-active ' : ''}menu-toggle`"
-            @click="onClick(index)"
+  <transition name="slide">
+    <div v-if="isMenuOpen" class="mob-menu">
+      <div class="mob-menu-top">
+        <!-- <span>kakaobrain</span> -->
+        <img src="@/assets/images/logo-w.png" />
+        <button class="menu-btn" @click="onClose">
+          <img
+            src="@/assets/images/mob_menu_close.png"
+            alt="모바일 메뉴 닫기 이미지"
+          />
+        </button>
+      </div>
+      <div class="mob-menu-content">
+        <ul class="menu-list">
+          <li
+            v-for="(menu, index) in menus"
+            :key="`menu-${index}`"
+            :class="`animation delay-${index} ${isAnimation ? 'fade-up' : ''}`"
           >
-            <span class="menu-name">{{ menu.name }}</span>
-          </button>
-          <ul class="sub-menu">
-            <li
-              v-for="(subMenu, idx) in menu.sub"
-              :key="`sub-${idx}`"
-              @click="onClose"
+            <button
+              :class="`${
+                active.includes(index) ? 'is-active ' : ''
+              }menu-toggle`"
+              @click="onClick(index)"
             >
-              <nuxt-link :to="subMenu.link">{{ subMenu.name }}</nuxt-link>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <MobMenuFooter @onClose="onClose" />
+              <span class="menu-name">{{ menu.name }}</span>
+            </button>
+            <ul class="sub-menu">
+              <li
+                v-for="(subMenu, idx) in menu.sub"
+                :key="`sub-${idx}`"
+                @click="onClose"
+              >
+                <nuxt-link :to="subMenu.link">{{ subMenu.name }}</nuxt-link>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <MobMenuFooter @onClose="onClose" />
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 <script>
-  import { mapState } from 'vuex'
+  import { mapState, mapMutations } from 'vuex'
   import Icon from '@/components/elements/Icon'
   import MobMenuFooter from '@/components/layouts/MobMenuFooter'
   export default {
@@ -43,20 +51,38 @@
       Icon,
       MobMenuFooter
     },
-    computed: {
-      ...mapState({
-        menus: state => state.menus
-      })
-    },
     data() {
       return {
-        active: []
+        active: [],
+        isAnimation: false
       }
     },
-    created() {},
+    computed: {
+      ...mapState({
+        menus: state => state.menus,
+        language: state => state.language,
+        isMenuOpen: state => state.isMenuOpen
+      })
+    },
+    mounted() {
+      setTimeout(() => {
+        this.isAnimation = true
+      }, 300)
+      window.addEventListener('scroll', this.onScroll)
+    },
+    beforeDestroy() {
+      this.isAnimation = false
+      window.removeEventListener('scroll', this.onScroll)
+    },
     methods: {
+      ...mapMutations(['setIsMenuOpen']),
+      onScroll(e) {
+        e.preventDefault()
+        e.stopPropagation()
+        return false
+      },
       onClose() {
-        this.$emit('onClose')
+        this.setIsMenuOpen(false)
       },
       onClick(idx) {
         this.active.includes(idx)
@@ -67,13 +93,42 @@
   }
 </script>
 <style lang="scss" scoped>
+  .animation {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    &.delay-0 {
+      animation-delay: 0.1s;
+    }
+    &.delay-1 {
+      animation-delay: 0.2s;
+    }
+    &.delay-2 {
+      animation-delay: 0.3s;
+    }
+    &.delay-3 {
+      animation-delay: 0.4s;
+    }
+    &.delay-4 {
+      animation-delay: 0.5s;
+    }
+  }
+  .fade-up {
+    animation-name: fadeUp;
+    -webkit-animation-name: fadeUp;
+    -moz-animation-name: fadeUp;
+    -ms-animation-name: fadeUp;
+  }
   .mob-menu {
+    transition: all 0.3s ease-in-out;
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 20;
     background-color: #000;
     color: #fff;
     &-top {
@@ -81,16 +136,12 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 46px;
+      // height: 46px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      // align-items: center;
+      align-items: flex-start;
       padding: 16px 20px 0 20px;
-      span {
-        font-size: 16px;
-        font-weight: 900;
-        line-height: 1.3;
-      }
       img {
         width: 84px;
       }
@@ -117,8 +168,8 @@
       &:first-child {
         margin-top: 0;
       }
-      &:last-child .sub-menu{
-        padding-bottom:0px;
+      &:last-child .sub-menu {
+        padding-bottom: 0px;
       }
     }
   }
@@ -173,16 +224,24 @@
   @include mobile {
     .mob-menu {
       &-top {
-        align-items: flex-start;
-        padding: 13px 15px 0 20px;
+        align-items: center;
+        padding: 0 15px 0 20px;
         height: 56px;
+        // height: 51px;
         span {
           font-size: 18px;
         }
+        button {
+          // position: absolute;
+          // top: 13px;
+          // right: 15px;
+          width: 30px;
+          height: 30px;
+        }
       }
       &-content {
-        height: calc(100% - 56px);
         margin-top: 56px;
+        height: calc(100% - 56px);
         margin-left: getMargin(1);
       }
     }
@@ -190,10 +249,7 @@
       margin-top: 25px;
     }
     .menu-list {
-      margin-top: 60px;
-      > li {
-        margin-top: 60px;
-      }
+      margin-top: 116px;
     }
   }
 </style>

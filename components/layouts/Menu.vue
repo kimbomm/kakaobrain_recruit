@@ -7,7 +7,7 @@
             v-for="(menu, index) in menus"
             :key="`menu-${index}`"
             class="menu-item"
-            @mouseenter="hideMenu(true)"
+            @mouseenter="setIsMenuOpen(true)"
           >
             <button type="button">
               <!-- <span v-if="menu.alarm" class="num">{{ menu.alarm }}</span> -->
@@ -17,17 +17,21 @@
         </ul>
       </div>
     </div>
-    <button class="menu-btn" @click="hideMenu(true)">
-      <!-- <img src="@/assets/images/mob_menu.png" alt="모바일 메뉴 열기 이미지" /> -->
-    </button>
+    <button
+      :class="{ 'menu-btn': true, 'hide-target': true, 'is-hide': isScrollUp }"
+      @click="setIsMenuOpen(true)"
+      title="메뉴 열기"
+    ></button>
     <transition name="slide">
-      <div v-if="this.isMenu" class="hide" @mouseleave="hideMenu(false)">
+      <div v-if="isMenuOpen" class="hide" @mouseleave="setIsMenuOpen(false)">
         <div class="lang">
           <ul>
             <li
               v-for="(item, index) in languageList"
               :key="index"
-              class="lang-item"
+              :class="`lang-item animation delay-${index} ${
+                isAnimation ? 'fade-up' : ''
+              }`"
             >
               <button
                 :class="item.value === language ? 'is-active' : ''"
@@ -45,15 +49,27 @@
               :key="`menu-${index}`"
               class="menu-item"
             >
-              <span v-if="menu.alarm" class="num">{{ menu.alarm }}</span>
-              <span>{{ menu.name }}</span>
+              <!-- <span v-if="menu.alarm" class="num">{{ menu.alarm }}</span> -->
+              <span :class="`animation ${isAnimation ? 'fade-up' : ''}`">{{
+                menu.name
+              }}</span>
               <ul class="sub">
                 <li
                   v-for="(subMenu, idx) in menu.sub"
                   :key="`sub-${idx}`"
-                  class="sub-item"
+                  :class="`sub-item animation delay-${idx} ${
+                    isAnimation ? 'fade-up' : ''
+                  }`"
+                  @click="setIsMenuOpen(false)"
                 >
-                  <nuxt-link :to="subMenu.link">{{ subMenu.name }}</nuxt-link>
+                  <template v-if="subMenu.name !== 'Principle'">
+                    <nuxt-link :to="subMenu.link">{{ subMenu.name }}</nuxt-link>
+                  </template>
+                  <template v-else>
+                    <a :href="principleLink" target="_blank">{{
+                      subMenu.name
+                    }}</a>
+                  </template>
                 </li>
               </ul>
             </li>
@@ -61,11 +77,11 @@
         </div>
       </div>
     </transition>
-    <MobMenu v-if="this.isMenu" @onClose="hideMenu(false)" />
   </div>
 </template>
 <script>
   import { mapState, mapMutations } from 'vuex'
+  import util from '@/util/utility.js'
   import MobMenu from '@/components/layouts/MobMenu'
   export default {
     components: {
@@ -74,6 +90,7 @@
     data() {
       return {
         isMenu: false,
+        isAnimation: false,
         languageList: [
           { name: 'English', value: 'EN' },
           { name: 'Korean', value: 'KR' }
@@ -84,20 +101,36 @@
       ...mapState({
         menus: state => state.menus,
         language: state => state.language,
-        isFilterMenuOpen: state => state.isFilterMenuOpen
+        isFilterMenuOpen: state => state.isFilterMenuOpen,
+        isScrollUp: state => state.isScrollUp,
+        isMenuOpen: state => state.isMenuOpen
       }),
       classBind() {
-        let classList = ['menu', 'menu-outer']
-        if (this.isFilterMenuOpen) {
-          classList.push('menu__light')
+        let classList = ['menu', 'menu-outer', 'hide-target']
+        if (this.isScrollUp) {
+          classList.push('is-hide')
         }
 
         return classList.join(' ')
       }
     },
+    watch: {
+      isMenuOpen(val) {
+        if (val) {
+          util.scrollControl(document.querySelector('body'), 'block')
+          setTimeout(() => {
+            this.isAnimation = true
+          }, 300)
+        } else {
+          this.isAnimation = false
+          util.scrollControl(document.querySelector('body'), 'enable')
+        }
+      }
+    },
     methods: {
       ...mapMutations({
-        setLanguage: 'setLanguage'
+        setLanguage: 'setLanguage',
+        setIsMenuOpen: 'setIsMenuOpen'
       }),
       hideMenu(value) {
         this.isMenu = value
@@ -105,17 +138,38 @@
       async selectLang(lang) {
         localStorage.setItem('language', lang)
         await this.setLanguage(lang)
+        await window.location.reload(true)
       }
     }
   }
 </script>
 <style lang="scss" scoped>
-  .slide-enter,
-  .slide-leave-to {
+  .animation {
     opacity: 0;
-    transform: translateY(-100%);
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    &.delay-0 {
+      animation-delay: 0.1s;
+    }
+    &.delay-1 {
+      animation-delay: 0.1s;
+    }
+    &.delay-2 {
+      animation-delay: 0.3s;
+    }
+    &.delay-3 {
+      animation-delay: 0.4s;
+    }
+    &.delay-4 {
+      animation-delay: 0.5s;
+    }
+  }
+  .fade-up {
+    animation-name: fadeUp;
   }
   .menu {
+    z-index: 10;
     &-item {
       display: inline-block;
       font-weight: 900;
@@ -131,6 +185,7 @@
       .txt {
         font-size: 16px;
         font-weight: 900;
+        font-family: 'Inter';
       }
       button {
         padding: 0px;
@@ -149,19 +204,18 @@
   }
   .menu-btn {
     display: none;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-image: url('~/assets/images/mob_menu.svg');
     background-size: cover;
     background-position: center center;
   }
-
   .hide {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    transition: all 0.2s ease-out;
+    transition: all 0.3s ease-in-out;
     .lang {
       position: absolute;
       right: 30px;
@@ -184,7 +238,7 @@
     }
     text-align: center;
     .menu {
-      // position: absolute;
+      // position: fixed;
       // left: 0;
       // right: 0;
       // top: 0;
@@ -194,35 +248,40 @@
         text-align: left;
         vertical-align: top;
         color: $gray-0;
-        font-size: 14px;
+        font-size: 22px;
+        line-height: 1.3;
         &:not(:last-child) {
           margin-right: 50px;
         }
-        // &:nth-child(2) .sub {
-        //   margin-left: 23px;
-        // }
-        // &:nth-child(3) .sub {
-        //   margin-left: 20px;
-        // }
-        // &:nth-child(4) .sub {
-        //   margin-left: 12px;
-        // }
-        // &:nth-child(5) .sub {
-        //   margin-left: 20px;
-        // }
       }
     }
     .sub {
       margin-top: 30px;
       &-item {
-        // line-height:23px;
         font-size: 14px;
+        line-height: 2.3;
         font-weight: 400;
-        &:not(:last-child) {
-          margin-bottom: 8px;
-        }
         a {
+          position: relative;
           color: $gray-0;
+          &:before {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            bottom: -2px;
+            left: 0;
+            height: 1px;
+            background-color: #fff;
+            width: 40%;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+          }
+          &:hover {
+            &:before {
+              width: 100%;
+              opacity: 1;
+            }
+          }
         }
       }
     }
@@ -258,6 +317,8 @@
       position: absolute;
       top: 13px;
       right: 15px;
+      width: 30px;
+      height: 30px;
     }
   }
 </style>

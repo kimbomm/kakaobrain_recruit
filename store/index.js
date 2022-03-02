@@ -4,13 +4,19 @@ export const state = () => ({
   language: 'KR',
   menus: data.menus,
   footerMenu: data.footer,
+  isMenuOpen: false,
   members: data.members,
   sns: data.sns,
   category: data.category,
   filter: [],
   filterList: [],
   touchDevice: false,
-  isFilterMenuOpen: false
+  isFilterMenuOpen: false,
+  isScrollUp: false,
+  device: {
+    touch: false,
+    mobile: false
+  }
 })
 export const getters = {
   // newsCategory(state) {
@@ -22,7 +28,7 @@ export const mutations = {
     state.isFilterMenuOpen = payload
   },
   setTouchDevice(state, payload) {
-    state.touchDevice = payload
+    state.device = Object.assign(state.device, payload)
   },
   setLanguage(state, payload) {
     state.language = payload
@@ -36,6 +42,12 @@ export const mutations = {
         state.filterList = state.category['innovation']
         break
     }
+  },
+  setIsScrollUp(state, payload) {
+    state.isScrollUp = payload
+  },
+  setIsMenuOpen(state, payload) {
+    state.isMenuOpen = payload
   }
 }
 export const actions = {
@@ -49,6 +61,11 @@ export const actions = {
   },
   getFilterList({ commit }, payload) {
     commit('setFilterList', payload)
+  },
+  async getList() {
+    return await this.$axios.get(
+      'https://api.lever.co/v0/postings/leverdemo?mode=json'
+    )
   },
   async getRecruitList({}, payload) {
     const res = await this.$axios.post(

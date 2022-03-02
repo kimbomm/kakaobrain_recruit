@@ -12,7 +12,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'referrer', content: 'no-referrer-when-downgrade' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [{ src: '/script/bodyScrollLock.js' }]
   },
   axios: {
     credentials: true,

@@ -1,29 +1,39 @@
 <template>
-  <header :class="classBind">
-    <div class="header-top">
-      <h1 class="b-logo gl-2">
-        <nuxt-link to="/">
-          <img src="@/assets/images/logo.png" />
-        </nuxt-link>
-      </h1>
-      <div class="header-con gl-2">
-        <div class="header-item">Unthinkable Question</div>
+  <div>
+    <header :class="classBind">
+      <div class="header-top">
+        <h1 class="b-logo gl-2">
+          <nuxt-link to="/">
+            <img src="@/assets/images/logo.png" />
+          </nuxt-link>
+        </h1>
+        <div class="header-con gl-2">
+          <div class="header-item">Unthinkable Question</div>
+        </div>
       </div>
-    </div>
-    <Menu />
-  </header>
+      <Menu />
+    </header>
+    <MobMenu />
+  </div>
 </template>
 <script>
   import { mapState } from 'vuex'
   import Menu from '@/components/layouts/Menu'
+  import MobMenu from '@/components/layouts/MobMenu'
   export default {
     components: {
-      Menu
+      Menu,
+      MobMenu
     },
     computed: {
+      ...mapState({
+        isScrollUp: state => state.isScrollUp
+      }),
       classBind() {
-        let classList = ['header']
-
+        let classList = ['header', 'hide-target']
+        if (this.isScrollUp) {
+          classList.push('is-hide')
+        }
         return classList.join(' ')
       }
     }
@@ -35,7 +45,7 @@
     top: 20px;
     left: 20px;
     right: 20px;
-    z-index: 3;
+    z-index: 20;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,9 +57,11 @@
     }
     .b-logo {
       font-weight: 900;
+      z-index: 3;
       img {
         width: 80px;
         height: 20px;
+        vertical-align: middle;
       }
     }
     &-con {
@@ -58,12 +70,6 @@
     }
     &-item {
       font-size: 16px;
-    }
-    &__light {
-      color: $gray-0;
-      .header-item {
-        color: $gray-0;
-      }
     }
   }
 
@@ -98,10 +104,11 @@
   @include tablet {
     .header,
     .header-item {
-      top: 16px;
+      // top: 16px;
       font-size: 16px;
     }
     .header {
+      align-items: flex-start;
       .b-logo {
         img {
           width: 84px;
@@ -117,6 +124,7 @@
       width: 100%;
       height: 56px;
       padding: 0 20px;
+      background-color: $surface-1;
       display: flex;
       justify-content: space-between;
       align-items: center;
