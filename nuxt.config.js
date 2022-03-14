@@ -1,7 +1,14 @@
 export default {
+  publicRuntimeConfig: {
+    baseURL: process.env.VUE_APP_BASE_URL,
+    apiBaseURL: process.env.VUE_APP_API_BASE_URL,
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'kakaobrain_recruit',
+    title: '카카오브레인 채용',
     htmlAttrs: {
       lang: 'en'
     },
@@ -10,6 +17,10 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
+      {
+        'http-equiv': 'Content-Security-Policy',
+        content: 'upgrade-insecure-requests'
+      },
       { name: 'referrer', content: 'no-referrer-when-downgrade' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -17,8 +28,7 @@ export default {
   },
   axios: {
     credentials: true,
-    baseURL:
-      'https://kakaobrain.loadingworks.com/front/v1' || process.env.API_BASE_URL
+    baseURL: process.env.VUE_APP_API_BASE_URL
   },
 
   router: {
@@ -38,7 +48,17 @@ export default {
   // components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ['@nuxtjs/style-resources', '@nuxtjs/dotenv'],
+  dotenv: {
+    filename: '.env' + process.env.NODE_ENV
+  },
+  buildModules: [
+    '@nuxtjs/style-resources',
+    '@nuxtjs/dotenv',
+    '@nuxtjs/google-analytics'
+  ],
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/axios', '@nuxtjs/dayjs'],
