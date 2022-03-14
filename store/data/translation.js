@@ -484,7 +484,7 @@ const COMPANY = {
   },
   ethics: {
     KR: {
-      MainTitle: '카카오브레인</br>사이버윤리실.',
+      MainTitle: '카카오브레인</br>실.',
       MainTitleText:
         '제보자가 안심하고 제보할 수 있도록 신고 내용과 제보자의 신분은 철저하게 보호되며,</br>빠른 시일 내에 처리할 수 있도록 최선을 다할 것입니다.',
       contents: [
@@ -568,7 +568,7 @@ const COMPANY = {
       button: '기업윤리규정 자세히보기'
     },
     EN: {
-      MainTitle: '카카오브레인</br>사이버윤리실.',
+      MainTitle: 'kakaobrain</br>Cyber Ethics.',
       MainTitleText:
         '제보자가 안심하고 제보할 수 있도록 신고 내용과 제보자의 신분은 철저하게 보호되며,</br>빠른 시일 내에 처리할 수 있도록 최선을 다할 것입니다.',
       contents: [
