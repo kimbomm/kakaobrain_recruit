@@ -12,6 +12,7 @@
   </div>
 </template>
 <script>
+  import Vue from 'vue'
   import Header from '@/components/layouts/Header'
   import Footer from '@/components/layouts/Footer'
   import CardinalPoints from '@/components/elements/button/CardinalPoints'
@@ -26,6 +27,7 @@
     },
     data() {
       return {
+        scrollLock: false,
         prevY: 0,
         touchInfo: {
           start: null,
@@ -57,7 +59,12 @@
         }
       }
     },
+    created() {
+      this.$nuxt.$on('scrollLock', this.onScrollLock)
+    },
     beforeMount() {
+      Vue.prototype.scrollBody = document.querySelector('.wrap')
+      Vue.prototype.scrollLock = false
       const language = localStorage.getItem('language')
       if (language) {
         this.setLanguage(language)
@@ -65,22 +72,27 @@
     },
     async mounted() {
       await this.checkDevice()
-      window.addEventListener('scroll', this.onScroll)
-      window.addEventListener('resize', this.checkDevice)
-      window.addEventListener('touchstart', this.touchStart)
-      window.addEventListener('touchmove', this.touchMove)
-      window.addEventListener('touchend', this.touchEnd)
+      await this.checkDevice()
+      this.scrollBody.addEventListener('scroll', this.onScroll)
+      this.scrollBody.addEventListener('wheel', this.onWheel)
+      this.scrollBody.addEventListener('resize', this.checkDevice)
     },
-    beforeDestroy() {
-      window.removeEventListener('scroll', this.onScroll)
-      window.removeEventListener('resize', this.checkDevice)
-    },
+    beforeDestroy() {},
     methods: {
       ...mapMutations({
         setTouchDevice: 'setTouchDevice',
         setLanguage: 'setLanguage',
         setIsScrollUp: 'setIsScrollUp'
       }),
+      onScrollLock(value) {
+        this.scrollLock = value
+      },
+      onStoryPage(value) {
+        this.isStoryPage = value
+      },
+      onSlideEnd(value) {
+        this.isFooterShow = value
+      },
       checkDevice() {
         const device = this.$device
         const isMobile = device.iphone || device.androidPhone || device.mobile
@@ -96,30 +108,24 @@
           mobile: isMobile
         })
       },
+      onWheel(e) {
+        e.preventDefault()
+        if (this.scrollLock) return false
+        this.scrollBody.scrollTop += Math.floor(e.deltaY) * 0.3
+        if (this.scrollBody.scrollTop < 0) this.scrollBody.scrollTop = 0
+        if (this.scrollBody.scrollTop > this.scrollBody.scrollHeight)
+          this.scrollBody.scrollTop = this.scrollBody.scrollHeight
+      },
       onScroll() {
-        if (window.scrollY > this.prevY && window.scrollY !== 0) {
+        if (
+          this.scrollBody.scrollTop > this.prevY &&
+          this.scrollBody.scrollTop !== 0
+        ) {
           this.setIsScrollUp(true)
         } else {
           this.setIsScrollUp(false)
         }
-        this.prevY = window.scrollY
-      },
-      touchStart(e) {
-        this.touchInfo.start = e.touches[0].clientY
-      },
-      touchMove(e) {
-        this.touchInfo.end = e.touches[0].clientY
-      },
-      touchEnd() {
-        if (this.touchInfo.start && this.touchInfo.end) {
-          this.setIsScrollUp(this.touchInfo.end < this.touchInfo.start)
-          this.$nextTick(() => {
-            this.touchInfo = {
-              start: null,
-              end: null
-            }
-          })
-        }
+        this.prevY = this.scrollBody.scrollTop
       }
     }
   }

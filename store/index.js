@@ -1,4 +1,4 @@
-import data from './data/common.json'
+import data from './data/common.js'
 
 export const state = () => ({
   language: 'KR',
@@ -18,11 +18,7 @@ export const state = () => ({
     mobile: false
   }
 })
-export const getters = {
-  // newsCategory(state) {
-  //   return state.category.news
-  // }
-}
+
 export const mutations = {
   setIsFilterMenuOpen(state, payload) {
     state.isFilterMenuOpen = payload
@@ -35,13 +31,6 @@ export const mutations = {
   },
   setFilter(state, payload) {
     state.filter = payload
-  },
-  setFilterList(state, payload) {
-    switch (payload) {
-      case 'innovation':
-        state.filterList = state.category['innovation']
-        break
-    }
   },
   setIsScrollUp(state, payload) {
     state.isScrollUp = payload
@@ -58,9 +47,6 @@ export const actions = {
     const res = await this.$axios.get(`/content/${payload}`)
     // console.log('RES::', res)
     return res
-  },
-  getFilterList({ commit }, payload) {
-    commit('setFilterList', payload)
   },
   async getList() {
     return await this.$axios.get(

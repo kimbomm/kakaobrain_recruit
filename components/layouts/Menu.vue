@@ -10,8 +10,7 @@
             @mouseenter="setIsMenuOpen(true)"
           >
             <button type="button">
-              <!-- <span v-if="menu.alarm" class="num">{{ menu.alarm }}</span> -->
-              <span class="txt">{{ menu.name }}</span>
+              <span class="txt">{{ menu.name[language] }}</span>
             </button>
           </li>
         </ul>
@@ -24,24 +23,7 @@
     ></button>
     <transition name="slide">
       <div v-if="isMenuOpen" class="hide" @mouseleave="setIsMenuOpen(false)">
-        <div class="lang">
-          <ul>
-            <li
-              v-for="(item, index) in languageList"
-              :key="index"
-              :class="`lang-item animation delay-${index} ${
-                isAnimation ? 'fade-up' : ''
-              }`"
-            >
-              <button
-                :class="item.value === language ? 'is-active' : ''"
-                @click="selectLang(item.value)"
-              >
-                {{ item.name }}
-              </button>
-            </li>
-          </ul>
-        </div>
+        <LanguageButton :isAnimation="isAnimation" />
         <div class="menu">
           <ul>
             <li
@@ -49,9 +31,8 @@
               :key="`menu-${index}`"
               class="menu-item"
             >
-              <!-- <span v-if="menu.alarm" class="num">{{ menu.alarm }}</span> -->
               <span :class="`animation ${isAnimation ? 'fade-up' : ''}`">{{
-                menu.name
+                menu.name[language]
               }}</span>
               <ul class="sub">
                 <li
@@ -63,11 +44,13 @@
                   @click="setIsMenuOpen(false)"
                 >
                   <template v-if="subMenu.name !== 'Principle'">
-                    <nuxt-link :to="subMenu.link">{{ subMenu.name }}</nuxt-link>
+                    <nuxt-link :to="subMenu.link">{{
+                      subMenu.name[language]
+                    }}</nuxt-link>
                   </template>
                   <template v-else>
                     <a :href="principleLink" target="_blank">{{
-                      subMenu.name
+                      subMenu.name[language]
                     }}</a>
                   </template>
                 </li>
@@ -81,11 +64,12 @@
 </template>
 <script>
   import { mapState, mapMutations } from 'vuex'
-  import util from '@/util/utility.js'
   import MobMenu from '@/components/layouts/MobMenu'
+  import LanguageButton from '@/components/elements/button/LanguageButton'
   export default {
     components: {
-      MobMenu
+      MobMenu,
+      LanguageButton
     },
     data() {
       return {
@@ -117,13 +101,13 @@
     watch: {
       isMenuOpen(val) {
         if (val) {
-          util.scrollControl(document.querySelector('body'), 'block')
+          this.$nuxt.$emit('scrollLock', true)
           setTimeout(() => {
             this.isAnimation = true
           }, 300)
         } else {
           this.isAnimation = false
-          util.scrollControl(document.querySelector('body'), 'enable')
+          this.$nuxt.$emit('scrollLock', false)
         }
       }
     },
@@ -144,30 +128,6 @@
   }
 </script>
 <style lang="scss" scoped>
-  .animation {
-    opacity: 0;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-out;
-    &.delay-0 {
-      animation-delay: 0.1s;
-    }
-    &.delay-1 {
-      animation-delay: 0.1s;
-    }
-    &.delay-2 {
-      animation-delay: 0.3s;
-    }
-    &.delay-3 {
-      animation-delay: 0.4s;
-    }
-    &.delay-4 {
-      animation-delay: 0.5s;
-    }
-  }
-  .fade-up {
-    animation-name: fadeUp;
-  }
   .menu {
     z-index: 10;
     &-item {
@@ -216,25 +176,12 @@
     left: 0;
     width: 100%;
     transition: all 0.3s ease-in-out;
-    .lang {
+    .language {
       position: absolute;
       right: 30px;
       top: 20px;
       z-index: 10;
       cursor: pointer;
-      &-item {
-        font-size: 12px;
-        &:not(:last-child) {
-          margin-bottom: 20px;
-        }
-        button {
-          color: $gray-0;
-          &.is-active,
-          &:hover {
-            color: $brain-yellow;
-          }
-        }
-      }
     }
     text-align: center;
     .menu {

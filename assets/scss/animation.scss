@@ -77,3 +77,28 @@
   opacity: 0;
   transform: translateY(-30%);
 }
+
+.animation {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  &.delay-0 {
+    animation-delay: 0.1s;
+  }
+  &.delay-1 {
+    animation-delay: 0.1s;
+  }
+  &.delay-2 {
+    animation-delay: 0.3s;
+  }
+  &.delay-3 {
+    animation-delay: 0.4s;
+  }
+  &.delay-4 {
+    animation-delay: 0.5s;
+  }
+}
+.fade-up {
+  animation-name: fadeUp;
+}

@@ -2,7 +2,6 @@
   <transition name="slide">
     <div v-if="isMenuOpen" class="mob-menu">
       <div class="mob-menu-top">
-        <!-- <span>kakaobrain</span> -->
         <img src="@/assets/images/logo-w.png" />
         <button class="menu-btn" @click="onClose">
           <img
@@ -37,6 +36,7 @@
             </ul>
           </li>
         </ul>
+        <LanguageButton :isAnimation="isAnimation" />
         <MobMenuFooter @onClose="onClose" />
       </div>
     </div>
@@ -46,10 +46,12 @@
   import { mapState, mapMutations } from 'vuex'
   import Icon from '@/components/elements/Icon'
   import MobMenuFooter from '@/components/layouts/MobMenuFooter'
+  import LanguageButton from '@/components/elements/button/LanguageButton'
   export default {
     components: {
       Icon,
-      MobMenuFooter
+      MobMenuFooter,
+      LanguageButton
     },
     data() {
       return {
@@ -93,33 +95,6 @@
   }
 </script>
 <style lang="scss" scoped>
-  .animation {
-    opacity: 0;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-out;
-    &.delay-0 {
-      animation-delay: 0.1s;
-    }
-    &.delay-1 {
-      animation-delay: 0.2s;
-    }
-    &.delay-2 {
-      animation-delay: 0.3s;
-    }
-    &.delay-3 {
-      animation-delay: 0.4s;
-    }
-    &.delay-4 {
-      animation-delay: 0.5s;
-    }
-  }
-  .fade-up {
-    animation-name: fadeUp;
-    -webkit-animation-name: fadeUp;
-    -moz-animation-name: fadeUp;
-    -ms-animation-name: fadeUp;
-  }
   .mob-menu {
     transition: all 0.3s ease-in-out;
     display: none;
@@ -136,10 +111,8 @@
       top: 0;
       left: 0;
       right: 0;
-      // height: 46px;
       display: flex;
       justify-content: space-between;
-      // align-items: center;
       align-items: flex-start;
       padding: 16px 20px 0 20px;
       img {
@@ -220,6 +193,9 @@
     .mob-menu {
       display: block;
     }
+    .language {
+      margin-top: 110px;
+    }
   }
   @include mobile {
     .mob-menu {
@@ -227,14 +203,10 @@
         align-items: center;
         padding: 0 15px 0 20px;
         height: 56px;
-        // height: 51px;
         span {
           font-size: 18px;
         }
         button {
-          // position: absolute;
-          // top: 13px;
-          // right: 15px;
           width: 30px;
           height: 30px;
         }
@@ -250,6 +222,9 @@
     }
     .menu-list {
       margin-top: 116px;
+    }
+    .language {
+      margin-top: 60px;
     }
   }
 </style>
