@@ -56,16 +56,8 @@ export const actions = {
     )
   },
   async getDetail({}, payload) {
-    // const params = utility.setParameters(payload)
     return await this.$axios.get(
       `https://api.lever.co/v0/postings/kakaobrain/${payload}`
-    )
-  },
-  async getApply({}, payload) {
-    // const params = utility.setParameters(payload)
-    await this.$axios.setHeader('Authorization', 'Basic MLgWhE78U628mYyyw5bC')
-    return await this.$axios.get(
-      `https://api.lever.co/v1/postings/${payload}/apply`
     )
   },
   async getRecruitList({}, payload) {

@@ -24,7 +24,7 @@
         </div>
         <div class="detail-html" v-html="detail.additional"></div>
       </template>
-      <button class="apply">APPLY FOR THIS JOB</button>
+      <button class="apply" @click="goApply">APPLY FOR THIS JOB</button>
     </div>
   </div>
 </template>
@@ -47,16 +47,16 @@
     },
     methods: {
       ...mapActions({
-        getDetail: 'getDetail',
-        getApply: 'getApply'
+        getDetail: 'getDetail'
       }),
       async init() {
         const res = await this.getDetail(this.id)
         if (res) {
           this.detail = res.data
         }
-        const rr = await this.getApply(this.id)
-        console.log(rr)
+      },
+      goApply() {
+        window.open(`${this.detail.hostedUrl}/apply`)
       }
     }
   }
