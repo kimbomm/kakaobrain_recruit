@@ -21,16 +21,18 @@
       <div
         v-for="(item, index) in data.bottom"
         :key="`bottom-${index}`"
-        class="bottom-item gl-3"
+        class="bottom-item"
       >
         <div class="bottom-title">
           <span v-html="item.title"></span>
         </div>
-        <div v-if="item.subTitle" class="bottom-sub-title">
-          <span v-html="item.subTitle"></span>
-        </div>
-        <div class="bottom-text">
-          <p v-html="item.text"></p>
+        <div>
+          <div v-if="item.subTitle" class="bottom-sub-title">
+            <span v-html="item.subTitle"></span>
+          </div>
+          <div class="bottom-text">
+            <p v-html="item.text"></p>
+          </div>
         </div>
         <div class="service-more">
           <nuxt-link :to="item.link"> more</nuxt-link>
@@ -80,10 +82,10 @@
       justify-content: space-between;
       .bottom {
         &-item {
-          // width:550px;
+          width: getWidth(3);
           position: relative;
           min-height: 230px;
-          padding: 30px;
+          padding: 30px 30px 60px;
           background-color: #eff1f6;
           &:first-child {
             margin-right: 20px;
@@ -100,12 +102,11 @@
           line-height: 120%;
         }
         &-sub-title {
-          font-weight: 900;
+          font-weight: 700;
           font-size: 14px;
           line-height: 150%;
         }
         &-text {
-          margin-bottom: 30px;
           font-size: 14px;
           line-height: 150%;
         }
@@ -138,7 +139,7 @@
         .bottom {
           &-item {
             min-height: 295px;
-            padding: 40px;
+            padding: 40px 40px 80px;
             .service-more {
               bottom: 40px;
             }
@@ -152,7 +153,6 @@
           }
           &-text {
             font-size: 18px;
-            margin-bottom: 18px;
           }
         }
       }
@@ -183,7 +183,7 @@
         .bottom {
           &-item {
             min-height: 442px;
-            padding: 40px;
+            padding: 40px 40px 80px;
             .service-more {
               bottom: 40px;
             }
@@ -229,13 +229,11 @@
         .bottom {
           &-item {
             min-height: 230px;
-            padding: 30px;
+            padding: 30px 30px 60px;
+            width: getWidth(6);
             &:first-child {
               margin-right: 0px;
               margin-bottom: 20px;
-            }
-            &.gl-3 {
-              width: getWidth(6) !important;
             }
             .service-more {
               bottom: 30px;
@@ -249,7 +247,6 @@
             font-size: 14px;
           }
           &-text {
-            margin-bottom: 38px;
             font-size: 14px;
           }
         }
@@ -279,30 +276,25 @@
       &-text {
         margin-bottom: 20px;
         font-size: 16px;
-        &.l-ml-1{
-          margin-left: 0 !important
+        &.l-ml-1 {
+          margin-left: 0 !important;
         }
       }
       &-more {
         font-size: 16px;
-        &.l-ml-1{
-          margin-left: 0 !important
+        &.l-ml-1 {
+          margin-left: 0 !important;
         }
       }
       .service-bottom {
         .bottom {
           &-item {
             min-height: 210px;
-            &.gl-3 {
-              width: 100% !important;
-            }
+            width: 100%;
           }
           &-title {
             margin-bottom: 20px;
             font-size: 20px;
-          }
-          &-text {
-            margin-bottom: 40px;
           }
         }
       }

@@ -42,7 +42,7 @@ const MAIN = {
           link: '/welfare'
         },
         {
-          title: `복지혜택`,
+          title: `복지혜택.`,
           text: `카카오브레인 크루와 가족을 위한<br/>
           복지혜택을 소개합니다.`,
           link: '/welfare/benefits'

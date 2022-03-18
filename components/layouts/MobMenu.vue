@@ -23,7 +23,7 @@
               }menu-toggle`"
               @click="onClick(index)"
             >
-              <span class="menu-name">{{ menu.name }}</span>
+              <span class="menu-name">{{ menu.name[language] }}</span>
             </button>
             <ul class="sub-menu">
               <li
@@ -31,7 +31,9 @@
                 :key="`sub-${idx}`"
                 @click="onClose"
               >
-                <nuxt-link :to="subMenu.link">{{ subMenu.name }}</nuxt-link>
+                <nuxt-link :to="subMenu.link">{{
+                  subMenu.name[language]
+                }}</nuxt-link>
               </li>
             </ul>
           </li>
