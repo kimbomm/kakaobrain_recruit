@@ -1,0 +1,150 @@
+<template>
+  <div class="detail">
+    <div v-if="detail" class="detail-content">
+      <div class="detail-header">
+        <div class="department">
+          {{ detail.categories.department.toUpperCase() }}
+        </div>
+        <div class="team">
+          {{ detail.categories.team.toUpperCase() }}
+          /
+          {{ detail.text }}
+        </div>
+        <div class="info">
+          {{ detail.categories.location }} / {{ detail.categories.commitment }}
+        </div>
+      </div>
+      <template v-if="step === 0">
+        <div class="detail-html" v-html="detail.description"></div>
+        <div v-for="(list, index) in detail.lists" :key="index" class="lists">
+          <div class="detail-title">
+            <b>{{ list.text }}</b>
+          </div>
+          <ul class="detail-list" v-html="list.content"></ul>
+        </div>
+        <div class="detail-html" v-html="detail.additional"></div>
+      </template>
+      <button class="apply">APPLY FOR THIS JOB</button>
+    </div>
+  </div>
+</template>
+<script>
+  import { mapActions } from 'vuex'
+  export default {
+    asyncData(ctx) {
+      return {
+        id: ctx.params.id
+      }
+    },
+    data() {
+      return {
+        detail: null,
+        step: 0
+      }
+    },
+    mounted() {
+      this.init()
+    },
+    methods: {
+      ...mapActions({
+        getDetail: 'getDetail',
+        getApply: 'getApply'
+      }),
+      async init() {
+        const res = await this.getDetail(this.id)
+        if (res) {
+          this.detail = res.data
+        }
+        const rr = await this.getApply(this.id)
+        console.log(rr)
+      }
+    }
+  }
+</script>
+<style lang="scss" scoped>
+  .detail {
+    padding-top: 200px;
+    &-content /deep/ {
+      width: getWidth(6);
+      margin: 0 auto;
+      .detail-html {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 24px;
+      }
+      b {
+        display: block;
+        line-height: 1.3;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .lists {
+        margin-bottom: 24px;
+        > b {
+          margin-bottom: 20px;
+        }
+      }
+      .detail-list {
+        > div {
+          height: 24px;
+        }
+        li {
+          font-size: 16px;
+          line-height: 1.5;
+          padding-left: 24px;
+          position: relative;
+          &:before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 12px;
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            background-color: #000;
+            border-radius: 50%;
+          }
+          b {
+            font-size: inherit;
+            line-height: inherit;
+            font-weight: 400;
+            margin-bottom: 0;
+          }
+        }
+      }
+      .postings-link {
+        text-decoration: underline;
+      }
+    }
+    &-header {
+      margin-bottom: 200px;
+      .department {
+        font-size: 20px;
+        line-height: 1.3;
+      }
+      .team {
+        margin-top: 30px;
+        font-size: 40px;
+        line-height: 1.2;
+        font-weight: 900;
+      }
+      .info {
+        margin-top: 20px;
+        color: $gray-5;
+      }
+    }
+    .apply {
+      margin-top: 100px;
+      padding: 10px 24px;
+      height: 46px;
+      border-radius: 27px;
+      background-color: #000;
+      font: inherit;
+      font-weight: 400;
+      font-size: 20px;
+      color: #fff;
+      line-height: 1.3;
+      font-style: italic;
+    }
+  }
+</style>

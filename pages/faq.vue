@@ -1,5 +1,6 @@
 <template>
   <div class="faq">
+    <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
     <MiddleImg image="middle-faq.jpg" />
@@ -37,6 +38,7 @@
   import ContentsTitle from '@/components/company/ContentsTitle'
   import ContentsText from '@/components/company/ContentsText'
   import FoldingBox from '@/components/elements/button/FoldingBox'
+  import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
     mixins: [mixinGlobal],
     components: {
@@ -45,10 +47,22 @@
       MiddleImg,
       ContentsTitle,
       ContentsText,
-      FoldingBox
+      FoldingBox,
+      BreadCrumb
     },
     data() {
-      return {}
+      return {
+        breadcrumb: {
+          KR: [
+            { text: '영입', sub: 'sub', link: '' },
+            { text: 'FAQ', sub: '', link: '' }
+          ],
+          EN: [
+            { text: 'Recruit', sub: 'sub', link: '' },
+            { text: 'FAQ', sub: '', link: '' }
+          ]
+        }
+      }
     },
     computed: {
       ...mapState({
@@ -63,7 +77,7 @@
 </script>
 <style lang="scss" scoped>
   .faq {
-    padding: 0 20px;
+    padding: 320px 20px 0;
     &-list {
       width: getWidth(5);
       margin-left: getMargin(3);
@@ -75,7 +89,6 @@
       }
     }
     .main-title {
-      margin-top: 320px;
       margin-bottom: 60px;
     }
     .main-title-text {
@@ -137,13 +150,13 @@
 
   @include pc-large {
     .faq {
+      padding-top: 440px;
       &-list {
         li {
           margin-bottom: 14px;
         }
       }
       .main-title {
-        margin-top: 440px;
         margin-bottom: 100px;
       }
       .main-title-text {
@@ -170,13 +183,13 @@
   }
   @include pc-4k {
     .faq {
+      padding-top: 600px;
       &-list {
         li {
           margin-bottom: 20px;
         }
       }
       .main-title {
-        margin-top: 600px;
         margin-bottom: 120px;
       }
       .main-title-text {
@@ -203,12 +216,12 @@
   }
   @include tablet {
     .faq {
+      padding-top: 200px;
       &-list {
         width: getWidth(7);
         margin-left: getMargin(2);
       }
       .main-title {
-        margin-top: 200px;
         margin-bottom: 40px;
       }
       .main-title-text {
@@ -226,8 +239,8 @@
           width: 160px;
           height: 48px;
           padding: 19px 16px;
-          &.l-ml-3{
-            margin-left: getMargin(2) !important
+          &.l-ml-3 {
+            margin-left: getMargin(2) !important;
           }
           .btn-txt {
             font-size: 12px;
@@ -238,12 +251,13 @@
   }
   @include mobile {
     .faq {
+      padding-top: 76px;
       &-list {
         width: 100% !important;
         margin-left: 0 !important;
       }
       .main-title {
-        margin-top: 157px;
+        margin-top: 60px;
         margin-bottom: 20px;
       }
       .main-title-text {

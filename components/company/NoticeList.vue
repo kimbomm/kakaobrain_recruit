@@ -1,26 +1,29 @@
 <template>
-  <div class="notice-item">
-    <div class="item-category">
-      <div class="category">{{ data.recruitClassName }}</div>
-    </div>
-    <div class="item-con">
-      <div class="title">{{ data.recruitNoticeName }}</div>
-      <div class="date">
-        {{ data.receiveStartDatetime }} ~ {{ data.receiveEndDatetime }}
+  <nuxt-link :to="`recruit/${data.id}`">
+    <div class="notice-item">
+      <div class="item-category">
+        <div class="category">
+          {{
+            data.categories.department &&
+            data.categories.department.toUpperCase()
+          }}
+        </div>
       </div>
-      <div class="day">
-        D-{{
-          $dayjs(data.receiveEndDatetime).diff(
-            $dayjs(data.receiveStartDatetime),
-            'day'
-          )
-        }}
+      <div class="item-con">
+        <div class="title">
+          {{ data.categories.team && data.categories.team.toUpperCase() }}
+          /
+          {{ data.text }}
+        </div>
+        <div class="date">
+          {{ data.categories.location }} / {{ data.categories.commitment }}
+        </div>
+      </div>
+      <div class="item-type">
+        <div class="type">APPLY</div>
       </div>
     </div>
-    <div class="item-type">
-      <div class="type">접수중</div>
-    </div>
-  </div>
+  </nuxt-link>
 </template>
 <script>
   export default {
@@ -51,7 +54,7 @@
     .category {
       font-size: 20px;
       font-weight: 400;
-      line-height: 130%;
+      line-height: 1.3;
     }
   }
   .item-con {
@@ -60,43 +63,31 @@
     .title {
       margin-bottom: 10px;
       font-size: 20px;
-      font-weight: 400;
-      line-height: 130%;
+      font-weight: 600;
+      line-height: 1.3;
       word-break: keep-all;
     }
     .date {
-      margin-bottom: 10px;
       font-size: 12px;
       font-weight: 400;
-      line-height: 130%;
+      line-height: 1.3;
       color: $gray-5;
-    }
-    .day {
-      display: inline-flex;
-      justify-content: center;
-      align-content: center;
-      min-width: 58px;
-      height: 28px;
-      padding: 6px;
-      border-radius: 50px;
-      background-color: $surface-8;
-      line-height: 130%;
-      font-weight: 900;
-      font-style: italic;
-      font-size: 12px;
-      color: $gray-0;
     }
   }
   .item-type {
     .type {
-      width: 58px;
-      height: 28px;
-      padding: 6px 11px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 72px;
+      height: 34px;
       background-color: $gray-9;
-      font-weight: 900;
-      font-size: 12px;
-      line-height: 130%;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 14px;
+      line-height: 1.3;
       color: $gray-0;
+      border-radius: 27px;
       // letter-spacing: -2px;
     }
   }

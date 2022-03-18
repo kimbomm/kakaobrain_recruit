@@ -1,5 +1,6 @@
 <template>
   <div class="company">
+    <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
     <MiddleImg image="middle-work.jpg" />
@@ -85,6 +86,7 @@
   import ContentsText from '@/components/company/ContentsText'
   import FoldingBox from '@/components/elements/button/FoldingBox'
   import SmallTitle from '@/components/company//SmallTitle'
+  import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
     mixins: [mixinGlobal],
     name: 'index',
@@ -95,10 +97,22 @@
       ContentsTitle,
       ContentsText,
       FoldingBox,
-      SmallTitle
+      SmallTitle,
+      BreadCrumb
     },
     data() {
-      return {}
+      return {
+        breadcrumb: {
+          KR: [
+            { text: '복지소개', sub: 'sub', link: '' },
+            { text: '원격근무와 유연근무제', sub: '', link: '' }
+          ],
+          EN: [
+            { text: 'Welfare', sub: 'sub', link: '' },
+            { text: 'Remote work and flextime working.', sub: '', link: '' }
+          ]
+        }
+      }
     },
     computed: {
       ...mapState({
@@ -113,9 +127,8 @@
 </script>
 <style lang="scss" scoped>
   .company {
-    padding: 0 20px;
+    padding: 320px 20px 0;
     .main-title {
-      margin-top: 320px;
       margin-bottom: 60px;
     }
     .main-title-text {
@@ -203,8 +216,8 @@
 
   @include pc-large {
     .company {
+      padding-top: 440px;
       .main-title {
-        margin-top: 440px;
         margin-bottom: 100px;
       }
       .main-title-text {
@@ -272,8 +285,8 @@
   }
   @include pc-4k {
     .company {
+      padding-top: 600px;
       .main-title {
-        margin-top: 600px;
         margin-bottom: 120px;
       }
       .main-title-text {
@@ -340,8 +353,8 @@
   }
   @include tablet {
     .company {
+      padding-top: 200px;
       .main-title {
-        margin-top: 200px;
         margin-bottom: 40px;
       }
       .main-title-text {
@@ -418,8 +431,9 @@
   }
   @include mobile {
     .company {
+      padding-top: 76px;
       .main-title {
-        margin-top: 157px;
+        margin-top: 60px;
         margin-bottom: 20px;
       }
       .main-title-text {

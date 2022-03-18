@@ -1,5 +1,6 @@
 <template>
   <div class="welfare">
+    <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
     <MiddleImg image="middle-benefit.jpg" />
@@ -23,6 +24,7 @@
   import MiddleImg from '@/components/company/MiddleImg'
   import ContentsTitle from '@/components/company/ContentsTitle'
   import FoldingBox from '@/components/elements/button/FoldingBox'
+  import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
     mixins: [mixinGlobal],
     name: 'benefits',
@@ -31,10 +33,22 @@
       MainTitleText,
       MiddleImg,
       ContentsTitle,
-      FoldingBox
+      FoldingBox,
+      BreadCrumb
     },
     data() {
-      return {}
+      return {
+        breadcrumb: {
+          KR: [
+            { text: '복지소개', sub: 'sub', link: '' },
+            { text: '복지혜택', sub: '', link: '' }
+          ],
+          EN: [
+            { text: 'Welfare', sub: 'sub', link: '' },
+            { text: 'Welfare benefits.', sub: '', link: '' }
+          ]
+        }
+      }
     },
     computed: {
       ...mapState({
@@ -49,9 +63,8 @@
 </script>
 <style lang="scss" scoped>
   .welfare {
-    padding: 0 20px;
+    padding: 320px 20px 0;
     .main-title {
-      margin-top: 320px;
       margin-bottom: 60px;
     }
     .main-title-text {
@@ -77,8 +90,8 @@
 
   @include pc-large {
     .welfare {
+      padding-top: 440px;
       .main-title {
-        margin-top: 440px;
         margin-bottom: 100px;
       }
       .main-title-text {
@@ -103,8 +116,8 @@
   }
   @include pc-4k {
     .welfare {
+      padding-top: 600px;
       .main-title {
-        margin-top: 600px;
         margin-bottom: 120px;
       }
       .main-title-text {
@@ -129,8 +142,8 @@
   }
   @include tablet {
     .welfare {
+      padding-top: 200px;
       .main-title {
-        margin-top: 200px;
         margin-bottom: 40px;
       }
       .main-title-text {
@@ -154,8 +167,9 @@
   }
   @include mobile {
     .welfare {
+      padding-top: 76px;
       .main-title {
-        margin-top: 157px;
+        margin-top: 60px;
         margin-bottom: 20px;
       }
       .main-title-text {

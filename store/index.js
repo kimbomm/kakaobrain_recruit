@@ -1,7 +1,8 @@
 import data from './data/common.js'
+import utility from '/util/utility.js'
 
 export const state = () => ({
-  language: 'KR',
+  language: 'EN',
   menus: data.menus,
   footerMenu: data.footer,
   isMenuOpen: false,
@@ -48,9 +49,23 @@ export const actions = {
     // console.log('RES::', res)
     return res
   },
-  async getList() {
+  async getList({}, payload) {
+    const params = utility.setParameters(payload)
     return await this.$axios.get(
-      'https://api.lever.co/v0/postings/leverdemo?mode=json'
+      `https://api.lever.co/v0/postings/kakaobrain?${params}`
+    )
+  },
+  async getDetail({}, payload) {
+    // const params = utility.setParameters(payload)
+    return await this.$axios.get(
+      `https://api.lever.co/v0/postings/kakaobrain/${payload}`
+    )
+  },
+  async getApply({}, payload) {
+    // const params = utility.setParameters(payload)
+    await this.$axios.setHeader('Authorization', 'Basic MLgWhE78U628mYyyw5bC')
+    return await this.$axios.get(
+      `https://api.lever.co/v1/postings/${payload}/apply`
     )
   },
   async getRecruitList({}, payload) {

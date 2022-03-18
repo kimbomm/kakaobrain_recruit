@@ -34,8 +34,6 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-right: 0;
-    margin-bottom: 10px;
     padding: 8px 14px;
     &.sub {
       background-color: $gray-9;

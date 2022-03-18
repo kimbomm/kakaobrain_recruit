@@ -29,10 +29,10 @@ const menus = [
       },
       {
         name: {
-          KR: 'External Referral Program',
-          EN: ''
+          KR: '사외 추천 제도',
+          EN: 'External Referral Program'
         },
-        link: '/recommend'
+        link: '/referral'
       }
     ]
   },

@@ -661,8 +661,8 @@ const RECRUIT = {
   home: {
     KR: {
       MainTitle: '영입공고.',
-      MainTitleText:
-        'Unthinkable Question의 여정을 함께할 든든한 동료를 찾습니다.'
+      MainTitleText: `카카오브레인과 함께 생각하지 못한 물음을 던지고,<br/>
+        아무도 가보지 않은 길을 개척할 Unthinkable Krew를 기다립니다.`
     },
     EN: {
       MainTitle: 'Job Openings.',

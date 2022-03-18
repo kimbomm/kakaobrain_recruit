@@ -1,5 +1,6 @@
 <template>
   <div class="recommendation">
+    <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
     <MiddleImg image="middle-referral.jpg" />
@@ -66,6 +67,7 @@
   import ContentsText from '@/components/company/ContentsText'
   import SmallTitle from '@/components/company//SmallTitle'
   import ContentSubTitle from '@/components/company//ContentSubTitle'
+  import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
     mixins: [mixinGlobal],
     name: 'recommend',
@@ -76,7 +78,22 @@
       ContentsTitle,
       ContentsText,
       SmallTitle,
-      ContentSubTitle
+      ContentSubTitle,
+      BreadCrumb
+    },
+    data() {
+      return {
+        breadcrumb: {
+          KR: [
+            { text: '영입', sub: 'sub', link: '' },
+            { text: '사외 추천 제도', sub: '', link: '' }
+          ],
+          EN: [
+            { text: 'Recruit', sub: 'sub', link: '' },
+            { text: 'External Referral Program', sub: '', link: '' }
+          ]
+        }
+      }
     },
     computed: {
       ...mapState({
@@ -91,9 +108,8 @@
 </script>
 <style lang="scss" scoped>
   .recommendation {
-    padding: 0 20px;
+    padding: 320px 20px 0;
     .main-title {
-      margin-top: 320px;
       margin-bottom: 60px;
     }
     .main-title-text {
@@ -172,8 +188,8 @@
 
   @include pc-large {
     .recommendation {
+      padding-top: 440px;
       .main-title {
-        margin-top: 440px;
         margin-bottom: 100px;
       }
       .main-title-text {
@@ -226,8 +242,8 @@
   }
   @include pc-4k {
     .recommendation {
+      padding-top: 600px;
       .main-title {
-        margin-top: 600px;
         margin-bottom: 120px;
       }
       .main-title-text {
@@ -288,8 +304,8 @@
   }
   @include tablet {
     .recommendation {
+      padding-top: 200px;
       .main-title {
-        margin-top: 200px;
         margin-bottom: 40px;
       }
       .main-title-text {
@@ -348,8 +364,9 @@
   }
   @include mobile {
     .recommendation {
+      padding-top: 76px;
       .main-title {
-        margin-top: 157px;
+        margin-top: 60px;
         margin-bottom: 20px;
       }
       .main-title-text {
