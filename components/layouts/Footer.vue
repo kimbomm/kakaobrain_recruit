@@ -155,7 +155,7 @@
   .menu-list {
     font-size: 20px;
     line-height: 1.3;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;
@@ -212,7 +212,7 @@
   }
   @include tablet {
     .footer {
-      padding-top: 400px;
+      padding-top: 300px;
       &-shape {
         width: getWidth(2);
         height: 80px;

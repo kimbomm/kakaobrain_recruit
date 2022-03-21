@@ -141,7 +141,7 @@ const COMPANY = {
         {
           ContentsTitle: '우리는 더 나은 결과를 위해</br>공개하고 공유해요.',
           ContentsText: [
-            '정보의 독점은 권력이 될 수 있고 수직적인 소통 구조를 만들어 크루들의 업무 자율성을 떨어뜨릴 수 있습니다.</br>하지만 정보가 공유되면 업무의 자율성을 높이고, 집단지성의 효과를 크게 할 수 있습니다. 그래서 우리는 공유/공개를 위해</br>Notion, Slack, Google Workspace, GitHub과 같은 협업툴을 사용하고 누구나 접근하고 참여할 수 있게 합니다.</br></br>공유/공개도 해야 되는 $lsquo;일&rsquo; 이지만, 공유가 최종 목적은 아닙니다.</br>효율적으로 일하는 방식을 끊임없이 고민하며 우리가 함께 성장 할 수 있도록 서로 돕습니다.</br>또한 올바른 공개 문화를 위해 보안을 지키고 크루끼리만 공유합니다.'
+            '정보의 독점은 권력이 될 수 있고 수직적인 소통 구조를 만들어 크루들의 업무 자율성을 떨어뜨릴 수 있습니다.</br>하지만 정보가 공유되면 업무의 자율성을 높이고, 집단지성의 효과를 크게 할 수 있습니다. 그래서 우리는 공유/공개를 위해</br>Notion, Slack, Google Workspace, GitHub과 같은 협업툴을 사용하고 누구나 접근하고 참여할 수 있게 합니다.</br></br>공유/공개도 해야 되는 &lsquo;일&rsquo; 이지만, 공유가 최종 목적은 아닙니다.</br>효율적으로 일하는 방식을 끊임없이 고민하며 우리가 함께 성장 할 수 있도록 서로 돕습니다.</br>또한 올바른 공개 문화를 위해 보안을 지키고 크루끼리만 공유합니다.'
           ],
           ruleList: [
             {
@@ -177,8 +177,8 @@ const COMPANY = {
             {
               title: "카카오 공동체의 '영어 호칭' 사용과 '신충헌 원칙'",
               content: `
-                <span class="string">영어 호칭</span>은 경력, 연차, 나이에 관계없이 솔직하게 의견을 제시하고 자발적인 토론과 능동적인 참여를 이끌어내는 환경을 만들어줍니다. 그래서 카카오브레인과 카카오 공동체 전체의 크루를 부를 때에는 &#39;~께서 /~님&#39;등의 극 존칭 표현을 사용하지 않습니다.<br/><br/>
-                <span class="string">신충헌</span>(신뢰, 충돌, 헌신)이라는 원칙은 자유로운 소통 문화와 더해져 빠르게 변화하는 IT산업 환경에서 혁신을 만들고 패러다임을 전환하는 원동력으로 작용됩니다.<br/>이 원칙은 [서로가 신뢰를 바탕으로 충분히 논쟁하고 부딪히며 나온 결론에 대해, 모두가 한 방향으로 헌신하자]는 내용으로,결과에 대한 크루 간 합의와 이해, 주도적인 업무 추진을 가능하게 합니다.
+                <span class="bold">영어 호칭</span>은 경력, 연차, 나이에 관계없이 솔직하게 의견을 제시하고 자발적인 토론과 능동적인 참여를 이끌어내는 환경을 만들어줍니다. 그래서 카카오브레인과 카카오 공동체 전체의 크루를 부를 때에는 &#39;~께서 /~님&#39;등의 극 존칭 표현을 사용하지 않습니다.<br/><br/>
+                <span class="bold">신충헌</span>(신뢰, 충돌, 헌신)이라는 원칙은 자유로운 소통 문화와 더해져 빠르게 변화하는 IT산업 환경에서 혁신을 만들고 패러다임을 전환하는 원동력으로 작용됩니다.<br/>이 원칙은 [서로가 신뢰를 바탕으로 충분히 논쟁하고 부딪히며 나온 결론에 대해, 모두가 한 방향으로 헌신하자]는 내용으로,결과에 대한 크루 간 합의와 이해, 주도적인 업무 추진을 가능하게 합니다.
               `
             }
           ]
@@ -193,7 +193,7 @@ const COMPANY = {
             {
               title: "카카오 공동체의 '최소한의 원칙'",
               content:
-                '<span class="string">100:0의 원칙</span><br/>카카오브레인 내부에서는 모든 것을 공개하고(100), 카카오브레인을 벗어나서는 아무 것도 공개하지 않습니다.<br/>왜 100:0 이냐? 누구에게는 중요한 정보가 누구에겐 중요하지 않은 정보일 수 있습니다. <br/>그렇다고 매번 동료들에게 공유를 해도 되는지 아닌지를 물어보는 것은 불가능한 일이라고 생각해서 입니다<br/><br/><span class="string">1원의 원칙</span><br/>회사의 자원을 개인의 사적일 일에 사용하지 않는다는 원칙입니다.<br/>누군가의 작은 행동이 동료들의 신뢰를 깰 수 있다면 그 부분은 1원이라고 해서 이슈 삼지 않을 이유가 없다고 생각해서 입니다.<br/><br/><span class="string">애매하면 하지 않는다</span>'
+                '<span class="bold">100:0의 원칙</span><br/>카카오브레인 내부에서는 모든 것을 공개하고(100), 카카오브레인을 벗어나서는 아무 것도 공개하지 않습니다.<br/>왜 100:0 이냐? 누구에게는 중요한 정보가 누구에겐 중요하지 않은 정보일 수 있습니다. <br/>그렇다고 매번 동료들에게 공유를 해도 되는지 아닌지를 물어보는 것은 불가능한 일이라고 생각해서 입니다<br/><br/><span class="bold">1원의 원칙</span><br/>회사의 자원을 개인의 사적일 일에 사용하지 않는다는 원칙입니다.<br/>누군가의 작은 행동이 동료들의 신뢰를 깰 수 있다면 그 부분은 1원이라고 해서 이슈 삼지 않을 이유가 없다고 생각해서 입니다.<br/><br/><span class="bold">애매하면 하지 않는다</span>'
             }
           ]
         }
@@ -263,11 +263,11 @@ const COMPANY = {
             {
               title: "Kakao community's 'minimum principle'",
               content: `
-                <span class="string">The 100:0 Principle</span><br/>
+                <span class="bold">The 100:0 Principle</span><br/>
                 kakaobrain opens everything inside (100) and nothing outside (0) kakaobrain. Why 100:0? Certain information might be important for some people but not for others. However, it is impossible to ask your colleagues every time whether it is okay to share or not.<br/><br/>
-                <span class="string">One Won Principle</span><br/>
+                <span class="bold">One Won Principle</span><br/>
                 The principle is not to use company resources for personal matters. There is no reason for ignoring an issue just because it's only 1 won if someone's small actions might break the trust of colleagues.<br/><br/>
-                <span class="string">We don’t do something ambiguous.</span>`
+                <span class="bold">We don’t do something ambiguous.</span>`
             }
           ]
         }
@@ -775,7 +775,7 @@ const WELFARE = {
             {
               title: '랜선 회식을 지원해요.  ',
               content:
-                '<span class="string">동료와의 캐주얼한 대화는 팀워크의 기반이 되고 업무 집중력을 높이는데 도움</span>이 된다고 합니다.</br></br> 우리는 원격 근무 중에도 동료 관계와 팀워크. 모두~ 놓쳐지지 않도록  업무 종료이후 시간에 각자 좋아하는 배달 음식을 시켜 얘기 나누는 랜선 회식비를 지원 합니다. 또한 팀단위의 회식이라면 업무 시간 중에도 랜선/오프라인 회식 모두 가능하고 지원됩니다. '
+                '<span class="bold">동료와의 캐주얼한 대화는 팀워크의 기반이 되고 업무 집중력을 높이는데 도움</span>이 된다고 합니다.</br></br> 우리는 원격 근무 중에도 동료 관계와 팀워크. 모두~ 놓쳐지지 않도록  업무 종료이후 시간에 각자 좋아하는 배달 음식을 시켜 얘기 나누는 랜선 회식비를 지원 합니다. 또한 팀단위의 회식이라면 업무 시간 중에도 랜선/오프라인 회식 모두 가능하고 지원됩니다. '
             },
             {
               title: '모든 크루에게 1인 1개의 법인카드가 제공됩니다.',

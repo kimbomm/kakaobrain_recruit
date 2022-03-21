@@ -10,7 +10,7 @@
         <li class="rule-item">
           <ContentsTitle :title="data.contents[0].ContentsTitle" />
           <ContentsText :text="data.contents[0].ContentsText[0]" />
-          <div class="share-rule gl-5 l-ml-3">
+          <div class="share-rule">
             <ul class="rule-list">
               <li
                 v-for="(data, index) in data.contents[0].ruleList"
@@ -34,7 +34,7 @@
         <li class="rule-item">
           <ContentsTitle :title="data.contents[2].ContentsTitle" />
           <ContentsText :text="data.contents[2].ContentsText[0]" />
-          <div class="share-rule gl-5 l-ml-3">
+          <div class="share-rule">
             <ul class="rule-list">
               <li
                 v-for="(data, index) in data.contents[2].ruleList"
@@ -49,7 +49,7 @@
         <li class="rule-item">
           <ContentsTitle :title="data.contents[3].ContentsTitle" />
           <ContentsText :text="data.contents[3].ContentsText[0]" />
-          <div class="share-rule gl-5 l-ml-3">
+          <div class="share-rule">
             <ul class="rule-list">
               <li
                 v-for="(data, index) in data.contents[3].ruleList"
@@ -132,6 +132,8 @@
       margin-bottom: 40px;
     }
     .share-rule {
+      width: getWidth(5);
+      margin-left: getMargin(3);
       // margin-bottom:200px;
       .rule-list {
         li {
@@ -273,12 +275,8 @@
         margin-bottom: 40px;
       }
       .share-rule {
-        &.gl-5 {
-          width: getWidth(7) !important;
-        }
-        &.l-ml-3 {
-          margin-left: getMargin(2) !important;
-        }
+        width: getWidth(7);
+        margin-left: getMargin(2);
       }
 
       .rule-box {
@@ -324,12 +322,8 @@
         margin-bottom: 30px;
       }
       .share-rule {
-        &.gl-5 {
-          width: 100% !important;
-        }
-        &.l-ml-3 {
-          margin-left: 0 !important;
-        }
+        width: 100%;
+        margin-left: 0;
       }
 
       .rule-box {
