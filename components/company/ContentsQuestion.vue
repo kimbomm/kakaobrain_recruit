@@ -1,7 +1,7 @@
 <template>
   <div ref="refWrap" class="question-box">
     <div ref="refImage" class="large-img">
-      <img src="@/assets/images/large-img.png" />
+      <img src="@/assets/images/large-img.png" @load="onResize" />
     </div>
     <div class="title gl-6">
       <span v-html="data.title"></span>
@@ -36,7 +36,6 @@
     },
     async mounted() {
       await window.addEventListener('resize', this.onResize)
-      await this.onResize()
     },
     beforeDestroy() {
       window.removeEventListener('resize', this.onResize)
