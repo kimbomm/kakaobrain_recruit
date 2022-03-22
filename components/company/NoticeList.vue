@@ -75,6 +75,8 @@
     }
   }
   .item-type {
+    width: getWidth(1);
+    text-align: right;
     .type {
       display: inline-flex;
       justify-content: center;

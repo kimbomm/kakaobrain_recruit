@@ -146,10 +146,13 @@
         if (this.checkedList.includes('all')) {
           let list = []
           this.list.forEach(item => {
-            list = list.concat(item.postings)
+            list = list.concat([], item.postings)
           })
-          this.recruitList = list
-          this.total = this.recruitList.length
+          this.total = list.length
+          this.recruitList = list.splice(
+            this.pageData.offset,
+            this.pageData.limit
+          )
         } else {
           let list = []
           this.list.forEach(item => {
@@ -186,8 +189,8 @@
     .category-box {
       margin-bottom: 50px;
     }
-    .paging {
-      margin-top: 62px;
+    .notice-paging {
+      margin-top: 200px;
     }
     .category-box {
       .checkbox {
@@ -228,11 +231,9 @@
         }
       }
       .notice-paging {
+        margin-top: 260px;
         &.l-ml-1 {
           margin-left: 0px !important;
-        }
-        .paging {
-          margin-top: 260px;
         }
       }
     }
@@ -267,11 +268,9 @@
         }
       }
       .notice-paging {
+        margin-top: 380px;
         &.l-ml-1 {
           margin-left: getMargin(1) !important;
-        }
-        .paging {
-          margin-top: 380px;
         }
       }
     }
@@ -308,11 +307,9 @@
         }
       }
       .notice-paging {
+        margin-top: 140px;
         &.l-ml-1 {
           margin-left: 0px !important;
-        }
-        .paging {
-          margin-top: 140px;
         }
       }
     }
@@ -352,9 +349,7 @@
       }
 
       .notice-paging {
-        .paging {
-          margin-top: 107px;
-        }
+        margin-top: 107px;
       }
     }
   }
