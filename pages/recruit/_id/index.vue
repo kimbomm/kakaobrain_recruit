@@ -1,5 +1,6 @@
 <template>
   <div class="detail">
+    <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <div v-if="detail" class="detail-content">
       <div class="detail-header">
         <div class="department">
@@ -29,18 +30,35 @@
   </div>
 </template>
 <script>
-  import { mapActions } from 'vuex'
+  import { mapState, mapActions } from 'vuex'
+  import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
     asyncData(ctx) {
       return {
         id: ctx.params.id
       }
     },
+    components: {
+      BreadCrumb
+    },
     data() {
       return {
+        breadcrumb: {
+          KR: [
+            { text: '영입', sub: 'sub', link: '' },
+            { text: '영입공고', sub: '', link: '' }
+          ],
+          EN: [
+            { text: 'Recruit', sub: 'sub', link: '' },
+            { text: 'Job Openings', sub: '', link: '' }
+          ]
+        },
         detail: null,
         step: 0
       }
+    },
+    computed: {
+      ...mapState(['language'])
     },
     mounted() {
       this.init()
@@ -53,10 +71,21 @@
         const res = await this.getDetail(this.id)
         if (res) {
           this.detail = res.data
+          this.setBreadcrumb()
         }
       },
       goApply() {
         window.open(`${this.detail.hostedUrl}/apply`)
+      },
+      setBreadcrumb() {
+        const keys = Object.keys(this.breadcrumb)
+        keys.forEach(key => {
+          this.breadcrumb[key].push({
+            text: this.detail.categories.department,
+            sub: '',
+            link: ''
+          })
+        })
       }
     }
   }
@@ -75,13 +104,16 @@
       b {
         display: block;
         line-height: 1.3;
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 20px;
       }
       .lists {
         margin-bottom: 24px;
         > b {
           margin-bottom: 20px;
+        }
+        & + .detail-html {
+          margin-bottom: 0;
         }
       }
       .detail-list {
@@ -130,13 +162,14 @@
       }
       .info {
         margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.3;
         color: $gray-5;
       }
     }
     .apply {
       margin-top: 100px;
       padding: 10px 24px;
-      height: 46px;
       border-radius: 27px;
       background-color: #000;
       font: inherit;
@@ -145,6 +178,112 @@
       color: #fff;
       line-height: 1.3;
       font-style: italic;
+    }
+  }
+  @include pc-large {
+    .detail {
+      padding-top: 300px;
+      &-content /deep/ {
+        .detail-html {
+          font-size: 20px;
+        }
+      }
+      &-header {
+        .department {
+          font-size: 26px;
+        }
+        .team {
+          font-size: 52px;
+        }
+        .info {
+          font-size: 20px;
+        }
+      }
+      .apply {
+        font-size: 24px;
+      }
+    }
+  }
+  @include pc-4k {
+    .detail {
+      padding-top: 500px;
+      &-content /deep/ {
+        .detail-html {
+          font-size: 30px;
+        }
+      }
+      &-header {
+        margin-bottom: 300px;
+        .department {
+          font-size: 36px;
+        }
+        .team {
+          font-size: 80px;
+          margin-top: 60px;
+        }
+        .info {
+          font-size: 30px;
+          margin-top: 30px;
+        }
+      }
+      .apply {
+        font-size: 34px;
+        margin-top: 120px;
+      }
+    }
+  }
+  @include tablet {
+    .detail {
+      padding-top: 170px;
+      &-content /deep/ {
+        .detail-html {
+          font-size: 14px;
+        }
+      }
+      &-header {
+        margin-bottom: 300px;
+        .department {
+          font-size: 18px;
+        }
+        .team {
+          font-size: 30px;
+          margin-top: 20px;
+        }
+        .info {
+          font-size: 14px;
+          margin-top: 10px;
+        }
+      }
+      .apply {
+        font-size: 20px;
+        margin-top: 80px;
+      }
+    }
+  }
+  @include mobile {
+    .detail {
+      padding: 76px 20px 0;
+      &-content /deep/ {
+        width: 100%;
+        .detail-html {
+          font-size: 16px;
+        }
+      }
+      &-header {
+        margin: 60px 0 100px;
+        .department {
+          font-size: 16px;
+        }
+        .team {
+          font-size: 24px;
+        }
+        .info {
+          font-size: 16px;
+        }
+      }
+      .apply {
+        font-size: 16px;
+      }
     }
   }
 </style>
