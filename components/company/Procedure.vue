@@ -30,7 +30,7 @@
     }
   }
 </script>
-<style lang="scss" scoped> 
+<style lang="scss" scoped>
   .procedure {
     .item {
       display: flex;
@@ -41,17 +41,17 @@
       &:not(:last-child) .item-shape {
         background-color: $surface-2;
       }
+      &:nth-child(2n) {
+        flex: 0 0 20px;
+        width: 20px;
+        justify-content: center;
+        align-items: center;
+      }
       &-box {
         display: flex;
         flex-wrap: wrap;
-        // justify-content: space-between;
         justify-content: flex-start;
         align-items: center;
-        li{
-          &:not(:last-child){
-            margin-right:6px;
-          }
-        }
       }
       &-shape {
         position: relative;
@@ -110,13 +110,8 @@
         &-box {
           display: flex;
           flex-wrap: wrap;
-          // justify-content: space-between;
+          justify-content: space-between;
           align-items: center;
-          li{
-            &:not(:last-child){
-              margin-right:5px;
-            }
-          }
         }
         &-shape {
           width: 234px;
@@ -140,12 +135,12 @@
   @include pc-4k {
     .procedure {
       .item {
-        &-box{
-          li{
-            &:not(:last-child){
-              margin-right:69px;
-            }
-          }
+        &-box {
+          // li {
+          //   &:not(:last-child) {
+          //     margin-right: 69px;
+          //   }
+          // }
         }
         &-shape {
           width: 362px;
@@ -175,16 +170,13 @@
         margin-left: getMargin(2) !important;
       }
       .item {
+        &:nth-child(2n) {
+          flex: 0 0 40px;
+        }
         &-box {
           display: flex;
           flex-wrap: wrap;
-          // justify-content: space-between;
           align-items: center;
-          li{
-            &:not(:last-child){ 
-              margin-right:19.8px;
-            }
-          }
         }
         &-shape {
           width: 100px;
@@ -220,9 +212,9 @@
           justify-content: flex-start;
           // justify-content: space-between;
           align-items: center;
-          li{
-            &:not(:last-child){
-              margin-right:13px;
+          li {
+            &:not(:last-child) {
+              margin-right: 13px;
             }
           }
         }
