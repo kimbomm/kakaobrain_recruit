@@ -89,6 +89,9 @@
           margin-bottom: 40px;
         }
       }
+      .content-sub-title /deep/ .tit {
+        font-weight: 700;
+      }
     }
     .content-sub-title {
       margin-bottom: 10px;
