@@ -74,7 +74,7 @@
       margin-bottom: 140px;
     }
     .contents-title {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
     .folding-rule {
       // margin-bottom:200px;
