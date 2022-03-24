@@ -56,7 +56,7 @@
 </script>
 <style lang="scss" scoped>
   .folding {
-    padding: 22px 30px 24px 30px;
+    padding: 30px 30px 40px 30px;
     background-color: $surface-2;
     &-top {
       position: relative;
@@ -135,7 +135,7 @@
   }
   @include pc-4k {
     .folding {
-      padding: 46px 50px;
+      padding: 46px 50px 60px;
       &-title {
         max-width: calc(100% - 140px);
         p {
@@ -163,7 +163,7 @@
   }
   @include tablet {
     .folding {
-      padding: 24px 30px;
+      padding: 26px 30px 30px;
       &-title {
         p {
           font-size: 18px;
