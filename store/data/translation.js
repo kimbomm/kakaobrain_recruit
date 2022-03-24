@@ -59,7 +59,7 @@ const MAIN = {
           title: '사외추천제도.',
           subTitle: '지인 추천 보상금 300만원',
           text: '누구에게나 열려있는 기회.<br/>지인을 추천해 주시면 추천 보상금 300만원을 지급 드립니다.',
-          link: 'recommend'
+          link: '/referral'
         }
       ]
     }
@@ -124,7 +124,7 @@ const MAIN = {
           title: 'External Referral Program.',
           subTitle: 'Refer a friend and earn 3 million KRW in reward',
           text: 'The opportunity is open to everyone!<br/>Recommend a qualified friend for the job and earn 3 million KRW in referral incentives.',
-          link: '/recommend'
+          link: '/referral'
         }
       ]
     }
