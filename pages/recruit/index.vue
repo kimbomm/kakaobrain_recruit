@@ -30,7 +30,7 @@
         </ul>
       </div>
     </div>
-    <div class="notice-paging l-ml-1">
+    <div class="notice-paging">
       <ListPaging
         :total="total"
         :offset="pageData.offset"
@@ -186,14 +186,14 @@
     .middle-img {
       margin-bottom: 140px;
     }
-    .category-box {
-      margin-bottom: 50px;
-    }
     .notice-paging {
       margin-top: 200px;
+      margin-left: getMargin(4);
     }
     .category-box {
+      margin-bottom: 50px;
       .checkbox {
+        margin-bottom: 10px;
         &:not(:last-child) {
           margin-right: 10px;
         }
@@ -232,9 +232,6 @@
       }
       .notice-paging {
         margin-top: 260px;
-        &.l-ml-1 {
-          margin-left: 0px !important;
-        }
       }
     }
   }
@@ -251,14 +248,13 @@
         margin-bottom: 270px;
       }
       .category-box {
+        margin-bottom: 100px;
         .checkbox {
+          margin-bottom: 20px;
           &:not(:last-child) {
             margin-right: 20px;
           }
         }
-      }
-      .category-box {
-        margin-bottom: 120px;
       }
       .notice-contents {
         .notice-list {
@@ -269,9 +265,6 @@
       }
       .notice-paging {
         margin-top: 380px;
-        &.l-ml-1 {
-          margin-left: getMargin(1) !important;
-        }
       }
     }
   }
@@ -294,8 +287,14 @@
         &.l-ml-3 {
           margin-left: getMargin(2) !important;
         }
-        .category-box {
-          margin-bottom: 30px;
+      }
+      .category-box {
+        margin-bottom: 30px;
+        .checkbox {
+          margin-bottom: 10px;
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
         }
       }
 
@@ -308,9 +307,7 @@
       }
       .notice-paging {
         margin-top: 140px;
-        &.l-ml-1 {
-          margin-left: 0px !important;
-        }
+        margin-left: getMargin(2);
       }
     }
   }
@@ -336,20 +333,21 @@
           margin-left: 0 !important;
         }
         .category-box {
-          margin-bottom: 30px;
+          margin-bottom: 29px;
         }
       }
 
       .notice-contents {
         .notice-list {
           &:not(:last-child) {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
           }
         }
       }
 
       .notice-paging {
         margin-top: 107px;
+        margin-left: 0;
       }
     }
   }

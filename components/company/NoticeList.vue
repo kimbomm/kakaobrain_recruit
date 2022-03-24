@@ -106,18 +106,12 @@
       }
     }
     .item-con {
+      margin-bottom: 14px;
       .title {
         margin-bottom: 14px;
         font-size: 26px;
       }
       .date {
-        margin-bottom: 14px;
-        font-size: 16px;
-      }
-      .day {
-        min-width: 69px;
-        height: 33px;
-        padding: 6px;
         font-size: 16px;
       }
     }
@@ -142,18 +136,12 @@
       }
     }
     .item-con {
+      margin-bottom: 20px;
       .title {
         margin-bottom: 20px;
         font-size: 38px;
       }
       .date {
-        margin-bottom: 20px;
-        font-size: 24px;
-      }
-      .day {
-        min-width: 107px;
-        height: 51px;
-        padding: 10px;
         font-size: 24px;
       }
     }
@@ -175,25 +163,17 @@
     }
     .item-con {
       width: getWidth(4);
+      margin-bottom: 10px;
       .title {
         margin-bottom: 10px;
         font-size: 18px;
       }
       .date {
-        margin-bottom: 10px;
-        font-size: 12px;
-      }
-      .day {
-        min-width: 58px;
-        height: 28px;
-        padding: 6px;
         font-size: 12px;
       }
     }
     .item-type {
       .type {
-        width: 58px;
-        height: 28px;
         padding: 6px 12px;
         font-size: 12px;
       }
@@ -214,29 +194,26 @@
       margin-bottom: 20px;
       margin-right: 0px;
       .category {
-        font-size: 18px;
+        font-size: 14px;
       }
     }
     .item-con {
       width: 100% !important;
       margin-right: 0px;
+      margin-bottom: 16px;
       .title {
-        margin-bottom: 20px;
-        font-size: 18px;
-      }
-      .date {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        .date {
+          font-size: 18px;
+        }
         font-size: 12px;
       }
     }
     .item-type {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      text-align: right;
+      width: 100%;
       .type {
-        width: 58px;
-        height: 28px;
-        padding: 6px 12px;
+        padding: 9px 14px;
         font-size: 12px;
       }
     }
