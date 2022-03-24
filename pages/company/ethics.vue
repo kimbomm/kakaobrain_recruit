@@ -46,8 +46,10 @@
         </li>
       </ul>
     </div>
-    <div class="company-btn l-ml-3">
-      <span class="btn-txt">{{ data.button }} →</span>
+    <div class="link-button">
+      <nuxt-link to="#">
+        <span class="btn-txt">{{ data.button }} →</span>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -140,24 +142,9 @@
       //   }
       // }
     }
-    .company-btn {
-      display: inline-block;
-      height: 50px;
-      border: 1px solid $gray-9;
-      border-radius: 0px;
-      padding: 16px;
-      font-size: 0px;
-      box-sizing: border-box;
-      cursor: pointer;
-      .btn-txt {
-        display: block;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 130%;
-        color: $gray-9;
-      }
-    }
+  }
+  .link-button {
+    margin-left: getMargin(3);
   }
   @include pc-large {
     .company {
@@ -194,13 +181,6 @@
           }
         }
       }
-      .company-btn {
-        height: 60px;
-        padding: 19px 14px;
-        .btn-txt {
-          font-size: 16px;
-        }
-      }
     }
   }
   @include pc-4k {
@@ -235,13 +215,6 @@
           &:not(:last-child) {
             margin-bottom: 400px;
           }
-        }
-      }
-      .company-btn {
-        height: 90px;
-        padding: 28px 18px;
-        .btn-txt {
-          font-size: 22px;
         }
       }
     }
@@ -296,16 +269,9 @@
           }
         }
       }
-      .company-btn {
-        &.l-ml-3 {
-          margin-left: getMargin(2) !important;
-        }
-        height: 48px;
-        padding: 18px 16px;
-        .btn-txt {
-          font-size: 12px;
-        }
-      }
+    }
+    .link-button {
+      margin-left: getMargin(2);
     }
   }
   @include mobile {
@@ -354,16 +320,9 @@
           }
         }
       }
-      .company-btn {
-        &.l-ml-3 {
-          margin-left: 0 !important;
-        }
-        height: 48px;
-        padding: 18px 16px;
-        .btn-txt {
-          font-size: 12px;
-        }
-      }
+    }
+    .link-button {
+      margin-left: 0;
     }
   }
 </style>

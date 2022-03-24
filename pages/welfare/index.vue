@@ -10,7 +10,7 @@
         <li class="rule-item">
           <ContentsTitle :title="data.contents[0].ContentsTitle" />
           <ContentsText :text="data.contents[0].ContentsText" />
-          <div class="company-btn l-ml-3">
+          <div class="link-button">
             <nuxt-link to="/recruit">
               <span class="btn-txt">Our Open Position →</span>
             </nuxt-link>
@@ -190,30 +190,9 @@
       }
     }
   }
-
-  .company-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 238px;
-    height: 50px;
-    border: 1px solid $gray-9;
-    border-radius: 0px;
-    padding: 16px;
-    font-size: 0px;
-    box-sizing: border-box;
-    cursor: pointer;
-    .btn-txt {
-      display: block;
-      letter-spacing: -1px;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 130%;
-      color: $gray-9;
-    }
+  .link-button {
+    margin-left: getMargin(3);
   }
-
   @include pc-large {
     .company {
       padding-top: 440px;
@@ -269,16 +248,6 @@
               height: 6px;
             }
           }
-        }
-      }
-
-      .company-btn {
-        width: 218px;
-        height: 60px;
-        padding: 19px 14px;
-        text-align: center;
-        .btn-txt {
-          font-size: 16px;
         }
       }
     }
@@ -338,15 +307,6 @@
               height: 8px;
             }
           }
-        }
-      }
-
-      .company-btn {
-        width: 541px;
-        height: 90px;
-        padding: 28px 74px;
-        .btn-txt {
-          font-size: 14px;
         }
       }
     }
@@ -414,19 +374,9 @@
           }
         }
       }
-
-      .company-btn {
-        width: 160px;
-        height: 48px;
-        padding: 16px 19px;
-        text-align: center;
-        &.l-ml-3 {
-          margin-left: getMargin(2) !important;
-        }
-        .btn-txt {
-          font-size: 12px;
-        }
-      }
+    }
+    .link-button {
+      margin-left: getMargin(2);
     }
   }
   @include mobile {
@@ -486,12 +436,9 @@
           }
         }
       }
-
-      .company-btn {
-        &.l-ml-3 {
-          margin-left: 0 !important;
-        }
-      }
+    }
+    .link-button {
+      margin-left: 0;
     }
   }
 </style>

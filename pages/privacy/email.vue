@@ -92,25 +92,6 @@
       //   }
       // }
     }
-    .company-btn {
-      width: 238px;
-      height: 50px;
-      border: 1px solid $gray-9;
-      border-radius: 0px;
-      padding: 16px;
-      font-size: 0px;
-      box-sizing: border-box;
-      cursor: pointer;
-      .btn-txt {
-        display: block;
-        letter-spacing: -1px;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 130%;
-        color: $gray-9;
-      }
-    }
   }
   @include pc-large {
     .company {
@@ -147,14 +128,6 @@
           }
         }
       }
-      .company-btn {
-        width: 218px;
-        height: 60px;
-        padding: 19px 14px;
-        .btn-txt {
-          font-size: 16px;
-        }
-      }
     }
   }
   @include pc-4k {
@@ -189,14 +162,6 @@
           &:not(:last-child) {
             margin-bottom: 400px;
           }
-        }
-      }
-      .company-btn {
-        width: 300px;
-        height: 90px;
-        padding: 28px 18px;
-        .btn-txt {
-          font-size: 22px;
         }
       }
     }
@@ -251,17 +216,6 @@
           }
         }
       }
-      .company-btn {
-        &.l-ml-3 {
-          margin-left: getMargin(2) !important;
-        }
-        width: 180px;
-        height: 48px;
-        padding: 18px 16px;
-        .btn-txt {
-          font-size: 12px;
-        }
-      }
     }
   }
   @include mobile {
@@ -308,17 +262,6 @@
               margin-left: 0 !important;
             }
           }
-        }
-      }
-      .company-btn {
-        &.l-ml-3 {
-          margin-left: 0 !important;
-        }
-        width: 180px;
-        height: 48px;
-        padding: 18px 16px;
-        .btn-txt {
-          font-size: 12px;
         }
       }
     }
