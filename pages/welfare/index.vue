@@ -140,14 +140,13 @@
     .contents-title {
       margin-bottom: 40px;
     }
-    .contents-text {
-      margin-bottom: 40px;
-    }
     .small-title {
       margin-bottom: 40px;
     }
+    .contents-text + .share-rule {
+      margin-top: 40px;
+    }
     .share-rule {
-      // margin-bottom:200px;
       .rule-list {
         li {
           &:not(:last-child) {
@@ -191,6 +190,7 @@
     }
   }
   .link-button {
+    margin-top: 40px;
     margin-left: getMargin(3);
   }
   @include pc-large {
@@ -208,12 +208,12 @@
       .contents-title {
         margin-bottom: 50px;
       }
-      .contents-text {
-        margin-bottom: 80px;
-      }
 
       .small-title {
         margin-bottom: 50px;
+      }
+      .contents-text + .share-rule {
+        margin-top: 50px;
       }
       .share-rule {
         .rule-list {
@@ -251,6 +251,9 @@
         }
       }
     }
+    .link-button {
+      margin-top: 50px;
+    }
   }
   @include pc-4k {
     .company {
@@ -267,12 +270,12 @@
       .contents-title {
         margin-bottom: 80px;
       }
-      .contents-text {
-        margin-bottom: 80px;
-      }
 
       .small-title {
         margin-bottom: 80px;
+      }
+      .contents-text + .share-rule {
+        margin-top: 80px;
       }
       .share-rule {
         .rule-list {
@@ -310,6 +313,9 @@
         }
       }
     }
+    .link-button {
+      margin-top: 80px;
+    }
   }
   @include tablet {
     .company {
@@ -326,12 +332,12 @@
       .contents-title {
         margin-bottom: 40px;
       }
-      .contents-text {
-        margin-bottom: 40px;
-      }
 
       .small-title {
         margin-bottom: 40px;
+      }
+      .contents-text + .share-rule {
+        margin-top: 40px;
       }
       .share-rule {
         &.gl-5 {
@@ -340,13 +346,6 @@
         &.l-ml-3 {
           margin-left: getMargin(2) !important;
         }
-        // .rule-list{
-        //   li{
-        //     &:not(:last-child){
-        //       margin-bottom:14px;
-        //     }
-        //   }
-        // }
       }
       .rule-box {
         .rule-item {
@@ -376,6 +375,7 @@
       }
     }
     .link-button {
+      margin-top: 40px;
       margin-left: getMargin(2);
     }
   }
@@ -395,12 +395,12 @@
       .contents-title {
         margin-bottom: 30px;
       }
-      .contents-text {
-        margin-bottom: 30px;
-      }
 
       .small-title {
         margin-bottom: 30px;
+      }
+      .contents-text + .share-rule {
+        margin-top: 30px;
       }
       .share-rule {
         &.gl-5 {
@@ -438,6 +438,7 @@
       }
     }
     .link-button {
+      margin-top: 30px;
       margin-left: 0;
     }
   }
