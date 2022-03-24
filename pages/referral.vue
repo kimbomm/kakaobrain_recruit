@@ -162,11 +162,14 @@
         }
       }
     }
+    .content-sub-title {
+      margin-bottom: 20px;
+    }
   }
 
   .link-btn {
     display: inline-block;
-    min-width: 150px;
+    min-width: 170px;
     width: auto;
     height: 50px;
     border: 1px solid $gray-9;
@@ -174,10 +177,10 @@
     padding: 16px;
     font-size: 0px;
     box-sizing: border-box;
+    text-align: center;
     cursor: pointer;
     .btn-txt {
       display: block;
-      letter-spacing: -1px;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -238,6 +241,9 @@
           font-size: 22px;
         }
       }
+    }
+    .content-sub-title {
+      margin-bottom: 26px;
     }
   }
   @include pc-4k {
@@ -300,6 +306,10 @@
           font-size: 22px;
         }
       }
+
+      .content-sub-title {
+        margin-bottom: 20px;
+      }
     }
   }
   @include tablet {
@@ -359,6 +369,9 @@
         .btn-txt {
           font-size: 12px;
         }
+      }
+      .content-sub-title {
+        margin-bottom: 10px;
       }
     }
   }
