@@ -1494,7 +1494,7 @@ const MAP = {
       ],
       info: {
         title: '문의',
-        text: 'contact@kakaobrain.com으로 연락 바랍니다.'
+        text: '<a href="mailto:contact@kakaobrain.com">contact@kakaobrain.com</a>으로 연락 바랍니다.'
       }
     }
   },
@@ -1527,7 +1527,7 @@ const MAP = {
       ],
       info: {
         title: 'Contact Us',
-        text: 'Send us an email to contact@kakaobrain.com'
+        text: 'Send us an email to <a href="mailto:contact@kakaobrain.com">contact@kakaobrain.com</a>'
       }
     }
   }

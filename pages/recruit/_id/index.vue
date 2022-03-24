@@ -31,8 +31,10 @@
 </template>
 <script>
   import { mapState, mapActions } from 'vuex'
+  import mixinGlobal from '@/mixin/global.js'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    mixins: [mixinGlobal],
     asyncData(ctx) {
       return {
         id: ctx.params.id

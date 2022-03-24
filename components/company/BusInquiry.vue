@@ -19,7 +19,7 @@
     </div>
     <div class="inquiry">
       <div class="tit">{{ data.info.title }}</div>
-      <div class="txt">{{ data.info.text }}</div>
+      <div class="txt" v-html="data.info.text"></div>
     </div>
   </div>
 </template>
