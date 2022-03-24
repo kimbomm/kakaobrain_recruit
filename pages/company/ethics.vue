@@ -141,7 +141,7 @@
       // }
     }
     .company-btn {
-      width: 238px;
+      display: inline-block;
       height: 50px;
       border: 1px solid $gray-9;
       border-radius: 0px;
@@ -151,7 +151,6 @@
       cursor: pointer;
       .btn-txt {
         display: block;
-        letter-spacing: -1px;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -196,7 +195,6 @@
         }
       }
       .company-btn {
-        width: 218px;
         height: 60px;
         padding: 19px 14px;
         .btn-txt {
@@ -240,7 +238,6 @@
         }
       }
       .company-btn {
-        width: 300px;
         height: 90px;
         padding: 28px 18px;
         .btn-txt {
@@ -303,7 +300,6 @@
         &.l-ml-3 {
           margin-left: getMargin(2) !important;
         }
-        width: 180px;
         height: 48px;
         padding: 18px 16px;
         .btn-txt {
@@ -362,7 +358,6 @@
         &.l-ml-3 {
           margin-left: 0 !important;
         }
-        width: 180px;
         height: 48px;
         padding: 18px 16px;
         .btn-txt {
