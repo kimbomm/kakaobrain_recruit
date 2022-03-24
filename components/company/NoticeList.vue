@@ -191,7 +191,7 @@
     }
     .item-category {
       width: 100% !important;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       margin-right: 0px;
       .category {
         font-size: 14px;
