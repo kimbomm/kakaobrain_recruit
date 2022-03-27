@@ -1,5 +1,5 @@
 <template>
-  <div class="bus-inquiry gl-6 l-ml-3">
+  <div :class="classBind">
     <div class="bus-con">
       <div class="tit">{{ data.title }}</div>
       <div class="list">
@@ -24,17 +24,29 @@
   </div>
 </template>
 <script>
+  import { mapState } from 'vuex'
   export default {
     props: {
       data: {
         type: Object,
         default: () => {}
       }
+    },
+    computed: {
+      ...mapState(['language']),
+      classBind() {
+        const classList = ['bus-inquiry']
+        if (this.language === 'EN') classList.push('map-en')
+
+        return classList.join(' ')
+      }
     }
   }
 </script>
 <style lang="scss" scoped>
   .bus-inquiry {
+    width: getWidth(6);
+    margin-left: getMargin(3);
     .bus-con {
       margin-bottom: 40px;
       .tit {
@@ -49,6 +61,14 @@
         display: flex;
         &:not(:last-child) {
           margin-bottom: 15px;
+        }
+        > div:nth-child(1) {
+          width: 50px;
+          flex: 0 0 50px;
+        }
+        > div:nth-child(2) {
+          width: calc(100% - 50px);
+          flex: 0 0 calc(100% - 50px);
         }
       }
       &-tit {
@@ -76,6 +96,18 @@
         line-height: 150%;
       }
     }
+    &.map-en {
+      .bus-item {
+        > div:nth-child(1) {
+          width: 70px;
+          flex: 0 0 70px;
+        }
+        > div:nth-child(2) {
+          width: calc(100% - 70px);
+          flex: 0 0 calc(100% - 70px);
+        }
+      }
+    }
   }
 
   @include pc-large {
@@ -91,6 +123,14 @@
         &-item {
           &:not(:last-child) {
             margin-bottom: 15px;
+          }
+          > div:nth-child(1) {
+            width: 70px;
+            flex: 0 0 70px;
+          }
+          > div:nth-child(2) {
+            width: calc(100% - 70px);
+            flex: 0 0 calc(100% - 70px);
           }
         }
         &-tit {
@@ -110,6 +150,18 @@
           font-size: 22px;
         }
       }
+      &.map-en {
+        .but-item {
+          > div:nth-child(1) {
+            width: 90px;
+            flex: 0 0 90px;
+          }
+          > div:nth-child(2) {
+            width: calc(100% - 90px);
+            flex: 0 0 calc(100% - 90px);
+          }
+        }
+      }
     }
   }
   @include pc-4k {
@@ -125,6 +177,14 @@
         &-item {
           &:not(:last-child) {
             margin-bottom: 15px;
+          }
+          > div:nth-child(1) {
+            width: 100px;
+            flex: 0 0 100px;
+          }
+          > div:nth-child(2) {
+            width: calc(100% - 100px);
+            flex: 0 0 calc(100% - 100px);
           }
         }
         &-tit {
@@ -144,16 +204,24 @@
           font-size: 32px;
         }
       }
+      &.map-en {
+        .but-item {
+          > div:nth-child(1) {
+            width: 130px;
+            flex: 0 0 130px;
+          }
+          > div:nth-child(2) {
+            width: calc(100% - 130px);
+            flex: 0 0 calc(100% - 130px);
+          }
+        }
+      }
     }
   }
   @include tablet {
     .bus-inquiry {
-      &.gl-6 {
-        width: getWidth(7) !important;
-      }
-      &.l-ml-3 {
-        margin-left: getMargin(2) !important;
-      }
+      width: getWidth(7);
+      margin-left: getMargin(2);
       .bus-con {
         margin-bottom: 40px;
         .tit {
@@ -165,6 +233,14 @@
         &-item {
           &:not(:last-child) {
             margin-bottom: 15px;
+          }
+          > div:nth-child(1) {
+            width: 40px;
+            flex: 0 0 40px;
+          }
+          > div:nth-child(2) {
+            width: calc(100% - 40px);
+            flex: 0 0 calc(100% - 40px);
           }
         }
         &-tit {
@@ -184,16 +260,24 @@
           font-size: 14px;
         }
       }
+      &.map-en {
+        .bus-item {
+          > div:nth-child(1) {
+            width: 60px;
+            flex: 0 0 60px;
+          }
+          > div:nth-child(2) {
+            width: calc(100% - 60px);
+            flex: 0 0 calc(100% - 60px);
+          }
+        }
+      }
     }
   }
   @include mobile {
     .bus-inquiry {
-      &.gl-6 {
-        width: 100% !important;
-      }
-      &.l-ml-3 {
-        margin-left: 0 !important;
-      }
+      width: 100%;
+      margin-left: 0;
       .bus-con {
         margin-bottom: 30px;
       }
@@ -202,6 +286,26 @@
           flex-direction: column;
           &:not(:last-child) {
             margin-bottom: 15px;
+          }
+          > div:nth-child(1) {
+            width: 100%;
+            flex: 1;
+          }
+          > div:nth-child(2) {
+            width: 100%;
+            flex: 1;
+          }
+        }
+      }
+      &.map-en {
+        .bus-item {
+          > div:nth-child(1) {
+            width: 100%;
+            flex: 1;
+          }
+          > div:nth-child(2) {
+            width: 100%;
+            flex: 1;
           }
         }
       }
