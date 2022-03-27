@@ -534,7 +534,7 @@ const COMPANY = {
           contentInfo: [
             {
               title: '이메일',
-              text: 'hotline@kakaobrain.com'
+              text: '<a href="mailto:hotline@kakaobrain.com">hotline@kakaobrain.com</a>'
             },
             {
               title: '우편',
@@ -620,7 +620,7 @@ const COMPANY = {
           contentInfo: [
             {
               title: 'E-mail',
-              text: 'hotline@kakaobrain.com'
+              text: '<a href="mailto:hotline@kakaobrain.com">hotline@kakaobrain.com</a>'
             },
             {
               title: 'Postal address',
@@ -734,7 +734,7 @@ const RECRUIT = {
           text: 'Based on the application and assignment screening, the applicant and the working-level staffs will get know each other more through a Q&A session. The interview is usually conducted once or twice.'
         },
         {
-          number: '➃',
+          number: '<span class="font-icon">➃</span>',
           icon: 'icon-money',
           title: 'Salary Negotiation',
           text: 'The applicant will negotiate salary based on his or her qualifications. (Interns will be paid according to the pre-defined bylaws)'

@@ -1,6 +1,6 @@
 <template>
   <div class="content-sub-title">
-    <div class="tit">{{ tit }}</div>
+    <div class="tit" v-html="tit"></div>
   </div>
 </template>
 <script>

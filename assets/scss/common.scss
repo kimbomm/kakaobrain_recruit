@@ -2,7 +2,7 @@ html,
 body {
   font-family: 'NotoSansKR', 'Inter', sans-serif;
   scroll-behavior: smooth;
-  word-break: break-word;
+  word-break: keep-all;
 }
 html .font-icon,
 body .font-icon {

@@ -6,7 +6,7 @@
           <div class="item-shape">
             <span :class="`icon ${item.icon}`"></span>
           </div>
-          <div class="item-text">{{ item.title }}</div>
+          <div class="item-text" v-html="item.title"></div>
         </li>
         <li
           v-if="index !== data.length - 1"
