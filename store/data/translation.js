@@ -678,31 +678,31 @@ const RECRUIT = {
       ContentsTitle: '인재 영입 프로세스',
       list: [
         {
-          number: '➀',
+          number: '<span class="font-icon">➀</span>',
           icon: 'icon-note',
           title: '서류 전형',
           text: '공고와 지원자의 기본 Fit을 검토하는 단계입니다.'
         },
         {
-          number: '➁',
+          number: '<span class="font-icon">➁</span>',
           icon: 'icon-game',
           title: '과제 전형',
           text: '다음단계로 공고에 필요한 역량을 실제로 보유하고 있는지 과제를 통해 검증하는 단계입니다.</br>공고별로 과제 전형이 제외되거나 내용이 상이할 수 있으며, 기술직군은 코딩테스트로 진행됩니다.'
         },
         {
-          number: '➂',
+          number: '<span class="font-icon">➂</span>',
           icon: 'icon-quotation',
           title: '인터뷰 전형',
           text: '서류,과제 전형을 토대로 실무 담당자들과 Q&A를 통해 서로를 더 깊게 알아가는 단계입니다.</br>통상 1-2회의 인터뷰로 진행됩니다.'
         },
         {
-          number: '➃',
+          number: '<span class="font-icon">➃</span>',
           icon: 'icon-money',
           title: '처우협상',
           text: '지원자의 역량을 기반으로 처우협상을 진행합니다. (인턴 : 사전에 정해진 내규에 따라 지급됩니다)'
         },
         {
-          number: '➄',
+          number: '<span class="font-icon">➄</span>',
           icon: 'icon-join',
           title: '입사확정',
           text: '입사일 조율후 Unthinkable Question의 여정을 함께할 든든한 크루들을 만날 준비를 합니다.'
@@ -716,19 +716,19 @@ const RECRUIT = {
       ContentsTitle: 'How We Hire',
       list: [
         {
-          number: '➀',
+          number: '<span class="font-icon">➀</span>',
           icon: 'icon-note',
           title: 'Application',
           text: 'We determine whether the applicant is a good fit for the job.'
         },
         {
-          number: '➁',
+          number: '<span class="font-icon">➁</span>',
           icon: 'icon-game',
           title: 'Assignment',
           text: 'The next step is to screen through an assignment whether the applicant actually has the practical skills required for the job. The assignment test may be excluded or the content may vary as per job opening. Tech applicants will be screened via a coding test.'
         },
         {
-          number: '➂',
+          number: '<span class="font-icon">➂</span>',
           icon: 'icon-quotation',
           title: 'Interview',
           text: 'Based on the application and assignment screening, the applicant and the working-level staffs will get know each other more through a Q&A session. The interview is usually conducted once or twice.'
@@ -740,7 +740,7 @@ const RECRUIT = {
           text: 'The applicant will negotiate salary based on his or her qualifications. (Interns will be paid according to the pre-defined bylaws)'
         },
         {
-          number: '➄',
+          number: '<span class="font-icon">➄</span>',
           icon: 'icon-join',
           title: 'Confirmation of Job Offer',
           text: 'After arranging the first day of work, the applicant will prepare to meet the trusted krews who will undertake the Unthinkable Question journey together.'
@@ -1154,7 +1154,7 @@ const WELFARE = {
 
 const FAQ = {
   KR: {
-    MainTitle: 'FAQ.',
+    MainTitle: '<span class="font-icon">FAQ.</span>',
     MainTitleText:
       '영입 관련한 질문이 있으신가요?</br>자세히 알려드리겠습니다.',
     ContentsTitle: '우선 확인해 주세요.',
@@ -1264,7 +1264,8 @@ const RECOMMEND = {
         ContentsTitle: '인재 추천 방법',
         box: [
           {
-            SmallTitle: '➀ 오픈된 영입 공고를 확인해 주세요.',
+            SmallTitle:
+              '<span class="font-icon">➀</span> 오픈된 영입 공고를 확인해 주세요.',
             ContentsText: [
               '추천 대상 : 정규직 포지션 지원 자격에 맞는 직무 역량과 경험을 보유한 인재'
             ],
@@ -1276,7 +1277,8 @@ const RECOMMEND = {
             }
           },
           {
-            SmallTitle: '➁ 인재 추천서를 작성해 주세요.',
+            SmallTitle:
+              '<span class="font-icon">➁</span> 인재 추천서를 작성해 주세요.',
             ContentsText: [
               '지원자가 지원서를 작성하기 전, 인재추천서 설문을 완료해 보내주시면 감사하겠습니다.'
             ],
@@ -1288,7 +1290,8 @@ const RECOMMEND = {
             }
           },
           {
-            SmallTitle: '➂ 지원자에게 해당 공고에 지원하도록 알려 주세요.',
+            SmallTitle:
+              '<span class="font-icon">➂</span> 지원자에게 해당 공고에 지원하도록 알려 주세요.',
             ContentsText: [
               '지원자가 지원서 작성시 추천인 란에 추천인을 작성하여 제출하도록 알려주세요.',
               '서류 전형에 통과한 분에 한하여, 서류 전형 및 최종 합격 여부를 메일 안내 드립니다.'
@@ -1301,7 +1304,8 @@ const RECOMMEND = {
             }
           },
           {
-            SmallTitle: '➃ 추천 보상금을 지급 드립니다.',
+            SmallTitle:
+              '<span class="font-icon">➃</span> 추천 보상금을 지급 드립니다.',
             ContentsText: [
               '추천하신 분이 입사한 후, 3개월이 지나면 , 추천 보상금을 지급 드립니다.'
             ],
@@ -1369,7 +1373,8 @@ const RECOMMEND = {
         ContentsTitle: 'How to make referrals',
         box: [
           {
-            SmallTitle: '➀ Please check the job opening notice.',
+            SmallTitle:
+              '<span class="font-icon">➀</span> Please check the job opening notice.',
             ContentsText: [
               'Who should you refer: Talent with job competencies and experience suitable for full-time position application'
             ],
@@ -1381,7 +1386,8 @@ const RECOMMEND = {
             }
           },
           {
-            SmallTitle: '➁ Please fill out the talent referral form.',
+            SmallTitle:
+              '<span class="font-icon">➁</span> Please fill out the talent referral form.',
             ContentsText: [
               'We would appreciate it if you send the talent referral questionnaire before the applicants complete the application form.'
             ],
@@ -1393,7 +1399,8 @@ const RECOMMEND = {
             }
           },
           {
-            SmallTitle: '➂ Tell the applicants to apply for the job opening.',
+            SmallTitle:
+              '<span class="font-icon">➂</span> Tell the applicants to apply for the job opening.',
             ContentsText: [
               'Tell the applicant to specify the referring person column when filling out the application form.',
               'Those who passed the document screening and final acceptance will be notified by e-mail.'
@@ -1406,7 +1413,8 @@ const RECOMMEND = {
             }
           },
           {
-            SmallTitle: '➃ You will be rewarded for the referral.',
+            SmallTitle:
+              '<span class="font-icon">➃</span> You will be rewarded for the referral.',
             ContentsText: [
               'You will be rewarded for the referral three months after the person joins the company.'
             ],

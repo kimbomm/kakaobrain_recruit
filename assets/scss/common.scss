@@ -4,6 +4,10 @@ body {
   scroll-behavior: smooth;
   word-break: break-word;
 }
+html .font-icon,
+body .font-icon {
+  font-family: 'NotoSansKr', sans-serif;
+}
 
 html,
 body,
