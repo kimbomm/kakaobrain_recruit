@@ -3,7 +3,7 @@
     <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <MainTitle :title="data.mainTitle" />
     <MainTitleText :text="data.mainTitleText" />
-    <MiddleImg image="middle-img.png" />
+    <MiddleImg image="middle-img.jpg" />
 
     <div class="rule-box">
       <ul>
