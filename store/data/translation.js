@@ -698,7 +698,7 @@ const RECRUIT = {
         {
           number: '<span class="font-icon">➃</span>',
           icon: 'icon-money',
-          title: '처우협상',
+          title: '처우협의',
           text: '지원자의 역량을 기반으로 처우협상을 진행합니다. (인턴 : 사전에 정해진 내규에 따라 지급됩니다)'
         },
         {
