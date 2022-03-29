@@ -61,6 +61,7 @@
       box-shadow: -30px 50px 80px rgba(0, 0, 0, 0.2);
     }
     .egg-B {
+      display: flex;
       position: absolute;
       right: 210px;
       transform: translate(0, -100%);
