@@ -1272,7 +1272,7 @@ const RECOMMEND = {
             button: {
               isShow: true,
               text: 'Our Open Position →',
-              link: '#',
+              link: '/recruit',
               target: ''
             }
           },
@@ -1285,8 +1285,8 @@ const RECOMMEND = {
             button: {
               isShow: true,
               text: 'Talent recommendation →',
-              link: '#',
-              target: ''
+              link: 'https://docs.google.com/forms/d/e/1FAIpQLSdHKxwPEpPpuDEGuGxjf4C8dyi4rfVyqWCGnQmDb6Oat8FT_g/viewform',
+              target: '_blank'
             }
           },
           {
@@ -1381,7 +1381,7 @@ const RECOMMEND = {
             button: {
               isShow: true,
               text: 'Our Open Position →',
-              link: '#',
+              link: '/recruit',
               target: ''
             }
           },
@@ -1394,8 +1394,8 @@ const RECOMMEND = {
             button: {
               isShow: true,
               text: 'Talent recommendation →',
-              link: '#',
-              target: ''
+              link: 'https://docs.google.com/forms/d/e/1FAIpQLSdHKxwPEpPpuDEGuGxjf4C8dyi4rfVyqWCGnQmDb6Oat8FT_g/viewform',
+              target: '_blank'
             }
           },
           {

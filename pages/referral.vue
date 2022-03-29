@@ -32,13 +32,10 @@
                     :text="text"
                   />
                 </div>
-                <div
-                  v-if="box.button && box.button.isShow"
-                  class="link-btn l-ml-3"
-                >
-                  <nuxt-link to="/recruit">
+                <div v-if="box.button && box.button.isShow" class="link-button">
+                  <a :href="box.button.link" :target="box.button.target">
                     <span class="btn-txt">{{ box.button.text }}</span>
-                  </nuxt-link>
+                  </a>
                 </div>
               </div>
 
@@ -167,26 +164,8 @@
     }
   }
 
-  .link-btn {
-    display: inline-block;
-    min-width: 170px;
-    width: auto;
-    height: 50px;
-    border: 1px solid $gray-9;
-    border-radius: 0px;
-    padding: 16px;
-    font-size: 0px;
-    box-sizing: border-box;
-    text-align: center;
-    cursor: pointer;
-    .btn-txt {
-      display: block;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 130%;
-      color: $gray-9;
-    }
+  .link-button {
+    margin-left: getMargin(3);
   }
 
   @include pc-large {
@@ -374,6 +353,9 @@
         margin-bottom: 10px;
       }
     }
+    .link-button {
+      margin-left: getMargin(2);
+    }
   }
   @include mobile {
     .recommendation {
@@ -434,6 +416,9 @@
           font-size: 12px;
         }
       }
+    }
+    .link-button {
+      margin-left: 0;
     }
   }
 </style>

@@ -47,9 +47,9 @@
       </ul>
     </div>
     <div class="link-button">
-      <nuxt-link to="#">
+      <a href="https://kakaobrain.com/ethics" target="_blank">
         <span class="btn-txt">{{ data.button }} →</span>
-      </nuxt-link>
+      </a>
     </div>
   </div>
 </template>
