@@ -96,7 +96,7 @@
           </div>
           <div class="btn">
             <a
-              href="https://www.facebook.com/1772178023100605/posts/2982992715352457/?d=n"
+              href="https://www.facebook.com/kakaobrain/posts/2972993276352401"
               target="_blank"
             >
               <span class="btn-txt">
