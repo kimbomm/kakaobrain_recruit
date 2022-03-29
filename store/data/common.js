@@ -16,7 +16,7 @@ const menus = [
       {
         name: {
           KR: '영입절차',
-          EN: 'Recruitment process'
+          EN: 'Process'
         },
         link: '/recruit/process'
       },
