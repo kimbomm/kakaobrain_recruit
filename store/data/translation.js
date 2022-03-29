@@ -66,7 +66,7 @@ const MAIN = {
   },
   EN: {
     MainTitle: `Our question</br>
-      for a better culture</br>`,
+      for a better</br>culture.`,
     MainTitleText: `
       Kakaobrain’s innovation begins with a question from all krews. To create a world unimaginable without AI, we need to ask a lot of unthinkable questions.<br/>
       We await for krews who are ready to ask a new question that will change the world.`,
@@ -1159,7 +1159,7 @@ const FAQ = {
       '영입 관련한 질문이 있으신가요?</br>자세히 알려드리겠습니다.',
     ContentsTitle: '우선 확인해 주세요.',
     ContentsText: [
-      '영입 절차의 공정화에 관한 법률 <span class="underline">제 4조의 3</span>에 근거하여 직무수행에 필요하지 않은 정보를 이력서에 기재하는 경우 서류반환 및 접수 취소됩니다.',
+      '영입 절차의 공정화에 관한 법률 <a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%B1%84%EC%9A%A9%EC%A0%88%EC%B0%A8%EC%9D%98%EA%B3%B5%EC%A0%95%ED%99%94%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0/(20200526,17326,20200526)/%EC%A0%9C4%EC%A1%B0%EC%9D%983" target="_blank" class="underline">제 4조의 3</a>에 근거하여 직무수행에 필요하지 않은 정보를 이력서에 기재하는 경우 서류반환 및 접수 취소됩니다.',
       '영입 관련한 모든 질문은 <a href="mailto:apply@kakaobrain.com" class="underline">apply@kakaobrain.com</a>로 메일로 주시면 확인하여 회신 드릴 수 있도록 하겠습니다.'
     ],
     faqList: [
@@ -1205,7 +1205,7 @@ const FAQ = {
       'Do you have any recruiting questions?<br/>We&rsquo;ll tell you more.',
     ContentsTitle: 'Please check the following first.',
     ContentsText: [
-      'According to the Fair Hiring Procedure Act Article 4-3, your resume will be returned, and the application canceled if you specify any information not required for performing your job.',
+      'According to <a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%B1%84%EC%9A%A9%EC%A0%88%EC%B0%A8%EC%9D%98%EA%B3%B5%EC%A0%95%ED%99%94%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0/(20200526,17326,20200526)/%EC%A0%9C4%EC%A1%B0%EC%9D%983" target="_blank" class="underline">the Fair Hiring Procedure Act Article 4-3</a>, your resume will be returned, and the application canceled if you specify any information not required for performing your job.',
       'Please send an e-mail for all job-related questions to <a href="mailto:apply@kakaobrain.com" class="underline">apply@kakaobrain.com</a>. We will check and reply.'
     ],
     faqList: [

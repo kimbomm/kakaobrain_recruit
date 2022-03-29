@@ -14,8 +14,10 @@
           :text="item"
         />
       </div>
-      <div class="faq-btn l-ml-3">
-        <span class="btn-txt">Our Open Position →</span>
+      <div class="link-button">
+        <nuxt-link to="/recruit">
+          <span class="btn-txt">Our Open Position →</span>
+        </nuxt-link>
       </div>
     </div>
 
@@ -99,26 +101,8 @@
     }
   }
 
-  .faq-btn {
-    display: flex;
-    align-items: center;
-    width: 170px;
-    height: 50px;
-    border: 1px solid $gray-9;
-    border-radius: 0px;
-    padding: 16px;
-    font-size: 0px;
-    box-sizing: border-box;
-    cursor: pointer;
-    .btn-txt {
-      display: block;
-      font-family: 'Inter';
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 130%;
-      color: $gray-9;
-    }
+  .link-button {
+    margin-left: getMargin(3);
   }
   .contents-title {
     margin-bottom: 40px;
@@ -170,14 +154,6 @@
         .list-box {
           margin-bottom: 50px;
         }
-        .faq-btn {
-          width: 218px;
-          height: 60px;
-          padding: 19px 14px;
-          .btn-txt {
-            font-size: 16px;
-          }
-        }
       }
     }
   }
@@ -203,14 +179,6 @@
         .list-box {
           margin-bottom: 80px;
         }
-        .faq-btn {
-          width: 300px;
-          height: 90px;
-          padding: 28px 41px 32px;
-          .btn-txt {
-            font-size: 22px;
-          }
-        }
       }
     }
   }
@@ -235,18 +203,10 @@
         .list-box {
           margin-bottom: 40px;
         }
-        .faq-btn {
-          width: 160px;
-          height: 48px;
-          padding: 19px 16px;
-          &.l-ml-3 {
-            margin-left: getMargin(2) !important;
-          }
-          .btn-txt {
-            font-size: 12px;
-          }
-        }
       }
+    }
+    .link-button {
+      margin-left: getMargin(2);
     }
   }
   @include mobile {
@@ -271,12 +231,10 @@
         .list-box {
           margin-bottom: 30px;
         }
-        .faq-btn {
-          &.l-ml-3 {
-            margin-left: 0 !important;
-          }
-        }
       }
+    }
+    .link-button {
+      margin-left: 0;
     }
   }
 </style>
