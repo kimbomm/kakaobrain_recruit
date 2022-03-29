@@ -86,7 +86,7 @@
             { text: '사외 추천 제도', sub: '', link: '' }
           ],
           EN: [
-            { text: 'Recruit', sub: 'sub', link: '' },
+            { text: 'Careers', sub: 'sub', link: '' },
             { text: 'External Referral Program', sub: '', link: '' }
           ]
         }

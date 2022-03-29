@@ -2,7 +2,7 @@ const menus = [
   {
     name: {
       KR: '영입',
-      EN: 'Recruit'
+      EN: 'Careers'
     },
     link: '/',
     sub: [
@@ -11,14 +11,14 @@ const menus = [
           KR: '영입공고',
           EN: 'Job Openings'
         },
-        link: '/recruit'
+        link: '/careers'
       },
       {
         name: {
           KR: '영입절차',
           EN: 'Process'
         },
-        link: '/recruit/process'
+        link: '/careers/process'
       },
       {
         name: {
@@ -77,9 +77,9 @@ const menus = [
   {
     name: {
       KR: '복지소개',
-      EN: 'Welfare'
+      EN: 'Benefits'
     },
-    link: '/welfare',
+    link: '/benefits',
     alarm: '',
     sub: [
       {
@@ -87,14 +87,14 @@ const menus = [
           KR: '원격근무와 유연근무제',
           EN: 'Teleworking&Flexible Working'
         },
-        link: '/welfare'
+        link: '/benefits'
       },
       {
         name: {
           KR: '복지혜택',
           EN: 'Benefits'
         },
-        link: '/welfare/benefits'
+        link: '/benefits/benefits'
       }
     ]
   }

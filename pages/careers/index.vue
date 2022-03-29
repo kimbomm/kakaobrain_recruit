@@ -70,7 +70,7 @@
             { text: '영입공고', sub: '', link: '' }
           ],
           EN: [
-            { text: 'Recruit', sub: 'sub', link: '' },
+            { text: 'Careers', sub: 'sub', link: '' },
             { text: 'Job Openings', sub: '', link: '' }
           ]
         },

@@ -1,16 +1,16 @@
 <template>
-  <div class="procedure-wrap">
+  <div class="welfare">
     <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
-    <MiddleImg image="middle-process.jpg" />
+    <MiddleImg image="middle-benefit.jpg" />
+
     <ContentsTitle :title="data.ContentsTitle" />
-    <Procedure :data="data.list" />
-    <div class="contents-list">
-      <ul>
-        <li v-for="(item, index) in data.list" :key="index" class="item">
-          <ContentSubTitle :tit="`${item.number} ${item.title}`" />
-          <ContentsText :text="item.text" />
+
+    <div class="folding-rule gl-5 l-ml-3">
+      <ul class="rule-list">
+        <li v-for="(data, index) in data.benefitsList" :key="index">
+          <FoldingBox :data="data" />
         </li>
       </ul>
     </div>
@@ -23,33 +23,29 @@
   import MainTitleText from '@/components/company/MainTitleText'
   import MiddleImg from '@/components/company/MiddleImg'
   import ContentsTitle from '@/components/company/ContentsTitle'
-  import ContentSubTitle from '@/components/company/ContentSubTitle'
-  import ContentsText from '@/components/company/ContentsText'
-  import Procedure from '@/components/company/Procedure'
+  import FoldingBox from '@/components/elements/button/FoldingBox'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
     mixins: [mixinGlobal],
-    name: 'process',
+    name: 'benefits',
     components: {
       MainTitle,
       MainTitleText,
       MiddleImg,
       ContentsTitle,
-      ContentSubTitle,
-      ContentsText,
-      Procedure,
+      FoldingBox,
       BreadCrumb
     },
     data() {
       return {
         breadcrumb: {
           KR: [
-            { text: '영입', sub: 'sub', link: '' },
-            { text: '영입절차', sub: '', link: '' }
+            { text: '복지소개', sub: 'sub', link: '' },
+            { text: '복지혜택', sub: '', link: '' }
           ],
           EN: [
-            { text: 'Recruit', sub: 'sub', link: '' },
-            { text: 'Job Openings', sub: '', link: '' }
+            { text: 'Benefits', sub: 'sub', link: '' },
+            { text: 'Welfare benefits.', sub: '', link: '' }
           ]
         }
       }
@@ -57,16 +53,16 @@
     computed: {
       ...mapState({
         language: state => state.language,
-        recruitData: state => state.translation.RECRUIT.process
+        welfareData: state => state.translation.WELFARE.benefits
       }),
       data() {
-        return this.recruitData[this.language]
+        return this.welfareData[this.language]
       }
     }
   }
 </script>
 <style lang="scss" scoped>
-  .procedure-wrap {
+  .welfare {
     padding: 320px 20px 0;
     .main-title {
       margin-bottom: 60px;
@@ -78,28 +74,22 @@
       margin-bottom: 140px;
     }
     .contents-title {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
-    .procedure {
-      margin-bottom: 160px;
-    }
-    .contents-list {
-      .item {
-        &:not(:last-child) {
-          margin-bottom: 40px;
+    .folding-rule {
+      // margin-bottom:200px;
+      .rule-list {
+        li {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
         }
       }
-      .content-sub-title /deep/ .tit {
-        font-weight: 700;
-      }
-    }
-    .content-sub-title {
-      margin-bottom: 10px;
     }
   }
 
   @include pc-large {
-    .procedure-wrap {
+    .welfare {
       padding-top: 440px;
       .main-title {
         margin-bottom: 100px;
@@ -113,23 +103,19 @@
       .contents-title {
         margin-bottom: 50px;
       }
-      .procedure {
-        margin-bottom: 220px;
-      }
-      .content-sub-title {
-        margin-bottom: 10px;
-      }
-      .contents-list {
-        .item {
-          &:not(:last-child) {
-            margin-bottom: 60px;
+      .folding-rule {
+        .rule-list {
+          li {
+            &:not(:last-child) {
+              margin-bottom: 14px;
+            }
           }
         }
       }
     }
   }
   @include pc-4k {
-    .procedure-wrap {
+    .welfare {
       padding-top: 600px;
       .main-title {
         margin-bottom: 120px;
@@ -143,23 +129,19 @@
       .contents-title {
         margin-bottom: 80px;
       }
-      .procedure {
-        margin-bottom: 360px;
-      }
-      .content-sub-title {
-        margin-bottom: 14px;
-      }
-      .contents-list {
-        .item {
-          &:not(:last-child) {
-            margin-bottom: 80px;
+      .folding-rule {
+        .rule-list {
+          li {
+            &:not(:last-child) {
+              margin-bottom: 20px;
+            }
           }
         }
       }
     }
   }
   @include tablet {
-    .procedure-wrap {
+    .welfare {
       padding-top: 200px;
       .main-title {
         margin-bottom: 40px;
@@ -173,23 +155,18 @@
       .contents-title {
         margin-bottom: 40px;
       }
-      .procedure {
-        margin-bottom: 100px;
-      }
-      .content-sub-title {
-        margin-bottom: 10px;
-      }
-      .contents-list {
-        .item {
-          &:not(:last-child) {
-            margin-bottom: 40px;
-          }
+      .folding-rule {
+        &.gl-5 {
+          width: getWidth(7) !important;
+        }
+        &.l-ml-3 {
+          margin-left: getMargin(2) !important;
         }
       }
     }
   }
   @include mobile {
-    .procedure-wrap {
+    .welfare {
       padding-top: 76px;
       .main-title {
         margin-top: 60px;
@@ -202,16 +179,14 @@
         margin-bottom: 100px;
       }
       .contents-title {
-        margin-bottom: 42px;
+        margin-bottom: 30px;
       }
-      .procedure {
-        margin-bottom: 60px;
-      }
-      .contents-list {
-        .item {
-          &:not(:last-child) {
-            margin-bottom: 30px;
-          }
+      .folding-rule {
+        &.gl-5 {
+          width: 100% !important;
+        }
+        &.l-ml-3 {
+          margin-left: 0 !important;
         }
       }
     }

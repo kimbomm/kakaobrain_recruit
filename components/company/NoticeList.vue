@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="`recruit/${data.id}`">
+  <nuxt-link :to="`/careers/${data.id}`">
     <div class="notice-item">
       <div class="item-category">
         <div class="category">

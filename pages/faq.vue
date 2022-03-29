@@ -15,7 +15,7 @@
         />
       </div>
       <div class="link-button">
-        <nuxt-link to="/recruit">
+        <nuxt-link to="/careers">
           <span class="btn-txt">Our Open Position →</span>
         </nuxt-link>
       </div>

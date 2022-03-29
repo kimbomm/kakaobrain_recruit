@@ -39,13 +39,13 @@ const MAIN = {
           title: `원격근무와<br/>유연근무제.`,
           text: `우리는 업무 공간을 스스로 정해 일합니다.<br/>
           우리의 ‘완전선택근무시간제’는 자신의 업무시간을 정해 스스로 관리하며 일합니다.`,
-          link: '/welfare'
+          link: '/benefits'
         },
         {
           title: `복지혜택.`,
           text: `카카오브레인 크루와 가족을 위한<br/>
           복지혜택을 소개합니다.`,
-          link: '/welfare/benefits'
+          link: '/benefits/benefits'
         }
       ],
       bottom: [
@@ -105,12 +105,12 @@ const MAIN = {
           title: `Teleworking<br/>& Flexible Working`,
           text: `We define our own workspace for work.<br/>
           Our ‘Complete Selective Working Hours’ allows krews to set and manage their own working hours for work.`,
-          link: '/welfare'
+          link: '/benefits'
         },
         {
           title: `Benefits`,
           text: `We offer a wide-range of benefits<br/>to kakaobrain krews and their family.`,
-          link: '/welfare/benefits'
+          link: '/benefits/benefits'
         }
       ],
       bottom: [
@@ -1272,7 +1272,7 @@ const RECOMMEND = {
             button: {
               isShow: true,
               text: 'Our Open Position →',
-              link: '/recruit',
+              link: '/careers',
               target: ''
             }
           },
@@ -1353,7 +1353,9 @@ const RECOMMEND = {
         box: [
           {
             SmallTitle: '사외 추천 제도 및 영입관련 문의',
-            ContentsText: ['apply@kakaobrain.com']
+            ContentsText: [
+              '<a href="mailto:apply@kakaobrain.com">apply@kakaobrain.com</a>'
+            ]
           }
         ]
       }
@@ -1381,7 +1383,7 @@ const RECOMMEND = {
             button: {
               isShow: true,
               text: 'Our Open Position →',
-              link: '/recruit',
+              link: '/careers',
               target: ''
             }
           },
@@ -1464,7 +1466,9 @@ const RECOMMEND = {
           {
             SmallTitle:
               'Questions regarding external referral system and hiring',
-            ContentsText: ['apply@kakaobrain.com']
+            ContentsText: [
+              '<a href="mailto:apply@kakaobrain.com">apply@kakaobrain.com</a>'
+            ]
           }
         ]
       }

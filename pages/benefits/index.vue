@@ -11,7 +11,7 @@
           <ContentsTitle :title="data.contents[0].ContentsTitle" />
           <ContentsText :text="data.contents[0].ContentsText" />
           <div class="link-button">
-            <nuxt-link to="/recruit">
+            <nuxt-link to="/careers">
               <span class="btn-txt">Our Open Position →</span>
             </nuxt-link>
           </div>
@@ -108,7 +108,7 @@
             { text: '원격근무와 유연근무제', sub: '', link: '' }
           ],
           EN: [
-            { text: 'Welfare', sub: 'sub', link: '' },
+            { text: 'Benefits', sub: 'sub', link: '' },
             { text: 'Remote work and flextime working.', sub: '', link: '' }
           ]
         }
