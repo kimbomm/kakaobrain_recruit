@@ -71,7 +71,7 @@ const MAIN = {
       Kakaobrain’s innovation begins with a question from all krews. To create a world unimaginable without AI, we need to ask a lot of unthinkable questions.<br/>
       We await for krews who are ready to ask a new question that will change the world.`,
     ContentsQuestion: {
-      title: `What kind of question will<br/>shape kakaobrain?`,
+      title: `What kind of question<br/>will shape kakaobrain?`,
       questionList: [
         {
           title:
