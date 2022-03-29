@@ -110,7 +110,7 @@
   }
   .map-js {
     height: 400px;
-    width: getWidht(6);
+    width: getWidth(7);
     margin: 60px 0 60px getMargin(2);
   }
 
@@ -209,6 +209,7 @@
       }
     }
     .map-js {
+      width: 100%;
       margin: {
         top: 30px;
         bottom: 30px;
