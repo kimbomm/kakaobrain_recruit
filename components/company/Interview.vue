@@ -94,11 +94,8 @@
           <div class="txt">
             <p v-html="data.interviewTidy.replace(/\n/g, '<br/>')"></p>
           </div>
-          <div class="btn">
-            <a
-              href="https://www.facebook.com/kakaobrain/posts/2972993276352401"
-              target="_blank"
-            >
+          <a :href="data.facebook.link" :target="data.facebook.target">
+            <div class="btn">
               <span class="btn-txt">
                 <template v-if="language === 'KR'">
                   카카오브레인 페이스북에서 보기
@@ -106,8 +103,8 @@
                 <template v-else> Meet kakaobrain on Facebook </template>
                 →
               </span>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>

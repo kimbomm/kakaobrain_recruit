@@ -302,7 +302,11 @@ const COMPANY = {
             '평소에 궁금했지만 쉽게 접할 수 없던 기술적 궁금증 리스트를 만들어 보세요.'
           ],
           interviewTidy:
-            '지나가 말한 ‘카카오브레인은 ‘빠르다’는 한마디엔 여러 가지가 담겨있어요. 단순히 내달리는 빠름보다는 서로 의견을 나누고 도움받고 때로는 도와주며, 서로의 능력에 맞게 나아가는 것이 카카오브레인 식의 발전입니다. ‘함께 가면 느리지만 멀리 갈 수 있다’보다 ‘함께 가야 힘내서 더 빨리 갈 수 있다’는 말이 옳다는 것을, 카카오브레인은 증명하고 있습니다.'
+            '지나가 말한 ‘카카오브레인은 ‘빠르다’는 한마디엔 여러 가지가 담겨있어요. 단순히 내달리는 빠름보다는 서로 의견을 나누고 도움받고 때로는 도와주며, 서로의 능력에 맞게 나아가는 것이 카카오브레인 식의 발전입니다. ‘함께 가면 느리지만 멀리 갈 수 있다’보다 ‘함께 가야 힘내서 더 빨리 갈 수 있다’는 말이 옳다는 것을, 카카오브레인은 증명하고 있습니다.',
+          facebook: {
+            link: 'https://www.facebook.com/kakaobrain/posts/2972993276352401',
+            target: '_blank'
+          }
         },
         {
           image: {
@@ -325,7 +329,11 @@ const COMPANY = {
             '근거를 바탕으로 논리적으로 커뮤니케이션하는 연습을 해보세요.'
           ],
           interviewTidy:
-            '그 어디보다 뛰어난 최신 AI 기술력, 업계 최고의 동료들과의 커뮤니케이션 및 토론 등, <br/>Wilson에게 카카오 브레인 인턴 2개월은 너무나 짧다고 느껴질 정도로 뜻 깊은 시간이었습니다. <br/>개인적으로 Wilson은 좀 더 긴 종류의 인턴 프로그램을 만들어줬으면 하는 마음도 있다고 해요. <br/>자신의 지인들에게는 휴학을 불사하고도 카카오브레인 인턴에 참여해보라고 권유할 생각이라고 합니다.'
+            '그 어디보다 뛰어난 최신 AI 기술력, 업계 최고의 동료들과의 커뮤니케이션 및 토론 등, <br/>Wilson에게 카카오 브레인 인턴 2개월은 너무나 짧다고 느껴질 정도로 뜻 깊은 시간이었습니다. <br/>개인적으로 Wilson은 좀 더 긴 종류의 인턴 프로그램을 만들어줬으면 하는 마음도 있다고 해요. <br/>자신의 지인들에게는 휴학을 불사하고도 카카오브레인 인턴에 참여해보라고 권유할 생각이라고 합니다.',
+          facebook: {
+            link: 'https://www.facebook.com/kakaobrain/posts/2977037289281333',
+            target: '_blank'
+          }
         },
         {
           image: {
@@ -348,7 +356,11 @@ const COMPANY = {
             '자신의 의견을 피력하기 위한 다양한 화법을 연구해 보세요.'
           ],
           interviewTidy:
-            '마치 비행기의 일등석처럼, 카카오브레인은 목표를 위해 날아가면서 <br/>편안하게 일할 수 있는 모든 인프라를 지원하는 게 좋았다고 강조했습니다. <br/>이렇게 빠르고 멀리 날아, 카카오브레인 인턴 생활 동안 Jwoong은 더 넓은 세계를 볼 수 있었다고 합니다.'
+            '마치 비행기의 일등석처럼, 카카오브레인은 목표를 위해 날아가면서 <br/>편안하게 일할 수 있는 모든 인프라를 지원하는 게 좋았다고 강조했습니다. <br/>이렇게 빠르고 멀리 날아, 카카오브레인 인턴 생활 동안 Jwoong은 더 넓은 세계를 볼 수 있었다고 합니다.',
+          facebook: {
+            link: 'https://www.facebook.com/kakaobrain/posts/2982355705416158',
+            target: '_blank'
+          }
         },
         {
           image: {
@@ -372,7 +384,11 @@ const COMPANY = {
             '자신의 장점과 약점을 미리 한 번 생각해 보세요.'
           ],
           interviewTidy:
-            '테드는 인턴 기간 동안 느낀 카카오브레인이 ‘오케스트라’처럼 엮여졌다고 표현합니다. <br/>각자가 최고의 연주자인 동시에, 모두가 카카오브레인이라는 하나의 목표로 전진하는 모습에 깊은 인상을 받았다고 합니다. <br/>인턴들을 주체적 연구자로 대해주는 모습도 좋았고요.'
+            '테드는 인턴 기간 동안 느낀 카카오브레인이 ‘오케스트라’처럼 엮여졌다고 표현합니다. <br/>각자가 최고의 연주자인 동시에, 모두가 카카오브레인이라는 하나의 목표로 전진하는 모습에 깊은 인상을 받았다고 합니다. <br/>인턴들을 주체적 연구자로 대해주는 모습도 좋았고요.',
+          facebook: {
+            link: 'https://www.facebook.com/1772178023100605/posts/2982992715352457/?d=n',
+            target: '_blank'
+          }
         }
       ]
     },
@@ -404,7 +420,11 @@ const COMPANY = {
             'List up technical questions you’ve always been curious about but couldn’t solve easily'
           ],
           interviewTidy:
-            'Gina’s words, &lsquo;kakaobrain is fast&rsquo;, means many things. kakaobrain-style development is sharing opinions, helping, sometimes receiving help, and to one’s own ability rather than simply going fast. kakaobrain is proving that “If you want to keep going faster, go together”, rather than “If you want to go far, go together.”'
+            'Gina’s words, &lsquo;kakaobrain is fast&rsquo;, means many things. kakaobrain-style development is sharing opinions, helping, sometimes receiving help, and to one’s own ability rather than simply going fast. kakaobrain is proving that “If you want to keep going faster, go together”, rather than “If you want to go far, go together.”',
+          facebook: {
+            link: 'https://www.facebook.com/kakaobrain/posts/2972993276352401',
+            target: '_blank'
+          }
         },
         {
           image: {
@@ -428,7 +448,11 @@ const COMPANY = {
             'Practice communicating logically based on evidence'
           ],
           interviewTidy:
-            'The latest AI technology is superior to any other, and communication and discussion with the best colleagues in the industry. Wilson’s internship at kakaobrain was so meaningful that the two-month period felt too short. Wilson personally thinks it would be great to have a longer type of internship program. He says he will encourage the people around him to participate in the kakaobrain internship even if they must take time off school.'
+            'The latest AI technology is superior to any other, and communication and discussion with the best colleagues in the industry. Wilson’s internship at kakaobrain was so meaningful that the two-month period felt too short. Wilson personally thinks it would be great to have a longer type of internship program. He says he will encourage the people around him to participate in the kakaobrain internship even if they must take time off school.',
+          facebook: {
+            link: 'https://www.facebook.com/kakaobrain/posts/2977037289281333',
+            target: '_blank'
+          }
         },
         {
           image: {
@@ -452,7 +476,11 @@ const COMPANY = {
             'Look for different ways of expressing your opinion.'
           ],
           interviewTidy:
-            'Like first class on an airplane, Jwoong emphasized that the good part at kakaobrain was its entire infrastructure support that allows you to work comfortably while flying towards your goal. He flew so fast and far and was able to see a wider world during his kakaobrain internship.'
+            'Like first class on an airplane, Jwoong emphasized that the good part at kakaobrain was its entire infrastructure support that allows you to work comfortably while flying towards your goal. He flew so fast and far and was able to see a wider world during his kakaobrain internship.',
+          facebook: {
+            link: 'https://www.facebook.com/kakaobrain/posts/2982355705416158',
+            target: '_blank'
+          }
         },
         {
           image: {
@@ -477,7 +505,11 @@ const COMPANY = {
             'Think about your strengths and weaknesses in advance.'
           ],
           interviewTidy:
-            'Ted says that kakaobrain was mingled like an ‘orchestra’ from what he felt during the internship. He said he was deeply impressed because each one of them was the best performer while advancing towards the one goal of kakaobrain. It was also nice to see the interns being treated as independent researchers.'
+            'Ted says that kakaobrain was mingled like an ‘orchestra’ from what he felt during the internship. He said he was deeply impressed because each one of them was the best performer while advancing towards the one goal of kakaobrain. It was also nice to see the interns being treated as independent researchers.',
+          facebook: {
+            link: 'https://www.facebook.com/1772178023100605/posts/2982992715352457/?d=n',
+            target: '_blank'
+          }
         }
       ]
     }
