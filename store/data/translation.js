@@ -217,7 +217,7 @@ const COMPANY = {
                 TIM is an abbreviation of [Talk, it’s Monday!], a [weekly meeting with the entire krew participating].<br/>
                 Various information is transparently [opened] and [shared] with the krew in the company-wide krew meeting TIM. The TIM meeting is a forum for freely exchanging questions and opinions with everyone attending, rather than simply making announcements.<br/><br/>
                 kakaobrain krews freely raise opinions and exchange questions and answers on in-house issues and tech trends. Krews who cannot attend receive recordings of the meeting. The [sharing culture] intends to have the kakaobrain krew first know about in-house issues inside the company than from outside.<br/><br/>
-                The culture team reminds the krew of any organizational reform, makes important announcements, and congratulates the krew's wedding or birthday in TIM meetings. There is also a time to introduce new krew members joining the company or say farewell to krew members leaving kakaobrain.
+                The Talent Acquisition Team reminds the krew of any organizational reform, makes important announcements, and congratulates the krew's wedding or birthday in TIM meetings. There is also a time to introduce new krew members joining the company or say farewell to krew members leaving kakaobrain.
               `
             },
             {
@@ -632,7 +632,7 @@ const COMPANY = {
           ContentsTitle:
             'Ethical Guidelines for Receiving Gifts and Entertainment',
           ContentsText: `Kakao Brain employees and their family members shall not receive any money or entertainment that may cause a conflict of interest, and competitors, customers, and other business partners shall not offer money or entertainment.</br></br>
-            In principle, the gift or money received shall be returned without delay. Gifts or money that has already been received shall be returned to the Culture Team for further guidance.</br>
+            In principle, the gift or money received shall be returned without delay. Gifts or money that has already been received shall be returned to the Talent Acquisition Team for further guidance.</br>
             Kakao Brain employees shall not solicit gifts, honoraria, or business favors for the benefit of themselves and their family or acquaintances, and problems may arise in the case of the following.`,
           typeList: [
             {
@@ -1453,7 +1453,7 @@ const RECOMMEND = {
               'krew working in the Kakao community',
               'Those who worked at kakaobrain in the past (regular workers, contract workers, dispatch workers, interns)',
               'Outsourced employees and freelancers who worked with kakaobrain now or within the past 12 months',
-              'Candidates who already applied through other channels or are in the process of screening, or whose resumes are already received by the kakaobrain Culture Team (referred by outside companies, headhunters, direct application of candidates, etc.)'
+              'Candidates who already applied through other channels or are in the process of screening, or whose resumes are already received by the kakaobrain Talent Acquisition Team (referred by outside companies, headhunters, direct application of candidates, etc.)'
             ]
           }
         ]
