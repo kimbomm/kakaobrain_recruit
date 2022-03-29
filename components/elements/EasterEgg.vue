@@ -52,11 +52,11 @@
     }
     .egg-A {
       position: absolute;
-      left: 50%;
+      right: 40%;
       width: 150px;
       height: 150px;
       overflow: hidden;
-      transform: translate(-50%, -100%);
+      transform: translate(0, -100%);
       border-radius: 50%;
       box-shadow: -30px 50px 80px rgba(0, 0, 0, 0.2);
     }
@@ -130,7 +130,7 @@
     .easter-egg {
       top: -60px;
       .egg-A {
-        left: 561px;
+        right: 36%;
         width: 80px;
         height: 80px;
         transform: translate(0, -100%);
@@ -148,7 +148,7 @@
     .easter-egg {
       top: 5px;
       .egg-A {
-        left: 50%;
+        right: 30%;
         width: 50px;
         height: 50px;
         transform: translate(-50%, -100%);
