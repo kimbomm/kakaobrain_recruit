@@ -39,6 +39,11 @@
       ...mapState({
         language: state => state.language
       }),
+      classBind() {
+        const classList = ['folding']
+        if (this.isOpen) classList.push('is-open')
+        return classList.join(' ')
+      },
       buttonName() {
         let name = this.language === 'KR' ? '자세히보기' : 'Detail'
         if (this.isOpen) {
@@ -56,8 +61,11 @@
 </script>
 <style lang="scss" scoped>
   .folding {
-    padding: 30px 30px 40px 30px;
     background-color: $surface-2;
+    padding: 22px 30px 24px 30px;
+    &.is-open {
+      padding: 30px 30px 40px 30px;
+    }
     &-top {
       position: relative;
       display: flex;
@@ -107,7 +115,7 @@
 
   @include pc-large {
     .folding {
-      padding: 29px 30px 31px 30px;
+      padding: 30px;
       &-title {
         max-width: calc(100% - 90px);
         p {
@@ -135,7 +143,10 @@
   }
   @include pc-4k {
     .folding {
-      padding: 46px 50px 60px;
+      padding: 46px 50px 46px;
+      &.is-open {
+        padding: 46px 50px 50px;
+      }
       &-title {
         max-width: calc(100% - 140px);
         p {
@@ -163,7 +174,10 @@
   }
   @include tablet {
     .folding {
-      padding: 26px 30px 30px;
+      padding: 24px 30px 24px;
+      &.is-open {
+        padding: 24px 30px 30px;
+      }
       &-title {
         p {
           font-size: 18px;
@@ -191,7 +205,10 @@
   @include mobile {
     .folding {
       position: relative;
-      padding: 20px 40px 57px 20px;
+      padding: 20px 20px 57px 20px;
+      &.is-open {
+        padding: 20px 20px 57px 20px;
+      }
       &-top {
         position: initial;
         display: flex;
