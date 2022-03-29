@@ -936,7 +936,7 @@ const WELFARE = {
         {
           title: '원격(재택) 근무와 유연 근무(완전선택근무시간제)',
           content:
-            '<div class="folding-item">카카오브레인 크루는 업무 공간을 스스로 정해 일합니다.</div></br><div class="folding-item"><span class="underline">원격근무와 유연근무제 상세보기</span></span></div>',
+            '<div class="folding-item">카카오브레인 크루는 업무 공간을 스스로 정해 일합니다.</div></br><div class="folding-item"><a href="/benefits" class="underline">원격근무와 유연근무제 상세보기</a></span></div>',
           isText: false
         },
         {
@@ -1063,7 +1063,7 @@ const WELFARE = {
             'Remote (working from home) work and flexible work (completely selective working hours)',
           content: `
             <div class="folding-item">kakaobrain krew decides their own workspace to work.</div>
-            <div class="folding-item"><span class="underline">See the details of remote work and flexible work systems</span></span></div>
+            <div class="folding-item"><a href="/benefits" class="underline">See the details of remote work and flexible work systems</a></span></div>
           `,
           isText: false
         },
