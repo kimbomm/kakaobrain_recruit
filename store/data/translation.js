@@ -693,7 +693,7 @@ const RECRUIT = {
           number: '<span class="font-icon">➂</span>',
           icon: 'icon-quotation',
           title: '인터뷰 전형',
-          text: '서류,과제 전형을 토대로 실무 담당자들과 Q&A를 통해 서로를 더 깊게 알아가는 단계입니다.</br>통상 1-2회의 인터뷰로 진행됩니다.'
+          text: '서류, 과제 전형을 토대로 실무 담당자들과 Q&A를 통해 서로를 더 깊게 알아가는 단계입니다.</br>통상 1-2회의 인터뷰로 진행됩니다.'
         },
         {
           number: '<span class="font-icon">➃</span>',
