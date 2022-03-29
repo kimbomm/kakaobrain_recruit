@@ -948,8 +948,13 @@ const WELFARE = {
         },
         {
           title: '직장 어린이집 지원',
-          content:
-            "<div class='folding-item'>카카오 공동체 직장 어린이집 지원 : <span class='underline'>늘예솔</span>, <span class='underline'>오리뜰</span>, <span class='underline'>스페이스닷키즈</span></div></br><div class='folding-item'>판교오피스 인근의 '<span class='underline'>스타트업캠퍼스어린이집</span>' 도 제휴해 지원합니다</div>",
+          content: `<div class='folding-item'>카카오 공동체 직장 어린이집 지원 : 
+            <a href="https://kakao-n.kidsnote.ac/home/main" target="_blank" class='underline'>늘예솔</a>,
+            <a href="https://kakao-o.kidsnote.ac/home/main" target="_blank" class='underline'>오리뜰</a>,
+            <a href="https://www.puruni.com/kakao" target="_blank" class='underline'>스페이스닷키즈</a>
+            </div></br><div class='folding-item'>판교오피스 인근의 
+            '<a href="https://www.instagram.com/startup.child/" target="_blank" class='underline'>스타트업캠퍼스어린이집</a>'
+            도 제휴해 지원합니다</div>`,
           isText: false
         },
         {
@@ -1077,8 +1082,13 @@ const WELFARE = {
         {
           title: 'Workplace daycare center',
           content: `
-            <div class='folding-item'>Kakao Community Workplace Daycare center : <span class='underline'>Neulyesol</span>, <span class='underline'>Oritdul</span>, <span class='underline'>Space.Kids</span></div>
-            <div class='folding-item'>'<span class='underline'>The Startup Campus Daycare Center</span>' near the Pangyo office is also supported in partnership.</div>
+            <div class='folding-item'>Kakao Community Workplace Daycare center :
+            <a href="https://kakao-n.kidsnote.ac/home/main" target="_blank" class='underline'>Neulyesol</a>,
+            <a href="https://kakao-o.kidsnote.ac/home/main" target="_blank" class='underline'>Oritdul</a>,
+            <a href="https://www.puruni.com/kakao" target="_blank" class='underline'>Space.Kids</a></div>
+            <div class='folding-item'>
+            '<a href="https://www.instagram.com/startup.child/" target="_blank" class='underline'>The Startup Campus Daycare Center</a>'
+            near the Pangyo office is also supported in partnership.</div>
           `,
           isText: false
         },
