@@ -1307,7 +1307,7 @@ const RECOMMEND = {
             SmallTitle:
               '<span class="font-icon">➃</span> 추천 보상금을 지급 드립니다.',
             ContentsText: [
-              '추천하신 분이 입사한 후, 3개월이 지나면 , 추천 보상금을 지급 드립니다.'
+              '추천하신 분이 입사한 후, 3개월이 지나면, 추천 보상금을 지급 드립니다.'
             ],
             button: {
               isShow: false,
