@@ -13,7 +13,7 @@
         </div>
       </template>
       <template v-else>
-        <div class="title">kakaobrain is</div>
+        <div class="title">Kakao Brain is</div>
         <div class="sub-title">
           <div class="bracket-text">
             <img
@@ -66,7 +66,7 @@
               {{
                 language === 'KR'
                   ? '이런 분들에게 추천!'
-                  : 'kakaobrain is great for!'
+                  : 'Kakao Brain is great for!'
               }}
             </div>
             <div
@@ -100,7 +100,7 @@
                 <template v-if="language === 'KR'">
                   카카오브레인 페이스북에서 보기
                 </template>
-                <template v-else> Meet kakaobrain on Facebook </template>
+                <template v-else> Meet Kakao Brain on Facebook </template>
                 →
               </span>
             </div>

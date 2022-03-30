@@ -24,7 +24,7 @@
     </div>
     <div class="copy">
       <p>
-        Copyright ⓒ kakaobrain Corp. <br />
+        Copyright ⓒ Kakao Brain Corp. <br />
         All rights reserved.
       </p>
     </div>

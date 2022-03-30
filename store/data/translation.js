@@ -68,10 +68,10 @@ const MAIN = {
     MainTitle: `Our question</br>
       for a better</br>culture.`,
     MainTitleText: `
-      Kakaobrain’s innovation begins with a question from all krews. To create a world unimaginable without AI, we need to ask a lot of unthinkable questions.<br/>
+    Kakao Brain’s innovation begins with a question from all krews. To create a world unimaginable without AI, we need to ask a lot of unthinkable questions.<br/>
       We await for krews who are ready to ask a new question that will change the world.`,
     ContentsQuestion: {
-      title: `What kind of question<br/>will shape kakaobrain?`,
+      title: `What kind of question<br/>will shape Kakao Brain?`,
       questionList: [
         {
           title:
@@ -97,7 +97,7 @@ const MAIN = {
       service: [
         {
           title: `How<br/>we work`,
-          text: `kakaobrain krews are given a lot of good opportunities to grow self-directed and<br/>
+          text: `Kakao Brain krews are given a lot of good opportunities to grow self-directed and<br/>
           can grow together through great colleagues?`,
           link: '/company'
         },
@@ -109,7 +109,7 @@ const MAIN = {
         },
         {
           title: `Benefits`,
-          text: `We offer a wide-range of benefits<br/>to kakaobrain krews and their family.`,
+          text: `We offer a wide-range of benefits<br/>to Kakao Brain krews and their family.`,
           link: '/benefits/benefits'
         }
       ],
@@ -202,7 +202,7 @@ const COMPANY = {
     EN: {
       mainTitle: 'How we work.',
       mainTitleText:
-        'kakaobrain krew can achieve personal growth through many good opportunities and improve together with great colleagues. How do the kakaobrain krew work?',
+        'Kakao Brain krew can achieve personal growth through many good opportunities and improve together with great colleagues. How do the Kakao Brain krew work?',
       contents: [
         {
           ContentsTitle: 'We open and share for better results.',
@@ -216,8 +216,8 @@ const COMPANY = {
               content: `
                 TIM is an abbreviation of [Talk, it’s Monday!], a [weekly meeting with the entire krew participating].<br/>
                 Various information is transparently [opened] and [shared] with the krew in the company-wide krew meeting TIM. The TIM meeting is a forum for freely exchanging questions and opinions with everyone attending, rather than simply making announcements.<br/><br/>
-                kakaobrain krews freely raise opinions and exchange questions and answers on in-house issues and tech trends. Krews who cannot attend receive recordings of the meeting. The [sharing culture] intends to have the kakaobrain krew first know about in-house issues inside the company than from outside.<br/><br/>
-                The Talent Acquisition Team reminds the krew of any organizational reform, makes important announcements, and congratulates the krew's wedding or birthday in TIM meetings. There is also a time to introduce new krew members joining the company or say farewell to krew members leaving kakaobrain.
+                Kakao Brain krews freely raise opinions and exchange questions and answers on in-house issues and tech trends. Krews who cannot attend receive recordings of the meeting. The [sharing culture] intends to have the Kakao Brain krew first know about in-house issues inside the company than from outside.<br/><br/>
+                The Talent Acquisition Team reminds the krew of any organizational reform, makes important announcements, and congratulates the krew's wedding or birthday in TIM meetings. There is also a time to introduce new krew members joining the company or say farewell to krew members leaving Kakao Brain.
               `
             },
             {
@@ -232,8 +232,8 @@ const COMPANY = {
           ContentsTitle:
             'We stay focused ourselves and work in a self-initiated manner.',
           ContentsText: [
-            'kakaobrain must experiment and transform faster than anywhere else, remain keen on and challenge new things and explore paths no one has ever taken. So we are not afraid of failure. Performance includes successes as well as meaningful failures. There are frequent situations where you should not simply pass over the obvious but must ask questions to yourself and maximize individual creativity. It primarily requires self-direction to find and solve problems on your own.',
-            'This is the first question you should ask if you are a kakaobrain krew. We create the driving force behind our work ourselves. We always think first, ask questions, and move to lead our work instead of being pushed around. We seek to judge ourselves and do our work because we believe we are the best at judging our work.'
+            'Kakao Brain must experiment and transform faster than anywhere else, remain keen on and challenge new things and explore paths no one has ever taken. So we are not afraid of failure. Performance includes successes as well as meaningful failures. There are frequent situations where you should not simply pass over the obvious but must ask questions to yourself and maximize individual creativity. It primarily requires self-direction to find and solve problems on your own.',
+            'This is the first question you should ask if you are a Kakao Brain krew. We create the driving force behind our work ourselves. We always think first, ask questions, and move to lead our work instead of being pushed around. We seek to judge ourselves and do our work because we believe we are the best at judging our work.'
           ],
           ContentSubTitle: 'Why are we doing this?'
         },
@@ -247,7 +247,7 @@ const COMPANY = {
               title:
                 "kakao Community's use of 'English names' and 'Shin-Chung-Heon Principle'",
               content: `
-                English names create an environment encouraging open discussion and active participation, regardless of experience, years of service, or age. So we don&rsquo;t use the most honorific expressions as &lsquo;~kkeseo (very honorific form to indicate someone (slightly similar to sir or ma’am))/~nim (a polite form to indicate someone (slightly similar to Mr. or Ms.))&rsquo; when calling a krew of kakaobrain or the entire Kakao community.<br/><br/>
+                English names create an environment encouraging open discussion and active participation, regardless of experience, years of service, or age. So we don&rsquo;t use the most honorific expressions as &lsquo;~kkeseo (very honorific form to indicate someone (slightly similar to sir or ma’am))/~nim (a polite form to indicate someone (slightly similar to Mr. or Ms.))&rsquo; when calling a krew of Kakao Brain or the entire Kakao community.<br/><br/>
                 The Shin-Chung-Heon (shilloe (meaning trust), chungdol (meaning conflict), heonshin (meaning commitment)), combined with a free communication culture, works as a driving force for innovation and paradigm shift in the rapidly changing IT industry. This principle is for [everyone to commit toward a single direction to the conclusions reached through sufficient discussion and conflicts with each other based on mutual trust], enabling consensus and understanding among krews about the outcome and proactive work promotion.
               `
             }
@@ -257,14 +257,14 @@ const COMPANY = {
           ContentsTitle:
             'We want to achieve maximum autonomy with minimum principles.',
           ContentsText: [
-            'We aim to minimize the principles of organizational culture and allow kakaobrain krews to voluntarily make all the decisions through discussions as much as possible to make it feel as if there is no such culture. The minimal principle makes things go around autonomously. Therefore, kakaobrain&rsquo;s culture of sharing and making the systems and principles, instead of artificially creating them, is applied not only to work but also to company welfare.'
+            'We aim to minimize the principles of organizational culture and allow Kakao Brain krews to voluntarily make all the decisions through discussions as much as possible to make it feel as if there is no such culture. The minimal principle makes things go around autonomously. Therefore, Kakao Brain&rsquo;s culture of sharing and making the systems and principles, instead of artificially creating them, is applied not only to work but also to company welfare.'
           ],
           ruleList: [
             {
               title: "Kakao community's 'minimum principle'",
               content: `
                 <span class="bold">The 100:0 Principle</span><br/>
-                kakaobrain opens everything inside (100) and nothing outside (0) kakaobrain. Why 100:0? Certain information might be important for some people but not for others. However, it is impossible to ask your colleagues every time whether it is okay to share or not.<br/><br/>
+                Kakao Brain opens everything inside (100) and nothing outside (0) Kakao Brain. Why 100:0? Certain information might be important for some people but not for others. However, it is impossible to ask your colleagues every time whether it is okay to share or not.<br/><br/>
                 <span class="bold">One Won Principle</span><br/>
                 The principle is not to use company resources for personal matters. There is no reason for ignoring an issue just because it's only 1 won if someone's small actions might break the trust of colleagues.<br/><br/>
                 <span class="bold">We don’t do something ambiguous.</span>`
@@ -395,7 +395,7 @@ const COMPANY = {
     EN: {
       MainTitle: 'Internship Experiences.',
       MainTitleText:
-        'Here are several internship experiences from Gina, Wilson, Jwoong, and Ted, who completed the 2021 Summer AI Internship at kakaobrain.',
+        'Here are several internship experiences from Gina, Wilson, Jwoong, and Ted, who completed the 2021 Summer AI Internship at Kakao Brain.',
       interviewList: [
         {
           image: {
@@ -409,7 +409,7 @@ const COMPANY = {
           interviewTextA:
             'It was impressive to talk and share opinions with the CEO in the ‘mini-conference’, a technology sharing seminar ordinarily held in the company. I could expand my industry knowledge and motivated from other researchers’ presentations',
           interviewTextB:
-            'Although kakaobrain is not a mammoth, the company has the AI system and provides abundant support as good as gigantic organizations. The environment made it possible to focus only on the research. I enjoyed discussing and working together because the atmosphere here was full of passion like start-ups.',
+            'Although Kakao Brain is not a mammoth, the company has the AI system and provides abundant support as good as gigantic organizations. The environment made it possible to focus only on the research. I enjoyed discussing and working together because the atmosphere here was full of passion like start-ups.',
           recommend: [
             'Those who want to grow through experiences working as a full-time employee at a large corporation',
             'Those who want to experience various project collaborations with industry-leading colleagues',
@@ -420,7 +420,7 @@ const COMPANY = {
             'List up technical questions you’ve always been curious about but couldn’t solve easily'
           ],
           interviewTidy:
-            'Gina’s words, &lsquo;kakaobrain is fast&rsquo;, means many things. kakaobrain-style development is sharing opinions, helping, sometimes receiving help, and to one’s own ability rather than simply going fast. kakaobrain is proving that “If you want to keep going faster, go together”, rather than “If you want to go far, go together.”',
+            'Gina’s words, &lsquo;Kakao Brain is fast&rsquo;, means many things. Kakao Brain-style development is sharing opinions, helping, sometimes receiving help, and to one’s own ability rather than simply going fast. Kakao Brain is proving that “If you want to keep going faster, go together”, rather than “If you want to go far, go together.”',
           facebook: {
             link: 'https://www.facebook.com/kakaobrain/posts/2972993276352401',
             target: '_blank'
@@ -436,9 +436,9 @@ const COMPANY = {
           profileTxt:
             'Undergraduate majoring in Computer Engineering, Soongsil University',
           interviewTextA:
-            'As soon as I started my internship, it was just as I expected and thought no wonder Managing Director Ryan works here. Affluent infrastructure for AI research as well as outstanding human resources. I came across much information shared at the ‘Minicon’, a technology sharing seminar ordinarily held in the company. I thought kakaobrain is flexing it right (as in showing its capability) in the AI world!',
+            'As soon as I started my internship, it was just as I expected and thought no wonder Managing Director Ryan works here. Affluent infrastructure for AI research as well as outstanding human resources. I came across much information shared at the ‘Minicon’, a technology sharing seminar ordinarily held in the company. I thought Kakao Brain is flexing it right (as in showing its capability) in the AI world!',
           interviewTextB:
-            'I was impressed with the mentoring. Mentoring is usually a passive way of defining the detailed specifications and technologies and instructing to implement them as is. But kakaobrain mentors respected the autonomous opinions of interns and only showed the directions for making their own decisions. It really helped a lot.',
+            'I was impressed with the mentoring. Mentoring is usually a passive way of defining the detailed specifications and technologies and instructing to implement them as is. But Kakao Brain mentors respected the autonomous opinions of interns and only showed the directions for making their own decisions. It really helped a lot.',
           recommend: [
             'Those who want to experience the mentoring of industry-leading engineers',
             'Those who are willing to pour out their passion into the internship period'
@@ -448,7 +448,7 @@ const COMPANY = {
             'Practice communicating logically based on evidence'
           ],
           interviewTidy:
-            'The latest AI technology is superior to any other, and communication and discussion with the best colleagues in the industry. Wilson’s internship at kakaobrain was so meaningful that the two-month period felt too short. Wilson personally thinks it would be great to have a longer type of internship program. He says he will encourage the people around him to participate in the kakaobrain internship even if they must take time off school.',
+            'The latest AI technology is superior to any other, and communication and discussion with the best colleagues in the industry. Wilson’s internship at Kakao Brain was so meaningful that the two-month period felt too short. Wilson personally thinks it would be great to have a longer type of internship program. He says he will encourage the people around him to participate in the Kakao Brain internship even if they must take time off school.',
           facebook: {
             link: 'https://www.facebook.com/kakaobrain/posts/2977037289281333',
             target: '_blank'
@@ -464,7 +464,7 @@ const COMPANY = {
           profileTxt:
             'Master’s course in Professor Sungju Hwang’s Lab, KAIST AI (Kim Jaechul Graduate School of AI at Korea Advanced Institute of Science and Technology)',
           interviewTextA:
-            'During my kakaobrain internship, I thought this place is like the passengers in an airplane. They are all different in age, gender, and purpose, but flying towards a certain destination. It was interesting and enjoyable to communicate and share information in various ways.',
+            'During my Kakao Brain internship, I thought this place is like the passengers in an airplane. They are all different in age, gender, and purpose, but flying towards a certain destination. It was interesting and enjoyable to communicate and share information in various ways.',
           interviewTextB:
             'I learned a lot from working and talking with the researchers. I saw them continuing the discussions without anyone losing their temper and coming up with the best results even if there were conflicts of opinion. I felt like witnessing the outcome from where personality met capability. I also wanted to learn how Team Leader Sam follows and manages all the research going on at once.',
           recommend: [
@@ -476,7 +476,7 @@ const COMPANY = {
             'Look for different ways of expressing your opinion.'
           ],
           interviewTidy:
-            'Like first class on an airplane, Jwoong emphasized that the good part at kakaobrain was its entire infrastructure support that allows you to work comfortably while flying towards your goal. He flew so fast and far and was able to see a wider world during his kakaobrain internship.',
+            'Like first class on an airplane, Jwoong emphasized that the good part at Kakao Brain was its entire infrastructure support that allows you to work comfortably while flying towards your goal. He flew so fast and far and was able to see a wider world during his Kakao Brain internship.',
           facebook: {
             link: 'https://www.facebook.com/kakaobrain/posts/2982355705416158',
             target: '_blank'
@@ -492,20 +492,20 @@ const COMPANY = {
           profileTxt:
             'Master&rsquo;s Program in Vision & Learning Lab, UNIST AI Graduate School',
           interviewTextA:
-            'I felt the flex (as in pride) of all kakaobrain seniors in their work and the company. I don’t mean it was “stiff” as people say. During my internship, I often spent time with my mentor Malfoy to solve problems, and he showed me directions. Other seniors were likewise.',
+            'I felt the flex (as in pride) of all Kakao Brain seniors in their work and the company. I don’t mean it was “stiff” as people say. During my internship, I often spent time with my mentor Malfoy to solve problems, and he showed me directions. Other seniors were likewise.',
           interviewTextB:
-            'It was also good to have various indirect experiences as almost all kakaobrain projects were open to interns as well. The mentoring of the seniors was really helpful, and I could even take the lead in a project because the people thought of interns as colleagues at work, not assistants.',
+            'It was also good to have various indirect experiences as almost all Kakao Brain projects were open to interns as well. The mentoring of the seniors was really helpful, and I could even take the lead in a project because the people thought of interns as colleagues at work, not assistants.',
           recommend: [
             'Those who want to expand their technical concerns in the best AI development environment',
             'Those who want to have technical/business discussions with the best seniors in the industry',
             'Those who want to launch their own service and get feedback from the public'
           ],
           advice: [
-            'List up what you want to try at kakaobrain.',
+            'List up what you want to try at Kakao Brain.',
             'Think about your strengths and weaknesses in advance.'
           ],
           interviewTidy:
-            'Ted says that kakaobrain was mingled like an ‘orchestra’ from what he felt during the internship. He said he was deeply impressed because each one of them was the best performer while advancing towards the one goal of kakaobrain. It was also nice to see the interns being treated as independent researchers.',
+            'Ted says that Kakao Brain was mingled like an ‘orchestra’ from what he felt during the internship. He said he was deeply impressed because each one of them was the best performer while advancing towards the one goal of Kakao Brain. It was also nice to see the interns being treated as independent researchers.',
           facebook: {
             link: 'https://www.facebook.com/1772178023100605/posts/2982992715352457/?d=n',
             target: '_blank'
@@ -604,7 +604,7 @@ const COMPANY = {
       }
     },
     EN: {
-      MainTitle: 'kakaobrain</br>Cyber Ethics.',
+      MainTitle: 'Kakao Brain</br>Cyber Ethics.',
       MainTitleText:
         'The details of any tip offs [DS1] and the identity of the person(s) providing the information are thoroughly protected so that tip offs can be submitted with confidence. In addition, we will do our best to resolve the situation as soon as possible.',
       contents: [
@@ -660,7 +660,7 @@ const COMPANY = {
             },
             {
               title: 'Postal address',
-              text: 'Kakaobrain Ethical Management Team 11F Mirae Asset Venture Tower, 20 Pangyoyeok-ro 241beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea'
+              text: 'Kakao Brain Ethical Management Team 11F Mirae Asset Venture Tower, 20 Pangyoyeok-ro 241beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea'
             }
           ]
         },
@@ -863,13 +863,13 @@ const WELFARE = {
         'We choose our own working place. Our ‘full flextime working system’ allows us to arrange and manage our own work.',
       contents: [
         {
-          ContentsTitle: 'kakaobrain krew<br/>decides their own workspace.',
+          ContentsTitle: 'Kakao Brain krew<br/>decides their own workspace.',
           ContentsText:
             'You can work anywhere you choose: home, office, cafe, hotel, or a campground. This is because there is the confidence that you’ll do your job well in a self-driven and autonomous manner wherever you work.'
         },
         {
           ContentsTitle:
-            'kakaobrain does not have a fixed commuting time or lateness.',
+            'Kakao Brain does not have a fixed commuting time or lateness.',
           ContentsText:
             'You can end early as long as you fulfill your monthly working hours. You will either be paid for overtime or take more time on leave instead. This is possible because we adopted a ‘full flextime working system’ and operating it according to our needs.'
         },
@@ -891,9 +891,9 @@ const WELFARE = {
         },
         {
           SmallTitle:
-            'kakaobrain krew discussed and institutionalized the [Full flextime working system].',
+            'Kakao Brain krew discussed and institutionalized the [Full flextime working system].',
           ContentsText:
-            'It is a working system that allows the krew to have [self-motivation] and [autonomy], to be focused when working, and take a good rest if you’re on leave. kakaobrain krew went through discussions to adopt and institutionalize a system allowing the people to work autonomously with minimum principles as possible.',
+            'It is a working system that allows the krew to have [self-motivation] and [autonomy], to be focused when working, and take a good rest if you’re on leave. Kakao Brain krew went through discussions to adopt and institutionalize a system allowing the people to work autonomously with minimum principles as possible.',
           qna: [
             {
               title: 'What is the full flextime working system?',
@@ -919,7 +919,7 @@ const WELFARE = {
             'For the krew&rsquo;s convenience, the ‘OFF system’ can be used like leaves. The ‘OFF system’ which frees up non-working time for the krews’ convenience can be used like vacations.',
           ContentsText: [
             'You don’t have to continue working unconditionally until the end time when you start a day&rsquo;s work. This is because if you completed all the standard working hours for the month without interfering with the job schedule, you don’t have to work for the rest of the month.',
-            'kakaobrain allows the krews to divide the 25-days paid leave/year by the hour and use as on a time basis. So, it is possible to use time leaves by the hour in the middle of working hours depending on personal circumstances. (1 day of paid vacation = 8 hours of vacation)',
+            'Kakao Brain allows the krews to divide the 25-days paid leave/year by the hour and use as on a time basis. So, it is possible to use time leaves by the hour in the middle of working hours depending on personal circumstances. (1 day of paid vacation = 8 hours of vacation)',
             'If you need to take a leave and have overtime hours in the month, you can use the ‘OFF system’ to free up time without working for that amount of time. You can use any options for working.'
           ]
         }
@@ -1057,7 +1057,7 @@ const WELFARE = {
     EN: {
       MainTitle: 'Welfare benefits.',
       MainTitleText:
-        'The following are the welfare benefits for the kakaobrain krew and their families, provided for the krew to focus on their work and improve further.',
+        'The following are the welfare benefits for the Kakao Brain krew and their families, provided for the krew to focus on their work and improve further.',
       ContentsTitle:
         'Read thoroughly and compare.</br>True sincerity for the krew.',
       benefitsList: [
@@ -1075,7 +1075,7 @@ const WELFARE = {
           title:
             'Remote (working from home) work and flexible work (completely selective working hours)',
           content: `
-            <div class="folding-item">kakaobrain krew decides their own workspace to work.</div>
+            <div class="folding-item">Kakao Brain krew decides their own workspace to work.</div>
             <div class="folding-item"><a href="/benefits" class="underline">See the details of remote work and flexible work systems</a></span></div>
           `,
           isText: false
@@ -1273,7 +1273,7 @@ const FAQ = {
       {
         title: 'Q. Can foreigners apply?',
         content:
-          'There are no restrictions on nationality, but you must have a visa permitting you to work in Korea.<br/>Furthermore, you must be able to communicate and work using the Korean language as kakaobrain currently contacts and collaborates with Kakao affiliates, schools, and domestic institutions.'
+          'There are no restrictions on nationality, but you must have a visa permitting you to work in Korea.<br/>Furthermore, you must be able to communicate and work using the Korean language as Kakao Brain currently contacts and collaborates with Kakao affiliates, schools, and domestic institutions.'
       },
       {
         title: 'Q. Can I get feedback concerning the interview results?',
@@ -1417,9 +1417,9 @@ const RECOMMEND = {
       'We are waiting for the Unthinkable krew, who can ask unthinkable questions and pioneer a path that no one has taken. Recommend us talents to work together.',
     contents: [
       {
-        ContentsTitle: 'Anyone, even if you’re not a kakaobrain krew.',
+        ContentsTitle: 'Anyone, even if you’re not a Kakao Brain krew.',
         ContentsText:
-          'Anyone can make referrals even if you are not a member of kakaobrain.<br/>You will be rewarded 3 million won if the person you referred joins the company.'
+          'Anyone can make referrals even if you are not a member of Kakao Brain.<br/>You will be rewarded 3 million won if the person you referred joins the company.'
       },
       {
         ContentsTitle: 'How to make referrals',
@@ -1503,9 +1503,9 @@ const RECOMMEND = {
             SmallTitle: '',
             ContentsText: [
               'krew working in the Kakao community',
-              'Those who worked at kakaobrain in the past (regular workers, contract workers, dispatch workers, interns)',
-              'Outsourced employees and freelancers who worked with kakaobrain now or within the past 12 months',
-              'Candidates who already applied through other channels or are in the process of screening, or whose resumes are already received by the kakaobrain Talent Acquisition Team (referred by outside companies, headhunters, direct application of candidates, etc.)'
+              'Those who worked at Kakao Brain in the past (regular workers, contract workers, dispatch workers, interns)',
+              'Outsourced employees and freelancers who worked with Kakao Brain now or within the past 12 months',
+              'Candidates who already applied through other channels or are in the process of screening, or whose resumes are already received by the Kakao Brain Talent Acquisition Team (referred by outside companies, headhunters, direct application of candidates, etc.)'
             ]
           }
         ]
@@ -1563,7 +1563,7 @@ const MAP = {
   EN: {
     MainTitle: 'Maps<br/>& Directions',
     MainTitleText:
-      'Innovation at kakaobrain starts with questions from its krew members.',
+      'Innovation at Kakao Brain starts with questions from its krew members.',
     address: {
       title: 'Address',
       text: '11F, Mirae Asset Venture Tower, 20, Pangyoyeok-ro 241beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do, 13494, Korea'
@@ -1842,9 +1842,9 @@ const PRIVACY = {
   EN: {
     MainTitle: 'Privacy Policy',
     MainTitleText: `
-    kakaobrain complies with the personal information protection regulations and guidelines under the statutes of the Personal Information Protection Act related laws for data subjects to use the service with confidence by protecting their valuable personal information.
+    Kakao Brain complies with the personal information protection regulations and guidelines under the statutes of the Personal Information Protection Act related laws for data subjects to use the service with confidence by protecting their valuable personal information.
         
-    According to the privacy policy, kakaobrain may use personal information obtained from data subjects for the following purposes in the following method. We also take measures to protect such information. 
+    According to the privacy policy, Kakao Brain may use personal information obtained from data subjects for the following purposes in the following method. We also take measures to protect such information. 
     `,
     ContentItems: [
       {
@@ -1854,7 +1854,7 @@ const PRIVACY = {
       {
         itemType: 'ContentsText',
         text: `
-          kakaobrain website collects minimum personal information necessary for using the site, apart from personal information for job applications.
+        Kakao Brain website collects minimum personal information necessary for using the site, apart from personal information for job applications.
 
           [Application for employment - Filling out the application form]
 
@@ -1889,7 +1889,7 @@ const PRIVACY = {
       {
         itemType: 'ContentsText',
         text: `
-          kakaobrain uses personal information of the data subject within the scope stated in ‘2. Purpose of processing personal information,’ and it does not use or provide to other persons, companies, or institutions beyond such scope.
+        Kakao Brain uses personal information of the data subject within the scope stated in ‘2. Purpose of processing personal information,’ and it does not use or provide to other persons, companies, or institutions beyond such scope.
 
           However, the personal information of the data subject may be provided to a third party only in case of the following
           
@@ -1904,7 +1904,7 @@ const PRIVACY = {
       {
         itemType: 'ContentsText',
         text: `
-          1) kakaobrain outsources the following personal information processing to smoothly handle personal information and improve its services. We will notify the data subject in advance of any changes concerning the entity outsourced to process personal information (the outsourcee) or the outsourced work.
+          1) Kakao Brain outsources the following personal information processing to smoothly handle personal information and improve its services. We will notify the data subject in advance of any changes concerning the entity outsourced to process personal information (the outsourcee) or the outsourced work.
 
           - Entity outsourced with the work 1 (outsourcee): Midasin Co., Ltd.
           - Details of outsourced tasks: Operation of the job opening website and its management IT system, and operation and management of relevant job opening website and its management IT system
@@ -1912,7 +1912,7 @@ const PRIVACY = {
           - Entity outsourced with the work 2 (outsourcee): Wecruit Co., Ltd.
           - Details of outsourced tasks: Reference check (if applicable)
           
-          kakaobrain outsources the following personal information processing tasks to smoothly handle personal information and improve its services. We further manage and supervise the outsourcee to prevent it from not violating laws related to personal information protection.        
+          Kakao Brain outsources the following personal information processing tasks to smoothly handle personal information and improve its services. We further manage and supervise the outsourcee to prevent it from not violating laws related to personal information protection.        
         `
       },
       {
@@ -1922,7 +1922,7 @@ const PRIVACY = {
       {
         itemType: 'ContentsText',
         text: `
-        1) kakaobrain processes and retains personal information within the period of retention and use of personal information according to the statutes or within the period of retention and use of personal information agreed upon at the time of collecting personal information from data subjects. Such information will be destroyed without delay once the purpose for personal information processing is achieved.
+        1) Kakao Brain processes and retains personal information within the period of retention and use of personal information according to the statutes or within the period of retention and use of personal information agreed upon at the time of collecting personal information from data subjects. Such information will be destroyed without delay once the purpose for personal information processing is achieved.
 
         2) The personal information processing and retention period are as follows. Each of the following information will be destroyed without delay in case the data subject explicitly requests destruction.
         
@@ -1938,7 +1938,7 @@ const PRIVACY = {
       {
         itemType: 'ContentsText',
         text: `
-        1) kakaobrain destroys personal information without delay when the personal information becomes unnecessary owing to the expiry of the retention period, attainment of the purpose of processing the information, etc.
+        1) Kakao Brain destroys personal information without delay when the personal information becomes unnecessary owing to the expiry of the retention period, attainment of the purpose of processing the information, etc.
 
         2) Where the personal information must be retained despite the expiry of the retention period agreed upon by the data object, or attainment of the purpose of processing the information, etc. under other statutes (see ‘5. The period for processing and retaining personal information’), the relevant personal information shall be moved to a separate database (DB) or stored in a different location separate from other personal information.
         
@@ -1956,7 +1956,7 @@ const PRIVACY = {
       {
         itemType: 'ContentsText',
         text: `
-        The data subject may exercise rights concerning personal information protection for the following items at any time to kakaobrain.
+        The data subject may exercise rights concerning personal information protection for the following items at any time to Kakao Brain.
 
         - Request access to his/her own personal information
         - Request correction of personal information
@@ -1967,9 +1967,9 @@ const PRIVACY = {
         
         3) Where the data subject requests correction or deletion of personal information errors, such information will not be used or provided until the correction or deletion is complete.
         
-        4) kakaobrain does not collect personal information from children under the age of 14: Provided, That the rights of the legal representative concerning the processing of personal information of children under the age of 14 are guaranteed in the event where personal information of children under the age of 14 is collected.
+        4) Kakao Brain does not collect personal information from children under the age of 14: Provided, That the rights of the legal representative concerning the processing of personal information of children under the age of 14 are guaranteed in the event where personal information of children under the age of 14 is collected.
         
-        5) kakaobrain checks whether the person requesting access, correction, deletion, or suspension of processing according to the rights of the data subject is the person or a legitimate representative.        
+        5) Kakao Brain checks whether the person requesting access, correction, deletion, or suspension of processing according to the rights of the data subject is the person or a legitimate representative.        
         `
       },
       {
@@ -2018,7 +2018,7 @@ const PRIVACY = {
       {
         itemType: 'ContentsText',
         text: `
-        kakaobrain takes the following administrative, technical, and physical measures to ensure the safety of personal information.
+        Kakao Brain takes the following administrative, technical, and physical measures to ensure the safety of personal information.
 
         1) Establishment and implementation of the internal personal information management plan
         We establish and implement an ‘internal management plan for personal information’ based on the ‘criteria for measures to ensure the safety of personal information’.
@@ -2049,7 +2049,7 @@ const PRIVACY = {
       {
         itemType: 'ContentsText',
         text: `
-        kakaobrain designates a privacy officer to take overall responsibility concerning personal information processing and handle complaints and damage relief of data subjects related to personal information processing as follows.
+        Kakao Brain designates a privacy officer to take overall responsibility concerning personal information processing and handle complaints and damage relief of data subjects related to personal information processing as follows.
 
         Please contact the privacy officer or the person in charge below if you have any questions, opinions or any possibility of personal information divulgence while using the website. We will take measures without delay and notify you of the outcome.
         
