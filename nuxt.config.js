@@ -35,7 +35,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: process.env.VUE_APP_BASE_URL + '/metaimg.png'
+        content: 'https://recruit.kakaobrain.com/metaimg.png'
       },
       {
         hid: 'og:description',
