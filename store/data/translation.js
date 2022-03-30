@@ -399,7 +399,7 @@ const COMPANY = {
       interviewList: [
         {
           image: {
-            bracket: 'yw_0.png',
+            bracket: 'yw_0_en.png',
             profile: 'profile_0.png'
           },
           name: 'Gina',
@@ -428,7 +428,7 @@ const COMPANY = {
         },
         {
           image: {
-            bracket: 'yw_1.png',
+            bracket: 'yw_1_en.png',
             profile: 'profile_1.png'
           },
           name: 'Wilson',
@@ -456,7 +456,7 @@ const COMPANY = {
         },
         {
           image: {
-            bracket: 'yw_2.png',
+            bracket: 'yw_2_en.png',
             profile: 'profile_2.png'
           },
           name: 'Jwoong',
@@ -484,7 +484,7 @@ const COMPANY = {
         },
         {
           image: {
-            bracket: 'yw_3.png',
+            bracket: 'yw_3_en.png',
             profile: 'profile_3.png'
           },
           name: 'Ted',

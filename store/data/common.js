@@ -9,7 +9,7 @@ const menus = [
       {
         name: {
           KR: '영입공고',
-          EN: 'Job Openings'
+          EN: 'Job'
         },
         link: '/careers'
       },
@@ -54,7 +54,7 @@ const menus = [
       {
         name: {
           KR: '인턴 체험스토리',
-          EN: 'Internship Experiences'
+          EN: 'Pathfinder Story'
         },
         link: '/company/intern'
       },
@@ -77,7 +77,7 @@ const menus = [
   {
     name: {
       KR: '복지소개',
-      EN: 'Benefits'
+      EN: 'Life At Kakao Brain'
     },
     link: '/benefits',
     alarm: '',
@@ -85,7 +85,7 @@ const menus = [
       {
         name: {
           KR: '원격근무와 유연근무제',
-          EN: 'Teleworking&Flexible Working'
+          EN: 'Remote Work'
         },
         link: '/benefits'
       },
