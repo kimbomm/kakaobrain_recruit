@@ -35,7 +35,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: process.env.BASE_URL + '/metaimg.png'
+        content: process.env.VUE_APP_BASE_URL + '/metaimg.png'
       },
       {
         hid: 'og:description',
