@@ -21,10 +21,37 @@ export default {
         'http-equiv': 'Content-Security-Policy',
         content: 'upgrade-insecure-requests'
       },
-      { name: 'referrer', content: 'no-referrer-when-downgrade' }
+      { name: 'referrer', content: 'no-referrer-when-downgrade' },
+      {
+        'http-equiv': 'Content-Security-Policy',
+        content: 'upgrade-insecure-requests'
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://recruit.kakaobrain.com/'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: process.env.BASE_URL + '/metaimg.png'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'Our question for a better culture.'
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'KaKao Brain Careers'
+      },
+      { hid: 'og:locale', property: 'og:locale', content: 'en_US' },
+      { hid: 'og:image:width', property: 'og:image:width', content: '1200' },
+      { hid: 'og:image:height', property: 'og:image:height', content: '630' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [{ src: '/script/bodyScrollLock.js' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   axios: {
     credentials: true,
