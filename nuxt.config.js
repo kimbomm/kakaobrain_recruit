@@ -1,5 +1,6 @@
 export default {
   publicRuntimeConfig: {
+    url: process.env.BASE_URL,
     baseURL: process.env.VUE_APP_BASE_URL,
     apiBaseURL: process.env.VUE_APP_API_BASE_URL,
     googleAnalytics: {
@@ -35,7 +36,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://recruit.kakaobrain.com/metaimg.png'
+        content: `${process.env.BASE_URL}/metaimg.png`
       },
       {
         hid: 'og:description',
