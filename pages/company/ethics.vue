@@ -47,8 +47,8 @@
       </ul>
     </div>
     <div class="link-button">
-      <a href="https://kakaobrain.com/ethics" target="_blank">
-        <span class="btn-txt">{{ data.button }} →</span>
+      <a :href="data.button.link" :target="data.button.target">
+        <span class="btn-txt">{{ data.button.text }}</span>
       </a>
     </div>
   </div>

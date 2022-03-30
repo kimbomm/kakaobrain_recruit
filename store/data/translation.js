@@ -518,7 +518,7 @@ const COMPANY = {
     KR: {
       MainTitle: '카카오브레인</br>사이버윤리실.',
       MainTitleText:
-        '제보자가 안심하고 제보할 수 있도록 신고 내용과 제보자의 신분은 철저하게 보호되며,</br>빠른 시일 내에 처리할 수 있도록 최선을 다할 것입니다.',
+        '제보자가 안심하고 제보할 수 있도록 신고 내용과 제보자의 신분은 철저하게 보호되며, 빠른 시일 내에 처리할 수 있도록 최선을 다할 것입니다.',
       contents: [
         {
           ContentsTitle: '사이버윤리실 안내',
@@ -597,12 +597,16 @@ const COMPANY = {
           ]
         }
       ],
-      button: '기업윤리규정 자세히보기'
+      button: {
+        text: '기업윤리규정 자세히보기 →',
+        link: 'https://kakaobrain.com/ethics',
+        target: '_blank'
+      }
     },
     EN: {
       MainTitle: 'kakaobrain</br>Cyber Ethics.',
       MainTitleText:
-        '제보자가 안심하고 제보할 수 있도록 신고 내용과 제보자의 신분은 철저하게 보호되며,</br>빠른 시일 내에 처리할 수 있도록 최선을 다할 것입니다.',
+        'The details of any tip offs [DS1] and the identity of the person(s) providing the information are thoroughly protected so that tip offs can be submitted with confidence. In addition, we will do our best to resolve the situation as soon as possible.',
       contents: [
         {
           ContentsTitle: 'Cyber Ethics Office Information',
@@ -685,7 +689,11 @@ const COMPANY = {
           ]
         }
       ],
-      button: '기업윤리규정 자세히보기'
+      button: {
+        text: 'Kakao Brain Cyber Ethics →',
+        link: 'https://kakaobrain.com/ethics',
+        target: '_blank'
+      }
     }
   }
 }
