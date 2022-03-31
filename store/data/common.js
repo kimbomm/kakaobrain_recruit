@@ -9,7 +9,7 @@ const menus = [
       {
         name: {
           KR: '영입공고',
-          EN: 'Job'
+          EN: 'Jobs'
         },
         link: '/careers'
       },
@@ -47,7 +47,7 @@ const menus = [
       {
         name: {
           KR: '우리의 일하는 방식',
-          EN: 'How we work'
+          EN: 'How We Work'
         },
         link: '/company'
       },
@@ -61,7 +61,7 @@ const menus = [
       {
         name: {
           KR: '사이버 윤리',
-          EN: 'Cyber ethics'
+          EN: 'Cyber Ethics'
         },
         link: '/company/ethics'
       },
