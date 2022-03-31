@@ -54,6 +54,7 @@
     line-height: 1.3;
     &-top {
       display: flex;
+      align-items: flex-end;
     }
     .b-logo {
       font-weight: 900;
