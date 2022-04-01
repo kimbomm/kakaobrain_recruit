@@ -84,6 +84,7 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
+  color: inherit;
   vertical-align: baseline;
   -webkit-font-smoothing: antialiased;
   letter-spacing: -0.6px;
@@ -146,6 +147,9 @@ a {
   text-decoration: none;
   color: inherit;
   &:visited {
+    color: inherit;
+  }
+  &:link {
     color: inherit;
   }
 }

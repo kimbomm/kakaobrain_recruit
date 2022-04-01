@@ -258,12 +258,14 @@
       &-prev {
         margin-right: 20px;
         .link {
+          padding: 6px 0;
           font-size: 30px;
         }
       }
       &-next {
         margin-left: 20px;
         .link {
+          padding: 6px 0;
           font-size: 30px;
         }
       }
