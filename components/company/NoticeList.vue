@@ -52,6 +52,7 @@
     width: getWidth(1);
     margin-right: 20px;
     .category {
+      word-break: break-word;
       font-size: 20px;
       font-weight: 400;
       line-height: 1.3;
