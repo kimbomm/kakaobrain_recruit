@@ -52,12 +52,18 @@ export const actions = {
   async getList({}, payload) {
     const params = utility.setParameters(payload)
     return await this.$axios.get(
-      `https://api.lever.co/v0/postings/kakaobrain?${params}`
+      `https://api.lever.co/v0/postings/kakaobrain?${params}`,
+      {
+        withCredentials: true
+      }
     )
   },
   async getDetail({}, payload) {
     return await this.$axios.get(
-      `https://api.lever.co/v0/postings/kakaobrain/${payload}`
+      `https://api.lever.co/v0/postings/kakaobrain/${payload}`,
+      {
+        withCredentials: true
+      }
     )
   },
   async getRecruitList({}, payload) {
