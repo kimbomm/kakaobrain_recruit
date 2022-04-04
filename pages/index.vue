@@ -10,7 +10,7 @@
   </div>
 </template>
 <script>
-  import { mapState } from 'vuex'
+  import { mapState, mapActions } from 'vuex'
   import mixinGlobal from '@/mixin/global.js'
   import MainTitle from '@/components/company/MainTitle'
   import EasterEgg from '@/components/elements/EasterEgg'
@@ -42,6 +42,14 @@
       data() {
         return this.mainData[this.language]
       }
+    },
+    async mounted() {
+      await this.getList()
+    },
+    methods: {
+      ...mapActions({
+        getList: 'getList'
+      })
     }
   }
 </script>
