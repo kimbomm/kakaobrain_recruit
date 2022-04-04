@@ -11,8 +11,6 @@
       </div>
       <div class="item-con">
         <div class="title">
-          {{ data.categories.team && data.categories.team.toUpperCase() }}
-          /
           {{ data.text }}
         </div>
         <div class="date">
