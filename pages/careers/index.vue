@@ -101,8 +101,13 @@
       }
     },
     async created() {
-      const res = await this.getList({
-        group: 'department'
+      // const res = await this.getList({
+      //   group: 'department'
+      // })
+      const res = await this.postList({
+        method: 'GET',
+        url: 'https://api.lever.co/v0/postings/kakaobrain?group=department',
+        formData: {}
       })
       this.list = res.data.map(item => {
         return {
@@ -116,7 +121,8 @@
     methods: {
       ...mapActions({
         getRecruitList: 'getRecruitList',
-        getList: 'getList'
+        getList: 'getList',
+        postList: 'postList'
       }),
       async setCategory() {
         const category = await this.list.map(list => list.title)

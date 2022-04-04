@@ -44,7 +44,7 @@
       }
     },
     async mounted() {
-      await this.getList()
+      // await this.getList()
     },
     methods: {
       ...mapActions({

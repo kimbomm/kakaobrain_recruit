@@ -49,6 +49,10 @@ export const actions = {
     // console.log('RES::', res)
     return res
   },
+  async postList({}, payload) {
+    const params = utility.setParameters(payload)
+    return await this.$axios.post(`/proxy`, payload)
+  },
   async getList({}, payload) {
     const params = utility.setParameters(payload)
     return await this.$axios.get(
