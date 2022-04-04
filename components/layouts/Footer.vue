@@ -20,7 +20,7 @@
       </div>
       <div class="footer-bottom">
         <div :class="{ copy: true, 'is-hide': onHide }">
-          <span class="info-txt">@2022</span>
+          <span class="info-txt">@Recruit</span>
           <div class="copyright">
             Copyright ⓒ Kakao Brain Corp. <span>All rights reserved.</span>
           </div>
@@ -238,6 +238,7 @@
   @include mobile {
     .copy {
       position: initial;
+      z-index: 0;
       &.is-hide {
         opacity: 1;
         transform: initial;

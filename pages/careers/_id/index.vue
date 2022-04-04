@@ -100,6 +100,7 @@
 <style lang="scss" scoped>
   .detail {
     padding-top: 200px;
+    position: relative;
     &-content /deep/ {
       width: getWidth(6);
       margin: 0 auto;
@@ -175,9 +176,15 @@
       }
     }
     .apply {
-      margin-top: 100px;
-      padding: 10px 24px;
-      border-radius: 27px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 24px;
+      height: 66px;
+      position: fixed;
+      bottom: 60px;
+      left: 20px;
+      border-radius: 100px;
       background-color: #000;
       font: inherit;
       font-weight: 400;
@@ -235,7 +242,14 @@
       }
       .apply {
         font-size: 34px;
-        margin-top: 120px;
+      }
+    }
+  }
+  @media screen and (max-width: 1300px) {
+    .detail {
+      .apply {
+        font-size: 16px;
+        padding: 0 20px;
       }
     }
   }
@@ -262,8 +276,9 @@
         }
       }
       .apply {
-        font-size: 20px;
-        margin-top: 80px;
+        height: 46px;
+        font-size: 14px;
+        padding: 0 18.5px;
       }
     }
   }
@@ -289,7 +304,9 @@
         }
       }
       .apply {
+        bottom: 20px;
         font-size: 16px;
+        padding: 0 20px;
       }
     }
   }
