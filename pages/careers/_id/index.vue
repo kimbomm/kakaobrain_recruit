@@ -67,10 +67,15 @@
     },
     methods: {
       ...mapActions({
-        getDetail: 'getDetail'
+        getDetail: 'getDetail',
+        postList: 'postList'
       }),
       async init() {
-        const res = await this.getDetail(this.id)
+        const res = await this.postList({
+          method: 'GET',
+          url: `https://api.lever.co/v0/postings/kakaobrain/${this.id}`,
+          formData: {}
+        })
         if (res) {
           this.detail = res.data
           this.setBreadcrumb()
