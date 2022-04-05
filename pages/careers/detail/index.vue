@@ -37,7 +37,7 @@
     mixins: [mixinGlobal],
     asyncData(ctx) {
       return {
-        id: ctx.params.id
+        id: ctx.query.id
       }
     },
     components: {
@@ -79,6 +79,8 @@
         if (res) {
           this.detail = res.data
           this.setBreadcrumb()
+        } else {
+          window.location = '/'
         }
       },
       goApply() {
