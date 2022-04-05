@@ -62,8 +62,8 @@
     computed: {
       ...mapState(['language'])
     },
-    mounted() {
-      this.init()
+    async mounted() {
+      await this.init()
     },
     methods: {
       ...mapActions({
@@ -71,16 +71,20 @@
         postList: 'postList'
       }),
       async init() {
-        const res = await this.postList({
-          method: 'GET',
-          url: `https://api.lever.co/v0/postings/kakaobrain/${this.id}`,
-          formData: {}
-        })
-        if (res) {
-          this.detail = res.data
-          this.setBreadcrumb()
+        if (this.id) {
+          const res = await this.postList({
+            method: 'GET',
+            url: `https://api.lever.co/v0/postings/kakaobrain/${this.id}`,
+            formData: {}
+          })
+          if (res) {
+            this.detail = res.data
+            this.setBreadcrumb()
+          } else {
+            window.location = '/'
+          }
         } else {
-          window.location = '/'
+          console.log('!!')
         }
       },
       goApply() {
