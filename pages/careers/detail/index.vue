@@ -71,20 +71,18 @@
         postList: 'postList'
       }),
       async init() {
-        if (this.id) {
-          const res = await this.postList({
-            method: 'GET',
-            url: `https://api.lever.co/v0/postings/kakaobrain/${this.id}`,
-            formData: {}
-          })
-          if (res) {
-            this.detail = res.data
-            this.setBreadcrumb()
-          } else {
-            window.location = '/'
-          }
+        const res = await this.postList({
+          method: 'GET',
+          url: `https://api.lever.co/v0/postings/kakaobrain/${
+            this.id || this.$route.query.id
+          }`,
+          formData: {}
+        })
+        if (res) {
+          this.detail = res.data
+          this.setBreadcrumb()
         } else {
-          console.log('!!')
+          window.location = '/'
         }
       },
       goApply() {
