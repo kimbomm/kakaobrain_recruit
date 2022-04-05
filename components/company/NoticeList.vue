@@ -1,5 +1,5 @@
 <template>
-  <a :href="`/careers/detail?id=${data.id}`">
+  <a :href="`/careers/detail?dataId=${data.id}`">
     <div class="notice-item">
       <div class="item-category">
         <div class="category">

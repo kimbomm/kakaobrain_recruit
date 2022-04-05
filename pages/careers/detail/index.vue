@@ -35,11 +35,6 @@
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
     mixins: [mixinGlobal],
-    asyncData(ctx) {
-      return {
-        id: ctx.query.id
-      }
-    },
     components: {
       BreadCrumb
     },
@@ -73,9 +68,7 @@
       async init() {
         const res = await this.postList({
           method: 'GET',
-          url: `https://api.lever.co/v0/postings/kakaobrain/${
-            this.id || this.$route.query.id
-          }`,
+          url: `https://api.lever.co/v0/postings/kakaobrain/${this.$route.query.dataId}`,
           formData: {}
         })
         if (res) {
