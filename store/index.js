@@ -2,7 +2,7 @@ import data from './data/common.js'
 import utility from '/util/utility.js'
 
 export const state = () => ({
-  language: 'EN',
+  language: 'KR',
   menus: data.menus,
   footerMenu: data.footer,
   isMenuOpen: false,

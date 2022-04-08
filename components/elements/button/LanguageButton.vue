@@ -45,7 +45,7 @@
         setLanguage: 'setLanguage'
       }),
       async selectLang(lang) {
-        localStorage.setItem('language', lang)
+        localStorage.setItem('career-language', lang)
         await this.setLanguage(lang)
         await window.location.reload(true)
       }

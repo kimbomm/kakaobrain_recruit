@@ -1328,14 +1328,14 @@ const RECOMMEND = {
           },
           {
             SmallTitle:
-              '<span class="font-icon">➁</span> 인재 추천서를 작성해 주세요.',
+              '<span class="font-icon">➁</span> 인재를 추천해 주세요.',
             ContentsText: [
-              '지원자가 지원서를 작성하기 전, 인재추천서 설문을 완료해 보내주시면 감사하겠습니다.'
+              '지원자가 지원서를 작성하기 전, 아래의 링크에서 먼저 추천해 주세요.'
             ],
             button: {
               isShow: true,
               text: 'Talent recommendation →',
-              link: 'https://docs.google.com/forms/d/e/1FAIpQLSdHKxwPEpPpuDEGuGxjf4C8dyi4rfVyqWCGnQmDb6Oat8FT_g/viewform',
+              link: 'https://jobs.lever.co/kakaobrain/d117008b-92d4-4202-b19c-eed16380a806',
               target: '_blank'
             }
           },
@@ -1446,7 +1446,7 @@ const RECOMMEND = {
             button: {
               isShow: true,
               text: 'Talent recommendation →',
-              link: 'https://docs.google.com/forms/d/e/1FAIpQLSdHKxwPEpPpuDEGuGxjf4C8dyi4rfVyqWCGnQmDb6Oat8FT_g/viewform',
+              link: 'https://jobs.lever.co/kakaobrain/d117008b-92d4-4202-b19c-eed16380a806',
               target: '_blank'
             }
           },
