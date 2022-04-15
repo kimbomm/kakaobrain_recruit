@@ -65,7 +65,7 @@
     beforeMount() {
       Vue.prototype.scrollBody = document.querySelector('.wrap')
       Vue.prototype.scrollLock = false
-      const language = localStorage.getItem('language')
+      const language = localStorage.getItem('career-language')
       if (language) {
         this.setLanguage(language)
       }
