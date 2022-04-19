@@ -1303,7 +1303,7 @@ const RECOMMEND = {
   KR: {
     MainTitle: '사외 추천 제도.',
     MainTitleText:
-      '카카오브레인과 함께 생각하지 못한 물음을 던지고, 아무도 가보지 않은 길을 개척할 Unthinkable Krew를 기다립니다.</br>함께할 인재를 추천해 주세요.',
+      '카카오브레인과 함께 생각하지 못한 물음을 던지고, 아무도 가보지 않은 길을 개척할 Unthinkable Krew를 기다립니다. 함께할 인재를 추천해 주세요.',
     contents: [
       {
         ContentsTitle: '구성원이 아니라도 누구나.',
@@ -1321,7 +1321,7 @@ const RECOMMEND = {
             ],
             button: {
               isShow: true,
-              text: 'Our Open Position →',
+              text: 'Find Your Role →',
               link: '/careers',
               target: ''
             }
@@ -1334,7 +1334,7 @@ const RECOMMEND = {
             ],
             button: {
               isShow: true,
-              text: 'Talent recommendation →',
+              text: 'External Referral Program →',
               link: 'https://jobs.lever.co/kakaobrain/d117008b-92d4-4202-b19c-eed16380a806',
               target: '_blank'
             }
@@ -1379,9 +1379,17 @@ const RECOMMEND = {
             ]
           }
         ],
-        ContentSubTitle: '지급 시점',
-        ContentsText:
-          '피추천인 입사 후 3개월 만근월 기준 **익월 10일**에 지급 드립니다.</br>단, 피추천인이나 추천인이 지급일 이전에 퇴직하는 경우 지급 대상에서 제외됩니다.</br>추천 대상자의 입사 시 보상금 지급을 위한 신분증 사본, 통장 사본 등을 요청할 수 있습니다.</br>보상금은 추천인의 기타 소득으로 처리되며, 소득세법 등 관련 규정에 따라 일부 세금(소득세 등)을 공제한 후 지급 드립니다.'
+        ref: [
+          {
+            ContentSubTitle: '지급 시점',
+            ContentsText: [
+              '피추천인 입사 후 3개월 만근월 기준 <strong>익월 10일</strong>에 지급 드립니다.',
+              '단, 피추천인이나 추천인이 지급일 이전에 퇴직하는 경우 지급 대상에서 제외됩니다.',
+              '추천 대상자의 입사 시 보상금 지급을 위한 신분증 사본, 통장 사본 등을 요청할 수 있습니다.',
+              '보상금은 추천인의 기타 소득으로 처리되며, 소득세법 등 관련 규정에 따라 일부 세금(소득세 등)을 공제한 후 지급 드립니다.'
+            ]
+          }
+        ]
       },
       {
         ContentsTitle:
@@ -1432,7 +1440,7 @@ const RECOMMEND = {
             ],
             button: {
               isShow: true,
-              text: 'Our Open Position →',
+              text: 'Find Your Role →',
               link: '/careers',
               target: ''
             }
@@ -1445,7 +1453,7 @@ const RECOMMEND = {
             ],
             button: {
               isShow: true,
-              text: 'Talent recommendation →',
+              text: 'External Referral Program →',
               link: 'https://jobs.lever.co/kakaobrain/d117008b-92d4-4202-b19c-eed16380a806',
               target: '_blank'
             }
@@ -1491,9 +1499,17 @@ const RECOMMEND = {
             ]
           }
         ],
-        ContentSubTitle: 'When is the reward paid',
-        ContentsText:
-          'Rewards will be paid on **10th of the following month** 3 months in full after the referred person joins the company.<br/>However, reward will not be paid if the referred or referring person resigns before the reward payment date.<br/>You may be requested to submit a copy of your ID card, copy of your bankbook, etc. for the reward payment if the referred person joins the company.<br/>The reward is regarded as other income of the referrer, which will be paid after deducting some taxes (income tax, etc.) under related regulations, including the Income Tax Act.'
+        ref: [
+          {
+            ContentSubTitle: 'When is the reward paid',
+            ContentsText: [
+              'Rewards will be paid on <strong>10th of the following month</strong> 3 months in full after the referred person joins the company.',
+              'However, reward will not be paid if the referred or referring person resigns before the reward payment date.',
+              'You may be requested to submit a copy of your ID card, copy of your bankbook, etc. for the reward payment if the referred person joins the company.',
+              'The reward is regarded as other income of the referrer, which will be paid after deducting some taxes (income tax, etc.) under related regulations, including the Income Tax Act.'
+            ]
+          }
+        ]
       },
       {
         ContentsTitle:
