@@ -39,14 +39,20 @@
                 </div>
               </div>
 
-              <ContentSubTitle
-                v-if="item.ContentSubTitle"
-                :tit="item.ContentSubTitle"
-              />
-              <ContentsText
-                v-if="item.ContentsText"
-                :text="item.ContentsText"
-              />
+              <div
+                v-for="(ref, idx) in item.ref"
+                :key="`ref-${idx}`"
+                class="list-box"
+              >
+                <ContentSubTitle :tit="ref.ContentSubTitle" />
+                <div class="box-text-con">
+                  <ContentsText
+                    v-for="text in ref.ContentsText"
+                    :key="text"
+                    :text="text"
+                  />
+                </div>
+              </div>
             </div>
           </template>
         </li>
