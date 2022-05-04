@@ -189,6 +189,17 @@
       color: #fff;
       line-height: 1.3;
       font-style: italic;
+      &:after {
+        content: '';
+        display: inline-block;
+        margin-left: 10px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $kakao-yellow;
+        position: relative;
+        top: 3px;
+      }
     }
   }
   @include pc-large {
@@ -212,6 +223,11 @@
       }
       .apply {
         font-size: 24px;
+        &:after {
+          width: 10px;
+          height: 10px;
+          top: 5px;
+        }
       }
     }
   }
@@ -239,6 +255,11 @@
       }
       .apply {
         font-size: 34px;
+        &:after {
+          width: 14px;
+          height: 14px;
+          top: 7px;
+        }
       }
     }
   }
@@ -276,6 +297,12 @@
         height: 46px;
         font-size: 14px;
         padding: 0 18.5px;
+        &:after {
+          width: 6px;
+          height: 6px;
+          margin-left: 6px;
+          top: 2px;
+        }
       }
     }
   }
@@ -304,6 +331,9 @@
         bottom: 20px;
         font-size: 16px;
         padding: 0 20px;
+        &:after {
+          margin-left: 4px;
+        }
       }
     }
   }
