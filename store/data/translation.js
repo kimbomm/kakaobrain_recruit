@@ -1419,7 +1419,7 @@ const RECOMMEND = {
     ]
   },
   EN: {
-    MainTitle: 'External Referral System.',
+    MainTitle: 'External Referral Program.',
     MainTitleText:
       'We are waiting for the Unthinkable krew, who can ask unthinkable questions and pioneer a path that no one has taken. Recommend us talents to work together.',
     contents: [
