@@ -1341,7 +1341,7 @@ const RECOMMEND = {
           },
           {
             SmallTitle:
-              '<span class="font-icon">➂</span> 지원자에게 해당 공고에 지원하도록 알려 주세요.',
+              '<span class="font-icon">➂</span> 서류 검토 후 결과 안내에 놀라지 않도록 피추천인에게 카카오브레인 지원 사실을 먼저 알려 주세요. 서류 전형에 통과한 분에 한하여, 추천인에게 서류 전형 및 최종 합격 여부를 메일 안내 드립니다.',
             ContentsText: [
               '지원자가 지원서 작성시 추천인 란에 추천인을 작성하여 제출하도록 알려주세요.',
               '서류 전형에 통과한 분에 한하여, 서류 전형 및 최종 합격 여부를 메일 안내 드립니다.'
@@ -1374,8 +1374,7 @@ const RECOMMEND = {
           {
             SmallTitle: '보상금 : 경력 300만원 / 신입 100만원',
             ContentsText: [
-              '신입 기준은 인정 경력 2년 미만 대상을 의미합니다. 단, 인턴/아르바이트 경력은 인정되지 않는 점 참고해 주세요.',
-              '사외 추천 보상금은 피추천인의 지원서 상의 추천인과 동일한 추천인에게 지급됩니다.'
+              '신입 기준은 인정 경력 2년 미만 대상을 의미합니다. 단, 인턴/아르바이트 경력은 인정되지 않는 점 참고해 주세요.'
             ]
           }
         ],
@@ -1384,7 +1383,7 @@ const RECOMMEND = {
             ContentSubTitle: '지급 시점',
             ContentsText: [
               '피추천인 입사 후 3개월 만근월 기준 <strong>익월 10일</strong>에 지급 드립니다.',
-              '단, 피추천인이나 추천인이 지급일 이전에 퇴직하는 경우 지급 대상에서 제외됩니다.',
+              '단, 피추천인이 지급일 이전에 퇴직하는 경우 지급 대상에서 제외 됩니다.',
               '추천 대상자의 입사 시 보상금 지급을 위한 신분증 사본, 통장 사본 등을 요청할 수 있습니다.',
               '보상금은 추천인의 기타 소득으로 처리되며, 소득세법 등 관련 규정에 따라 일부 세금(소득세 등)을 공제한 후 지급 드립니다.'
             ]
@@ -1494,8 +1493,7 @@ const RECOMMEND = {
             SmallTitle:
               'Rewards: 3 million won for persons with experience / 1 million won for new hires',
             ContentsText: [
-              'New hires refer to those with less than two years of experience recognized. Please note that internships/part-time work experiences will not be considered as work experience.',
-              'The external referral reward is paid to the same referrer specified in the referred person&rsquo;s application form.'
+              'New hires refer to those with less than two years of experience recognized. Please note that internships/part-time work experiences will not be considered as work experience.'
             ]
           }
         ],
