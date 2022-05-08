@@ -89,7 +89,7 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios', '@nuxtjs/dayjs'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/dayjs', 'cookie-universal-nuxt'],
 
   dayjs: {
     locales: ['en', 'ko'],

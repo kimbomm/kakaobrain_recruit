@@ -38,7 +38,6 @@
             </ul>
           </li>
         </ul>
-        <LanguageButton :isAnimation="isAnimation" />
         <MobMenuFooter @onClose="onClose" />
       </div>
     </div>
@@ -48,12 +47,10 @@
   import { mapState, mapMutations } from 'vuex'
   import Icon from '@/components/elements/Icon'
   import MobMenuFooter from '@/components/layouts/MobMenuFooter'
-  import LanguageButton from '@/components/elements/button/LanguageButton'
   export default {
     components: {
       Icon,
-      MobMenuFooter,
-      LanguageButton
+      MobMenuFooter
     },
     data() {
       return {

@@ -1,5 +1,5 @@
 <template>
-  <div :class="classBind">
+  <div :class="classBind" @click="pageClick">
     <div class="l-pages">
       <Header />
       <div class="container">
@@ -65,7 +65,7 @@
     beforeMount() {
       Vue.prototype.scrollBody = document.querySelector('.wrap')
       Vue.prototype.scrollLock = false
-      const language = localStorage.getItem('career-language')
+      const language = this.$cookies.get('brain_careers_language')
       if (language) {
         this.setLanguage(language)
       }
@@ -126,6 +126,15 @@
           this.setIsScrollUp(false)
         }
         this.prevY = this.scrollBody.scrollTop
+      },
+      pageClick(e) {
+        if (
+          (e.target.offsetParent &&
+            !e.target.offsetParent.classList.contains('menu-item')) ||
+          !e.target.offsetParent
+        ) {
+          this.$nuxt.$emit('closeMenu', true)
+        }
       }
     }
   }

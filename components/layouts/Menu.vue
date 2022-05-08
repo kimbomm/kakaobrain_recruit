@@ -1,80 +1,75 @@
 <template>
-  <div>
+  <div class="menu">
     <div :class="classBind">
       <div class="menu-list">
-        <ul>
+        <ul :class="{ 'menu-enter': isHover }">
           <li
             v-for="(menu, index) in menus"
             :key="`menu-${index}`"
             class="menu-item"
-            @mouseenter="setIsMenuOpen(true)"
+            @mouseenter=";(hoverIndex = index), (isHover = true)"
+            @mouseleave="isHover = false"
           >
             <button type="button">
               <span class="txt">{{ menu.name[language] }}</span>
             </button>
+            <ul
+              v-show="clickIndex === index"
+              :ref="`subMenu-${index}`"
+              :id="`subMenu-${index}`"
+              :class="`subMenu-${index}`"
+            >
+              <li v-for="subMenu in menu.sub" :key="subMenu.category">
+                <a
+                  v-if="subMenu.target"
+                  :href="subMenu.link"
+                  :target="subMenu.target"
+                  @click.prevent="clickIndex = null"
+                >
+                  {{ subMenu.name }}
+                </a>
+                <nuxt-link v-else exact :to="subMenu.link">
+                  {{ subMenu.name }}
+                </nuxt-link>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
+    </div>
+    <div
+      :class="{
+        'common-menu': true,
+        'hide-target': true,
+        'is-hide': isScrollUp
+      }"
+    >
+      <button
+        :class="`btn-lang ${cookieLang}`"
+        @click="selectLang(cookieLang === 'KR' ? 'EN' : 'KR')"
+      ></button>
     </div>
     <button
       :class="{ 'menu-btn': true, 'hide-target': true, 'is-hide': isScrollUp }"
       @click="setIsMenuOpen(true)"
       title="메뉴 열기"
     ></button>
-    <transition name="slide">
-      <div v-if="isMenuOpen" class="hide" @mouseleave="setIsMenuOpen(false)">
-        <LanguageButton :isAnimation="isAnimation" />
-        <div class="menu">
-          <ul>
-            <li
-              v-for="(menu, index) in menus"
-              :key="`menu-${index}`"
-              class="menu-item"
-            >
-              <span :class="`animation ${isAnimation ? 'fade-up' : ''}`">{{
-                menu.name[language]
-              }}</span>
-              <ul class="sub">
-                <li
-                  v-for="(subMenu, idx) in menu.sub"
-                  :key="`sub-${idx}`"
-                  :class="`sub-item animation delay-${idx} ${
-                    isAnimation ? 'fade-up' : ''
-                  }`"
-                  @click="setIsMenuOpen(false)"
-                >
-                  <template v-if="subMenu.name !== 'Principle'">
-                    <nuxt-link :to="subMenu.link">{{
-                      subMenu.name[language]
-                    }}</nuxt-link>
-                  </template>
-                  <template v-else>
-                    <a :href="principleLink" target="_blank">{{
-                      subMenu.name[language]
-                    }}</a>
-                  </template>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </transition>
   </div>
 </template>
 <script>
   import { mapState, mapMutations } from 'vuex'
   import MobMenu from '@/components/layouts/MobMenu'
-  import LanguageButton from '@/components/elements/button/LanguageButton'
   export default {
     components: {
-      MobMenu,
-      LanguageButton
+      MobMenu
     },
     data() {
       return {
         isMenu: false,
         isAnimation: false,
+        isHover: false,
+        hoverIndex: null,
+        clickIndex: null,
         languageList: [
           { name: 'English', value: 'EN' },
           { name: 'Korean', value: 'KR' }
@@ -96,6 +91,9 @@
         }
 
         return classList.join(' ')
+      },
+      cookieLang() {
+        return this.$cookies.get('brain_careers_language') || this.language
       }
     },
     watch: {
@@ -111,6 +109,9 @@
         }
       }
     },
+    created() {
+      this.$nuxt.$on('closeMenu', this.closeMenu)
+    },
     methods: {
       ...mapMutations({
         setLanguage: 'setLanguage',
@@ -120,9 +121,33 @@
         this.isMenu = value
       },
       async selectLang(lang) {
-        localStorage.setItem('career-language', lang)
+        this.$cookies.set('brain_careers_language', lang)
         await this.setLanguage(lang)
         await window.location.reload(true)
+      },
+      openMenu(index) {
+        if (this.clickIndex === index) {
+          this.clickIndex = null
+        } else {
+          this.clickIndex = index
+          this.$nextTick(() => {
+            const menu = this.$refs[`subMenu-${index}`][0]
+            const subMenuPos =
+              menu.parentElement.offsetLeft +
+              menu.parentElement.offsetWidth / 2 +
+              menu.offsetWidth / 2
+            if (subMenuPos > window.innerWidth) {
+              menu.style.left = `calc(50% - ${
+                subMenuPos - window.innerWidth + 20
+              }px)`
+            }
+          })
+        }
+      },
+      closeMenu() {
+        if (this.clickIndex >= 0) {
+          this.clickIndex = null
+        }
       }
     }
   }
@@ -130,9 +155,12 @@
 <style lang="scss" scoped>
   .menu {
     z-index: 10;
+    display: flex;
     &-item {
+      position: relative;
       display: inline-block;
       font-weight: 900;
+      padding: 0 0 10px;
       &:not(:last-child) {
         margin-right: 30px;
       }
@@ -152,6 +180,45 @@
         background-color: rgba(0, 0, 0, 0);
         color: $gray-9;
       }
+      ul {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 30px;
+        border-radius: 78px;
+        background-color: #000;
+        display: flex;
+        white-space: nowrap;
+        li {
+          margin-right: 30px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        a {
+          font-size: 14px;
+          line-height: 2.1;
+          color: #fff;
+          font-weight: 400;
+          &.nuxt-link-active,
+          &:hover {
+            color: $brain-yellow;
+          }
+        }
+      }
+    }
+    .menu-enter {
+      .menu-item {
+        button {
+          color: $gray-5;
+        }
+        &:hover {
+          button {
+            color: #000;
+          }
+        }
+      }
     }
     &__light {
       .menu-item button {
@@ -170,66 +237,18 @@
     background-size: cover;
     background-position: center center;
   }
-  .hide {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transition: all 0.3s ease-in-out;
-    .language {
-      position: absolute;
-      right: 30px;
-      top: 20px;
-      z-index: 10;
-      cursor: pointer;
-    }
-    text-align: center;
-    .menu {
-      // position: fixed;
-      // left: 0;
-      // right: 0;
-      // top: 0;
-      padding: 90px 0 84px;
-      background-color: $gray-9;
-      &-item {
-        text-align: left;
-        vertical-align: top;
-        color: $gray-0;
-        font-size: 22px;
-        line-height: 1.3;
-        &:not(:last-child) {
-          margin-right: 50px;
-        }
+  .common-menu {
+    font-size: 0;
+    margin-left: 30px;
+    button {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
       }
-    }
-    .sub {
-      margin-top: 30px;
-      &-item {
-        font-size: 14px;
-        line-height: 2.3;
-        font-weight: 400;
-        a {
-          position: relative;
-          color: $gray-0;
-          &:before {
-            content: '';
-            position: absolute;
-            display: inline-block;
-            bottom: -2px;
-            left: 0;
-            height: 1px;
-            background-color: #fff;
-            width: 40%;
-            opacity: 0;
-            transition: all 0.3s ease-out;
-          }
-          &:hover {
-            &:before {
-              width: 100%;
-              opacity: 1;
-            }
-          }
-        }
+      img {
+        width: 100%;
       }
     }
   }
@@ -240,11 +259,24 @@
         font-size: 22px;
       }
     }
+    .common-menu {
+      margin-left: 36px;
+      button {
+        width: 26px;
+        height: 26px;
+      }
+    }
   }
   @include pc-4k {
     .menu-item {
       .txt {
         font-size: 34px;
+      }
+    }
+    .common-menu {
+      button {
+        width: 40px;
+        height: 40px;
       }
     }
   }
@@ -258,6 +290,14 @@
     .menu-btn {
       display: block;
     }
+    .common-menu {
+      margin-left: 0;
+      margin-right: 5px;
+      button {
+        width: 40px;
+        height: 40px;
+      }
+    }
   }
   @include mobile {
     .menu-btn {
@@ -266,6 +306,13 @@
       right: 15px;
       width: 30px;
       height: 30px;
+    }
+    .common-menu {
+      margin-right: 35px;
+      button {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 </style>
