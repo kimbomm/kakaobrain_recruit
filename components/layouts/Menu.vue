@@ -10,7 +10,7 @@
             @mouseenter=";(hoverIndex = index), (isHover = true)"
             @mouseleave="isHover = false"
           >
-            <button type="button">
+            <button type="button" @click="openMenu(index)">
               <span class="txt">{{ menu.name[language] }}</span>
             </button>
             <ul
@@ -26,10 +26,10 @@
                   :target="subMenu.target"
                   @click.prevent="clickIndex = null"
                 >
-                  {{ subMenu.name }}
+                  {{ subMenu.name[cookieLang] }}
                 </a>
                 <nuxt-link v-else exact :to="subMenu.link">
-                  {{ subMenu.name }}
+                  {{ subMenu.name[cookieLang] }}
                 </nuxt-link>
               </li>
             </ul>
