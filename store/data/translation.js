@@ -1063,7 +1063,7 @@ const WELFARE = {
         'Read thoroughly and compare.</br>True sincerity for the krew.',
       benefitsList: [
         {
-          title: '25 days of annually paid leave?',
+          title: '25 days of annually paid leave',
           titleText: 'Same paid leave regardless of the years of service.',
           content: `
             <div class="folding-item">25 days/year are paid based on full-time work for one year. (Part-time employees are paid on a pro-rata basis depending on the working period of the current year)</div>
