@@ -135,10 +135,12 @@
             const subMenuPos =
               menu.parentElement.offsetLeft +
               menu.parentElement.offsetWidth / 2 +
-              menu.offsetWidth / 2
-            if (subMenuPos > window.innerWidth) {
+              menu.offsetWidth / 2 +
+              20
+            console.log(subMenuPos, window.innerWidth)
+            if (subMenuPos >= window.innerWidth) {
               menu.style.left = `calc(50% - ${
-                subMenuPos - window.innerWidth + 40
+                subMenuPos - window.innerWidth + 20
               }px)`
             }
           })

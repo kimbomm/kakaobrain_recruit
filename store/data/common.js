@@ -54,7 +54,7 @@ const menus = [
       {
         name: {
           KR: '인턴 체험스토리',
-          EN: 'Pathfinder Story'
+          EN: 'Internship Experiences'
         },
         link: '/company/intern'
       },

@@ -44,7 +44,7 @@
           ],
           EN: [
             { text: 'Company', sub: 'sub', link: '' },
-            { text: 'Intership Experiences', sub: '', link: '' }
+            { text: 'Internship Experiences', sub: '', link: '' }
           ]
         }
       }
