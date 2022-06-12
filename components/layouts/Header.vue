@@ -60,7 +60,6 @@
       font-weight: 900;
       z-index: 3;
       img {
-        width: 80px;
         height: 20px;
         vertical-align: middle;
       }
@@ -82,7 +81,6 @@
     .header {
       .b-logo {
         img {
-          width: 108px;
           height: 27px;
         }
       }
@@ -96,7 +94,6 @@
     .header {
       .b-logo {
         img {
-          width: 176px;
           height: 44px;
         }
       }
@@ -112,7 +109,6 @@
       align-items: flex-start;
       .b-logo {
         img {
-          width: 84px;
           height: 21px;
         }
       }

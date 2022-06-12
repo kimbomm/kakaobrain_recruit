@@ -115,13 +115,14 @@
       align-items: flex-start;
       padding: 16px 20px 0 20px;
       img {
-        width: 84px;
+        height: 21px;
       }
       button {
         width: 40px;
         height: 40px;
         img {
           width: 100%;
+          height: auto;
         }
       }
     }
