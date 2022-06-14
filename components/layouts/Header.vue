@@ -48,20 +48,17 @@
     z-index: 20;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: nowrap;
     font-size: 16px;
     line-height: 1.3;
     &-top {
       display: flex;
-      align-items: flex-end;
     }
     .b-logo {
       font-weight: 900;
       z-index: 3;
       img {
         height: 20px;
-        vertical-align: middle;
       }
     }
     &-con {
@@ -112,6 +109,9 @@
           height: 21px;
         }
       }
+      &-con {
+        display: none;
+      }
     }
   }
   @include mobile {
@@ -129,9 +129,6 @@
     .header,
     .header-item {
       font-size: 18px;
-      &-con {
-        display: none;
-      }
     }
   }
 </style>
