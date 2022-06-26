@@ -86,6 +86,7 @@
         font-size: 12px;
         line-height: 1.3;
         color: #fff;
+        font-weight: 600;
       }
     }
   }
