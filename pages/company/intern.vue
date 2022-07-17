@@ -43,7 +43,7 @@
           {
             hid: 'og:image',
             name: 'og:image',
-            content: process.env.BASE_URL + '/meta/meta_careers_company.png'
+            content: this.$config.url + '/meta/meta_careers_company.png'
           }
         ]
       }

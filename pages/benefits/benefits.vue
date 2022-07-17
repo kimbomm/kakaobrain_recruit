@@ -44,7 +44,7 @@
             hid: 'og:image',
             name: 'og:image',
             content:
-              process.env.BASE_URL + '/meta/meta_careers_Like_at_KakaoBrain.png'
+              this.$config.url + '/meta/meta_careers_Like_at_KakaoBrain.png'
           }
         ]
       }
