@@ -26,6 +26,28 @@
   import Interview from '@/components/company/Interview'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head() {
+      return {
+        title: 'Kakao Brain Careers, Internship Experiences',
+        meta: [
+          {
+            hid: 'og-title',
+            name: 'og:title',
+            content: 'Kakao Brain Careers, Internship Experiences'
+          },
+          {
+            hid: 'og:url',
+            name: 'og:url',
+            content: 'https://careers.kakaobrain.com/intern'
+          },
+          {
+            hid: 'og:image',
+            name: 'og:image',
+            content: process.env.BASE_URL + '/meta/meta_careers_company.png'
+          }
+        ]
+      }
+    },
     mixins: [mixinGlobal],
     name: 'intern',
     components: {

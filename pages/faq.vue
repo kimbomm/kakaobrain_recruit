@@ -42,6 +42,28 @@
   import FoldingBox from '@/components/elements/button/FoldingBox'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head() {
+      return {
+        title: 'Kakao Brain Careers, FAQ',
+        meta: [
+          {
+            hid: 'og-title',
+            name: 'og:title',
+            content: 'Kakao Brain Careers, FAQ'
+          },
+          {
+            hid: 'og:url',
+            name: 'og:url',
+            content: 'https://careers.kakaobrain.com/faq'
+          },
+          {
+            hid: 'og:image',
+            name: 'og:image',
+            content: process.env.BASE_URL + '/meta/meta_careers_careers.png'
+          }
+        ]
+      }
+    },
     mixins: [mixinGlobal],
     components: {
       MainTitle,

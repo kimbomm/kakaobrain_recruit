@@ -65,6 +65,28 @@
   import ContentsInfo from '@/components/company/ContentsInfo'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head() {
+      return {
+        title: 'Kakao Brain Careers, Cyber Ethics',
+        meta: [
+          {
+            hid: 'og-title',
+            name: 'og:title',
+            content: 'Kakao Brain Careers, Cyber Ethics'
+          },
+          {
+            hid: 'og:url',
+            name: 'og:url',
+            content: 'https://careers.kakaobrain.com/ethics'
+          },
+          {
+            hid: 'og:image',
+            name: 'og:image',
+            content: process.env.BASE_URL + '/meta/meta_careers_company.png'
+          }
+        ]
+      }
+    },
     mixins: [mixinGlobal],
     name: 'ethics',
     components: {

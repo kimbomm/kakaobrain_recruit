@@ -28,6 +28,28 @@
   import Procedure from '@/components/company/Procedure'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head() {
+      return {
+        title: 'Kakao Brain Careers, Job Openings',
+        meta: [
+          {
+            hid: 'og-title',
+            name: 'og:title',
+            content: 'Kakao Brain Careers, Job Openings'
+          },
+          {
+            hid: 'og:url',
+            name: 'og:url',
+            content: 'https://careers.kakaobrain.com/careers/process'
+          },
+          {
+            hid: 'og:image',
+            name: 'og:image',
+            content: process.env.BASE_URL + '/meta/meta_careers_careers.png'
+          }
+        ]
+      }
+    },
     mixins: [mixinGlobal],
     name: 'process',
     components: {

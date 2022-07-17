@@ -72,6 +72,28 @@
   import ContentSubTitle from '@/components/company//ContentSubTitle'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head() {
+      return {
+        title: 'Kakao Brain Careers, External Referral Program',
+        meta: [
+          {
+            hid: 'og-title',
+            name: 'og:title',
+            content: 'Kakao Brain Careers, External Referral Program'
+          },
+          {
+            hid: 'og:url',
+            name: 'og:url',
+            content: 'https://careers.kakaobrain.com/referral'
+          },
+          {
+            hid: 'og:image',
+            name: 'og:image',
+            content: process.env.BASE_URL + '/meta/meta_careers_careers.png'
+          }
+        ]
+      }
+    },
     mixins: [mixinGlobal],
     name: 'recommend',
     components: {

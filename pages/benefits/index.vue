@@ -88,6 +88,29 @@
   import SmallTitle from '@/components/company//SmallTitle'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head() {
+      return {
+        title: 'Kakao Brain Careers, Remote work and flextime working',
+        meta: [
+          {
+            hid: 'og-title',
+            name: 'og:title',
+            content: 'Kakao Brain Careers, Remote work and flextime working'
+          },
+          {
+            hid: 'og:url',
+            name: 'og:url',
+            content: 'https://careers.kakaobrain.com/benefits'
+          },
+          {
+            hid: 'og:image',
+            name: 'og:image',
+            content:
+              process.env.BASE_URL + '/meta/meta_careers_Like_at_KakaoBrain.png'
+          }
+        ]
+      }
+    },
     mixins: [mixinGlobal],
     name: 'index',
     components: {

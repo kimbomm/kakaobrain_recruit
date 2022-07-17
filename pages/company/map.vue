@@ -22,6 +22,28 @@
   import BusInquiry from '@/components/company/BusInquiry'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head() {
+      return {
+        title: 'Kakao Brain Careers, Maps & Directions',
+        meta: [
+          {
+            hid: 'og-title',
+            name: 'og:title',
+            content: 'Kakao Brain Careers, Maps & Directions'
+          },
+          {
+            hid: 'og:url',
+            name: 'og:url',
+            content: 'https://careers.kakaobrain.com/map'
+          },
+          {
+            hid: 'og:image',
+            name: 'og:image',
+            content: process.env.BASE_URL + '/meta/meta_careers_company.png'
+          }
+        ]
+      }
+    },
     mixins: [mixinGlobal],
     name: 'map',
     components: {
