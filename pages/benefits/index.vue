@@ -94,17 +94,17 @@
         meta: [
           {
             hid: 'og-title',
-            name: 'og:title',
+            property: 'og:title',
             content: 'Kakao Brain Careers, Remote work and flextime working'
           },
           {
             hid: 'og:url',
-            name: 'og:url',
+            property: 'og:url',
             content: 'https://careers.kakaobrain.com/benefits'
           },
           {
             hid: 'og:image',
-            name: 'og:image',
+            property: 'og:image',
             content:
               this.$config.url + '/meta/meta_careers_Like_at_KakaoBrain.png'
           }

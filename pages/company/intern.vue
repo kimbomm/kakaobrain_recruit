@@ -32,17 +32,17 @@
         meta: [
           {
             hid: 'og-title',
-            name: 'og:title',
+            property: 'og:title',
             content: 'Kakao Brain Careers, Internship Experiences'
           },
           {
             hid: 'og:url',
-            name: 'og:url',
+            property: 'og:url',
             content: 'https://careers.kakaobrain.com/intern'
           },
           {
             hid: 'og:image',
-            name: 'og:image',
+            property: 'og:image',
             content: this.$config.url + '/meta/meta_careers_company.png'
           }
         ]

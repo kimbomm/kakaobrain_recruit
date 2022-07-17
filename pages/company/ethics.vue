@@ -71,17 +71,17 @@
         meta: [
           {
             hid: 'og-title',
-            name: 'og:title',
+            property: 'og:title',
             content: 'Kakao Brain Careers, Cyber Ethics'
           },
           {
             hid: 'og:url',
-            name: 'og:url',
+            property: 'og:url',
             content: 'https://careers.kakaobrain.com/ethics'
           },
           {
             hid: 'og:image',
-            name: 'og:image',
+            property: 'og:image',
             content: this.$config.url + '/meta/meta_careers_company.png'
           }
         ]

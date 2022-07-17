@@ -57,17 +57,17 @@
         meta: [
           {
             hid: 'og-title',
-            name: 'og:title',
+            property: 'og:title',
             content: 'Kakao Brain Careers'
           },
           {
             hid: 'og:url',
-            name: 'og:url',
+            property: 'og:url',
             content: 'https://careers.kakaobrain.com/careers'
           },
           {
             hid: 'og:image',
-            name: 'og:image',
+            property: 'og:image',
             content: this.$config.url + '/meta/meta_careers_careers.png'
           }
         ]
