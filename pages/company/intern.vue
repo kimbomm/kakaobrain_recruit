@@ -28,22 +28,23 @@
   export default {
     head() {
       return {
-        title: 'Kakao Brain Careers, Internship Experiences',
+        // title: 'Kakao Brain Careers, Internship Experiences',
         meta: [
-          {
-            hid: 'og-title',
-            property: 'og:title',
-            content: 'Kakao Brain Careers, Internship Experiences'
-          },
-          {
-            hid: 'og:url',
-            property: 'og:url',
-            content: 'https://careers.kakaobrain.com/intern'
-          },
+          // {
+          //   hid: 'og-title',
+          //   property: 'og:title',
+          //   content: 'Kakao Brain Careers, Internship Experiences'
+          // },
+          // {
+          //   hid: 'og:url',
+          //   property: 'og:url',
+          //   content: 'https://careers.kakaobrain.com/intern'
+          // },
           {
             hid: 'og:image',
             property: 'og:image',
-            content: this.$config.url + '/meta/meta_careers_company.png'
+            content:
+              'https://careers.stgkakaobrain.com/meta/meta_careers_company.png'
           }
         ]
       }

@@ -30,22 +30,23 @@
   export default {
     head() {
       return {
-        title: 'Kakao Brain Careers, Job Openings',
+        // title: 'Kakao Brain Careers, Job Openings',
         meta: [
-          {
-            hid: 'og-title',
-            property: 'og:title',
-            content: 'Kakao Brain Careers, Job Openings'
-          },
-          {
-            hid: 'og:url',
-            property: 'og:url',
-            content: 'https://careers.kakaobrain.com/careers/process'
-          },
+          // {
+          //   hid: 'og-title',
+          //   property: 'og:title',
+          //   content: 'Kakao Brain Careers, Job Openings'
+          // },
+          // {
+          //   hid: 'og:url',
+          //   property: 'og:url',
+          //   content: 'https://careers.kakaobrain.com/careers/process'
+          // },
           {
             hid: 'og:image',
             property: 'og:image',
-            content: this.$config.url + '/meta/meta_careers_careers.png'
+            content:
+              'https://careers.stgkakaobrain.com/meta/meta_careers_careers.png'
           }
         ]
       }

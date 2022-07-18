@@ -24,22 +24,23 @@
   export default {
     head() {
       return {
-        title: 'Kakao Brain Careers, Maps & Directions',
+        // title: 'Kakao Brain Careers, Maps & Directions',
         meta: [
-          {
-            hid: 'og-title',
-            property: 'og:title',
-            content: 'Kakao Brain Careers, Maps & Directions'
-          },
-          {
-            hid: 'og:url',
-            property: 'og:url',
-            content: 'https://careers.kakaobrain.com/map'
-          },
+          // {
+          //   hid: 'og-title',
+          //   property: 'og:title',
+          //   content: 'Kakao Brain Careers, Maps & Directions'
+          // },
+          // {
+          //   hid: 'og:url',
+          //   property: 'og:url',
+          //   content: 'https://careers.kakaobrain.com/map'
+          // },
           {
             hid: 'og:image',
             property: 'og:image',
-            content: this.$config.url + '/meta/meta_careers_company.png'
+            content:
+              'https://careers.stgkakaobrain.com/meta/meta_careers_company.png'
           }
         ]
       }

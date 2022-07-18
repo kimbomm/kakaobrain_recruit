@@ -44,22 +44,23 @@
   export default {
     head() {
       return {
-        title: 'Kakao Brain Careers, FAQ',
+        // title: 'Kakao Brain Careers, FAQ',
         meta: [
-          {
-            hid: 'og-title',
-            property: 'og:title',
-            content: 'Kakao Brain Careers, FAQ'
-          },
-          {
-            hid: 'og:url',
-            property: 'og:url',
-            content: 'https://careers.kakaobrain.com/faq'
-          },
+          // {
+          //   hid: 'og-title',
+          //   property: 'og:title',
+          //   content: 'Kakao Brain Careers, FAQ'
+          // },
+          // {
+          //   hid: 'og:url',
+          //   property: 'og:url',
+          //   content: 'https://careers.kakaobrain.com/faq'
+          // },
           {
             hid: 'og:image',
             property: 'og:image',
-            content: this.$config.url + '/meta/meta_careers_careers.png'
+            content:
+              'https://careers.stgkakaobrain.com/meta/meta_careers_careers.png'
           }
         ]
       }

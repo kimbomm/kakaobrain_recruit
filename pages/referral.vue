@@ -74,22 +74,23 @@
   export default {
     head() {
       return {
-        title: 'Kakao Brain Careers, External Referral Program',
+        // title: 'Kakao Brain Careers, External Referral Program',
         meta: [
-          {
-            hid: 'og-title',
-            property: 'og:title',
-            content: 'Kakao Brain Careers, External Referral Program'
-          },
-          {
-            hid: 'og:url',
-            property: 'og:url',
-            content: 'https://careers.kakaobrain.com/referral'
-          },
+          // {
+          //   hid: 'og-title',
+          //   property: 'og:title',
+          //   content: 'Kakao Brain Careers, External Referral Program'
+          // },
+          // {
+          //   hid: 'og:url',
+          //   property: 'og:url',
+          //   content: 'https://careers.kakaobrain.com/referral'
+          // },
           {
             hid: 'og:image',
             property: 'og:image',
-            content: this.$config.url + '/meta/meta_careers_careers.png'
+            content:
+              'https://careers.stgkakaobrain.com/meta/meta_careers_careers.png'
           }
         ]
       }
