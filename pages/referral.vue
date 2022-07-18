@@ -72,28 +72,26 @@
   import ContentSubTitle from '@/components/company//ContentSubTitle'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
-    head() {
-      return {
-        // title: 'Kakao Brain Careers, External Referral Program',
-        meta: [
-          // {
-          //   hid: 'og-title',
-          //   property: 'og:title',
-          //   content: 'Kakao Brain Careers, External Referral Program'
-          // },
-          // {
-          //   hid: 'og:url',
-          //   property: 'og:url',
-          //   content: 'https://careers.kakaobrain.com/referral'
-          // },
-          {
-            hid: 'og:image',
-            property: 'og:image',
-            content:
-              'https://careers.stgkakaobrain.com/meta/meta_careers_careers.png'
-          }
-        ]
-      }
+    head: {
+      // title: 'Kakao Brain Careers, External Referral Program',
+      meta: [
+        // {
+        //   hid: 'og-title',
+        //   property: 'og:title',
+        //   content: 'Kakao Brain Careers, External Referral Program'
+        // },
+        // {
+        //   hid: 'og:url',
+        //   property: 'og:url',
+        //   content: 'https://careers.kakaobrain.com/referral'
+        // },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://careers.stgkakaobrain.com/meta/meta_careers_careers.png'
+        }
+      ]
     },
     mixins: [mixinGlobal],
     name: 'recommend',

@@ -22,28 +22,26 @@
   import BusInquiry from '@/components/company/BusInquiry'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
-    head() {
-      return {
-        // title: 'Kakao Brain Careers, Maps & Directions',
-        meta: [
-          // {
-          //   hid: 'og-title',
-          //   property: 'og:title',
-          //   content: 'Kakao Brain Careers, Maps & Directions'
-          // },
-          // {
-          //   hid: 'og:url',
-          //   property: 'og:url',
-          //   content: 'https://careers.kakaobrain.com/map'
-          // },
-          {
-            hid: 'og:image',
-            property: 'og:image',
-            content:
-              'https://careers.stgkakaobrain.com/meta/meta_careers_company.png'
-          }
-        ]
-      }
+    head: {
+      // title: 'Kakao Brain Careers, Maps & Directions',
+      meta: [
+        // {
+        //   hid: 'og-title',
+        //   property: 'og:title',
+        //   content: 'Kakao Brain Careers, Maps & Directions'
+        // },
+        // {
+        //   hid: 'og:url',
+        //   property: 'og:url',
+        //   content: 'https://careers.kakaobrain.com/map'
+        // },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://careers.stgkakaobrain.com/meta/meta_careers_company.png'
+        }
+      ]
     },
     mixins: [mixinGlobal],
     name: 'map',

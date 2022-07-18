@@ -26,28 +26,26 @@
   import FoldingBox from '@/components/elements/button/FoldingBox'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
-    head() {
-      return {
-        // title: 'Kakao Brain Careers, Welfare benefits',
-        meta: [
-          // {
-          //   hid: 'og-title',
-          //   property: 'og:title',
-          //   content: 'Kakao Brain Careers, Welfare benefits'
-          // },
-          // {
-          //   hid: 'og:url',
-          //   property: 'og:url',
-          //   content: 'https://careers.kakaobrain.com/benefits/benefits'
-          // },
-          {
-            hid: 'og:image',
-            property: 'og:image',
-            content:
-              'https://careers.stgkakaobrain.com/meta/meta_careers_Like_at_KakaoBrain.png'
-          }
-        ]
-      }
+    head: {
+      // title: 'Kakao Brain Careers, Welfare benefits',
+      meta: [
+        // {
+        //   hid: 'og-title',
+        //   property: 'og:title',
+        //   content: 'Kakao Brain Careers, Welfare benefits'
+        // },
+        // {
+        //   hid: 'og:url',
+        //   property: 'og:url',
+        //   content: 'https://careers.kakaobrain.com/benefits/benefits'
+        // },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://careers.stgkakaobrain.com/meta/meta_careers_Like_at_KakaoBrain.png'
+        }
+      ]
     },
     mixins: [mixinGlobal],
     name: 'benefits',

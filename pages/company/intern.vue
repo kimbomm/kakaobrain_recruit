@@ -26,28 +26,26 @@
   import Interview from '@/components/company/Interview'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
-    head() {
-      return {
-        // title: 'Kakao Brain Careers, Internship Experiences',
-        meta: [
-          // {
-          //   hid: 'og-title',
-          //   property: 'og:title',
-          //   content: 'Kakao Brain Careers, Internship Experiences'
-          // },
-          // {
-          //   hid: 'og:url',
-          //   property: 'og:url',
-          //   content: 'https://careers.kakaobrain.com/intern'
-          // },
-          {
-            hid: 'og:image',
-            property: 'og:image',
-            content:
-              'https://careers.stgkakaobrain.com/meta/meta_careers_company.png'
-          }
-        ]
-      }
+    head: {
+      // title: 'Kakao Brain Careers, Internship Experiences',
+      meta: [
+        // {
+        //   hid: 'og-title',
+        //   property: 'og:title',
+        //   content: 'Kakao Brain Careers, Internship Experiences'
+        // },
+        // {
+        //   hid: 'og:url',
+        //   property: 'og:url',
+        //   content: 'https://careers.kakaobrain.com/intern'
+        // },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://careers.stgkakaobrain.com/meta/meta_careers_company.png'
+        }
+      ]
     },
     mixins: [mixinGlobal],
     name: 'intern',

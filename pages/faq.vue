@@ -42,28 +42,26 @@
   import FoldingBox from '@/components/elements/button/FoldingBox'
   import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
-    head() {
-      return {
-        // title: 'Kakao Brain Careers, FAQ',
-        meta: [
-          // {
-          //   hid: 'og-title',
-          //   property: 'og:title',
-          //   content: 'Kakao Brain Careers, FAQ'
-          // },
-          // {
-          //   hid: 'og:url',
-          //   property: 'og:url',
-          //   content: 'https://careers.kakaobrain.com/faq'
-          // },
-          {
-            hid: 'og:image',
-            property: 'og:image',
-            content:
-              'https://careers.stgkakaobrain.com/meta/meta_careers_careers.png'
-          }
-        ]
-      }
+    head: {
+      // title: 'Kakao Brain Careers, FAQ',
+      meta: [
+        // {
+        //   hid: 'og-title',
+        //   property: 'og:title',
+        //   content: 'Kakao Brain Careers, FAQ'
+        // },
+        // {
+        //   hid: 'og:url',
+        //   property: 'og:url',
+        //   content: 'https://careers.kakaobrain.com/faq'
+        // },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://careers.stgkakaobrain.com/meta/meta_careers_careers.png'
+        }
+      ]
     },
     mixins: [mixinGlobal],
     components: {
