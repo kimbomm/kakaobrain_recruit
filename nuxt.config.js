@@ -14,7 +14,7 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: '카카오브레인 채용',
+    title: '카카오브레인 영입',
     htmlAttrs: {
       lang: 'en'
     },
