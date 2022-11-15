@@ -98,7 +98,7 @@
   .detail {
     padding-top: 200px;
     position: relative;
-    &-content /deep/ {
+    &-content ::v-deep {
       width: getWidth(6);
       margin: 0 auto;
       .detail-html {
@@ -205,7 +205,7 @@
   @include pc-large {
     .detail {
       padding-top: 300px;
-      &-content /deep/ {
+      &-content ::v-deep {
         .detail-html {
           font-size: 20px;
         }
@@ -234,7 +234,7 @@
   @include pc-4k {
     .detail {
       padding-top: 500px;
-      &-content /deep/ {
+      &-content ::v-deep {
         .detail-html {
           font-size: 30px;
         }
@@ -274,7 +274,7 @@
   @include tablet {
     .detail {
       padding-top: 170px;
-      &-content /deep/ {
+      &-content ::v-deep {
         .detail-html {
           font-size: 14px;
         }
@@ -309,7 +309,7 @@
   @include mobile {
     .detail {
       padding: 76px 20px 0;
-      &-content /deep/ {
+      &-content ::v-deep {
         width: 100%;
         .detail-html {
           font-size: 16px;

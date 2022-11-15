@@ -110,7 +110,7 @@
           margin-bottom: 40px;
         }
       }
-      .content-sub-title /deep/ .tit {
+      .content-sub-title ::v-deep .tit {
         font-weight: 700;
       }
     }
