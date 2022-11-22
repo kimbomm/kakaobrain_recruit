@@ -101,15 +101,20 @@
     &-content ::v-deep {
       width: getWidth(6);
       margin: 0 auto;
+      b {
+        display: inline-block;
+        line-height: 1.3;
+        font-weight: 700;
+      }
       .detail-html {
         font-size: 16px;
         line-height: 1.5;
         margin-bottom: 24px;
+        b {
+          margin-bottom: 20px;
+        }
       }
-      b {
-        display: block;
-        line-height: 1.3;
-        font-weight: 700;
+      .detail-title {
         margin-bottom: 20px;
       }
       .lists {
@@ -144,7 +149,6 @@
           b {
             font-size: inherit;
             line-height: inherit;
-            font-weight: 400;
             margin-bottom: 0;
           }
         }
