@@ -38,6 +38,40 @@
     components: {
       BreadCrumb
     },
+    async asyncData(ctx) {
+      const res = await ctx.store.dispatch('postList', {
+        method: 'GET',
+        url: `https://api.lever.co/v0/postings/kakaobrain/${ctx.query.dataId}`,
+        formData: {}
+      })
+
+      return {
+        detail: res.data
+      }
+    },
+    head() {
+      return {
+        title: this.detail.categories.team,
+        meta: [
+          {
+            hid: 'og-title',
+            property: 'og:title',
+            content: `Kakao Brain - ${this.detail.categories.team}`
+          },
+          // {
+          //   hid: 'og:url',
+          //   property: 'og:url',
+          //   content: 'https://careers.kakaobrain.com/careers'
+          // },
+          {
+            hid: 'og:image',
+            property: 'og:image',
+            content:
+              'https://careers.stgkakaobrain.com/meta/meta_careers_careers.png'
+          }
+        ]
+      }
+    },
     data() {
       return {
         breadcrumb: {
@@ -50,7 +84,7 @@
             { text: 'Job Openings', sub: '', link: '' }
           ]
         },
-        detail: null,
+        // detail: null,
         step: 0
       }
     },
@@ -66,17 +100,18 @@
         postList: 'postList'
       }),
       async init() {
-        const res = await this.postList({
-          method: 'GET',
-          url: `https://api.lever.co/v0/postings/kakaobrain/${this.$route.query.dataId}`,
-          formData: {}
-        })
-        if (res) {
-          this.detail = res.data
-          this.setBreadcrumb()
-        } else {
-          window.location = '/'
-        }
+        this.setBreadcrumb()
+        // const res = await this.postList({
+        //   method: 'GET',
+        //   url: `https://api.lever.co/v0/postings/kakaobrain/${this.$route.query.dataId}`,
+        //   formData: {}
+        // })
+        // if (res) {
+        //   this.detail = res.data
+        //   this.setBreadcrumb()
+        // } else {
+        //   window.location = '/'
+        // }
       },
       goApply() {
         window.open(`${this.detail.hostedUrl}/apply`)

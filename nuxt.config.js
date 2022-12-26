@@ -12,6 +12,8 @@ export default {
       latlng_y: process.env.KAKAO_MAP_LATLNG_Y
     }
   },
+  ssr: true,
+  target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: '카카오브레인 영입',
