@@ -12,4 +12,4 @@ ENV PORT=8087
 
 RUN npm run build:prod
 
-CMD [ "npm", "run", "start:stg" ]
+CMD [ "npm", "run", "start:prod" ]
