@@ -113,7 +113,7 @@ export default {
     ]
   },
   server: {
-    host: process.env.SERVER_HOST,
-    port: 3012
+    // host: process.env.SERVER_HOST,
+    // port: 3012
   }
 }
