@@ -39,6 +39,9 @@
       BreadCrumb
     },
     async asyncData(ctx) {
+      if (!ctx.query.dataId) {
+        ctx.redirect('/')
+      }
       const res = await ctx.store.dispatch('postList', {
         method: 'GET',
         url: `https://api.lever.co/v0/postings/kakaobrain/${ctx.query.dataId}`,
