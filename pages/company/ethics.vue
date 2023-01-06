@@ -1,5 +1,6 @@
 <template>
   <div class="company">
+    <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
     <MiddleImg image="middle-ethics.jpg" />
@@ -45,8 +46,10 @@
         </li>
       </ul>
     </div>
-    <div class="company-btn l-ml-3">
-      <span class="btn-txt">{{ data.button }} →</span>
+    <div class="link-button">
+      <a :href="data.button.link" :target="data.button.target">
+        <span class="btn-txt">{{ data.button.text }}</span>
+      </a>
     </div>
   </div>
 </template>
@@ -60,7 +63,29 @@
   import ContentsText from '@/components/company/ContentsText'
   import ContentsTypeList from '@/components/company/ContentsTypeList'
   import ContentsInfo from '@/components/company/ContentsInfo'
+  import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head: {
+      // title: 'Kakao Brain Careers, Cyber Ethics',
+      meta: [
+        // {
+        //   hid: 'og-title',
+        //   property: 'og:title',
+        //   content: 'Kakao Brain Careers, Cyber Ethics'
+        // },
+        // {
+        //   hid: 'og:url',
+        //   property: 'og:url',
+        //   content: 'https://careers.kakaobrain.com/ethics'
+        // },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://careers.stgkakaobrain.com/meta/meta_careers_company.png'
+        }
+      ]
+    },
     mixins: [mixinGlobal],
     name: 'ethics',
     components: {
@@ -70,10 +95,22 @@
       ContentsTitle,
       ContentsText,
       ContentsTypeList,
-      ContentsInfo
+      ContentsInfo,
+      BreadCrumb
     },
     data() {
-      return {}
+      return {
+        breadcrumb: {
+          KR: [
+            { text: '회사소개', sub: 'sub', link: '' },
+            { text: '사이버윤리실', sub: '', link: '' }
+          ],
+          EN: [
+            { text: 'Company', sub: 'sub', link: '' },
+            { text: 'Cyber Ethics', sub: '', link: '' }
+          ]
+        }
+      }
     },
     computed: {
       ...mapState({
@@ -88,8 +125,8 @@
 </script>
 <style lang="scss" scoped>
   .company {
+    padding-top: 320px;
     .main-title {
-      margin-top: 320px;
       margin-bottom: 60px;
     }
     .main-title-text {
@@ -126,30 +163,14 @@
       //   }
       // }
     }
-    .company-btn {
-      width: 238px;
-      height: 50px;
-      border: 1px solid $gray-9;
-      border-radius: 0px;
-      padding: 16px;
-      font-size: 0px;
-      box-sizing: border-box;
-      cursor: pointer;
-      .btn-txt {
-        display: block;
-        letter-spacing: -1px;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 130%;
-        color: $gray-9;
-      }
-    }
+  }
+  .link-button {
+    margin-left: getMargin(3);
   }
   @include pc-large {
     .company {
+      padding-top: 440px;
       .main-title {
-        margin-top: 440px;
         margin-bottom: 100px;
       }
       .main-title-text {
@@ -181,20 +202,12 @@
           }
         }
       }
-      .company-btn {
-        width: 218px;
-        height: 60px;
-        padding: 19px 14px;
-        .btn-txt {
-          font-size: 16px;
-        }
-      }
     }
   }
   @include pc-4k {
     .company {
+      padding-top: 600px;
       .main-title {
-        margin-top: 600px;
         margin-bottom: 120px;
       }
       .main-title-text {
@@ -225,20 +238,12 @@
           }
         }
       }
-      .company-btn {
-        width: 300px;
-        height: 90px;
-        padding: 28px 18px;
-        .btn-txt {
-          font-size: 22px;
-        }
-      }
     }
   }
   @include tablet {
     .company {
+      padding-top: 200px;
       .main-title {
-        margin-top: 200px;
         margin-bottom: 40px;
       }
       .main-title-text {
@@ -285,24 +290,16 @@
           }
         }
       }
-      .company-btn {
-        &.l-ml-3 {
-          margin-left: getMargin(2) !important;
-        }
-        width: 180px;
-        height: 48px;
-        padding: 18px 16px;
-        .btn-txt {
-          font-size: 12px;
-        }
-      }
+    }
+    .link-button {
+      margin-left: getMargin(2);
     }
   }
   @include mobile {
     .company {
-      padding: 0 20px;
+      padding: 76px 20px 0;
       .main-title {
-        margin-top: 157px;
+        margin-top: 60px;
         margin-bottom: 20px;
       }
       .main-title-text {
@@ -344,17 +341,9 @@
           }
         }
       }
-      .company-btn {
-        &.l-ml-3 {
-          margin-left: 0 !important;
-        }
-        width: 180px;
-        height: 48px;
-        padding: 18px 16px;
-        .btn-txt {
-          font-size: 12px;
-        }
-      }
+    }
+    .link-button {
+      margin-left: 0;
     }
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="main-title-text gl-5 l-ml-3">
+  <div class="main-title-text">
     <div class="text" v-html="text"></div>
   </div>
 </template>
@@ -17,10 +17,12 @@
 </script>
 <style lang="scss" scoped>
   .main-title-text {
+    width: getWidth(5);
+    margin-left: getMargin(3);
     font-size: 16px;
     line-height: 150%;
-    .text{
-      letter-spacing:-1px;
+    .text {
+      letter-spacing: -1px;
     }
   }
   @include pc-large {
@@ -35,20 +37,15 @@
   }
   @include tablet {
     .main-title-text {
+      width: getWidth(7);
+      margin-left: getMargin(2);
       font-size: 14px;
-      &.l-ml-3 {
-        margin-left: getMargin(2) !important;
-      }
     }
   }
   @include mobile {
     .main-title-text {
-      &.gl-5 {
-        width: 100% !important;
-      }
-      &.l-ml-3 {
-        margin-left: 0 !important;
-      }
+      width: 100%;
+      margin-left: 0;
     }
   }
 </style>

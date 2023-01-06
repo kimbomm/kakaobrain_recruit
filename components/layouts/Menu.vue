@@ -1,67 +1,59 @@
 <template>
-  <div>
+  <div class="menu">
     <div :class="classBind">
       <div class="menu-list">
-        <ul>
+        <ul :class="{ 'menu-enter': isHover }">
           <li
             v-for="(menu, index) in menus"
             :key="`menu-${index}`"
             class="menu-item"
-            @mouseenter="hideMenu(true)"
+            @mouseenter=";(hoverIndex = index), (isHover = true)"
+            @mouseleave="isHover = false"
           >
-            <button type="button">
-              <!-- <span v-if="menu.alarm" class="num">{{ menu.alarm }}</span> -->
-              <span class="txt">{{ menu.name }}</span>
+            <button type="button" @click="openMenu(index)">
+              <span class="txt">{{ menu.name[language] }}</span>
             </button>
+            <ul
+              v-show="clickIndex === index"
+              :ref="`subMenu-${index}`"
+              :id="`subMenu-${index}`"
+              :class="`subMenu-${index}`"
+            >
+              <li v-for="subMenu in menu.sub" :key="subMenu.category">
+                <a
+                  v-if="subMenu.target"
+                  :href="subMenu.link"
+                  :target="subMenu.target"
+                  @click.prevent="clickIndex = null"
+                >
+                  {{ subMenu.name[cookieLang] }}
+                </a>
+                <nuxt-link v-else exact :to="subMenu.link">
+                  {{ subMenu.name[cookieLang] }}
+                </nuxt-link>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
     </div>
-    <button class="menu-btn" @click="hideMenu(true)">
-      <!-- <img src="@/assets/images/mob_menu.png" alt="모바일 메뉴 열기 이미지" /> -->
-    </button>
-    <transition name="slide">
-      <div v-if="this.isMenu" class="hide" @mouseleave="hideMenu(false)">
-        <div class="lang">
-          <ul>
-            <li
-              v-for="(item, index) in languageList"
-              :key="index"
-              class="lang-item"
-            >
-              <button
-                :class="item.value === language ? 'is-active' : ''"
-                @click="selectLang(item.value)"
-              >
-                {{ item.name }}
-              </button>
-            </li>
-          </ul>
-        </div>
-        <div class="menu">
-          <ul>
-            <li
-              v-for="(menu, index) in menus"
-              :key="`menu-${index}`"
-              class="menu-item"
-            >
-              <span v-if="menu.alarm" class="num">{{ menu.alarm }}</span>
-              <span>{{ menu.name }}</span>
-              <ul class="sub">
-                <li
-                  v-for="(subMenu, idx) in menu.sub"
-                  :key="`sub-${idx}`"
-                  class="sub-item"
-                >
-                  <nuxt-link :to="subMenu.link">{{ subMenu.name }}</nuxt-link>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </transition>
-    <MobMenu v-if="this.isMenu" @onClose="hideMenu(false)" />
+    <div
+      :class="{
+        'common-menu': true,
+        'hide-target': true,
+        'is-hide': isScrollUp
+      }"
+    >
+      <button
+        :class="`btn-lang ${cookieLang}`"
+        @click="selectLang(cookieLang === 'KR' ? 'EN' : 'KR')"
+      ></button>
+    </div>
+    <button
+      :class="{ 'menu-btn': true, 'hide-target': true, 'is-hide': isScrollUp }"
+      @click="setIsMenuOpen(true)"
+      title="메뉴 열기"
+    ></button>
   </div>
 </template>
 <script>
@@ -74,6 +66,10 @@
     data() {
       return {
         isMenu: false,
+        isAnimation: false,
+        isHover: false,
+        hoverIndex: null,
+        clickIndex: null,
         languageList: [
           { name: 'English', value: 'EN' },
           { name: 'Korean', value: 'KR' }
@@ -84,39 +80,86 @@
       ...mapState({
         menus: state => state.menus,
         language: state => state.language,
-        isFilterMenuOpen: state => state.isFilterMenuOpen
+        isFilterMenuOpen: state => state.isFilterMenuOpen,
+        isScrollUp: state => state.isScrollUp,
+        isMenuOpen: state => state.isMenuOpen
       }),
       classBind() {
-        let classList = ['menu', 'menu-outer']
-        if (this.isFilterMenuOpen) {
-          classList.push('menu__light')
+        let classList = ['menu', 'menu-outer', 'hide-target']
+        if (this.isScrollUp) {
+          classList.push('is-hide')
         }
 
         return classList.join(' ')
+      },
+      cookieLang() {
+        return this.$cookies.get('brain_careers_language') || this.language
       }
+    },
+    watch: {
+      isMenuOpen(val) {
+        if (val) {
+          this.$nuxt.$emit('scrollLock', true)
+          setTimeout(() => {
+            this.isAnimation = true
+          }, 300)
+        } else {
+          this.isAnimation = false
+          this.$nuxt.$emit('scrollLock', false)
+        }
+      }
+    },
+    created() {
+      this.$nuxt.$on('closeMenu', this.closeMenu)
     },
     methods: {
       ...mapMutations({
-        setLanguage: 'setLanguage'
+        setLanguage: 'setLanguage',
+        setIsMenuOpen: 'setIsMenuOpen'
       }),
       hideMenu(value) {
         this.isMenu = value
       },
       async selectLang(lang) {
-        localStorage.setItem('language', lang)
+        this.$cookies.set('brain_careers_language', lang)
         await this.setLanguage(lang)
+        await window.location.reload(true)
+      },
+      openMenu(index) {
+        if (this.clickIndex === index) {
+          this.clickIndex = null
+        } else {
+          this.clickIndex = index
+          this.$nextTick(() => {
+            const menu = this.$refs[`subMenu-${index}`][0]
+            const subMenuPos =
+              menu.parentElement.offsetLeft +
+              menu.parentElement.offsetWidth / 2 +
+              menu.offsetWidth / 2 +
+              20
+            console.log(subMenuPos, window.innerWidth)
+            if (subMenuPos >= window.innerWidth) {
+              menu.style.left = `calc(50% - ${
+                subMenuPos - window.innerWidth + 20
+              }px)`
+            }
+          })
+        }
+      },
+      closeMenu() {
+        if (this.clickIndex >= 0) {
+          this.clickIndex = null
+        }
       }
     }
   }
 </script>
 <style lang="scss" scoped>
-  .slide-enter,
-  .slide-leave-to {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
   .menu {
+    z-index: 10;
+    display: flex;
     &-item {
+      position: relative;
       display: inline-block;
       font-weight: 900;
       &:not(:last-child) {
@@ -131,11 +174,51 @@
       .txt {
         font-size: 16px;
         font-weight: 900;
+        font-family: 'Inter';
       }
       button {
         padding: 0px;
         background-color: rgba(0, 0, 0, 0);
         color: $gray-9;
+      }
+      ul {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 30px;
+        border-radius: 78px;
+        background-color: #000;
+        display: flex;
+        white-space: nowrap;
+        li {
+          margin-right: 30px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        a {
+          font-size: 14px;
+          line-height: 2.1;
+          color: #fff;
+          font-weight: 400;
+          &.nuxt-link-active,
+          &:hover {
+            color: $brain-yellow;
+          }
+        }
+      }
+    }
+    .menu-enter {
+      .menu-item {
+        button {
+          color: $gray-5;
+        }
+        &:hover {
+          button {
+            color: #000;
+          }
+        }
       }
     }
     &__light {
@@ -149,81 +232,24 @@
   }
   .menu-btn {
     display: none;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-image: url('~/assets/images/mob_menu.svg');
     background-size: cover;
     background-position: center center;
   }
-
-  .hide {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transition: all 0.2s ease-out;
-    .lang {
-      position: absolute;
-      right: 30px;
-      top: 20px;
-      z-index: 10;
-      cursor: pointer;
-      &-item {
-        font-size: 12px;
-        &:not(:last-child) {
-          margin-bottom: 20px;
-        }
-        button {
-          color: $gray-0;
-          &.is-active,
-          &:hover {
-            color: $brain-yellow;
-          }
-        }
+  .common-menu {
+    font-size: 0;
+    margin-left: 30px;
+    button {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
       }
-    }
-    text-align: center;
-    .menu {
-      // position: absolute;
-      // left: 0;
-      // right: 0;
-      // top: 0;
-      padding: 90px 0 84px;
-      background-color: $gray-9;
-      &-item {
-        text-align: left;
-        vertical-align: top;
-        color: $gray-0;
-        font-size: 14px;
-        &:not(:last-child) {
-          margin-right: 50px;
-        }
-        // &:nth-child(2) .sub {
-        //   margin-left: 23px;
-        // }
-        // &:nth-child(3) .sub {
-        //   margin-left: 20px;
-        // }
-        // &:nth-child(4) .sub {
-        //   margin-left: 12px;
-        // }
-        // &:nth-child(5) .sub {
-        //   margin-left: 20px;
-        // }
-      }
-    }
-    .sub {
-      margin-top: 30px;
-      &-item {
-        // line-height:23px;
-        font-size: 14px;
-        font-weight: 400;
-        &:not(:last-child) {
-          margin-bottom: 8px;
-        }
-        a {
-          color: $gray-0;
-        }
+      img {
+        width: 100%;
       }
     }
   }
@@ -234,11 +260,24 @@
         font-size: 22px;
       }
     }
+    .common-menu {
+      margin-left: 36px;
+      button {
+        width: 26px;
+        height: 26px;
+      }
+    }
   }
   @include pc-4k {
     .menu-item {
       .txt {
         font-size: 34px;
+      }
+    }
+    .common-menu {
+      button {
+        width: 40px;
+        height: 40px;
       }
     }
   }
@@ -252,12 +291,29 @@
     .menu-btn {
       display: block;
     }
+    .common-menu {
+      margin-left: 0;
+      margin-right: 5px;
+      button {
+        width: 40px;
+        height: 40px;
+      }
+    }
   }
   @include mobile {
     .menu-btn {
       position: absolute;
       top: 13px;
       right: 15px;
+      width: 30px;
+      height: 30px;
+    }
+    .common-menu {
+      margin-right: 35px;
+      button {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 </style>

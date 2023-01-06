@@ -1,5 +1,6 @@
 <template>
   <div class="faq">
+    <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
     <MiddleImg image="middle-faq.jpg" />
@@ -13,8 +14,10 @@
           :text="item"
         />
       </div>
-      <div class="faq-btn l-ml-3">
-        <span class="btn-txt">Our Open Position →</span>
+      <div class="link-button">
+        <nuxt-link to="/careers">
+          <span class="btn-txt">Our Open Position →</span>
+        </nuxt-link>
       </div>
     </div>
 
@@ -37,7 +40,29 @@
   import ContentsTitle from '@/components/company/ContentsTitle'
   import ContentsText from '@/components/company/ContentsText'
   import FoldingBox from '@/components/elements/button/FoldingBox'
+  import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head: {
+      // title: 'Kakao Brain Careers, FAQ',
+      meta: [
+        // {
+        //   hid: 'og-title',
+        //   property: 'og:title',
+        //   content: 'Kakao Brain Careers, FAQ'
+        // },
+        // {
+        //   hid: 'og:url',
+        //   property: 'og:url',
+        //   content: 'https://careers.kakaobrain.com/faq'
+        // },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://careers.stgkakaobrain.com/meta/meta_careers_careers.png'
+        }
+      ]
+    },
     mixins: [mixinGlobal],
     components: {
       MainTitle,
@@ -45,10 +70,22 @@
       MiddleImg,
       ContentsTitle,
       ContentsText,
-      FoldingBox
+      FoldingBox,
+      BreadCrumb
     },
     data() {
-      return {}
+      return {
+        breadcrumb: {
+          KR: [
+            { text: '영입', sub: 'sub', link: '' },
+            { text: 'FAQ', sub: '', link: '' }
+          ],
+          EN: [
+            { text: 'Recruit', sub: 'sub', link: '' },
+            { text: 'FAQ', sub: '', link: '' }
+          ]
+        }
+      }
     },
     computed: {
       ...mapState({
@@ -63,7 +100,7 @@
 </script>
 <style lang="scss" scoped>
   .faq {
-    padding: 0 20px;
+    padding: 320px 20px 0;
     &-list {
       width: getWidth(5);
       margin-left: getMargin(3);
@@ -75,7 +112,6 @@
       }
     }
     .main-title {
-      margin-top: 320px;
       margin-bottom: 60px;
     }
     .main-title-text {
@@ -86,26 +122,8 @@
     }
   }
 
-  .faq-btn {
-    display: flex;
-    align-items: center;
-    width: 170px;
-    height: 50px;
-    border: 1px solid $gray-9;
-    border-radius: 0px;
-    padding: 16px;
-    font-size: 0px;
-    box-sizing: border-box;
-    cursor: pointer;
-    .btn-txt {
-      display: block;
-      font-family: 'Inter';
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 130%;
-      color: $gray-9;
-    }
+  .link-button {
+    margin-left: getMargin(3);
   }
   .contents-title {
     margin-bottom: 40px;
@@ -137,13 +155,13 @@
 
   @include pc-large {
     .faq {
+      padding-top: 440px;
       &-list {
         li {
           margin-bottom: 14px;
         }
       }
       .main-title {
-        margin-top: 440px;
         margin-bottom: 100px;
       }
       .main-title-text {
@@ -157,26 +175,18 @@
         .list-box {
           margin-bottom: 50px;
         }
-        .faq-btn {
-          width: 218px;
-          height: 60px;
-          padding: 19px 14px;
-          .btn-txt {
-            font-size: 16px;
-          }
-        }
       }
     }
   }
   @include pc-4k {
     .faq {
+      padding-top: 600px;
       &-list {
         li {
           margin-bottom: 20px;
         }
       }
       .main-title {
-        margin-top: 600px;
         margin-bottom: 120px;
       }
       .main-title-text {
@@ -190,25 +200,17 @@
         .list-box {
           margin-bottom: 80px;
         }
-        .faq-btn {
-          width: 300px;
-          height: 90px;
-          padding: 28px 41px 32px;
-          .btn-txt {
-            font-size: 22px;
-          }
-        }
       }
     }
   }
   @include tablet {
     .faq {
+      padding-top: 200px;
       &-list {
         width: getWidth(7);
         margin-left: getMargin(2);
       }
       .main-title {
-        margin-top: 200px;
         margin-bottom: 40px;
       }
       .main-title-text {
@@ -222,28 +224,21 @@
         .list-box {
           margin-bottom: 40px;
         }
-        .faq-btn {
-          width: 160px;
-          height: 48px;
-          padding: 19px 16px;
-          &.l-ml-3{
-            margin-left: getMargin(2) !important
-          }
-          .btn-txt {
-            font-size: 12px;
-          }
-        }
       }
+    }
+    .link-button {
+      margin-left: getMargin(2);
     }
   }
   @include mobile {
     .faq {
+      padding-top: 76px;
       &-list {
         width: 100% !important;
         margin-left: 0 !important;
       }
       .main-title {
-        margin-top: 157px;
+        margin-top: 60px;
         margin-bottom: 20px;
       }
       .main-title-text {
@@ -257,12 +252,10 @@
         .list-box {
           margin-bottom: 30px;
         }
-        .faq-btn {
-          &.l-ml-3 {
-            margin-left: 0 !important;
-          }
-        }
       }
+    }
+    .link-button {
+      margin-left: 0;
     }
   }
 </style>

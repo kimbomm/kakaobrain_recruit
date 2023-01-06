@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="paging l-ml-3">
+  <div class="paging">
     <div class="paging-inner">
       <div class="paging-prev">
         <button
@@ -141,9 +141,6 @@
 <style lang="scss" scoped>
   .paging {
     margin-top: 200px;
-    &.l-ml-3 {
-      margin-left: getMargin(3) !important;
-    }
     &-inner {
       display: flex;
       align-items: center;
@@ -189,9 +186,6 @@
   @include pc-large {
     .paging {
       margin-top: 260px;
-      &.l-ml-3 {
-        margin-left: getMargin(3) !important;
-      }
       &-prev {
         margin-right: 12px;
         font-size: 20.8px;
@@ -215,9 +209,6 @@
   @include pc-4k {
     .paging {
       margin-top: 374px;
-      &.l-ml-3 {
-        margin-left: getMargin(3) !important;
-      }
       &-prev {
         margin-right: 15px;
         font-size: 26px;
@@ -241,9 +232,6 @@
   @include tablet {
     .paging {
       margin-top: 150px;
-      &.l-ml-3 {
-        margin-left: getMargin(2) !important;
-      }
       &-prev {
         margin-right: 12px;
         font-size: 20px;
@@ -267,18 +255,17 @@
   @include mobile {
     .paging {
       margin-top: 80px;
-      &.l-ml-3 {
-        margin-left: 0 !important;
-      }
       &-prev {
         margin-right: 20px;
         .link {
+          padding: 6px 0;
           font-size: 30px;
         }
       }
       &-next {
         margin-left: 20px;
         .link {
+          padding: 6px 0;
           font-size: 30px;
         }
       }

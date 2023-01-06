@@ -1,26 +1,27 @@
 <template>
-  <div class="notice-item">
-    <div class="item-category">
-      <div class="category">{{ data.recruitClassName }}</div>
-    </div>
-    <div class="item-con">
-      <div class="title">{{ data.recruitNoticeName }}</div>
-      <div class="date">
-        {{ data.receiveStartDatetime }} ~ {{ data.receiveEndDatetime }}
+  <a :href="`/careers/detail?dataId=${data.id}`">
+    <div class="notice-item">
+      <div class="item-category">
+        <div class="category">
+          {{
+            data.categories.department &&
+            data.categories.department.toUpperCase()
+          }}
+        </div>
       </div>
-      <div class="day">
-        D-{{
-          $dayjs(data.receiveEndDatetime).diff(
-            $dayjs(data.receiveStartDatetime),
-            'day'
-          )
-        }}
+      <div class="item-con">
+        <div class="title">
+          {{ data.text }}
+        </div>
+        <div class="date">
+          {{ data.categories.location }} / {{ data.categories.commitment }}
+        </div>
+      </div>
+      <div class="item-type">
+        <div class="type">APPLY</div>
       </div>
     </div>
-    <div class="item-type">
-      <div class="type">접수중</div>
-    </div>
-  </div>
+  </a>
 </template>
 <script>
   export default {
@@ -49,9 +50,10 @@
     width: getWidth(1);
     margin-right: 20px;
     .category {
+      word-break: break-word;
       font-size: 20px;
       font-weight: 400;
-      line-height: 130%;
+      line-height: 1.3;
     }
   }
   .item-con {
@@ -60,43 +62,33 @@
     .title {
       margin-bottom: 10px;
       font-size: 20px;
-      font-weight: 400;
-      line-height: 130%;
+      font-weight: 600;
+      line-height: 1.3;
       word-break: keep-all;
     }
     .date {
-      margin-bottom: 10px;
       font-size: 12px;
       font-weight: 400;
-      line-height: 130%;
+      line-height: 1.3;
       color: $gray-5;
-    }
-    .day {
-      display: inline-flex;
-      justify-content: center;
-      align-content: center;
-      min-width: 58px;
-      height: 28px;
-      padding: 6px;
-      border-radius: 50px;
-      background-color: $surface-8;
-      line-height: 130%;
-      font-weight: 900;
-      font-style: italic;
-      font-size: 12px;
-      color: $gray-0;
     }
   }
   .item-type {
+    width: getWidth(1);
+    text-align: right;
     .type {
-      width: 58px;
-      height: 28px;
-      padding: 6px 11px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 72px;
+      height: 34px;
       background-color: $gray-9;
-      font-weight: 900;
-      font-size: 12px;
-      line-height: 130%;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 14px;
+      line-height: 1.3;
       color: $gray-0;
+      border-radius: 27px;
       // letter-spacing: -2px;
     }
   }
@@ -113,18 +105,12 @@
       }
     }
     .item-con {
+      margin-bottom: 14px;
       .title {
         margin-bottom: 14px;
         font-size: 26px;
       }
       .date {
-        margin-bottom: 14px;
-        font-size: 16px;
-      }
-      .day {
-        min-width: 69px;
-        height: 33px;
-        padding: 6px;
         font-size: 16px;
       }
     }
@@ -149,18 +135,12 @@
       }
     }
     .item-con {
+      margin-bottom: 20px;
       .title {
         margin-bottom: 20px;
         font-size: 38px;
       }
       .date {
-        margin-bottom: 20px;
-        font-size: 24px;
-      }
-      .day {
-        min-width: 107px;
-        height: 51px;
-        padding: 10px;
         font-size: 24px;
       }
     }
@@ -182,25 +162,17 @@
     }
     .item-con {
       width: getWidth(4);
+      margin-bottom: 10px;
       .title {
         margin-bottom: 10px;
         font-size: 18px;
       }
       .date {
-        margin-bottom: 10px;
-        font-size: 12px;
-      }
-      .day {
-        min-width: 58px;
-        height: 28px;
-        padding: 6px;
         font-size: 12px;
       }
     }
     .item-type {
       .type {
-        width: 58px;
-        height: 28px;
         padding: 6px 12px;
         font-size: 12px;
       }
@@ -218,32 +190,26 @@
     }
     .item-category {
       width: 100% !important;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       margin-right: 0px;
       .category {
-        font-size: 18px;
+        font-size: 14px;
       }
     }
     .item-con {
       width: 100% !important;
       margin-right: 0px;
+      margin-bottom: 16px;
       .title {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         font-size: 18px;
-      }
-      .date {
-        margin-bottom: 20px;
-        font-size: 12px;
       }
     }
     .item-type {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      text-align: right;
+      width: 100%;
       .type {
-        width: 58px;
-        height: 28px;
-        padding: 6px 12px;
+        padding: 9px 14px;
         font-size: 12px;
       }
     }

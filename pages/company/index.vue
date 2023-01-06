@@ -1,15 +1,16 @@
 <template>
   <div class="company">
+    <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <MainTitle :title="data.mainTitle" />
     <MainTitleText :text="data.mainTitleText" />
-    <MiddleImg image="middle-img.png" />
+    <MiddleImg image="middle-img.jpg" />
 
     <div class="rule-box">
       <ul>
         <li class="rule-item">
           <ContentsTitle :title="data.contents[0].ContentsTitle" />
           <ContentsText :text="data.contents[0].ContentsText[0]" />
-          <div class="share-rule gl-5 l-ml-3">
+          <div class="share-rule">
             <ul class="rule-list">
               <li
                 v-for="(data, index) in data.contents[0].ruleList"
@@ -33,7 +34,7 @@
         <li class="rule-item">
           <ContentsTitle :title="data.contents[2].ContentsTitle" />
           <ContentsText :text="data.contents[2].ContentsText[0]" />
-          <div class="share-rule gl-5 l-ml-3">
+          <div class="share-rule">
             <ul class="rule-list">
               <li
                 v-for="(data, index) in data.contents[2].ruleList"
@@ -48,7 +49,7 @@
         <li class="rule-item">
           <ContentsTitle :title="data.contents[3].ContentsTitle" />
           <ContentsText :text="data.contents[3].ContentsText[0]" />
-          <div class="share-rule gl-5 l-ml-3">
+          <div class="share-rule">
             <ul class="rule-list">
               <li
                 v-for="(data, index) in data.contents[3].ruleList"
@@ -73,7 +74,29 @@
   import ContentsText from '@/components/company/ContentsText'
   import ContentSubTitle from '@/components/company/ContentSubTitle'
   import FoldingBox from '@/components/elements/button/FoldingBox'
+  import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head: {
+      // title: 'Kakao Brain Careers, How we work',
+      meta: [
+        // {
+        //   hid: 'og-title',
+        //   property: 'og:title',
+        //   content: 'Kakao Brain Careers, How we work'
+        // },
+        // {
+        //   hid: 'og:url',
+        //   property: 'og:url',
+        //   content: 'https://careers.kakaobrain.com/company'
+        // },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://careers.stgkakaobrain.com/meta/meta_careers_company.png'
+        }
+      ]
+    },
     mixins: [mixinGlobal],
     name: 'index',
     components: {
@@ -83,10 +106,22 @@
       ContentsTitle,
       ContentsText,
       FoldingBox,
-      ContentSubTitle
+      ContentSubTitle,
+      BreadCrumb
     },
     data() {
-      return {}
+      return {
+        breadcrumb: {
+          KR: [
+            { text: '회사소개', sub: 'sub', link: '' },
+            { text: '우리의 일하는 방식', sub: '', link: '' }
+          ],
+          EN: [
+            { text: 'Company', sub: 'sub', link: '' },
+            { text: 'How we work', sub: '', link: '' }
+          ]
+        }
+      }
     },
     computed: {
       ...mapState({
@@ -101,9 +136,8 @@
 </script>
 <style lang="scss" scoped>
   .company {
-    padding: 0 20px;
+    padding: 320px 20px 0;
     .main-title {
-      margin-top: 320px;
       margin-bottom: 60px;
     }
     .main-title-text {
@@ -119,6 +153,8 @@
       margin-bottom: 40px;
     }
     .share-rule {
+      width: getWidth(5);
+      margin-left: getMargin(3);
       // margin-bottom:200px;
       .rule-list {
         li {
@@ -149,8 +185,8 @@
 
   @include pc-large {
     .company {
+      padding-top: 440px;
       .main-title {
-        margin-top: 440px;
         margin-bottom: 100px;
       }
       .main-title-text {
@@ -195,8 +231,8 @@
   }
   @include pc-4k {
     .company {
+      padding-top: 600px;
       .main-title {
-        margin-top: 600px;
         margin-bottom: 120px;
       }
       .main-title-text {
@@ -242,8 +278,8 @@
   }
   @include tablet {
     .company {
+      padding-top: 200px;
       .main-title {
-        margin-top: 200px;
         margin-bottom: 40px;
       }
       .main-title-text {
@@ -260,12 +296,8 @@
         margin-bottom: 40px;
       }
       .share-rule {
-        &.gl-5 {
-          width: getWidth(7) !important;
-        }
-        &.l-ml-3 {
-          margin-left: getMargin(2) !important;
-        }
+        width: getWidth(7);
+        margin-left: getMargin(2);
       }
 
       .rule-box {
@@ -287,8 +319,9 @@
   }
   @include mobile {
     .company {
+      padding-top: 76px;
       .main-title {
-        margin-top: 157px;
+        margin-top: 60px;
         margin-bottom: 20px;
       }
       .main-title-text {
@@ -310,12 +343,8 @@
         margin-bottom: 30px;
       }
       .share-rule {
-        &.gl-5 {
-          width: 100% !important;
-        }
-        &.l-ml-3 {
-          margin-left: 0 !important;
-        }
+        width: 100%;
+        margin-left: 0;
       }
 
       .rule-box {

@@ -1,5 +1,8 @@
 <template>
-  <div class="question-box">
+  <div ref="refWrap" class="question-box">
+    <div ref="refImage" class="large-img">
+      <img src="@/assets/images/large-img.png" @load="onResize" />
+    </div>
     <div class="title gl-6">
       <span v-html="data.title"></span>
     </div>
@@ -10,7 +13,7 @@
           v-for="(item, index) in data.questionList"
           :key="index"
         >
-          <QuestionList :data="item" />
+          <QuestionList :data="item" :index="index" />
         </li>
       </ul>
     </div>
@@ -30,12 +33,56 @@
     },
     data() {
       return {}
+    },
+    async mounted() {
+      await window.addEventListener('resize', this.onResize)
+    },
+    beforeDestroy() {
+      window.removeEventListener('resize', this.onResize)
+    },
+    methods: {
+      onResize() {
+        const refWrap = this.$refs.refWrap
+        const refImage = this.$refs.refImage
+        let marginBase = 120
+        let paddingBase = 500
+        if (window.innerWidth >= 2560 && window.innerWidth < 3840) {
+          marginBase = 160
+          paddingBase = 670
+        } else if (window.innerWidth >= 3840) {
+          marginBase = 238
+          paddingBase = 1000
+        } else if (window.innerWidth > 768 && window.innerWidth <= 1024) {
+          marginBase = 100
+          paddingBase = 300
+        } else if (window.innerWidth <= 768) {
+          marginBase = 80
+          paddingBase = 200
+        }
+        refWrap.style.marginTop = `${refImage.offsetHeight / 2 + marginBase}px`
+        refWrap.style.paddingTop = `${
+          refImage.offsetHeight / 2 + paddingBase
+        }px`
+      }
     }
   }
 </script>
 <style lang="scss" scoped>
+  .large-img {
+    position: absolute;
+    width: getWidth(8);
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    img {
+      width: 100%;
+    }
+  }
   .question-box {
-    padding: 870px 20px 500px;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px 500px;
     background-color: $gray-9;
     .title {
       position: relative;
@@ -71,7 +118,7 @@
 
   @include pc-large {
     .question-box {
-      padding: 1163px 20px 670px;
+      padding: 0 20px 670px;
       .title {
         margin-bottom: 914px;
         font-size: 120px;
@@ -92,7 +139,7 @@
   }
   @include pc-4k {
     .question-box {
-      padding: 1740px 20px 1000px;
+      padding: 0 20px 1000px;
       .title {
         margin-bottom: 1376px;
         font-size: 180px;
@@ -113,7 +160,7 @@
   }
   @include tablet {
     .question-box {
-      padding: 480px 20px 300px;
+      padding: 0 20px 300px;
       .title {
         margin-bottom: 474px;
         font-size: 60px;
@@ -136,8 +183,12 @@
     }
   }
   @include mobile {
+    .large-img {
+      width: 100%;
+      padding: 0 20px;
+    }
     .question-box {
-      padding: 340px 20px 200px;
+      padding: 0 20px 200px;
       .title {
         margin-bottom: 328px;
         font-size: 36px;

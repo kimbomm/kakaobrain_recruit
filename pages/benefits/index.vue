@@ -1,5 +1,6 @@
 <template>
   <div class="company">
+    <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
     <MiddleImg image="middle-work.jpg" />
@@ -9,8 +10,8 @@
         <li class="rule-item">
           <ContentsTitle :title="data.contents[0].ContentsTitle" />
           <ContentsText :text="data.contents[0].ContentsText" />
-          <div class="company-btn l-ml-3">
-            <nuxt-link to="/recruit">
+          <div class="link-button">
+            <nuxt-link to="/careers">
               <span class="btn-txt">Our Open Position →</span>
             </nuxt-link>
           </div>
@@ -85,7 +86,29 @@
   import ContentsText from '@/components/company/ContentsText'
   import FoldingBox from '@/components/elements/button/FoldingBox'
   import SmallTitle from '@/components/company//SmallTitle'
+  import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head: {
+      // title: 'Kakao Brain Careers, Remote work and flextime working',
+      meta: [
+        // {
+        //   hid: 'og-title',
+        //   property: 'og:title',
+        //   content: 'Kakao Brain Careers, Remote work and flextime working'
+        // },
+        // {
+        //   hid: 'og:url',
+        //   property: 'og:url',
+        //   content: 'https://careers.kakaobrain.com/benefits'
+        // },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://careers.stgkakaobrain.com/meta/meta_careers_Like_at_KakaoBrain.png'
+        }
+      ]
+    },
     mixins: [mixinGlobal],
     name: 'index',
     components: {
@@ -95,10 +118,22 @@
       ContentsTitle,
       ContentsText,
       FoldingBox,
-      SmallTitle
+      SmallTitle,
+      BreadCrumb
     },
     data() {
-      return {}
+      return {
+        breadcrumb: {
+          KR: [
+            { text: '복지소개', sub: 'sub', link: '' },
+            { text: '원격근무와 유연근무제', sub: '', link: '' }
+          ],
+          EN: [
+            { text: 'Benefits', sub: 'sub', link: '' },
+            { text: 'Remote work and flextime working.', sub: '', link: '' }
+          ]
+        }
+      }
     },
     computed: {
       ...mapState({
@@ -113,9 +148,8 @@
 </script>
 <style lang="scss" scoped>
   .company {
-    padding: 0 20px;
+    padding: 320px 20px 0;
     .main-title {
-      margin-top: 320px;
       margin-bottom: 60px;
     }
     .main-title-text {
@@ -127,14 +161,13 @@
     .contents-title {
       margin-bottom: 40px;
     }
-    .contents-text {
-      margin-bottom: 40px;
-    }
     .small-title {
       margin-bottom: 40px;
     }
+    .contents-text + .share-rule {
+      margin-top: 40px;
+    }
     .share-rule {
-      // margin-bottom:200px;
       .rule-list {
         li {
           &:not(:last-child) {
@@ -177,34 +210,14 @@
       }
     }
   }
-
-  .company-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 238px;
-    height: 50px;
-    border: 1px solid $gray-9;
-    border-radius: 0px;
-    padding: 16px;
-    font-size: 0px;
-    box-sizing: border-box;
-    cursor: pointer;
-    .btn-txt {
-      display: block;
-      letter-spacing: -1px;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 130%;
-      color: $gray-9;
-    }
+  .link-button {
+    margin-top: 40px;
+    margin-left: getMargin(3);
   }
-
   @include pc-large {
     .company {
+      padding-top: 440px;
       .main-title {
-        margin-top: 440px;
         margin-bottom: 100px;
       }
       .main-title-text {
@@ -216,12 +229,12 @@
       .contents-title {
         margin-bottom: 50px;
       }
-      .contents-text {
-        margin-bottom: 80px;
-      }
 
       .small-title {
         margin-bottom: 50px;
+      }
+      .contents-text + .share-rule {
+        margin-top: 50px;
       }
       .share-rule {
         .rule-list {
@@ -258,22 +271,15 @@
           }
         }
       }
-
-      .company-btn {
-        width: 218px;
-        height: 60px;
-        padding: 19px 14px;
-        text-align: center;
-        .btn-txt {
-          font-size: 16px;
-        }
-      }
+    }
+    .link-button {
+      margin-top: 50px;
     }
   }
   @include pc-4k {
     .company {
+      padding-top: 600px;
       .main-title {
-        margin-top: 600px;
         margin-bottom: 120px;
       }
       .main-title-text {
@@ -285,12 +291,12 @@
       .contents-title {
         margin-bottom: 80px;
       }
-      .contents-text {
-        margin-bottom: 80px;
-      }
 
       .small-title {
         margin-bottom: 80px;
+      }
+      .contents-text + .share-rule {
+        margin-top: 80px;
       }
       .share-rule {
         .rule-list {
@@ -327,21 +333,15 @@
           }
         }
       }
-
-      .company-btn {
-        width: 541px;
-        height: 90px;
-        padding: 28px 74px;
-        .btn-txt {
-          font-size: 14px;
-        }
-      }
+    }
+    .link-button {
+      margin-top: 80px;
     }
   }
   @include tablet {
     .company {
+      padding-top: 200px;
       .main-title {
-        margin-top: 200px;
         margin-bottom: 40px;
       }
       .main-title-text {
@@ -353,12 +353,12 @@
       .contents-title {
         margin-bottom: 40px;
       }
-      .contents-text {
-        margin-bottom: 40px;
-      }
 
       .small-title {
         margin-bottom: 40px;
+      }
+      .contents-text + .share-rule {
+        margin-top: 40px;
       }
       .share-rule {
         &.gl-5 {
@@ -367,13 +367,6 @@
         &.l-ml-3 {
           margin-left: getMargin(2) !important;
         }
-        // .rule-list{
-        //   li{
-        //     &:not(:last-child){
-        //       margin-bottom:14px;
-        //     }
-        //   }
-        // }
       }
       .rule-box {
         .rule-item {
@@ -401,25 +394,17 @@
           }
         }
       }
-
-      .company-btn {
-        width: 160px;
-        height: 48px;
-        padding: 16px 19px;
-        text-align: center;
-        &.l-ml-3 {
-          margin-left: getMargin(2) !important;
-        }
-        .btn-txt {
-          font-size: 12px;
-        }
-      }
+    }
+    .link-button {
+      margin-top: 40px;
+      margin-left: getMargin(2);
     }
   }
   @include mobile {
     .company {
+      padding-top: 76px;
       .main-title {
-        margin-top: 157px;
+        margin-top: 60px;
         margin-bottom: 20px;
       }
       .main-title-text {
@@ -431,12 +416,12 @@
       .contents-title {
         margin-bottom: 30px;
       }
-      .contents-text {
-        margin-bottom: 30px;
-      }
 
       .small-title {
         margin-bottom: 30px;
+      }
+      .contents-text + .share-rule {
+        margin-top: 30px;
       }
       .share-rule {
         &.gl-5 {
@@ -472,12 +457,10 @@
           }
         }
       }
-
-      .company-btn {
-        &.l-ml-3 {
-          margin-left: 0 !important;
-        }
-      }
+    }
+    .link-button {
+      margin-top: 30px;
+      margin-left: 0;
     }
   }
 </style>

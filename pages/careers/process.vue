@@ -1,5 +1,6 @@
 <template>
   <div class="procedure-wrap">
+    <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
     <MiddleImg image="middle-process.jpg" />
@@ -25,7 +26,29 @@
   import ContentSubTitle from '@/components/company/ContentSubTitle'
   import ContentsText from '@/components/company/ContentsText'
   import Procedure from '@/components/company/Procedure'
+  import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head: {
+      // title: 'Kakao Brain Careers, Job Openings',
+      meta: [
+        // {
+        //   hid: 'og-title',
+        //   property: 'og:title',
+        //   content: 'Kakao Brain Careers, Job Openings'
+        // },
+        // {
+        //   hid: 'og:url',
+        //   property: 'og:url',
+        //   content: 'https://careers.kakaobrain.com/careers/process'
+        // },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://careers.stgkakaobrain.com/meta/meta_careers_careers.png'
+        }
+      ]
+    },
     mixins: [mixinGlobal],
     name: 'process',
     components: {
@@ -35,7 +58,22 @@
       ContentsTitle,
       ContentSubTitle,
       ContentsText,
-      Procedure
+      Procedure,
+      BreadCrumb
+    },
+    data() {
+      return {
+        breadcrumb: {
+          KR: [
+            { text: '영입', sub: 'sub', link: '' },
+            { text: '영입절차', sub: '', link: '' }
+          ],
+          EN: [
+            { text: 'Careers', sub: 'sub', link: '' },
+            { text: 'Job Openings', sub: '', link: '' }
+          ]
+        }
+      }
     },
     computed: {
       ...mapState({
@@ -50,9 +88,8 @@
 </script>
 <style lang="scss" scoped>
   .procedure-wrap {
-    padding: 0 20px;
+    padding: 320px 20px 0;
     .main-title {
-      margin-top: 320px;
       margin-bottom: 60px;
     }
     .main-title-text {
@@ -73,6 +110,9 @@
           margin-bottom: 40px;
         }
       }
+      .content-sub-title ::v-deep .tit {
+        font-weight: 700;
+      }
     }
     .content-sub-title {
       margin-bottom: 10px;
@@ -81,8 +121,8 @@
 
   @include pc-large {
     .procedure-wrap {
+      padding-top: 440px;
       .main-title {
-        margin-top: 440px;
         margin-bottom: 100px;
       }
       .main-title-text {
@@ -111,8 +151,8 @@
   }
   @include pc-4k {
     .procedure-wrap {
+      padding-top: 600px;
       .main-title {
-        margin-top: 600px;
         margin-bottom: 120px;
       }
       .main-title-text {
@@ -141,8 +181,8 @@
   }
   @include tablet {
     .procedure-wrap {
+      padding-top: 200px;
       .main-title {
-        margin-top: 200px;
         margin-bottom: 40px;
       }
       .main-title-text {
@@ -171,8 +211,9 @@
   }
   @include mobile {
     .procedure-wrap {
+      padding-top: 76px;
       .main-title {
-        margin-top: 157px;
+        margin-top: 60px;
         margin-bottom: 20px;
       }
       .main-title-text {

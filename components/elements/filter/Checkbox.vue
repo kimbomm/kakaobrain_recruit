@@ -81,11 +81,8 @@
   }
 </script>
 <style lang="scss" scoped>
-  @import '@/assets/scss/mixins.scss';
-
   .checkbox {
     display: inline-flex;
-    margin-bottom:12px;
     input {
       display: none;
       &:checked + .label {
@@ -110,7 +107,7 @@
       font-family: 'Inter';
       font-style: italic;
       cursor: pointer;
-      user-select: none; 
+      user-select: none;
       overflow: hidden;
     }
     &__dark {
@@ -124,14 +121,12 @@
         border-color: #fff;
         color: #000;
       }
-    } 
+    }
   }
 
-  
   @include pc-large {
     .checkbox {
       .label {
-        // padding: 14px 24px;
         height: 39px;
         font-size: 18px;
       }
@@ -149,18 +144,17 @@
   @include tablet {
     .checkbox {
       .label {
-        padding: 4px 10px;
-        height: 21px;
-        font-size: 10px;
+        padding: 8px 14px;
+        height: 34px;
+        font-size: 14px;
       }
     }
   }
   @include mobile {
     .checkbox {
       .label {
-        padding: 8px 14px;
-        height: 29px;
-        font-size: 10px;
+        padding: 10px 12px 8px;
+        font-size: 12px;
       }
     }
   }

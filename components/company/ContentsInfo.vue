@@ -1,8 +1,8 @@
 <template>
   <div class="contents-info gl-5 l-ml-3">
     <div v-for="(item, index) in data" :key="index" class="item">
-      <div class="tit">{{ item.title }}</div>
-      <div class="txt">{{ item.text }}</div>
+      <div class="tit" v-html="item.title"></div>
+      <div class="txt" v-html="item.text"></div>
     </div>
   </div>
 </template>

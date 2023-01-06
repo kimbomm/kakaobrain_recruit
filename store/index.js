@@ -1,28 +1,31 @@
-import data from './data/common.json'
+import data from './data/common.js'
+import utility from '/util/utility.js'
 
 export const state = () => ({
   language: 'KR',
   menus: data.menus,
   footerMenu: data.footer,
+  isMenuOpen: false,
   members: data.members,
   sns: data.sns,
   category: data.category,
   filter: [],
   filterList: [],
   touchDevice: false,
-  isFilterMenuOpen: false
+  isFilterMenuOpen: false,
+  isScrollUp: false,
+  device: {
+    touch: false,
+    mobile: false
+  }
 })
-export const getters = {
-  // newsCategory(state) {
-  //   return state.category.news
-  // }
-}
+
 export const mutations = {
   setIsFilterMenuOpen(state, payload) {
     state.isFilterMenuOpen = payload
   },
   setTouchDevice(state, payload) {
-    state.touchDevice = payload
+    state.device = Object.assign(state.device, payload)
   },
   setLanguage(state, payload) {
     state.language = payload
@@ -30,12 +33,11 @@ export const mutations = {
   setFilter(state, payload) {
     state.filter = payload
   },
-  setFilterList(state, payload) {
-    switch (payload) {
-      case 'innovation':
-        state.filterList = state.category['innovation']
-        break
-    }
+  setIsScrollUp(state, payload) {
+    state.isScrollUp = payload
+  },
+  setIsMenuOpen(state, payload) {
+    state.isMenuOpen = payload
   }
 }
 export const actions = {
@@ -47,8 +49,26 @@ export const actions = {
     // console.log('RES::', res)
     return res
   },
-  getFilterList({ commit }, payload) {
-    commit('setFilterList', payload)
+  async postList({}, payload) {
+    const params = utility.setParameters(payload)
+    return await this.$axios.post(`/proxy`, payload)
+  },
+  async getList({}, payload) {
+    const params = utility.setParameters(payload)
+    return await this.$axios.get(
+      `https://api.lever.co/v0/postings/kakaobrain?${params}`
+      // {
+      //   withCredentials: true
+      // }
+    )
+  },
+  async getDetail({}, payload) {
+    return await this.$axios.get(
+      `https://api.lever.co/v0/postings/kakaobrain/${payload}`
+      // {
+      //   withCredentials: true
+      // }
+    )
   },
   async getRecruitList({}, payload) {
     const res = await this.$axios.post(

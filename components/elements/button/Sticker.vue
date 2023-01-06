@@ -34,9 +34,8 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-right: 0;
-    margin-bottom: 10px;
     padding: 8px 14px;
+    height: 34px;
     &.sub {
       background-color: $gray-9;
       border: none;
@@ -92,19 +91,21 @@
     }
   }
 
-  @include pc-4k {
+  @include pc-large {
     .btn {
-      padding: 14px 24px;
+      height: 39px;
       .txt {
-        font-size: 28px !important;
+        font-size: 18px;
       }
     }
   }
 
-  @include pc-large {
+  @include pc-4k {
     .btn {
+      height: 64px;
+      padding: 14px 24px;
       .txt {
-        font-size: 18px;
+        font-size: 28px !important;
       }
     }
   }
@@ -114,6 +115,7 @@
       display: inline-block;
     }
     .btn {
+      height: 29px;
       margin-bottom: 4px;
       .txt {
         font-size: 10px;
@@ -125,6 +127,7 @@
       display: inline-block;
     }
     .btn {
+      height: 21px;
       padding: 4px 10px;
       margin-bottom: 0px;
     }

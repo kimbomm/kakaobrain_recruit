@@ -1,5 +1,6 @@
 <template>
   <div class="recruiting">
+    <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
     <MiddleImg image="middle-recruit.jpg" />
@@ -29,7 +30,7 @@
         </ul>
       </div>
     </div>
-    <div class="notice-paging l-ml-1">
+    <div class="notice-paging">
       <ListPaging
         :total="total"
         :offset="pageData.offset"
@@ -48,7 +49,29 @@
   import Checkbox from '@/components/elements/filter/Checkbox'
   import NoticeList from '@/components/company/NoticeList'
   import ListPaging from '@/components/elements/ListPaging'
+  import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head: {
+      // title: 'Kakao Brain Careers',
+      meta: [
+        // {
+        //   hid: 'og-title',
+        //   property: 'og:title',
+        //   content: 'Kakao Brain Careers'
+        // },
+        // {
+        //   hid: 'og:url',
+        //   property: 'og:url',
+        //   content: 'https://careers.kakaobrain.com/careers'
+        // },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://careers.stgkakaobrain.com/meta/meta_careers_careers.png'
+        }
+      ]
+    },
     mixins: [mixinGlobal],
     name: 'index',
     components: {
@@ -57,10 +80,21 @@
       MiddleImg,
       Checkbox,
       NoticeList,
-      ListPaging
+      ListPaging,
+      BreadCrumb
     },
     data() {
       return {
+        breadcrumb: {
+          KR: [
+            { text: '영입', sub: 'sub', link: '' },
+            { text: '영입공고', sub: '', link: '' }
+          ],
+          EN: [
+            { text: 'Careers', sub: 'sub', link: '' },
+            { text: 'Job Openings', sub: '', link: '' }
+          ]
+        },
         pageData: {
           limit: 10,
           offset: 0
@@ -88,23 +122,32 @@
       }
     },
     async created() {
-      const res = await this.getRecruitList()
-      this.list = res.data.data
+      // const res = await this.getList({
+      //   group: 'department'
+      // })
+      const res = await this.postList({
+        method: 'GET',
+        url: 'https://api.lever.co/v0/postings/kakaobrain?group=department',
+        formData: {}
+      })
+      this.list = res.data.map(item => {
+        return {
+          title: item.title ? item.title : 'etc',
+          postings: item.postings
+        }
+      })
       await this.setCategory()
       await this.fetchList()
     },
     methods: {
       ...mapActions({
-        getRecruitList: 'getRecruitList'
+        getRecruitList: 'getRecruitList',
+        getList: 'getList',
+        postList: 'postList'
       }),
       async setCategory() {
-        const category = []
-        for (let i = 0; i < this.list.length; i++) {
-          const recruitClassName = this.list[i].recruitClassName
-          if (!category.includes(recruitClassName))
-            category.push(recruitClassName)
-        }
-        category.forEach(item => {
+        const category = await this.list.map(list => list.title)
+        await category.forEach(item => {
           this.filter.push({
             value: item,
             text: item,
@@ -127,18 +170,22 @@
         await this.fetchList()
       },
       async fetchList() {
-        const tmpList = [...this.list]
         if (this.checkedList.includes('all')) {
-          this.recruitList = tmpList.splice(
+          let list = []
+          this.list.forEach(item => {
+            list = list.concat([], item.postings)
+          })
+          this.total = list.length
+          this.recruitList = list.splice(
             this.pageData.offset,
             this.pageData.limit
           )
-          this.total = this.list.length
         } else {
-          const list = []
-          tmpList.forEach(item => {
-            if (this.checkedList.includes(item.recruitClassName))
-              list.push(item)
+          let list = []
+          this.list.forEach(item => {
+            if (this.checkedList.includes(item.title)) {
+              list = list.concat(item.postings)
+            }
           })
           this.total = list.length
           this.recruitList = [
@@ -155,10 +202,9 @@
 </script>
 <style lang="scss" scoped>
   .recruiting {
-    padding: 0 20px;
+    padding: 320px 20px 0;
 
     .main-title {
-      margin-top: 320px;
       margin-bottom: 60px;
     }
     .main-title-text {
@@ -167,14 +213,14 @@
     .middle-img {
       margin-bottom: 140px;
     }
+    .notice-paging {
+      margin-top: 200px;
+      margin-left: getMargin(4);
+    }
     .category-box {
       margin-bottom: 50px;
-    }
-    .paging {
-      margin-top: 62px;
-    }
-    .category-box {
       .checkbox {
+        margin-bottom: 10px;
         &:not(:last-child) {
           margin-right: 10px;
         }
@@ -191,8 +237,8 @@
 
   @include pc-large {
     .recruiting {
+      padding-top: 440px;
       .main-title {
-        margin-top: 440px;
         margin-bottom: 100px;
       }
       .main-title-text {
@@ -212,19 +258,14 @@
         }
       }
       .notice-paging {
-        &.l-ml-1 {
-          margin-left: 0px !important;
-        }
-        .paging {
-          margin-top: 260px;
-        }
+        margin-top: 260px;
       }
     }
   }
   @include pc-4k {
     .recruiting {
+      padding-top: 600px;
       .main-title {
-        margin-top: 600px;
         margin-bottom: 120px;
       }
       .main-title-text {
@@ -234,14 +275,13 @@
         margin-bottom: 270px;
       }
       .category-box {
+        margin-bottom: 100px;
         .checkbox {
+          margin-bottom: 20px;
           &:not(:last-child) {
             margin-right: 20px;
           }
         }
-      }
-      .category-box {
-        margin-bottom: 120px;
       }
       .notice-contents {
         .notice-list {
@@ -251,19 +291,14 @@
         }
       }
       .notice-paging {
-        &.l-ml-1 {
-          margin-left: getMargin(1) !important;
-        }
-        .paging {
-          margin-top: 380px;
-        }
+        margin-top: 380px;
       }
     }
   }
   @include tablet {
     .recruiting {
+      padding-top: 200px;
       .main-title {
-        margin-top: 200px;
         margin-bottom: 40px;
       }
       .main-title-text {
@@ -279,8 +314,14 @@
         &.l-ml-3 {
           margin-left: getMargin(2) !important;
         }
-        .category-box {
-          margin-bottom: 30px;
+      }
+      .category-box {
+        margin-bottom: 30px;
+        .checkbox {
+          margin-bottom: 10px;
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
         }
       }
 
@@ -292,19 +333,16 @@
         }
       }
       .notice-paging {
-        &.l-ml-1 {
-          margin-left: 0px !important;
-        }
-        .paging {
-          margin-top: 140px;
-        }
+        margin-top: 140px;
+        margin-left: getMargin(2);
       }
     }
   }
   @include mobile {
     .recruiting {
+      padding-top: 76px;
       .main-title {
-        margin-top: 157px;
+        margin-top: 60px;
         margin-bottom: 20px;
       }
       .main-title-text {
@@ -322,22 +360,21 @@
           margin-left: 0 !important;
         }
         .category-box {
-          margin-bottom: 30px;
+          margin-bottom: 29px;
         }
       }
 
       .notice-contents {
         .notice-list {
           &:not(:last-child) {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
           }
         }
       }
 
       .notice-paging {
-        .paging {
-          margin-top: 107px;
-        }
+        margin-top: 107px;
+        margin-left: 0;
       }
     }
   }

@@ -1,5 +1,6 @@
 <template>
   <div class="recommendation">
+    <BreadCrumb :data="breadcrumb[language]" :full="true" />
     <MainTitle :title="data.MainTitle" />
     <MainTitleText :text="data.MainTitleText" />
     <MiddleImg image="middle-referral.jpg" />
@@ -31,24 +32,27 @@
                     :text="text"
                   />
                 </div>
-                <div
-                  v-if="box.button && box.button.isShow"
-                  class="link-btn l-ml-3"
-                >
-                  <nuxt-link to="/recruit">
+                <div v-if="box.button && box.button.isShow" class="link-button">
+                  <a :href="box.button.link" :target="box.button.target">
                     <span class="btn-txt">{{ box.button.text }}</span>
-                  </nuxt-link>
+                  </a>
                 </div>
               </div>
 
-              <ContentSubTitle
-                v-if="item.ContentSubTitle"
-                :tit="item.ContentSubTitle"
-              />
-              <ContentsText
-                v-if="item.ContentsText"
-                :text="item.ContentsText"
-              />
+              <div
+                v-for="(ref, idx) in item.ref"
+                :key="`ref-${idx}`"
+                class="list-box"
+              >
+                <ContentSubTitle :tit="ref.ContentSubTitle" />
+                <div class="box-text-con">
+                  <ContentsText
+                    v-for="text in ref.ContentsText"
+                    :key="text"
+                    :text="text"
+                  />
+                </div>
+              </div>
             </div>
           </template>
         </li>
@@ -66,7 +70,29 @@
   import ContentsText from '@/components/company/ContentsText'
   import SmallTitle from '@/components/company//SmallTitle'
   import ContentSubTitle from '@/components/company//ContentSubTitle'
+  import BreadCrumb from '@/components/elements/BreadCrumb'
   export default {
+    head: {
+      // title: 'Kakao Brain Careers, External Referral Program',
+      meta: [
+        // {
+        //   hid: 'og-title',
+        //   property: 'og:title',
+        //   content: 'Kakao Brain Careers, External Referral Program'
+        // },
+        // {
+        //   hid: 'og:url',
+        //   property: 'og:url',
+        //   content: 'https://careers.kakaobrain.com/referral'
+        // },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://careers.stgkakaobrain.com/meta/meta_careers_careers.png'
+        }
+      ]
+    },
     mixins: [mixinGlobal],
     name: 'recommend',
     components: {
@@ -76,7 +102,22 @@
       ContentsTitle,
       ContentsText,
       SmallTitle,
-      ContentSubTitle
+      ContentSubTitle,
+      BreadCrumb
+    },
+    data() {
+      return {
+        breadcrumb: {
+          KR: [
+            { text: '영입', sub: 'sub', link: '' },
+            { text: '사외 추천 제도', sub: '', link: '' }
+          ],
+          EN: [
+            { text: 'Careers', sub: 'sub', link: '' },
+            { text: 'External Referral Program', sub: '', link: '' }
+          ]
+        }
+      }
     },
     computed: {
       ...mapState({
@@ -91,9 +132,8 @@
 </script>
 <style lang="scss" scoped>
   .recommendation {
-    padding: 0 20px;
+    padding: 320px 20px 0;
     .main-title {
-      margin-top: 320px;
       margin-bottom: 60px;
     }
     .main-title-text {
@@ -146,34 +186,19 @@
         }
       }
     }
+    .content-sub-title {
+      margin-bottom: 20px;
+    }
   }
 
-  .link-btn {
-    display: inline-block;
-    min-width: 150px;
-    width: auto;
-    height: 50px;
-    border: 1px solid $gray-9;
-    border-radius: 0px;
-    padding: 16px;
-    font-size: 0px;
-    box-sizing: border-box;
-    cursor: pointer;
-    .btn-txt {
-      display: block;
-      letter-spacing: -1px;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 130%;
-      color: $gray-9;
-    }
+  .link-button {
+    margin-left: getMargin(3);
   }
 
   @include pc-large {
     .recommendation {
+      padding-top: 440px;
       .main-title {
-        margin-top: 440px;
         margin-bottom: 100px;
       }
       .main-title-text {
@@ -223,11 +248,14 @@
         }
       }
     }
+    .content-sub-title {
+      margin-bottom: 26px;
+    }
   }
   @include pc-4k {
     .recommendation {
+      padding-top: 600px;
       .main-title {
-        margin-top: 600px;
         margin-bottom: 120px;
       }
       .main-title-text {
@@ -284,12 +312,16 @@
           font-size: 22px;
         }
       }
+
+      .content-sub-title {
+        margin-bottom: 20px;
+      }
     }
   }
   @include tablet {
     .recommendation {
+      padding-top: 200px;
       .main-title {
-        margin-top: 200px;
         margin-bottom: 40px;
       }
       .main-title-text {
@@ -344,12 +376,19 @@
           font-size: 12px;
         }
       }
+      .content-sub-title {
+        margin-bottom: 10px;
+      }
+    }
+    .link-button {
+      margin-left: getMargin(2);
     }
   }
   @include mobile {
     .recommendation {
+      padding-top: 76px;
       .main-title {
-        margin-top: 157px;
+        margin-top: 60px;
         margin-bottom: 20px;
       }
       .main-title-text {
@@ -404,6 +443,9 @@
           font-size: 12px;
         }
       }
+    }
+    .link-button {
+      margin-left: 0;
     }
   }
 </style>

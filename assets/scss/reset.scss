@@ -84,6 +84,7 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
+  color: inherit;
   vertical-align: baseline;
   -webkit-font-smoothing: antialiased;
   letter-spacing: -0.6px;
@@ -148,6 +149,9 @@ a {
   &:visited {
     color: inherit;
   }
+  &:link {
+    color: inherit;
+  }
 }
 
 button,
@@ -158,11 +162,13 @@ input {
   }
 }
 button {
+  font: inherit;
   cursor: pointer;
   box-sizing: border-box;
   background-color: transparent;
   margin: 0;
   padding: 0;
+  color: inherit;
 }
 input {
   background-color: transparent;

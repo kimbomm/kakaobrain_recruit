@@ -1,5 +1,5 @@
 <template>
-  <div class="interview gl-6 l-ml-2">
+  <div class="interview">
     <div class="interview-title">
       <template v-if="language === 'KR'">
         <div class="title">카카오브레인은</div>
@@ -13,7 +13,7 @@
         </div>
       </template>
       <template v-else>
-        <div class="title">kakaobrain is</div>
+        <div class="title">Kakao Brain is</div>
         <div class="sub-title">
           <div class="bracket-text">
             <img
@@ -48,7 +48,7 @@
         <div class="interview-text">
           <p v-html="data.interviewTextA.replace(/\n/g, '<br/>')"></p>
         </div>
-        <div class="interview-text l-ml-1">
+        <div class="interview-text">
           <p v-html="data.interviewTextB.replace(/\n/g, '<br/>')"></p>
         </div>
       </div>
@@ -66,7 +66,7 @@
               {{
                 language === 'KR'
                   ? '이런 분들에게 추천!'
-                  : 'kakaobrain is great for!'
+                  : 'Kakao Brain is great for!'
               }}
             </div>
             <div
@@ -94,20 +94,17 @@
           <div class="txt">
             <p v-html="data.interviewTidy.replace(/\n/g, '<br/>')"></p>
           </div>
-          <div class="btn">
-            <a
-              href="https://www.facebook.com/1772178023100605/posts/2982992715352457/?d=n"
-              target="_blank"
-            >
+          <a :href="data.facebook.link" :target="data.facebook.target">
+            <div class="btn">
               <span class="btn-txt">
                 <template v-if="language === 'KR'">
                   카카오브레인 페이스북에서 보기
                 </template>
-                <template v-else> Meet kakaobrain on Facebook </template>
+                <template v-else> Meet Kakao Brain on Facebook </template>
                 →
               </span>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -133,12 +130,14 @@
 </script>
 <style lang="scss" scoped>
   .interview {
-    font-weight: 900;
-    font-size: 80px;
-    line-height: 130%;
+    width: getWidth(6);
+    margin-left: getMargin(2);
     word-break: keep-all;
     .interview-title {
       margin-bottom: 100px;
+      font-weight: 900;
+      font-size: 80px;
+      line-height: 130%;
     }
     .sub-title {
       display: flex;
@@ -189,63 +188,63 @@
         line-height: 150%;
       }
     }
-    .interview {
-      &-box {
-        display: flex;
-        margin-bottom: 100px;
+    &-box {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 100px;
+    }
+    &-text {
+      // width: getWidth(2);
+      flex: 0 0 getWidth(2);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 150%;
+      &::before {
+        content: '“';
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-bottom: 20px;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 100%;
       }
-      &-text {
-        width: getWidth(2);
-        font-size: 20px;
+    }
+    &-know-how {
+      .know-how-tit {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 130%;
+        margin-bottom: 20px;
+      }
+    }
+    &-tidy {
+      padding: 30px;
+      background-color: $gray-9;
+      color: $gray-0;
+      .txt {
+        margin-bottom: 40px;
+        font-size: 16px;
         font-weight: 400;
         line-height: 150%;
-        &::before {
-          content: '“';
+      }
+      .btn {
+        display: inline-block;
+        height: 50px;
+        border: 1px solid $gray-0;
+        border-radius: 0px;
+        padding: 16px;
+        font-size: 0px;
+        box-sizing: border-box;
+        cursor: pointer;
+        text-align: center;
+        .btn-txt {
           display: block;
-          width: 24px;
-          height: 24px;
-          margin-bottom: 20px;
-          font-weight: 900;
-          font-size: 50px;
-          line-height: 100%;
-        }
-      }
-      &-know-how {
-        .know-how-tit {
-          font-size: 26px;
-          font-weight: 700;
-          line-height: 130%;
-          margin-bottom: 50px;
-        }
-      }
-      &-tidy {
-        padding: 30px;
-        background-color: $gray-9;
-        color: $gray-0;
-        .txt {
-          margin-bottom: 40px;
-          font-size: 16px;
+          font-size: 14px;
+          font-style: normal;
           font-weight: 400;
-          line-height: 150%;
-        }
-        .btn {
-          width: 238px;
-          height: 50px;
-          border: 1px solid $gray-0;
-          border-radius: 0px;
-          padding: 16px;
-          font-size: 0px;
-          box-sizing: border-box;
-          cursor: pointer;
-          .btn-txt {
-            display: block;
-            letter-spacing: -1px;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 130%;
-            color: $gray-0;
-          }
+          line-height: 130%;
+          color: $gray-0;
         }
       }
     }
@@ -286,8 +285,8 @@
 
   @include pc-large {
     .interview {
-      font-size: 100px;
       .interview-title {
+        font-size: 100px;
         margin-bottom: 130px;
       }
       .sub-title {
@@ -314,38 +313,35 @@
           font-size: 22px;
         }
       }
-      .interview {
-        &-box {
-          margin-bottom: 140px;
+      &-box {
+        margin-bottom: 140px;
+      }
+      &-text {
+        font-size: 26px;
+        &::before {
+          width: 24px;
+          height: 32px;
+          margin-bottom: 30px;
+          font-size: 70px;
         }
-        &-text {
-          font-size: 26px;
-          &::before {
-            width: 24px;
-            height: 32px;
-            margin-bottom: 30px;
-            font-size: 70px;
-          }
+      }
+      &-know-how {
+        .know-how-tit {
+          font-size: 34px;
+          margin-bottom: 30px;
         }
-        &-know-how {
-          .know-how-tit {
-            font-size: 34px;
-            margin-bottom: 30px;
-          }
+      }
+      &-tidy {
+        padding: 30px;
+        .txt {
+          margin-bottom: 50px;
+          font-size: 22px;
         }
-        &-tidy {
-          padding: 30px;
-          .txt {
-            margin-bottom: 50px;
-            font-size: 22px;
-          }
-          .btn {
-            width: 273px;
-            height: 60px;
-            padding: 19px 18px;
-            .btn-txt {
-              font-size: 16px;
-            }
+        .btn {
+          height: 60px;
+          padding: 19px 18px;
+          .btn-txt {
+            font-size: 16px;
           }
         }
       }
@@ -377,8 +373,8 @@
       &.l-ml-2 {
         margin-left: getMargin(3) !important;
       }
-      font-size: 140px;
       .interview-title {
+        font-size: 140px;
         margin-bottom: 200px;
       }
       .sub-title {
@@ -405,37 +401,34 @@
           font-size: 32px;
         }
       }
-      .interview {
-        &-box {
-          margin-bottom: 210px;
+      &-box {
+        margin-bottom: 210px;
+      }
+      &-text {
+        font-size: 40px;
+        &::before {
+          width: 45px;
+          height: 100px;
+          font-size: 100px;
         }
-        &-text {
-          font-size: 40px;
-          &::before {
-            width: 45px;
-            height: 100px;
-            font-size: 100px;
-          }
+      }
+      &-know-how {
+        .know-how-tit {
+          font-size: 50px;
+          margin-bottom: 50px;
         }
-        &-know-how {
-          .know-how-tit {
-            font-size: 50px;
-            margin-bottom: 50px;
-          }
+      }
+      &-tidy {
+        padding: 46px 10px 50px 50px;
+        .txt {
+          margin-bottom: 70px;
+          font-size: 32px;
         }
-        &-tidy {
-          padding: 46px 10px 50px 50px;
-          .txt {
-            margin-bottom: 70px;
-            font-size: 32px;
-          }
-          .btn {
-            width: 400px;
-            height: 90px;
-            padding: 28px 26px;
-            .btn-txt {
-              font-size: 22px;
-            }
+        .btn {
+          height: 90px;
+          padding: 28px 26px;
+          .btn-txt {
+            font-size: 22px;
           }
         }
       }
@@ -466,8 +459,9 @@
   }
   @include tablet {
     .interview {
-      font-size: 40px;
+      width: getWidth(7);
       .interview-title {
+        font-size: 40px;
         margin-bottom: 80px;
       }
       .sub-title {
@@ -494,38 +488,36 @@
           font-size: 14px;
         }
       }
-      .interview {
-        &-box {
-          margin-bottom: 80px;
+      &-box {
+        margin-bottom: 80px;
+      }
+      &-text {
+        flex: 0 0 getWidth(3);
+        font-size: 16px;
+        &::before {
+          width: 24px;
+          height: 24px;
+          margin-bottom: 20px;
+          font-size: 50px;
         }
-        &-text {
-          font-size: 16px;
-          &::before {
-            width: 24px;
-            height: 24px;
-            margin-bottom: 20px;
-            font-size: 50px;
-          }
+      }
+      &-know-how {
+        .know-how-tit {
+          font-size: 24px;
+          margin-bottom: 20px;
         }
-        &-know-how {
-          .know-how-tit {
-            font-size: 24px;
-            margin-bottom: 20px;
-          }
+      }
+      &-tidy {
+        padding: 30px 36px;
+        .txt {
+          margin-bottom: 30px;
+          font-size: 14px;
         }
-        &-tidy {
-          padding: 30px 36px;
-          .txt {
-            margin-bottom: 30px;
-            font-size: 14px;
-          }
-          .btn {
-            width: 218px;
-            height: 48px;
-            padding: 16px 20px;
-            .btn-txt {
-              font-size: 12px;
-            }
+        .btn {
+          height: 48px;
+          padding: 16px 20px;
+          .btn-txt {
+            font-size: 12px;
           }
         }
       }
@@ -554,14 +546,10 @@
   }
   @include mobile {
     .interview {
-      font-size: 34px;
-      &.gl-6 {
-        width: 100% !important;
-      }
-      &.l-ml-2 {
-        margin-left: 0px !important;
-      }
+      width: 100%;
+      margin-left: 0;
       .interview-title {
+        font-size: 34px;
         margin-bottom: 50px;
       }
       .sub-title {
@@ -588,43 +576,40 @@
           font-size: 14px;
         }
       }
-      .interview {
-        &-con {
-          &.l-ml-1 {
-            margin-left: 0 !important;
-          }
+      &-con {
+        &.l-ml-1 {
+          margin-left: 0 !important;
         }
-        &-box {
-          margin-bottom: 50px;
-          flex-direction: column;
+      }
+      &-box {
+        margin-bottom: 50px;
+        flex-direction: column;
+      }
+      &-text {
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 40px;
+        &.l-ml-1 {
+          margin-left: 0 !important;
         }
-        &-text {
-          width: 100%;
-          font-size: 16px;
-          margin-bottom: 40px;
-          &.l-ml-1 {
-            margin-left: 0 !important;
-          }
+      }
+      &-know-how {
+        .know-how-tit {
+          font-size: 20px;
+          margin-bottom: 20px;
         }
-        &-know-how {
-          .know-how-tit {
-            font-size: 20px;
-            margin-bottom: 20px;
-          }
+      }
+      &-tidy {
+        padding: 20px;
+        .txt {
+          margin-bottom: 30px;
+          font-size: 14px;
         }
-        &-tidy {
-          padding: 20px;
-          .txt {
-            margin-bottom: 30px;
-            font-size: 14px;
-          }
-          .btn {
-            width: 218px;
-            height: 48px;
-            padding: 16px 20px;
-            .btn-txt {
-              font-size: 12px;
-            }
+        .btn {
+          height: 48px;
+          padding: 16px 20px;
+          .btn-txt {
+            font-size: 12px;
           }
         }
       }

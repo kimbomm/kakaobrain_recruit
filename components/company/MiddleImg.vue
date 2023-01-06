@@ -1,6 +1,6 @@
 <template>
   <div
-    class="middle-img gl-7 l-ml-2"
+    class="middle-img"
     :style="`background-image:url(${require(`@/assets/images/middle/${image}`)})`"
   ></div>
 </template>
@@ -21,6 +21,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    width: getWidth(7);
+    margin-left: getMargin(2);
     height: 400px;
   }
   @include pc-large {
@@ -40,12 +42,8 @@
   }
   @include mobile {
     .middle-img {
-      &.gl-7{
-        width: 100% !important
-      }
-      &.l-ml-2{
-        margin-left:0 !important
-      }
+      width: 100%;
+      margin-left: 0;
     }
   }
 </style>

@@ -24,7 +24,7 @@
     </div>
     <div class="copy">
       <p>
-        Copyright ⓒ kakaobrain Corp. <br />
+        Copyright ⓒ Kakao Brain Corp. <br />
         All rights reserved.
       </p>
     </div>
@@ -86,6 +86,7 @@
         font-size: 12px;
         line-height: 1.3;
         color: #fff;
+        font-weight: 600;
       }
     }
   }

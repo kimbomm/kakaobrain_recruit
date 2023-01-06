@@ -19,11 +19,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span class="info-txt">@2021</span>
-        <div class="copyright">
-          Copyright ⓒ kakaobrain Corp. <span>All rights reserved.</span>
+        <div :class="{ copy: true, 'is-hide': onHide }">
+          <span class="info-txt">@Recruit</span>
+          <div class="copyright">
+            Copyright ⓒ Kakao Brain Corp. <span>All rights reserved.</span>
+          </div>
         </div>
-        <SnsLink v-if="language === 'KR'" />
+        <SnsLink />
       </div>
       <div class="footer-shape"></div>
     </div>
@@ -35,6 +37,12 @@
   export default {
     components: {
       SnsLink
+    },
+    data() {
+      return {
+        isMouseWheel: false,
+        isScrollEnd: false
+      }
     },
     computed: {
       ...mapState({
@@ -48,11 +56,54 @@
           classList.push('footer__light')
         }
         return classList.join(' ')
+      },
+      onHide() {
+        return this.isScrollEnd ? false : this.isMouseWheel
+      }
+    },
+    mounted() {
+      window.addEventListener('wheel', this.onWheel)
+      window.addEventListener('scroll', this.onScroll)
+    },
+    beforeDestroy() {
+      window.removeEventListener('wheel', this.onWheel)
+    },
+    methods: {
+      menuLink(data) {
+        if (data.name === '사이버윤리실') {
+          let link = data.link
+          this.language === 'KR' ? (link += 'ko') : (link += 'en')
+          return link
+        } else {
+          return data.link
+        }
+      },
+      onScroll() {
+        this.isScrollEnd =
+          document.querySelector('body').scrollHeight - window.innerHeight ===
+          window.scrollY
+      },
+      onWheel(e) {
+        this.isMouseWheel = e.wheelDelta < 0
       }
     }
   }
 </script>
 <style lang="scss" scoped>
+  .copy {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    transition: all 0.5s linear;
+    width: getWidth(7);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    &.is-hide {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
   .footer {
     padding: 500px 20px 20px;
     > div {
@@ -67,6 +118,7 @@
       z-index: 10;
       display: flex;
       align-items: flex-end;
+      padding-left: getMargin(7);
       font-size: 16px;
       line-height: 1.3;
       color: $gray-9;
@@ -96,30 +148,17 @@
     height: 198px;
     margin-bottom: 230px;
     margin-left: getMargin(2);
-    background-image: url('~/assets/images/b-symbol.png');
+    background-image: url('@/assets/images/b-symbol.svg');
     background-size: cover;
     background-position: center center;
   }
   .menu-list {
     font-size: 20px;
     line-height: 1.3;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;
-    }
-  }
-
-  .footer__light {
-    background-color: $gray-9;
-    .footer-bottom {
-      color: $gray-0;
-    }
-    .b-symbol {
-      background-image: url('~/assets/images/b-w-symbol.png');
-    }
-    .menu-list {
-      color: $gray-0;
     }
   }
 
@@ -168,11 +207,12 @@
     .b-symbol {
       width: 240px;
       height: 396px;
+      margin-bottom: 156px;
     }
   }
   @include tablet {
     .footer {
-      padding-top: 400px;
+      padding-top: 300px;
       &-shape {
         width: getWidth(2);
         height: 80px;
@@ -183,6 +223,7 @@
       }
       &-bottom {
         font-size: 16px;
+        padding-left: getMargin(6);
       }
     }
     .menu-list {
@@ -195,6 +236,14 @@
     }
   }
   @include mobile {
+    .copy {
+      position: initial;
+      z-index: 0;
+      &.is-hide {
+        opacity: 1;
+        transform: initial;
+      }
+    }
     .footer {
       padding-top: 200px;
       padding-bottom: 50px;
@@ -207,11 +256,15 @@
       &-bottom {
         font-size: 12px;
         color: $surface-6;
+        padding-left: 0;
         .info-txt {
           display: none;
         }
         .copyright {
           width: getWidth(6);
+          span {
+            display: block;
+          }
         }
       }
     }
