@@ -54,12 +54,12 @@
     },
     head() {
       return {
-        title: this.detail.categories.team,
+        title: this.detail.text,
         meta: [
           {
-            hid: 'og-title',
+            hid: 'og:title',
             property: 'og:title',
-            content: `Kakao Brain - ${this.detail.categories.team}`
+            content: `Kakao Brain - ${this.detail.text}`
           },
           // {
           //   hid: 'og:url',
