@@ -1,7 +1,7 @@
 <template>
   <div class="recruit">
     <MainTitle :title="data.MainTitle" />
-    <EasterEgg />
+
     <MainTitleText :text="data.MainTitleText" />
     <!-- <LargeImg /> -->
     <ContentsQuestion :data="data.ContentsQuestion" />
