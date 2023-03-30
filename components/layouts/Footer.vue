@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div>
-      <div class="b-symbol"></div>
+      <!-- <div class="b-symbol"></div> -->
       <!-- <div class="b-w-symbol"></div> -->
       <div class="footer-con">
         <div class="menu">
