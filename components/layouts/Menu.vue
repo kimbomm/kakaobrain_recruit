@@ -130,8 +130,7 @@
         await window.location.reload(true)
       },
       openMenu(menu, index) {
-        console.log(menu, index)
-        if ((this.clickIndex = index)) {
+        if (index === 3) {
           //this.clickIndex = null
           window.open('https://blog.kakaobrain.com', '_blank')
         } else {
