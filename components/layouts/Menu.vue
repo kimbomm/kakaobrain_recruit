@@ -10,9 +10,10 @@
             @mouseenter=";(hoverIndex = index), (isHover = true)"
             @mouseleave="isHover = false"
           >
-            <button type="button" @click="openMenu(index)">
+            <button type="button" @click="openMenu(menu, index)">
               <span class="txt">{{ menu.name[language] }}</span>
             </button>
+
             <ul
               v-show="clickIndex === index"
               :ref="`subMenu-${index}`"
@@ -44,6 +45,9 @@
         'is-hide': isScrollUp
       }"
     >
+      <a class="tag-link" href="https://www.kakaobrain.com/" target="_blank">
+        <img src="@/assets/images/kakaobrain.png" />
+      </a>
       <button
         :class="`btn-lang ${cookieLang}`"
         @click="selectLang(cookieLang === 'KR' ? 'EN' : 'KR')"
@@ -125,9 +129,11 @@
         await this.setLanguage(lang)
         await window.location.reload(true)
       },
-      openMenu(index) {
-        if (this.clickIndex === index) {
-          this.clickIndex = null
+      openMenu(menu, index) {
+        console.log(menu, index)
+        if ((this.clickIndex = index)) {
+          //this.clickIndex = null
+          window.open('https://blog.kakaobrain.com', '_blank')
         } else {
           this.clickIndex = index
           this.$nextTick(() => {
@@ -165,6 +171,7 @@
       &:not(:last-child) {
         margin-right: 30px;
       }
+
       .num {
         padding-right: 6px;
         vertical-align: top;
@@ -208,12 +215,16 @@
           }
         }
       }
+      #subMenu-3 {
+        display: none;
+      }
     }
     .menu-enter {
       .menu-item {
         button {
           color: $gray-5;
         }
+
         &:hover {
           button {
             color: #000;
@@ -248,9 +259,14 @@
       &:last-child {
         margin-right: 0;
       }
+      background-color: #fff;
       img {
         width: 100%;
       }
+    }
+
+    .tag-link {
+      margin-right: 12px;
     }
   }
 
@@ -297,6 +313,9 @@
       button {
         width: 40px;
         height: 40px;
+      }
+      .tag-link {
+        display: none;
       }
     }
   }
