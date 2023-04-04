@@ -97,7 +97,17 @@ const menus = [
         link: '/benefits/benefits'
       }
     ]
-  }
+  },
+  {
+    name: {
+      KR: 'Blog',
+      EN: 'Blog',
+    },
+     link: 'https://blog.kakaobrain.com'
+
+  },
+
+
 ]
 
 const footer = [
