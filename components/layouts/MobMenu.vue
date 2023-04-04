@@ -38,6 +38,16 @@
             </ul>
           </li>
         </ul>
+
+        <div class="etc-menu">
+          <a
+            class="mob-link"
+            href="https://careers.kakaobrain.com/"
+            target="_blank"
+          >
+            <img src="@/assets/images/kakaobrain_mob.png" />
+          </a>
+        </div>
         <MobMenuFooter @onClose="onClose" />
       </div>
     </div>
@@ -162,6 +172,7 @@
       }
     }
   }
+
   .menu-toggle {
     color: #fff;
     &:after {
@@ -177,6 +188,10 @@
         display: block;
       }
     }
+  }
+
+  .etc-menu {
+    margin-top: 60px;
   }
   .menu-name {
     font-size: 24px;
