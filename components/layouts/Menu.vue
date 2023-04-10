@@ -10,9 +10,23 @@
             @mouseenter=";(hoverIndex = index), (isHover = true)"
             @mouseleave="isHover = false"
           >
-            <button type="button" @click="openMenu(menu, index)">
+            <!-- <button type="button" @click="openMenu(menu, index)">
               <span class="txt">{{ menu.name[language] }}</span>
+            </button> -->
+
+            <button
+              type="button"
+              :href="menu.link"
+              :target="menu.target"
+              @click="openMenu(menu, index)"
+            >
+              >
+              <span class="txt"> {{ menu.name[language] }}</span>
             </button>
+
+            <!-- <a v-else :href="openMenu(menu)" :target="menu.target">
+              <span class="txt"> {{ menu.name[language] }}</span>
+            </a> -->
 
             <ul
               v-show="clickIndex === index"
@@ -129,23 +143,29 @@
         await this.setLanguage(lang)
         await window.location.reload(true)
       },
+      // openMenu(data, menu) {
+      //   //console.log(data, menu)
+      //   if (data.link != menu) {
+      //     return data.link
+      //   } else {
+      //     this.clickIndex = null
+      //   }
+      // },
       openMenu(menu, index) {
-        if (index === 3) {
-          //this.clickIndex = null
-          window.open('https://blog.kakaobrain.com', '_blank')
-        } else {
+        console.log(menu, index)
+        if (menu.target === '_blank') {
+          window.open(menu.link)
+        } else if (menu.sub != null) {
           this.clickIndex = index
           this.$nextTick(() => {
             const menu = this.$refs[`subMenu-${index}`][0]
             const subMenuPos =
               menu.parentElement.offsetLeft +
               menu.parentElement.offsetWidth / 2 +
-              menu.offsetWidth / 2 +
-              20
-            console.log(subMenuPos, window.innerWidth)
-            if (subMenuPos >= window.innerWidth) {
+              menu.offsetWidth / 2
+            if (subMenuPos > window.innerWidth) {
               menu.style.left = `calc(50% - ${
-                subMenuPos - window.innerWidth + 20
+                subMenuPos - window.innerWidth + 40
               }px)`
             }
           })

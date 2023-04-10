@@ -5,34 +5,39 @@ const menus = [
       EN: 'Careers'
     },
     link: '/',
+    target: '',
     sub: [
       {
         name: {
           KR: '영입공고',
           EN: 'Jobs'
         },
-        link: '/careers'
+        link: '/careers',
+          target: ''
       },
       {
         name: {
           KR: '영입절차',
           EN: 'Process'
         },
-        link: '/careers/process'
+        link: '/careers/process',
+        target: ''
       },
       {
         name: {
           KR: 'FAQ',
           EN: 'FAQ'
         },
-        link: '/faq'
+        link: '/faq',
+          target: ''
       },
       {
         name: {
           KR: '사외 추천 제도',
           EN: 'External Referral Program'
         },
-        link: '/referral'
+        link: '/referral',
+          target: ''
       }
     ]
   },
@@ -43,34 +48,39 @@ const menus = [
     },
     link: '/company',
     alarm: '',
+    target: '',
     sub: [
       {
         name: {
           KR: '우리의 일하는 방식',
           EN: 'How We Work'
         },
-        link: '/company'
+        link: '/company',
+          target: ''
       },
       {
         name: {
           KR: '인턴 체험스토리',
           EN: 'Internship Experiences'
         },
-        link: '/company/intern'
+        link: '/company/intern',
+          target: ''
       },
       {
         name: {
           KR: '사이버 윤리',
           EN: 'Cyber Ethics'
         },
-        link: '/company/ethics'
+        link: '/company/ethics',
+          target: ''
       },
       {
         name: {
           KR: '찾아오시는 길',
           EN: 'Maps & Directions'
         },
-        link: '/company/map'
+        link: '/company/map',
+          target: ''
       }
     ]
   },
@@ -81,20 +91,23 @@ const menus = [
     },
     link: '/benefits',
     alarm: '',
+    target: '',
     sub: [
       {
         name: {
           KR: '원격근무와 유연근무제',
           EN: 'Remote Work'
         },
-        link: '/benefits'
+        link: '/benefits',
+           target: '',
       },
       {
         name: {
           KR: '복지혜택',
           EN: 'Benefits'
         },
-        link: '/benefits/benefits'
+        link: '/benefits/benefits',
+          target: '',
       }
     ]
   },
@@ -103,7 +116,14 @@ const menus = [
       KR: 'Blog',
       EN: 'Blog',
     },
-     link: 'https://blog.kakaobrain.com'
+    link: 'https://blog.kakaobrain.com',
+    target: '_blank'
+    //a태그 기본속성
+    //어떤 태그에 속성일까
+    //target:'blank'랑 target:''이랑 차이점이 뭘까
+    //target:'blank'를 구분짓기 위해서 왜 target:''를 다 써줘야 할까
+    //몰까아아아아아아아아아아앙
+
 
   },
 
