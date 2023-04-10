@@ -118,11 +118,7 @@ const menus = [
     },
     link: 'https://blog.kakaobrain.com',
     target: '_blank'
-    //a태그 기본속성
-    //어떤 태그에 속성일까
-    //target:'blank'랑 target:''이랑 차이점이 뭘까
-    //target:'blank'를 구분짓기 위해서 왜 target:''를 다 써줘야 할까
-    //몰까아아아아아아아아아아앙
+
 
 
   },
