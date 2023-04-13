@@ -21,7 +21,7 @@
               :class="`${
                 active.includes(index) ? 'is-active ' : ''
               }menu-toggle`"
-              @click="onClick(index)"
+              @click="onClick(menu, index)"
             >
               <span class="menu-name">{{ menu.name[language] }}</span>
             </button>
@@ -95,10 +95,14 @@
       onClose() {
         this.setIsMenuOpen(false)
       },
-      onClick(idx) {
-        this.active.includes(idx)
-          ? (this.active = this.active.filter(item => item != idx))
-          : this.active.push(idx)
+      onClick(menu, idx) {
+        if (menu.sub) {
+          this.active.includes(idx)
+            ? (this.active = this.active.filter(item => item != idx))
+            : this.active.push(idx)
+        } else {
+          window.open(menu.link)
+        }
       }
     }
   }
