@@ -251,6 +251,9 @@
   .common-menu {
     font-size: 0;
     margin-left: 30px;
+    a {
+      vertical-align: top;
+    }
     button {
       width: 20px;
       height: 20px;

@@ -138,6 +138,7 @@ strong,
 .btn-lang {
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: transparent !important;
   &.KR {
     background-image: url('../images/icon-kr.png');
     @include tablet {
