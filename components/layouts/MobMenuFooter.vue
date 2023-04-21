@@ -16,12 +16,12 @@
         </li>
       </ul>
     </div>
-    <div class="mob-logo">
+    <!-- <div class="mob-logo">
       <img
         src="@/assets/images/mob_footer_logo.png"
         alt="카카오브레인 로고 이미지"
       />
-    </div>
+    </div> -->
     <div class="copy">
       <p>
         Copyright ⓒ Kakao Brain Corp. <br />
