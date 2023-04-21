@@ -84,6 +84,7 @@
           )
           plusDegree = 0
         }
+        // btn.style = `transform: rotate(${plusDegree + degree}deg);`
       },
       calcRadianToDegree(cX, cY, pX, pY, base) {
         const x = Math.abs(pX - cX)
