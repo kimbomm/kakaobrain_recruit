@@ -27,7 +27,7 @@
         </div>
         <SnsLink />
       </div>
-      <div class="footer-shape"></div>
+      <!-- <div class="footer-shape"></div> -->
     </div>
   </footer>
 </template>
