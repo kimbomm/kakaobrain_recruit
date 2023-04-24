@@ -8,7 +8,7 @@
       class="mbtn"
       onclick="window.open('https://kakaobrain-pathfinder2.com')"
     >
-      <img src="@/assets/images/m_badge_pathfinder.png" />
+      <img src="@/assets/images/m_badge_pathfinder.svg" />
     </button>
   </div>
 </template>
@@ -84,7 +84,7 @@
           )
           plusDegree = 0
         }
-        // btn.style = `transform: rotate(${plusDegree + degree}deg);`
+        //btn.style = `transform: rotate(${plusDegree + degree}deg);`
       },
       calcRadianToDegree(cX, cY, pX, pY, base) {
         const x = Math.abs(pX - cX)
@@ -124,7 +124,7 @@
       //background: url('@/assets/images/icon-cardinal-point__b.png') no-repeat;
       width: 100%;
       height: 100%;
-      background: url('@/assets/images/badge_pathfinder.png') no-repeat;
+      background: url('@/assets/images/badge_pathfinder.svg') no-repeat;
       background-size: cover;
       left: 50%;
       top: 50%;
