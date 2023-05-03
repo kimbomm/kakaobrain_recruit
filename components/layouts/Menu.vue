@@ -60,7 +60,7 @@
       }"
     >
       <a class="tag-link" href="https://www.kakaobrain.com/" target="_blank">
-        <img src="@/assets/images/kakaobrain.png" />
+        Kakao Brain
       </a>
       <button
         :class="`btn-lang ${cookieLang}`"
@@ -286,9 +286,18 @@
         width: 100%;
       }
     }
-
     .tag-link {
-      margin-right: 12px;
+      position: relative;
+      top: -2px;
+      display: inline-block;
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 12px;
+      line-height: 1.3;
+      padding: 4px 12px;
+      border-radius: 100px;
+      background-color: #000;
+      color: #fff;
     }
   }
 
@@ -304,6 +313,10 @@
         width: 26px;
         height: 26px;
       }
+      a.tag-link {
+        padding: 6px 14px;
+        font-size: 14px;
+      }
     }
   }
   @include pc-4k {
@@ -316,6 +329,11 @@
       button {
         width: 40px;
         height: 40px;
+      }
+      a.tag-link {
+        top: -4px;
+        padding: 10px 20px;
+        font-size: 22px;
       }
     }
   }
