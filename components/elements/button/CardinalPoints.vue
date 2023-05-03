@@ -189,7 +189,6 @@
   @include mobile {
     .mbtn {
       display: block;
-      border-radius: 50%;
       position: fixed;
       left: 20px;
       bottom: 20px;
