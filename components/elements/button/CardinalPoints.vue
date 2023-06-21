@@ -1,16 +1,5 @@
 <template>
-  <div class="arrow">
-    <button
-      class="btn-arrow"
-      onclick="window.open('https://kakaobrain-pathfinder2.com')"
-    ></button>
-    <button
-      class="mbtn"
-      onclick="window.open('https://kakaobrain-pathfinder2.com')"
-    >
-      <img src="@/assets/images/m_badge_pathfinder.svg" />
-    </button>
-  </div>
+  <button class="btn-arrow"></button>
 </template>
 <script>
   import { mapState } from 'vuex'
@@ -84,7 +73,7 @@
           )
           plusDegree = 0
         }
-        //btn.style = `transform: rotate(${plusDegree + degree}deg);`
+        btn.style = `transform: rotate(${plusDegree + degree}deg);`
       },
       calcRadianToDegree(cX, cY, pX, pY, base) {
         const x = Math.abs(pX - cX)
@@ -98,10 +87,6 @@
   }
 </script>
 <style lang="scss" scoped>
-  .mbtn {
-    display: none;
-  }
-
   .btn-arrow {
     width: 150px;
     height: 150px;
@@ -114,17 +99,14 @@
     overflow: hidden;
     z-index: 2;
     padding: 0;
-
+    background-color: #000;
     &:after {
       content: '';
       display: block;
       position: absolute;
-      //width: 60px;
-      //height: 60px;
-      //background: url('@/assets/images/icon-cardinal-point__b.png') no-repeat;
-      width: 100%;
-      height: 100%;
-      background: url('@/assets/images/badge_pathfinder.svg') no-repeat;
+      width: 60px;
+      height: 60px;
+      background: url('@/assets/images/icon-cardinal-point__b.png') no-repeat;
       background-size: cover;
       left: 50%;
       top: 50%;
@@ -138,76 +120,47 @@
       background: url('@/assets/images/icon-cardinal-point.png') no-repeat;
     }
   }
-
   @include pc-large {
-    .mbtn {
-      display: none;
-    }
-
     .btn-arrow {
       width: 200px;
       height: 200px;
       bottom: 220px;
       &:after {
-        // width: 80px;
-        // height: 80px;
-        width: 100%;
-        height: 100%;
+        width: 80px;
+        height: 80px;
       }
     }
   }
   @include pc-4k {
-    .mbtn {
-      display: none;
-    }
     .btn-arrow {
       width: 300px;
       height: 300px;
       bottom: 320px;
       &:after {
-        width: 100%;
-        height: 100%;
+        width: 120px;
+        height: 120px;
       }
     }
   }
   @include tablet {
-    .mbtn {
-      display: none;
-    }
     .btn-arrow {
       width: 80px;
       height: 80px;
       bottom: 100px;
       &:after {
-        // width: 32px;
-        // height: 32px;
-        width: 100%;
-        height: 100%;
+        width: 32px;
+        height: 32px;
       }
     }
   }
   @include mobile {
-    .mbtn {
-      display: block;
-      position: fixed;
-      left: 20px;
-      bottom: 20px;
-      z-index: 2;
-      padding: 0;
-    }
     .btn-arrow {
       width: 50px;
       height: 50px;
       bottom: 70px;
-      pointer-events: none;
       &:after {
-        background: url('@/assets/images/micon-cardinal-point.png') no-repeat;
-        //width: 20px;
-        //height: 20px;
-        width: 100%;
-        height: 100%;
-
-        overflow: hidden;
+        width: 20px;
+        height: 20px;
       }
     }
   }
