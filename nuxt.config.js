@@ -69,7 +69,8 @@ export default {
     middleware: ['middleRouter']
   },
 
-  css: ['~assets/scss/index.scss'],
+  css: ['~assets/scss/index.scss',
+  '~assets/scss/index.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
