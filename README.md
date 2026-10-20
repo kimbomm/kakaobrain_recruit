@@ -1,69 +1,106 @@
-# kakaobrain_homepage
+# 카카오브레인 채용 사이트
 
-## Build Setup
+> 지원자가 **회사 문화를 이해하고, 맞는 포지션을 찾고, 지원까지** 이어지도록 설계한 채용 사이트.
+> Nuxt.js 기반 카카오브레인 채용 사이트의 프론트엔드입니다.
 
-```bash
-# install dependencies
-$ npm install
+> 회사(프리아이브)에서 진행한 프로젝트로, 이 문서는 포트폴리오용으로 작성했으며 실서비스 주소와 설정 값은 포함하지 않습니다.
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+<br>
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+## 📋 프로젝트 개요
 
-# generate static project
-$ npm run generate
+| 항목 | 내용 |
+|---|---|
+| 소속 | 프리아이브 프론트개발팀 |
+| 역할 | **프론트엔드 팀장** · 프론트엔드 개발 |
+| 형태 | Nuxt.js 기반 SSR 웹사이트 |
+
+<br>
+
+## 🎯 해결해야 했던 문제
+
+| 문제 | 접근 |
+|---|---|
+| 지원자가 **많은 공고 중 원하는 포지션을 빨리 찾아야** 함 | 조건 필터와 목록 · 상세 · 채용 절차 화면 구성 |
+| 채용 공고가 **검색에 잘 노출**되어야 함 | 서버 사이드 렌더링 |
+| 회사 소개 · 복지 · 인턴 · FAQ 등 **화면별 콘텐츠 구성이 다양** | 제목 · 본문 · 이미지 · 인터뷰 등 콘텐츠 블록 컴포넌트 |
+| 개발 · 스테이징 · 운영 **환경 분리**와 잦은 배포 | 환경별 빌드 스크립트, 이슈 단위 브랜치와 릴리스 브랜치 |
+
+<br>
+
+## 👤 담당 역할
+
+- **프론트엔드 구조 설계** — 페이지 · 컴포넌트 · 레이아웃 구성, 공통 믹스인과 미들웨어
+- **채용 화면 개발** — 공고 목록 · 필터 · 상세, 채용 절차, 추천 채용
+- **회사 소개 화면 개발** — 회사 소개, 윤리, 인턴, 복지, 오시는 길, FAQ
+- **반응형 · 다국어** — 모바일 메뉴, 언어 전환
+- **배포 흐름 관리** — 환경별 빌드, `feature/{이슈번호}` → `release/staging` → 운영 흐름
+
+<br>
+
+## ✨ 주요 화면
+
+| 경로 | 내용 |
+|---|---|
+| `/careers` | 채용 공고 목록 · 필터, 상세, 채용 절차 |
+| `/referral` | 추천 채용 |
+| `/company` | 회사 소개, 윤리, 인턴, 오시는 길 |
+| `/benefits` | 복지 |
+| `/faq` | 자주 묻는 질문 |
+| `/privacy` | 개인정보처리방침 |
+
+<br>
+
+## 🛠 기술 스택
+
+| 영역 | 기술 |
+|---|---|
+| 프레임워크 | Nuxt.js 2 (Vue 2), SSR |
+| 상태 | Vuex |
+| 스타일 | SCSS (style-resources) |
+| 통신 | @nuxtjs/axios |
+| 기타 | Day.js, cookie-universal-nuxt, vue-device-detector |
+| 분석 | Google Analytics |
+| 배포 | Docker, nginx |
+| 품질 | ESLint, Prettier, EditorConfig |
+
+<br>
+
+## 🏗 프로젝트 구조
+
+```text
+├── pages/
+│   ├── careers/        # 공고 목록, 상세, 채용 절차
+│   ├── company/        # 회사 소개, 윤리, 인턴, 오시는 길
+│   ├── benefits/  faq.vue  referral.vue  privacy/
+├── components/
+│   ├── company/        # 콘텐츠 블록 (제목, 본문, 이미지, 인터뷰, 절차, FAQ)
+│   ├── elements/       # 버튼, 필터, 페이징, 언어 전환 등 공통 요소
+│   └── layouts/        # 헤더, 푸터, 모바일 메뉴
+├── store/              # Vuex (번역, 공통 데이터)
+├── plugins/  middleware/  mixin/  util/
+└── nginx/
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+<br>
 
-## Special Directories
+## 🔀 브랜치 · 배포 흐름
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+```text
+feature/{이슈번호}  ──►  develop  ──►  release/staging  ──►  master (운영)
+```
 
-### `assets`
+- 이슈 단위로 기능 브랜치를 만들고, 스테이징 검증 후 운영에 반영
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+<br>
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+## 🚀 실행 방법
 
-### `components`
+```bash
+npm install
+npm run dev           # 개발 서버
+npm run build:stg     # 스테이징 빌드
+npm run build:prod    # 운영 빌드
+```
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+환경 변수 값은 이 문서에 포함하지 않습니다.
